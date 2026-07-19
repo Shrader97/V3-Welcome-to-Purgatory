@@ -1,0 +1,873 @@
+<configs>
+
+    <set xpath="/item_modifiers/item_modifier[@name='modGunBowPolymerString']/property[@name='UnlockedBy']/@value">perkRangersFlamingArrows</set>
+    <set xpath="/item_modifiers/item_modifier[@name='modGunBowArrowRest']/property[@name='UnlockedBy']/@value">perkRangersFlamingArrows</set>
+
+    <append xpath="/item_modifiers/item_modifier[@name='modGunRetractingStock']">
+
+        <effect_group tiered="false" name="mod effects">
+            <requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+                <triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="stockA"/>
+            </effect_group>
+
+        <effect_group tiered="false" name="mod effects">
+            <triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Astock">
+                <requirement name="IsFPV"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Astock">
+                <requirement name="!IsFPV"/>
+            </triggered_effect>
+        </effect_group>
+
+    </append>
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+
+		<item_property_overrides name="GunMGP90">
+			<property name="BarrelOffset" value="0,-.03,.06"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="GunMGAR-57">
+			<property name="BarrelOffset" value="0,-.03,.06"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+	</append>
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']">
+
+			<item_property_overrides name="GunMGP90">
+				<property name="SideOffset" value="0,-0.01,0.01"/>
+				<property name="SideScale" value=".75,.75,.75"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="GunMGAR-57">
+				<property name="SideOffset" value="0,-0.03,0.05"/>
+				<property name="SideScale" value=".75,.75,.75"/>
+			</item_property_overrides>
+
+	</append>
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
+
+			<item_property_overrides name="GunMGP90">
+				<property name="SideOffset" value="0,-0.01,0.01"/>
+				<property name="SideScale" value=".75,.75,.75"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="GunMGAR-57">
+				<property name="SideOffset" value="0,-0.03,0.05"/>
+				<property name="SideScale" value=".75,.75,.75"/>
+			</item_property_overrides>
+
+	</append>
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']">
+
+		<item_property_overrides name="GunMGP90">
+			<property name="ScopeOffset" value="0,0.1,0"/>
+			<property name="ScopeScale" value=".9,.9,.9"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="GunMGAR-57">
+			<property name="ScopeOffset" value="0,0.03,0"/>
+			<property name="ScopeScale" value=".9,.9,.9"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+			
+	</append>
+
+	<!--append xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']">
+
+		<item_property_overrides name="gunRifleT4SniperRifle">
+			<property name="ScopeOffset" value="0,0.1,0"/>
+			<property name="ScopeScale" value=".9,.9,.9"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+			
+	</append>
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeLarge']">
+
+		<item_property_overrides name="gunRifleT4SniperRifle">
+			<property name="ScopeOffset" value="0,0.1,0"/>
+			<property name="ScopeScale" value=".9,.9,.9"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+			
+	</append-->
+
+
+
+
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+
+		<item_property_overrides name="GunMGP90">
+			<property name="ScopeOffset" value="0,0.1,0"/>
+			<property name="ScopeScale" value=".9,.9,.9"/>
+			<property name="ScopeCameraOffset" value="0,-0.034,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="GunMGAR-57">
+			<property name="ScopeOffset" value="0,0.03,0"/>
+			<property name="ScopeScale" value=".5,.5,.5"/>
+			<property name="ScopeCameraOffset" value="0,-0.0125,0.3"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunShotgunT4Spas">
+			<property name="ScopeOffset" value="0,1.2,0"/>
+			<property name="ScopeCameraOffset" value="0,-0.0275,0"/>
+		</item_property_overrides>
+
+
+	</append>
+
+	<append xpath="/item_modifiers">
+
+        <item_modifier name="modRadiationReady" installable_tags="armor" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            
+
+            <!--Increase radiation resistance by x%-->
+            <effect_group tiered="false">
+                <passive_effect name="ElementalDamageResist" operation="perc_add" value=".5" tags="radiation"/>
+            </effect_group>
+        </item_modifier>
+
+
+		<item_modifier name="modVehicleTurboCharger" installable_tags="vengine" modifier_tags="speed" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="UnlockedBy" value="modVehicleTurboChargerSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="modVehicleTurboCharger"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".15"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".21"/>
+			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="modVehicleDoubleTurboCharger" installable_tags="vengine" modifier_tags="speed" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="modVehicleTurboCharger"/>
+			<property name="UnlockedBy" value="modVehicleDoubleTurboChargerSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="modVehicleTurboCharger"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".30"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".42"/>
+			</effect_group>
+		</item_modifier>
+
+        <item_modifier name="modMaxDegradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modArmorStrength"/>
+            <property name="CustomIconTint" value="00FF00"/>
+            <property name="TraderStageTemplate" value="modsTier1"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="UnlockedBy" value="modMaxDegradationSchematic"/>
+            <effect_group tiered="true">
+                <passive_effect name="DegradationMax" operation="base_add" value="2500"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modSuperMaxDegradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modArmorStrength"/>
+            <property name="CustomIconTint" value="013220"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1500"/>
+            <property name="UnlockedBy" value="modSuperMaxDegradationSchematic"/>
+            <effect_group tiered="true">
+                <passive_effect name="DegradationMax" operation="base_add" value="5000"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modUltraMaxDegradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modArmorStrength"/>
+            <property name="CustomIconTint" value="0000FF"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="2000"/>
+            <property name="UnlockedBy" value="modUltraMaxDegradationSchematic"/>
+            <effect_group tiered="true">
+                <passive_effect name="DegradationMax" operation="base_add" value="10000"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modMeleeBurningFist" installable_tags="perkBrawler" modifier_tags="fire" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modMeleeClubBurningShaft"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+
+                <item_property_overrides name="meleeWpnKnucklesT0LeatherKnuckles">
+                        <property name="FlameEffect" remove="true"/>
+                </item_property_overrides>
+                
+                <item_property_overrides name="meleeWpnKnucklesT1IronKnuckles">
+                        <property name="FlameEffect" remove="true"/>
+                </item_property_overrides>
+                
+                <item_property_overrides name="meleeWpnKnucklesT3SteelKnuckles">
+                        <property name="FlameEffect" remove="true"/>
+                </item_property_overrides>
+                        
+                <effect_group>
+                    <triggered_effect trigger="onSelfEquipStart" action="RemovePart" part="Flames">
+                        <requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+                    </triggered_effect>
+                    <triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="@:ItemModEffects/mod_sledge_flamePrefab.prefab" parent_transform="LeftHand" local_offset="0,0,0" local_rotation="0,0,0" local_scale="0,0,0">
+                        <requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+                    </triggered_effect>
+                    <triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="@:ItemModEffects/mod_sledge_flamePrefab.prefab" parent_transform="RightHand" local_offset="0,0,0" local_rotation="0,0,0" local_scale="0,0,0">
+                        <requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+                    </triggered_effect>
+                    <triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="mod_sledge_flamePrefab" parent_transform="LeftHand"/>
+                    <triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="mod_sledge_flamePrefab" parent_transform="RightHand"/>
+                    <triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Flames">
+                        <requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+                    </triggered_effect>
+                </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modMeleeRightCross" installable_tags="perkBrawler" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modMeleeStunBatonRepulsor"/>
+            <property name="CustomIconTint" value="800080"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            
+            <!-- Increases stun chance; increases stamina use, axe, hammer, club> -->
+            <effect_group tiered="false">
+                <requirement name="ProgressionLevel" progression_name="perkBrawler" operation="GTE" value="3"/>
+                <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="GT" value="5"/>
+                <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="25"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned01"/>
+            </effect_group>
+
+            <!--<effect_group name="increase AttacksPerMinute1" tiered="false">
+                <requirement name="ProgressionLevel" progression_name="perkBrawler" operation="Equals" value="0"/>
+                <passive_effect name="AttacksPerMinute" operation="perc_add" value="1"/>
+            </effect_group>-->
+
+            <effect_group name="increase AttacksPerMinute2" tiered="false">
+                <requirement name="ProgressionLevel" progression_name="perkBrawler" operation="Equals" value="1"/>
+                <passive_effect name="AttacksPerMinute" operation="perc_add" value=".2"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".1"/>
+            </effect_group>
+
+            <effect_group name="increase AttacksPerMinute3" tiered="false">
+                <requirement name="ProgressionLevel" progression_name="perkBrawler" operation="Equals" value="2"/>
+                <passive_effect name="AttacksPerMinute" operation="perc_add" value=".4"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".2"/>
+            </effect_group>
+
+            <effect_group name="increase AttacksPerMinute4" tiered="false">
+                <requirement name="ProgressionLevel" progression_name="perkBrawler" operation="Equals" value="3"/>
+                <passive_effect name="AttacksPerMinute" operation="perc_add" value=".6"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".3"/>
+            </effect_group>
+
+            <effect_group name="increase AttacksPerMinute5" tiered="false">
+                <requirement name="ProgressionLevel" progression_name="perkBrawler" operation="Equals" value="4"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".8"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".4"/>
+            </effect_group>
+            
+            <effect_group name="increase AttacksPerMinute6" tiered="false">
+                <requirement name="ProgressionLevel" progression_name="perkBrawler" operation="Equals" value="5"/>
+                <passive_effect name="AttacksPerMinute" operation="perc_add" value="1"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".5"/>
+            </effect_group>
+
+        </item_modifier>
+
+        <item_modifier name="modBerserk" installable_tags="perkBrawler" modifier_tags="damage" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="modBerserk"/>
+            <property name="EconomicValue" value="2000"/>
+            <property name="TraderStageTemplate" value="modsTier3"/>
+            <effect_group tiered="false">
+                <requirement name="IsBloodMoon"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration=".2" force="500">
+                    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+                </triggered_effect>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Health" operation="add" value="1"/>
+                <passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+                <passive_effect name="DegradationPerUse" operation="perc_add" value="-.25"/>
+                <passive_effect name="AttacksPerMinute" operation="perc_add" value="1.5"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+                <passive_effect name="WalkSpeed" operation="perc_add" value=".75"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".75"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="1"/>
+                <passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffFatigued,buffLacerationBleedingStatus,buffArmSprained,buffArmBroken,buffLegSprained,buffLegBroken,buffInfection,buffInjuryAbrasion,buffLaceration,buffInjuryBleeding,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modPusher" installable_tags="perkBrawler" modifier_tags="damage" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modMeleeWeightedHead"/>
+            <property name="CustomIconTint" value="#ffb343"/>
+            <property name="TraderStageTemplate" value="modsTier3"/>
+            <effect_group tiered="false">
+                <passive_effect name="DegradationPerUse" operation="perc_add" value=".01"/>
+            </effect_group>
+            <effect_group tiered="false">
+            <triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration=".25" force="2500">
+                    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+            </triggered_effect>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modMeleeStunRepulsor" installable_tags="perkBrawler" modifier_tags="knockback" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modMeleeStunBatonRepulsor"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            
+            <!-- Increases stun chance; increases stamina use, axe, hammer, club -->
+            <effect_group tiered="false">
+                <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned01"/>
+            </effect_group>
+
+            <effect_group name="new Eletic Proc" tiered="false">
+                <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+                <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+                    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShocked"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGunDualDrumMagazineExtender" installable_tags="drumMagazine" modifier_tags="magazine" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="TraderStageTemplate" value="modsTier3"/>
+
+            <effect_group tiered="false">
+                <passive_effect name="MagazineSize" operation="perc_add" value="2"/>
+                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-.3"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modArrowReload" installable_tags="perkArchery" type="attachment" rarity="1">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="modGunMeleeTheHunter"/>
+            <property name="DescriptionKey" value="ArrowRDesc"/>
+            <property name="CustomIconTint" value="#1e9d16"/>
+            <property name="UnlockedBy" value="modGunBowPolymerStringSchematic"/>
+            <effect_group tiered="false">
+                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".40"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modBlessedMetal" installable_tags="weapon,tool" modifier_tags="DoubleDamage" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="modGunMeleeBlessedMetal"/>
+            <property name="DescriptionKey" value="BlessDesc"/>
+            <!--Do double damage to evil / undead-->
+            <effect_group tiered="false">
+                <passive_effect name="EntityDamage" operation="perc_add" value="1.1"/>
+            </effect_group>
+            <effect_group tiered="false">
+                <requirement name="EntityTagCompare" target="other" tags="Bosszombie"/>
+                <passive_effect name="EntityDamage" operation="perc_add" value="2.2"/>
+            </effect_group>
+        </item_modifier>
+
+        <!--item_modifier name="modAdvRadRemover" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modGunMeleeRadRemover"/>
+            <property name="DescriptionKey" value="RadRemoveDesc"/>
+            <property name="CustomIconTint" value="#1e9d16"/>
+            <property name="UnlockedBy" value="modGunMeleeRadRemoverSchematic"/>
+            <effect_group tiered="false">
+                <requirement name="EntityTagCompare" target="other" tags="radiated"/>
+                    <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
+            </effect_group>
+        </item_modifier-->
+
+        <item_modifier name="modFlammableOil" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage2" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modGunMeleeFlammableOil"/>
+            <property name="DescriptionKey" value="FOilDesc"/>
+            <effect_group tiered="false">
+                <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+                <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modShockBattery" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage2" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modGunMeleeNiCdBattery"/>
+            <property name="DescriptionKey" value="ShockDesc"/>
+            <effect_group tiered="false">
+                <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+                    <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modRodandSpring" installable_tags="ranged" modifier_tags="fireRate" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="resourceSpring"/>
+            <property name="DescriptionKey" value="RodSpringDesc"/>
+            <property name="CustomIconTint" value="#1e9d16"/>
+            <effect_group tiered="false">
+                <passive_effect name="RoundsPerMinute" operation="perc_add" value=".15"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.2"/>
+                <passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value=".1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modArmorShredder" installable_tags="ranged,turretRanged" modifier_tags="ArmorShredding" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modArmorBandolier"/>
+            <property name="DescriptionKey" value="ArmorShreddDesc"/>
+            <property name="CustomIconTint" value="#1e9d16"/>
+            <!--<item_property_overrides name="*">
+                <property name="Material" value="Mmetal"/>
+                <property name="Damage_type" value="Piercing"/>
+            </item_property_overrides> -->
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffArmorShredding"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.2"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="noMods" type="attachment"> <!-- collegeJacket -->
+            <property name="CustomIcon" value="apparelCoatJacketLetterZU"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
+            <property name="DisplayType" value="clothingJacketLetter"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".1"/><display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modSuperCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="noMods" type="attachment"> <!-- collegeJacket -->
+            <property name="CustomIcon" value="apparelCoatJacketLetterZU"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
+            <property name="DisplayType" value="clothingJacketLetter"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".2"/><display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modUltraCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="noMods" type="attachment"> <!-- collegeJacket -->
+            <property name="CustomIcon" value="apparelCoatJacketLetterZU"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
+            <property name="DisplayType" value="clothingJacketLetter"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".3"/><display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
+            <property name="CustomIcon" value="apparelRunningShoesRegular"/>
+            <property name="CustomIconTint" value="86,255,109"/>
+            <property name="DisplayType" value="clothingRunningShoes"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="EconomicValue" value="200"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/><display_value name="dStaminaRegen" value=".2"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modSuperRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
+            <property name="CustomIcon" value="apparelRunningShoesRegular"/>
+            <property name="CustomIconTint" value="86,255,109"/>
+            <property name="DisplayType" value="clothingRunningShoes"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="EconomicValue" value="200"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".5" tags="running"/><display_value name="dStaminaRegen" value=".5"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".1"/><display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modUltraRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
+            <property name="CustomIcon" value="apparelRunningShoesRegular"/>
+            <property name="CustomIconTint" value="86,255,109"/>
+            <property name="DisplayType" value="clothingRunningShoes"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="EconomicValue" value="200"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="75" tags="running"/><display_value name="dStaminaRegen" value=".75"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".2"/><display_value name="dRunSpeed" value=".2"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGhillieSuitHood" installable_tags="armorHead" blocked_tags="" modifier_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
+            <property name="CustomIcon" value="apparelGhillieSuitHood"/>
+            <property name="DisplayType" value="GhillieHood"/>
+            <property name="DescriptionKey" value="apparelGhillieSuitGroupDesc"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1,3.5"/>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.07"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.05"><requirement name="IsIndoors"/></passive_effect>
+                <display_value name="dLightMultiplier" value="-.07"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGhillieSuitPants" installable_tags="armorFeet" blocked_tags="" modifier_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
+            <property name="CustomIcon" value="apparelGhillieSuitPants"/>
+            <property name="DisplayType" value="Ghillie"/>
+            <property name="DescriptionKey" value="apparelGhillieSuitGroupDesc"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1,3.5"/>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.07"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.05"><requirement name="IsIndoors"/></passive_effect>
+                <display_value name="dLightMultiplier" value="-.07"/>
+                <passive_effect name="NoiseMultiplier" operation="perc_add" value="-.05"/><display_value name="dNoiseMultiplier" value="-.05"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGhillieSuitJacket" installable_tags="armorChest" blocked_tags="" modifier_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
+            <property name="CustomIcon" value="apparelGhillieSuitJacket"/>
+            <property name="DisplayType" value="clothingGhillie"/>
+            <property name="DescriptionKey" value="apparelGhillieSuitGroupDesc"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1,5"/>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.07"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.05"><requirement name="IsIndoors"/></passive_effect>
+                <display_value name="dLightMultiplier" value="-.07"/>
+                <passive_effect name="NoiseMultiplier" operation="perc_add" value="-.05"/><display_value name="dNoiseMultiplier" value="-.05"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modBikecycleSpeedBoost" installable_tags="vehicle" modifier_tags="speed" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="modTMBikeSpeedBoostDesc"/>
+			<property name="TraderStageTemplate" value="modsTier1"/>
+            <property name="CustomIcon" value="modVehicleSuperCharger"/>
+            <property name="CustomIconTint" value="86,255,109"/>
+			<property name="Stacknumber" value="1"/>
+            <property name="UnlockedBy" value="modBikecycleSpeedBoostSchematic"/>
+			<property name="EconomicValue" value="500"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".40"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".58"/>
+			</effect_group>
+		</item_modifier>
+
+        <!--item_modifier name="modGunMeleeLiquidNitrogen" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="UnlockedBy" value="modGunMeleeLiquidNitrogenSchematic"/> 
+            <property name="TraderStageTemplate" value="modsTier3"/> 
+
+           
+            <item_property_overrides name="*">
+                <property name="DamageType" value="Cold"/>
+            </item_property_overrides>
+
+            <effect_group tiered="false">
+                <passive_effect name="BlockDamage" operation="perc_add" value=".4"/>
+            </effect_group>
+        </item_modifier-->
+
+        <item_modifier name="modSpeedLoader" installable_tags="revolver,dbarrel" modifier_tags="magazine" blocked_tags="noMods,magazine" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="modSpeedLoader"/>
+            <property name="UnlockedBy" value="modSpeedLoaderSchematic"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".75"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCopperBand" installable_tags="armorHands" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="CopperBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="5"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="5"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modIronBand" installable_tags="armorHands" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="IronBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="10"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="10"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modSilverBand" installable_tags="armorHands" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="SilverBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="25"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="25"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGoldBand" installable_tags="armorHands" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="GoldBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="50"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="50"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modPlatinumBand" installable_tags="armorHands" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="PlatinumBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="100"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="100"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modTungstenBand" installable_tags="armorHands" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="TungstenBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="200"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="200"/> 
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCopperNeckless" installable_tags="armorChest" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="CopperNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="5"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="5"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modIronNeckless" installable_tags="armorChest" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="IronNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="10"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="10"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modSilverNeckless" installable_tags="armorChest" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="SilverNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="25"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="25"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGoldNeckless" installable_tags="armorChest" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="GoldNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="50"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="50"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modPlatinumNeckless" installable_tags="armorChest" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="PlatinumNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="100"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="100"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modTungstenNeckless" installable_tags="armorChest" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="TungstenNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="200"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="200"/> 
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCopperTonguePiercing" installable_tags="armorHeadw" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="CopperTonguePiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="5"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="5"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modIronTonguePiercing" installable_tags="armorHeadw" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="IronTonguePiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="10"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="10"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modSilverTonguePiercing" installable_tags="armorHeadw" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="SilverTonguePiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="25"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="25"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGoldTonguePiercing" installable_tags="armorHeadw" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="GoldTonguePiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="50"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="50"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modPlatinumTonguePiercing" installable_tags="armorHeadw" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="PlatinumTonguePiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="100"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="100"/> 
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modTungstenTonguePiercing" installable_tags="armorHeadw" modifier_tags="armor" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="TungstenTonguePiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthMax" operation="base_add" value="200"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="200"/> 
+            </effect_group>
+        </item_modifier>
+
+		<item_modifier name="modArmorFireRetardantLiner" installable_tags="armorHead,armorChest,armorHands,armorFeet" modifier_tags="fireRetardant" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="modArmorInsulatedLinerT3"/>
+            <property name="CustomIconTint" value="#FF0000"/>
+			<property name="UnlockedBy" value="modArmorFireRetardantLinerSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="DisplayType" value="modArmorLiners"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="EconomicValue" value="700"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5" tags="heat"/>
+				<display_value name="dElementalDamageResist" value="5"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffFireRetardantArmorLiner"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFireRetardantArmorLiner"/>
+			</effect_group>
+		</item_modifier>
+
+        <item_modifier name="modRadiationReady" installable_tags="armor" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="None"/>
+             <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="UnlockedBy" value="modRadiationReadySchematic"/>
+
+            <!--Increase radiation resistance by x%-->
+            <effect_group tiered="false">
+                <passive_effect name="ElementalDamageResist" operation="perc_add" value=".5" tags="radiation"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+
+
+
+
+
+
+
+	</append>
+
+</configs>

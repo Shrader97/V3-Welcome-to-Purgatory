@@ -1,0 +1,91 @@
+<npc>
+
+    <append xpath="/npc">
+
+        <npc_info
+            id="traderNoah"
+            name="Noah"
+            name_key="npctraderNoah"
+            faction="whiteriver"      
+                portrait="npc_Noah"
+                greeting_type="nearby"
+                stance="Neutral" voice_set="trader"
+                trader_id="12" dialog_id="trader"
+            quest_faction="1"
+                localization_id="npcTraderNoah" />
+
+        <npc_info
+            id="traderBartender"
+            name="Bartender"
+            name_key="npcTraderBartender"
+            faction="whiteriver"      
+                portrait="npc_Noah"
+                greeting_type="nearby"
+                stance="Neutral" voice_set="trader"
+                trader_id="13" dialog_id="trader"
+            quest_faction="1"
+                localization_id="npcTraderBartender" />
+        
+        <npc_info
+            id="traderBouner"
+            name="Bouner"
+            name_key="npcTraderBouner"
+            faction="whiteriver"      
+                portrait="npc_Noah"
+                greeting_type="nearby"
+                stance="Neutral" voice_set="trader"
+                trader_id="14" dialog_id="trader"
+            quest_faction="1"
+                localization_id="npcTraderBouner" />
+
+        <npc_info
+            id="traderCommanderInChief"
+            name="CommanderInChief"
+            name_key="npcTraderCommanderInChief"
+            faction="whiteriver"      
+                portrait="npc_Noah"
+                greeting_type="nearby"
+                stance="Neutral" voice_set="trader"
+                trader_id="15" dialog_id="trader"
+            quest_faction="1"
+                localization_id="npcTraderCommanderInChief" />
+
+        <npc_info
+            id="traderHomelessDude"
+            name="HomelessDude"
+            name_key="npcTraderHomelessDude"
+            faction="whiteriver"      
+                portrait="npc_Noah"
+                greeting_type="nearby"
+                stance="Neutral" voice_set="trader"
+                trader_id="16" dialog_id="trader"
+            quest_faction="1"
+                localization_id="npcTraderHomelessDude" />
+
+        <npc_info
+            id="traderSecretary"
+            name="Secretary"
+            name_key="npcTraderSecretary"
+            faction="whiteriver"      
+                portrait="npc_Noah"
+                greeting_type="nearby"
+                stance="Neutral" voice_set="trader"
+                trader_id="17" dialog_id="trader"
+            quest_faction="1"
+                localization_id="npcTraderSecretary" />
+
+        <npc_info
+            id="traderMechanic"
+            name="Mechanic"
+            name_key="npcTraderMechanic"
+            faction="whiteriver"      
+                portrait="npc_Noah"
+                greeting_type="nearby"
+                stance="Neutral" voice_set="trader"
+                trader_id="18" dialog_id="trader"
+            quest_faction="1"
+                localization_id="npcTraderMechanic" />
+
+    </append>
+
+</npc>

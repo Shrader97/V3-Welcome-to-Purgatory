@@ -1,0 +1,48 @@
+<configs>
+
+    <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedMods']">
+        <item name="modSpeedLoader"/>
+        <item name="modRunningShoesHP"/>
+        <item name="modBikecycleSpeedBoost"/>
+        <item name="modCollegeJacket"/>
+        <item name="modArmorShredder"/>
+        <item name="modFlammableOil"/>
+        <item name="modShockBattery"/>
+        <item name="modBlessedMetal"/>
+        <item name="modArrowReload"/>
+        <item name="modGunDualDrumMagazineExtender"/>
+        <item name="modMeleeStunRepulsor"/>
+        <item name="modPusher"/>
+        <item name="modBerserk"/>
+        <item name="modMeleeRightCross"/>
+        <item name="modMeleeBurningFist"/>
+        <item name="modRadiationReady"/>
+        <item name="modVehicleTurboCharger"/>
+        <item name="modVehicleDoubleTurboCharger"/>
+        <item name="modMaxDegradation"/>
+        <item name="modSuperMaxDegradation"/>
+        <item name="modUltraMaxDegradation"/>
+    </append>
+
+    <append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsModsCommon']">
+        <item name="modSpeedLoaderSchematic"/>
+        <item name="modMaxDegradationSchematic"/>
+        <item name="modSuperMaxDegradationSchematic"/>
+        <item name="modUltraMaxDegradationSchematic"/>
+        <item name="modBikecycleSpeedBoostSchematic"/>
+        <item name="modVehicleTurboChargerSchematic"/>
+        <item name="modVehicleDoubleTurboChargerSchematic"/>        
+    </append>
+		
+	<append xpath="//trader_item_group[@name='groupRangedAll']">
+		<item name="gunT0GrenadeLauncher" quality="1,5" />
+		<item name="gunT1GrenadeLauncher" quality="1,5" prob="0.4"/>
+		<item name="gunT3GrenadeLauncher" quality="1,5" prob="0.2"/>
+	</append>
+
+	<append xpath="//trader_item_group[@name='ammoSupplies']">
+        <item name="resourceGrenadeTip" count="5,20"/>
+        <item name="resourceGrenadeCasing" count="5,20"/>
+	</append>
+
+</configs>

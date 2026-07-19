@@ -1,0 +1,13 @@
+<configs>
+	<remove xpath="//window[@name='menuBackground']/video[@name='videoTexture']"></remove>
+    <append xpath="//window[@name='menuBackground']">
+        <texture 
+            color="[white]" 
+            depth="1" 
+            texture="@modfolder:UIAtlases/ItemIconAtlas/background.png" 
+            anchor_left="#cam,0,-5"
+            anchor_bottom="#cam,0,-5"
+            anchor_right="#cam,1,5"
+            anchor_top="#cam,1,5"	/>
+    </append>
+</configs>

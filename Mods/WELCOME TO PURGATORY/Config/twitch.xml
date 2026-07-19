@@ -1,0 +1,585 @@
+<shark>
+
+	<append xpath="twitch">
+	
+		<action name="spawn_TickleMeDemo">
+			<property name="command" value="#spawn_TickleMeDemo" />
+			<property name="command_key" value="#spawn_TickleMeDemo" />
+			<property name="title_key" value="spawn_TickleMeDemo" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_TickleMeDemo" />
+			<property name="default_cost" value="250" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="85" />
+			<property name="description_key" value="spawn_TickleMeDemo" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_JumpingBean">
+			<property name="command" value="#spawn_JumpingBean" />
+			<property name="command_key" value="#spawn_JumpingBean" />
+			<property name="title_key" value="spawn_JumpingBean" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_JumpingBean" />
+			<property name="default_cost" value="100" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="30" />
+			<property name="description_key" value="spawn_JumpingBean" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_CottonMouthh">
+			<property name="command" value="#spawn_CottonMouth" />
+			<property name="command_key" value="#spawn_CottonMouth" />
+			<property name="title_key" value="spawn_CottonMouth" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_CottonMouth" />
+			<property name="default_cost" value="75" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="25" />
+			<property name="description_key" value="spawn_CottonMouth" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_ExplodingZombieDog">
+			<property name="command" value="#spawn_ExplodingDog" />
+			<property name="command_key" value="#spawn_ExplodingDog" />
+			<property name="title_key" value="spawn_ExplodingDog" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_ExplodingZombieDog" />
+			<property name="default_cost" value="150" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="50" />
+			<property name="description_key" value="spawn_ExplodingDog" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_ExplodingDireWolf">
+			<property name="command" value="#spawn_ExplodingWolf" />
+			<property name="command_key" value="#spawn_ExplodingWolf" />
+			<property name="title_key" value="spawn_ExplodingWolf" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_ExplodingDireWolf" />
+			<property name="default_cost" value="200" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="75" />
+			<property name="description_key" value="spawn_ExplodingWolf" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_FeralHouseCat">
+			<property name="command" value="#spawn_HouseCat" />
+			<property name="command_key" value="#spawn_HouseCat" />
+			<property name="title_key" value="spawn_HouseCat" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_FeralHouseCat" />
+			<property name="default_cost" value="175" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="95" />
+			<property name="description_key" value="spawn_HouseCat" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_AnacondaSnake">
+			<property name="command" value="#spawn_Anaconda" />
+			<property name="command_key" value="#spawn_Anaconda" />
+			<property name="title_key" value="spawn_Anaconda" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_AnacondaSnake" />
+			<property name="default_cost" value="185" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="85" />
+			<property name="description_key" value="spawn_Anaconda" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_MiniBossGrace">
+			<property name="command" value="#spawn_MiniBossGrace" />
+			<property name="command_key" value="#spawn_MiniBossGrace" />
+			<property name="title_key" value="spawn_MiniBossGrace" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_MiniBossGrace" />
+			<property name="default_cost" value="195" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="55" />
+			<property name="description_key" value="spawn_MiniBossGrace" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_PainDoe">
+			<property name="command" value="#spawn_PainDoe" />
+			<property name="command_key" value="#spawn_PainDoe" />
+			<property name="title_key" value="spawn_PainDoe" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_PainDoe" />
+			<property name="default_cost" value="65" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="45" />
+			<property name="description_key" value="spawn_PainDoe" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_PainStag">
+			<property name="command" value="#spawn_PainStag" />
+			<property name="command_key" value="#spawn_PainStag" />
+			<property name="title_key" value="spawn_PainStag" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_PainStag" />
+			<property name="default_cost" value="65" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="45" />
+			<property name="description_key" value="spawn_PainStag" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_RageChicken">
+			<property name="command" value="#spawn_RageChicken" />
+			<property name="command_key" value="#spawn_RageChicken" />
+			<property name="title_key" value="spawn_RageChicken" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_RageChicken" />
+			<property name="default_cost" value="125" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="15" />
+			<property name="description_key" value="spawn_RageChicken" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_CluckingKing">
+			<property name="command" value="#spawn_CluckingKing" />
+			<property name="command_key" value="#spawn_CluckingKing" />
+			<property name="title_key" value="spawn_CluckingKing" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_CluckingKing" />
+			<property name="default_cost" value="135" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="35" />
+			<property name="description_key" value="spawn_CluckingKing" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_PickleRick">
+			<property name="command" value="#spawn_PickleRick" />
+			<property name="command_key" value="#spawn_PickleRick" />
+			<property name="title_key" value="spawn_PickleRick" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_PickleRick" />
+			<property name="default_cost" value="750" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="95" />
+			<property name="description_key" value="spawn_PickleRick" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_BattleWolf">
+			<property name="command" value="#spawn_BattleWolf" />
+			<property name="command_key" value="#spawn_BattleWolf" />
+			<property name="title_key" value="spawn_BattleWolf" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_BattleWolf" />
+			<property name="default_cost" value="175" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="55" />
+			<property name="description_key" value="spawn_BattleWolf" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_BattleChicken">
+			<property name="command" value="#spawn_BattleChicken" />
+			<property name="command_key" value="#spawn_BattleChicken" />
+			<property name="title_key" value="spawn_BattleChicken" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_BattleChicken" />
+			<property name="default_cost" value="65" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="35" />
+			<property name="description_key" value="spawn_BattleChicken" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+			<!-- horde spawns -->
+
+		<action name="spawn_TickleMeDemo_horde">
+			<property name="command" value="#spawn_TickleMeDemo_horde" />
+			<property name="command_key" value="#spawn_TickleMeDemo_horde" />
+			<property name="title_key" value="spawn_TickleMeDemo_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_TickleMeDemo_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="450" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="75" />
+			<property name="description_key" value="spawn_TickleMeDemo_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_jumpingbean_horde">
+			<property name="command" value="#spawn_jumpingbean_horde" />
+			<property name="command_key" value="#spawn_jumpingbean_horde" />
+			<property name="title_key" value="spawn_jumpingbean_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_jumpingbean_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="350" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="75" />
+			<property name="description_key" value="spawn_jumpingbean_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_CottonMouth_horde">
+			<property name="command" value="#spawn_CottonMouth_horde" />
+			<property name="command_key" value="#spawn_CottonMouth_horde" />
+			<property name="title_key" value="spawn_CottonMouth_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_CottonMouth_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="300" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="65" />
+			<property name="description_key" value="spawn_CottonMouth_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_ExplodingZombieDog_horde">
+			<property name="command" value="#spawn_ExplodingZombieDog_horde" />
+			<property name="command_key" value="#spawn_ExplodingZombieDog_horde" />
+			<property name="title_key" value="spawn_ExplodingZombieDog_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_ExplodingZombieDog_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="400" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="65" />
+			<property name="description_key" value="spawn_ExplodingZombieDog_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_ExplodingDireWolf_horde">
+			<property name="command" value="#spawn_ExplodingDireWolf_horde" />
+			<property name="command_key" value="#spawn_ExplodingDireWolf_horde" />
+			<property name="title_key" value="spawn_ExplodingDireWolf_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_ExplodingDireWolf_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="500" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="65" />
+			<property name="description_key" value="spawn_ExplodingDireWolf_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_FeralHouseCat_horde">
+			<property name="command" value="#spawn_FeralHouseCat_horde" />
+			<property name="command_key" value="#spawn_FeralHouseCat_horde" />
+			<property name="title_key" value="spawn_FeralHouseCat_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_FeralHouseCat_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="475" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="80" />
+			<property name="description_key" value="spawn_FeralHouseCat_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_MiniBossGrace_horde">
+			<property name="command" value="#spawn_MiniBossGrace_horde" />
+			<property name="command_key" value="#spawn_MiniBossGrace_horde" />
+			<property name="title_key" value="spawn_MiniBossGrace_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_MiniBossGrace_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="750" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="130" />
+			<property name="description_key" value="spawn_MiniBossGrace_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_PainDoe_horde">
+			<property name="command" value="#spawn_PainDoe_horde" />
+			<property name="command_key" value="#spawn_PainDoe_horde" />
+			<property name="title_key" value="spawn_PainDoe_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_PainDoe_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="300" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="75" />
+			<property name="description_key" value="spawn_PainDoe_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_PainStag_horde">
+			<property name="command" value="#spawn_PainStag_horde" />
+			<property name="command_key" value="#spawn_PainStag_horde" />
+			<property name="title_key" value="spawn_PainStag_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_PainStag_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="300" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="75" />
+			<property name="description_key" value="spawn_PainStag_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_RageChicken_horde">
+			<property name="command" value="#spawn_RageChicken_horde" />
+			<property name="command_key" value="#spawn_RageChicken_horde" />
+			<property name="title_key" value="spawn_RageChicken_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_RageChicken_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="200" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="65" />
+			<property name="description_key" value="spawn_RageChicken_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_BattleChicken_horde">
+			<property name="command" value="#spawn_BattleChicken_horde" />
+			<property name="command_key" value="#spawn_BattleChicken_horde" />
+			<property name="title_key" value="spawn_BattleChicken_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_BattleChicken_horde" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="250" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="65" />
+			<property name="description_key" value="spawn_BattleChicken_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+					<!-- mixed horde spawns -->
+	
+		<action name="spawn_Deer_Family">
+			<property name="command" value="#spawn_Deer_Family" />
+			<property name="command_key" value="#spawn_Deer_Family" />
+			<property name="title_key" value="spawn_Deer_Family" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_Deer_Family" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="400" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="80" />
+			<property name="description_key" value="spawn_Deer_Family" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_Piggy_Family">
+			<property name="command" value="#spawn_Piggy_Family" />
+			<property name="command_key" value="#spawn_Piggy_Family" />
+			<property name="title_key" value="spawn_Piggy_Family" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_Piggy_Family" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="750" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="150" />
+			<property name="description_key" value="spawn_Piggy_Family" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_Kitty_Family">
+			<property name="command" value="#spawn_Kitty_Family" />
+			<property name="command_key" value="#spawn_Kitty_Family" />
+			<property name="title_key" value="spawn_Kitty_Family" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_Kitty_Family" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="550" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="100" />
+			<property name="description_key" value="spawn_Kitty_Family" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_Puppy_family">
+			<property name="command" value="#spawn_Puppy_family" />
+			<property name="command_key" value="#spawn_Puppy_family" />
+			<property name="title_key" value="spawn_Puppy_family" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_Puppy_family" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="475" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="100" />
+			<property name="description_key" value="spawn_Puppy_family" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_Demo_family">
+			<property name="command" value="#spawn_Demo_family" />
+			<property name="command_key" value="#spawn_Demo_family" />
+			<property name="title_key" value="spawn_Demo_family" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_Demo_family" />
+			<property name="point_type" value="Bits" />
+			<property name="default_cost" value="650" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="100" />
+			<property name="description_key" value="spawn_Demo_family" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+	</append>
+
+</shark>

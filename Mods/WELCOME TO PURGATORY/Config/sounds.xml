@@ -1,0 +1,328 @@
+<configs>
+
+    <append xpath="/Sounds" >
+
+		<SoundDataNode name="GunMGP90_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+			<Noise ID="0" noise="54" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?P90Fire"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/>  <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="GunMGRuger_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+			<Noise ID="0" noise="54" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?RugerFire"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/>  <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="4Bore_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+			<Noise ID="0" noise="54" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/4BoreSounds.unity3d?4bore"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/>  <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="Warrior"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/Banana.unity3d?warrior.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="Want"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/Banana.unity3d?Want.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="Look"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/Banana.unity3d?Look.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="open_cowstable"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Interact.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/husbandrysounds.unity3d?Cow.mp3"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="open_pigstable"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Interact.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/husbandrysounds.unity3d?Pig.mp3"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="open_sheepstable"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Interact.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/husbandrysounds.unity3d?Sheep.mp3"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="open_goatstable"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Interact.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/husbandrysounds.unity3d?goat.mp3"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="open_chickenstable"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Interact.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/husbandrysounds.unity3d?Chicken.mp3"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="ClownLaugh2_throw"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/clownsound.unity3d?ClownLaugh2.mp3"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="ClownLaugh_throw"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/clownsound.unity3d?ClownLaugh.mp3"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.001"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="farmers"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSounds.unity3d?farmers.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="GoodBoy"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSounds.unity3d?GoodBoy.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="yeehaw"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSounds.unity3d?yee-haw.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="cocaine"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSounds.unity3d?cocaine.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="whispercocaine"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSounds.unity3d?metalocalypse-whisper-i-do-cocaine.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="munnyhurt"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSounds.unity3d?munnyhurt.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="mummyattack"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSounds.unity3d?mummyattack.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="mummyalert"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSounds.unity3d?mummyalert.mp3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
+		</SoundDataNode>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </append>
+    
+	<append xpath="/Sounds">
+		<!-- Hornet Sounds -->
+		<SoundDataNode name="hornetalert">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Noise ID="2" noise="9" time="3" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetalert1.wav" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetalert2.wav" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetalert3.wav" />
+			<Channel name="Mouth" />
+			<Priority name="3" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<MaxRepeatRate name="0.9" />
+		</SoundDataNode>
+			
+		<SoundDataNode name="hornetattack">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Noise ID="1" noise="9" time="1.5" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetattack1.wav" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetattack2.wav" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetattack3.wav" />
+			<Channel name="Mouth" />
+			<Priority name="2" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<MaxRepeatRate name="0.9" />
+		</SoundDataNode>
+			
+		<SoundDataNode name="hornetdeath">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Noise ID="3" noise="9" time="2.5" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetdeath1.wav" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetdeath2.wav" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetdeath3.wav" />
+			<Channel name="Mouth" />
+			<Priority name="0" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<MaxRepeatRate name="0.9" />
+		</SoundDataNode>
+			
+		<SoundDataNode name="hornetgiveup">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Noise ID="1" noise="11" time="3" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetroam1.wav" />
+			<Channel name="Mouth" />
+			<Priority name="5" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<MaxRepeatRate name="0.9" />
+		</SoundDataNode>
+			
+		<SoundDataNode name="hornetpain">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Noise ID="2" noise="9" time="1.5" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetpain1.wav" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetpain2.wav" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetpain3.wav" />
+			<Channel name="Mouth" />
+			<Priority name="1" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<MaxRepeatRate name="0.9" />
+		</SoundDataNode>
+			
+		<SoundDataNode name="hornetroam">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Noise ID="1" noise="7" time="14.6" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetflylp1.wav" />
+			<Channel name="Mouth" />
+			<Priority name="6" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<MaxRepeatRate name="0.9" />
+		</SoundDataNode>
+
+		<SoundDataNode name="hornetsense">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Noise ID="3" noise="9" time="4" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Assets/Hornet.unity3d?hornetsense1.wav" />
+			<Channel name="Mouth" />
+			<Priority name="4" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<MaxRepeatRate name="0.9" />
+		</SoundDataNode>
+	</append>
+
+	<append xpath="/Sounds">
+
+		<SoundDataNode name="player_drinking_can"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Interact.prefab"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/FoodModel.unity3d?player_drinking_can.wav"/>
+			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="player_drinking_cork"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Interact.prefab"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/FoodModel.unity3d?player_drinking_cork.wav"/>
+			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+	</append>
+
+
+
+
+
+
+
+</configs>

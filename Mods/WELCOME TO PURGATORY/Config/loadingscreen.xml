@@ -1,0 +1,30 @@
+<doc>
+
+	<set xpath="doc/backgrounds">
+		<tex file="@modfolder:GUI/loading_1.png" />
+	</set>
+    <append xpath="/doc/tips">
+        <tip key="loadingTipFireBad" />
+        <tip key="loadingTipGasoline" />
+        <tip key="loadingTipBodyHarvesting" />
+    </append>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</doc>

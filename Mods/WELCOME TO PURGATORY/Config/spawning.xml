@@ -1,0 +1,6 @@
+<configs>
+	<set xpath="/spawning/biome[@name='wasteland']/spawn[@time='Day']/@entitygroup">ZombiesWasteland</set>
+
+
+
+</configs>

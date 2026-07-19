@@ -1,0 +1,970 @@
+<configs>
+
+    <!--insertAfter xpath="/quests/quest[@id='tier1_fetch']">  
+
+        <quest id="InformationQuest">
+            <property name="name_key" value="InformationQuestTier1" param1="name"/>
+            <property name="subtitle_key" value="InformationQuestTier1__subtitle"/>
+            <property name="description_key" value="information_quest_fetch_description"/>
+            <property name="icon" value="ui_game_symbol_quest"/>
+            <property name="repeatable" value="false"/>
+            <property name="category_key" value="quest"/>
+            <property name="difficulty_tier" value="1" param1="difficulty"/>
+            <property name="offer_key" value="information_quest_tier1_fetch_offer" param1="offer"/>
+            <property name="statement_key" value="information_quest_fetch_statement"/>
+            <property name="response_key" value="information_quest_fetch_response"/>
+            <property name="login_rally_reset" value="true"/>
+            <property name="reward_choices_count" value="5"/>
+            <property name="filter_tags" value="poi" param1="filter_tags"/>
+            <property name="shareable" value="false"/>
+
+            <property name="completiontype" value="TurnIn"/>
+            <property name="completion_key" value="information_quest_fetch_completion"/>
+
+            <objective type="RandomPOIGoto">
+                <property name="phase" value="1"/>						
+                <property name="nav_object" value="quest"/>
+                <property name="poi_tier" value="-1" param1="poi_tier"/>
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>			
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="FetchFromContainer">
+                <property name="phase" value="3"/>
+                <property name="quest_item_ID" value="1"/>
+                <property name="item_count" value="1"/>
+                <property name="default_container" value="cntInformationQuestfile"/>
+                <property name="nav_object" value="fetch_container"/>
+            </objective>
+            
+            <reward type="Item" id="Informationfile"/>
+
+
+            <objective type="ClearSleepers">
+                <property name="phase" value="3"/>
+                <property name="nav_object" value="sleeper_volume"/>
+            </objective>
+
+            <objective type="POIStayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="25"/>
+            </objective>
+
+            <action type="UnlockPOI" >
+                <property name="phase" value="4"/>
+            </action>
+
+            <objective type="ReturnToNPC">
+                <property name="phase" value="4"/>
+                <property name="nav_object" value="return_to_trader"/>
+            </objective>
+
+            <objective type="InteractWithNPC">
+                <property name="phase" value="4"/>
+                <property name="nav_object" value="return_to_trader"/>
+            </objective>
+
+
+            <reward type="LootItem" id="groupQuestFood,groupQuestAmmo,groupQuestSchematics" ischosen="true" value="1"/>
+            <reward type="LootItem" id="groupQuestFood,groupQuestAmmo,groupQuestSchematics" ischosen="true" value="1"/>
+            <reward type="LootItem" id="groupQuestFood,groupQuestAmmo,groupQuestSchematics" ischosen="true" value="1"/>
+            <reward type="LootItem" id="groupQuestFood,groupQuestAmmo,groupQuestSchematics" ischosen="true" value="1"/>
+            <reward type="LootItem" id="groupQuestMedical,groupQuestAmmo,groupQuestSchematics" ischosen="true" value="1"/>
+            <reward type="LootItem" id="groupQuestResourcesT0" ischosen="true" value="1"/>
+            <reward type="LootItem" id="groupQuestResourcesT0,groupQuestT1SkillMagazineBundle" ischosen="true" value="1"/>
+        </quest>
+    </insertAfter>
+
+
+    <append xpath="/quests/quest_list[@id='trader_rekt_quests']">  
+        <quest id="InformationQuest"/>
+    </append-->
+
+
+    <append xpath="/quests"> 
+
+        <quest id="Quest1InformationOnRekt">
+            <property name="name_key" value="Quest1InformationOnRekt"/>
+            <property name="subtitle_key" value="Quest1InformationOnRekt_subtitle"/>
+            <property name="description_key" value="Quest1InformationOnRekt_Desc"/>
+            <property name="icon" value="ui_game_symbol_quest"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer_key" value="Quest1InformationOnRekt_offer"/>
+            <property name="difficulty_tier" value="0"/>
+            <property name="shareable" value="false"/>
+
+            <objective type="RandomPOIGoto">
+                <property name="phase" value="1"/>						
+                <property name="nav_object" value="quest"/>
+                <property name="poi_tier" value="1" param1="poi_tier"/>
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="ClearSleepers">
+                <property name="phase" value="3"/>
+                <property name="nav_object" value="sleeper_volume"/>
+            </objective>
+
+            <objective type="POIStayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="25"/>
+            </objective>
+
+            <action type="UnlockPOI" >
+                <property name="phase" value="4"/>
+            </action>
+
+            <reward type="Exp" value="1000"/>
+            <reward type="Item" id="casinoCoin" value="500"/>
+            <reward type="Item" id="InformationfileonRekt"/>
+            <reward type="Item" id="Quest1InformationOnRektSon"/>
+        </quest>
+
+        <quest id="Quest1InformationOnRektSon">
+            <property name="name_key" value="Quest1InformationOnRektSon"/>
+            <property name="subtitle_key" value="Quest1InformationOnRektSon_subtitle"/>
+            <property name="description_key" value="Quest1InformationOnRektSon_Desc"/>
+            <property name="icon" value="ui_game_symbol_quest"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer_key" value="Quest1InformationOnRektSon_offer"/>
+            <property name="difficulty_tier" value="0"/>
+            <property name="shareable" value="false"/>
+
+            <objective type="RandomPOIGoto">
+                <property name="phase" value="1"/>						
+                <property name="nav_object" value="quest"/>
+                <property name="poi_tier" value="1" param1="poi_tier"/>
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="ClearSleepers">
+                <property name="phase" value="3"/>
+                <property name="nav_object" value="sleeper_volume"/>
+            </objective>
+
+            <objective type="POIStayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="25"/>
+            </objective>
+
+            <action type="UnlockPOI" >
+                <property name="phase" value="4"/>
+            </action>
+
+            <reward type="Exp" value="1000"/>
+            <reward type="Item" id="casinoCoin" value="500"/>
+            <reward type="Item" id="InformationfileonRektSon"/>
+        </quest>
+
+        <!--quest id="challenge1Zombie">
+            <property name="name_key" value="Just A Small Town Girl"/>
+            <property name="subtitle_key" value="Survive The Zombie Horde"/>
+            <property name="description_key" value="challenge1ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of zombies?
+    [FFFF00]Task:
+    [CD7F32]Arlene - [228B22]3
+    [CD7F32]Darlene - [228B22]3
+    [CD7F32]Marlene - [228B22]3
+    "/>
+            <property name="difficulty" value="veryeasy"/>
+            <property name="shareable" value="false"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="nav_object" value="quest" />
+                <property name="completion_distance" value="20"/>
+			    <property name="distance" value="100-150"/>
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="50"/>
+            </objective>
+
+            <objective type="EntityKill" id="zombieArlene" value="3" phase="3" />
+            <objective type="EntityKill" id="zombieDarlene" value="3" phase="3" />
+            <objective type="EntityKill" id="zombieMarlene" value="3" phase="3" />
+
+            <action type="SpawnEnemy" id="zombieArlene" value="3" phase="3"/>
+            <action type="SpawnEnemy" id="zombieDarlene" value="3" phase="3"/>
+            <action type="SpawnEnemy" id="zombieMarlene" value="3" phase="3"/>
+
+            <reward type="Exp" value="3000" />
+            <reward type="Item" id="casinoCoin" value="1000" />
+        </quest-->
+
+        <quest id="challenge51Zombie">
+            <property name="name_key" value="All Exploding Dogs Go To Heaven"/>
+            <property name="subtitle_key" value="Survive The Exploding Zombie Dogs"/>
+            <property name="description_key" value="challenge51ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Zombie Dogs?
+    [FFFF00]Task:
+    [CD7F32]Exploding Zombie Dog - [228B22]9
+    "/>       
+            
+            <property name="difficulty" value="easy"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="75"/>
+            </objective>
+
+            <objective type="EntityKill" id="animalExplodingZombieDog" value="9" phase="3" />
+            
+            <action type="SpawnEnemy" id="animalExplodingZombieDog" value="9" phase="3"/>
+            
+            <reward type="Exp" value="4100" />
+            <reward type="Item" id="casinoCoin" value="1000-1200" />
+            <reward type="Item" id="ammoTicket" value="2" />
+        </quest>
+
+        <quest id="challenge52Zombie">
+            <property name="name_key" value="All Cats Go To Heaven"/>
+            <property name="subtitle_key" value="Survive The Feral House Cats"/>
+            <property name="description_key" value="challenge52ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Feral House Cats?
+    [FFFF00]Task:
+    [CD7F32]Feral House Cats - [228B22]9
+    "/>       
+            
+            <property name="difficulty" value="easy"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="75"/>
+            </objective>
+
+            <objective type="EntityKill" id="animalFeralHouseCat" value="9" phase="3" />
+            
+            <action type="SpawnEnemy" id="animalFeralHouseCat" value="9" phase="3"/>
+            
+            <reward type="Exp" value="4100" />
+            <reward type="Item" id="casinoCoin" value="1000-1200" />
+            <reward type="Item" id="ammoTicket" value="2" />
+        </quest>
+
+        <quest id="challenge53Zombie">
+            <property name="name_key" value="Snakes on a Plane"/>
+            <property name="subtitle_key" value="Survive The Onslaught Of Snakes"/>
+            <property name="description_key" value="challenge53ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Snakes and Venomous Snakes?
+    [FFFF00]Task:
+    [CD7F32]Cotton Mouth - [228B22]3
+    [CD7F32]Snake - [228B22]5
+    [CD7F32]Anaconda - [228B22]2
+    "/>       
+            
+            <property name="difficulty" value="easy"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="75"/>
+            </objective>
+
+            <objective type="EntityKill" id="animalCottonMouth" value="3" phase="3" />
+            <objective type="EntityKill" id="animalSnake" value="5" phase="3" />
+            <objective type="EntityKill" id="animalAnacondaSnake" value="2" phase="3" />
+
+            <action type="SpawnEnemy" id="animalCottonMouth" value="3" phase="3"/>
+            <action type="SpawnEnemy" id="animalSnake" value="5" phase="3"/>
+            <action type="SpawnEnemy" id="animalAnacondaSnake" value="2" phase="3"/>
+
+
+
+            <reward type="Exp" value="4100" />
+            <reward type="Item" id="casinoCoin" value="1000-1200" />
+            <reward type="Item" id="ammoTicket" value="2" />
+        </quest>
+
+        <quest id="challenge54Zombie">
+            <property name="name_key" value="No Pain No Gain"/>
+            <property name="subtitle_key" value="Survive The Onslaught Of Pain Deers and Doe"/>
+            <property name="description_key" value="challenge54ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Pain Deers and Doe?
+    [FFFF00]Task:
+    [CD7F32]Pain Stag - [228B22]4
+    [CD7F32]Pain Doe - [228B22]4
+    "/>       
+            
+            <property name="difficulty" value="easy"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="75"/>
+            </objective>
+
+            <objective type="EntityKill" id="animalPainStag" value="4" phase="3" />
+            <objective type="EntityKill" id="animalPainDoe" value="4" phase="3" />
+
+            <action type="SpawnEnemy" id="animalPainStag" value="4" phase="3"/>
+            <action type="SpawnEnemy" id="animalPainDoe" value="4" phase="3"/>
+
+            <reward type="Exp" value="4100" />
+            <reward type="Item" id="casinoCoin" value="1000-1200" />
+            <reward type="Item" id="ammoTicket" value="2" />
+        </quest>
+
+        <quest id="challenge55Zombie">
+            <property name="name_key" value="Brothers in Arms"/>
+            <property name="subtitle_key" value="Survive The Onslaught Of Wolfs and Chickens"/>
+            <property name="description_key" value="challenge55ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Wolfs and Chickens?
+    [FFFF00]Task:
+    [CD7F32]Battle Wolfs - [228B22]4
+    [CD7F32]Battle Chickens - [228B22]6
+    "/>       
+            
+            <property name="difficulty" value="easy"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="75"/>
+            </objective>
+
+            <objective type="EntityKill" id="animalBattleWolf" value="4" phase="3" />
+            <objective type="EntityKill" id="animalBattleChicken" value="6" phase="3" />
+
+            <action type="SpawnEnemy" id="animalBattleWolf" value="4" phase="3"/>
+            <action type="SpawnEnemy" id="animalBattleChicken" value="6" phase="3"/>
+
+            <reward type="Exp" value="4100" />
+            <reward type="Item" id="casinoCoin" value="1000-1200" />
+            <reward type="Item" id="ammoTicket" value="2" />
+        </quest>
+
+        <quest id="challenge56Zombie">
+            <property name="name_key" value="Tickle Me Time"/>
+            <property name="subtitle_key" value="Survive The Onslaught Of Tickle Me Demo"/>
+            <property name="description_key" value="challenge56ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Tickle Me Demo?
+    [FFFF00]Task:
+    [CD7F32]Tickle Me Demo - [228B22]9
+    "/>       
+            
+            <property name="difficulty" value="medium"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="100"/>
+            </objective>
+
+            <objective type="EntityKill" id="zombieTickleMeDemo" value="9" phase="3" />
+
+            <action type="SpawnEnemy" id="zombieTickleMeDemo" value="9" phase="3"/>
+
+            <reward type="Exp" value="6200" />
+            <reward type="Item" id="casinoCoin" value="2200-4400" />
+            <reward type="Item" id="ammoTicket" value="2" />
+        </quest>
+
+        <quest id="challenge57Zombie">
+            <property name="name_key" value="The Resetters"/>
+            <property name="subtitle_key" value="Survive The Onslaught Of Jumping Bean and Pickle Rick"/>
+            <property name="description_key" value="challenge57ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Jumping Bean and Pickle Rick?
+    [FFFF00]Task:
+    [CD7F32]Pickle Rick - [228B22]4
+    [CD7F32]Jumping Bean - [228B22]4
+    "/>       
+            
+            <property name="difficulty" value="medium"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="100"/>
+            </objective>
+
+            <objective type="EntityKill" id="Jumping Bean" value="4" phase="3" />
+            <objective type="EntityKill" id="Pickle Rick" value="4" phase="3" />
+
+            <action type="SpawnEnemy" id="Jumping Bean" value="4" phase="3"/>
+            <action type="SpawnEnemy" id="Pickle Rick" value="4" phase="3"/>
+
+            <reward type="Exp" value="6200" />
+            <reward type="Item" id="casinoCoin" value="2200-4400" />
+            <reward type="Item" id="ammoTicket" value="2" />
+        </quest>
+
+        <quest id="challenge58Zombie">
+            <property name="name_key" value="The Clucking King"/>
+            <property name="subtitle_key" value="Survive The Onslaught Of Clucking King"/>
+            <property name="description_key" value="challenge58ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Clucking King?
+    [FFFF00]Task:
+    [CD7F32]Clucking King - [228B22]25
+    "/>       
+            
+            <property name="difficulty" value="medium"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="100"/>
+            </objective>
+
+            <objective type="EntityKill" id="Clucking King" value="25" phase="3" />
+
+            <action type="SpawnEnemy" id="Clucking King" value="25" phase="3"/>
+
+            <reward type="Exp" value="6200" />
+            <reward type="Item" id="casinoCoin" value="2200-4400" />
+            <reward type="Item" id="ammoTicket" value="2" />
+        </quest>
+
+        <quest id="challenge59Zombie">
+            <property name="name_key" value="All Dogs Go to Heaven 2"/>
+            <property name="subtitle_key" value="Survive The Onslaught Of Chihuahua"/>
+            <property name="description_key" value="challenge59ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Chihuahua?
+    [FFFF00]Task:
+    [CD7F32]Chihuahua - [228B22]10
+    "/>       
+            
+            <property name="difficulty" value="medium"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="100"/>
+            </objective>
+
+            <objective type="EntityKill" id="animalChihuahua" value="10" phase="3" />
+
+            <action type="SpawnEnemy" id="animalChihuahua" value="10" phase="3"/>
+
+            <reward type="Exp" value="6200" />
+            <reward type="Item" id="casinoCoin" value="2200-4400" />
+            <reward type="Item" id="ammoTicket" value="2" />
+        </quest>
+
+        <quest id="challenge60Zombie">
+            <property name="name_key" value="Survive Yogi Bear"/>
+            <property name="subtitle_key" value="Survive The Horde Of Alpha Bears"/>
+            <property name="description_key" value="challenge60ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Alpha Bears?
+    [FFFF00]Task:
+    [CD7F32]Zombie Bear - [228B22]40 "/>
+                
+            <property name="difficulty" value="insane"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="200"/>
+            </objective>
+
+            <objective type="EntityKill" id="animalAlphaBear" value="40" phase="3" />
+        
+            <action type="SpawnEnemy" id="animalAlphaBear" value="40" phase="3"/>
+            
+            <reward type="Exp" value="29000" />
+            <reward type="Item" id="casinoCoin" value="9000" />
+            <reward type="Item" id="ammoTicket" value="10" />
+        </quest>
+
+        <quest id="challenge61Zombie">
+            <property name="name_key" value="Survive The Sharknado"/>
+            <property name="subtitle_key" value="Survive The Horde Of Flying Sharks"/>
+            <property name="description_key" value="challenge61ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Flying Sharks?
+    [FFFF00]Task:
+    [CD7F32]Sharks - [228B22]20 "/>
+                
+            <property name="difficulty" value="insane"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="200"/>
+            </objective>
+
+            <objective type="EntityKill" id="animalShark" value="20" phase="3" />
+        
+            <action type="SpawnEnemy" id="animalShark" value="20" phase="3"/>
+            
+            <reward type="Exp" value="29000" />
+            <reward type="Item" id="casinoCoin" value="10000" />
+            <reward type="Item" id="ammoTicket" value="10" />
+        </quest>
+
+        <quest id="challenge62Zombie">
+            <property name="name_key" value="Survive The Batnado"/>
+            <property name="subtitle_key" value="Survive The Horde Of Vampire Bats"/>
+            <property name="description_key" value="challenge62ZombieDesc"/>
+            <property name="icon" value="server_feral"/>
+            <property name="repeatable" value="true"/>
+            <property name="category_key" value="challenge"/>
+            <property name="offer" value="[FF0000]Can you survive the onslaught of Vampire Bats?
+    [FFFF00]Task:
+    [CD7F32]Bats - [228B22]10 "/>
+                
+            <property name="difficulty" value="insane"/>
+            <property name="shareable" value="true"/>
+
+            <objective type="RandomGoto" phase="1">
+                <property name="distance" value="100-150"/>
+                <property name="nav_object" value="quest" />
+            </objective>
+
+            <objective type="RallyPoint">
+                <property name="start_mode" value="Create"/>
+                <property name="phase" value="2"/>
+                <property name="nav_object" value="rally"/>
+                <property name="rally_marker_type" value="questRallyMarkerClear"/>
+            </objective>
+
+            <objective type="StayWithin">
+                <property name="phase" value="3"/>
+                <property name="radius" value="200"/>
+            </objective>
+
+            <objective type="EntityKill" id="animalVampireBat" value="10" phase="3" />
+        
+            <action type="SpawnEnemy" id="animalVampireBat" value="10" phase="3"/>
+            
+            <reward type="Exp" value="29000" />
+            <reward type="Item" id="casinoCoin" value="15000" />
+            <reward type="Item" id="ammoTicket" value="20" />
+        </quest>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </append>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <append xpath="/quests"> 
+
+    <!-- *** ZOMBIE_SLAYER_REWARDS -->
+        <quest id="quest_reward_hornet_zombie_slayer" template="challengegroup_reward_homesteading">
+            <variable name="name" value="zombie_slayer_name_hornet"/>
+            <variable name="subtitle" value="zombie_slayer_subtitle_hornet"/>
+            <variable name="description" value="zombie_slayer_desc"/>
+            <property name="completion_key" value="zombie_slayer_completion"/>
+            
+            <reward type="Exp" value="10000"/>
+            <reward type="Item" id="ammoBundleArrowSteelAP" ischosen="true" isfixed="true" value="5"/>
+            <reward type="Item" id="ammoBundle9mmBulletAP" ischosen="true" isfixed="true" value="5"/>
+            <reward type="Item" id="ammoBundleShotgunSlug" ischosen="true" isfixed="true" value="5"/>
+            <reward type="Item" id="ammoBundle762mmBulletAP" ischosen="true" isfixed="true" value="5"/>
+            <reward type="Item" id="ammoBundleJunkTurretAP" ischosen="true" isfixed="true" value="5"/>
+        </quest>
+
+    <!-- Kill_Any_Zombies_Challenge_Reward -->
+        <quest id="quest_reward_behemoth_zombie_slayer" template="challengegroup_reward_homesteading">
+            <variable name="name" value="zombie_slayer_name_behemoth_zombies"/>
+            <variable name="subtitle" value="zombie_slayer_subtitle_behemoth_zombies"/>
+            <variable name="description" value="zombie_slayer_desc"/>
+            <variable name="completion" value="zombie_slayer_completion"/>
+            <!-- Challenge Rewards are localized. Update challengeKillRewardRegAmmo if this list is changed. -->
+            <reward type="Exp" value="10000"/>
+            <reward type="Item" id="ammoArrowSteelAP" ischosen="true" isfixed="true" value="150"/>
+            <reward type="Item" id="ammo9mmBulletBall" ischosen="true" isfixed="true" value="300"/>
+            <reward type="Item" id="ammoShotgunShell" ischosen="true" isfixed="true" value="150"/>
+            <reward type="Item" id="ammo762mmBulletBall" ischosen="true" isfixed="true" value="150"/>
+            <reward type="Item" id="ammoJunkTurretRegular" ischosen="true" isfixed="true" value="1000"/>
+        </quest>
+
+    <!-- Kill_Vulture_Challenge_Reward -->
+        <quest id="quest_reward_Tickle_Me_Demo_zombie_slayer" template="challengegroup_reward_homesteading">
+            <variable name="name" value="zombie_slayer_name_Tickle_Me_Demo"/>
+            <variable name="subtitle" value="zombie_slayer_subtitle_Tickle_Me_Demo"/>
+            <variable name="description" value="zombie_slayer_desc"/>
+            <variable name="completion" value="zombie_slayer_completion"/>
+            <!-- Challenge Rewards are localized. Update challengeKillRewardRegAmmo if this list is changed. -->
+            <reward type="Exp" value="10000"/>
+            <reward type="Item" id="ammoArrowSteelAP" ischosen="true" isfixed="true" value="150"/>
+            <reward type="Item" id="ammo9mmBulletAP" ischosen="true" isfixed="true" value="300"/>
+            <reward type="Item" id="ammoShotgunSlug" ischosen="true" isfixed="true" value="150"/>
+            <reward type="Item" id="ammo762mmBulletAP" ischosen="true" isfixed="true" value="150"/>
+            <reward type="Item" id="ammoJunkTurretAP" ischosen="true" isfixed="true" value="1000"/>
+        </quest>
+
+    <!-- Kill_jumpingbean_Challenge_Reward -->
+        <quest id="quest_reward_jumpingbean_zombie_slayer" template="challengegroup_reward_homesteading">
+            <variable name="name" value="zombie_slayer_name_jumpingbean"/>
+            <variable name="subtitle" value="zombie_slayer_subtitle_jumpingbean"/>
+            <variable name="description" value="zombie_slayer_desc"/>
+            <variable name="completion" value="zombie_slayer_completion"/>
+            <!-- Challenge Rewards are localized. Update challengeKillRewardExplosives if this list is changed. -->
+            <reward type="Exp" value="10000"/>
+            <reward type="Item" id="thrownAmmoMolotovCocktail" ischosen="true" isfixed="true" value="20"/>
+            <reward type="Item" id="thrownGrenade" ischosen="true" isfixed="true" value="25"/>
+            <reward type="Item" id="thrownGrenadeContact" ischosen="true" isfixed="true" value="25"/>
+            <reward type="Item" id="thrownTimedCharge" ischosen="true" isfixed="true" value="10"/>
+            <reward type="Item" id="mineAirFilter" ischosen="true" isfixed="true" value="10"/>
+        </quest>
+
+    <!-- Kill_battlechicken_Challenge_Reward -->
+        <quest id="quest_reward_battlechicken_zombie_slayer" template="challengegroup_reward_homesteading">
+            <variable name="name" value="zombie_slayer_name_battlechicken"/>
+            <variable name="subtitle" value="zombie_slayer_subtitle_battlechicken"/>
+            <variable name="description" value="zombie_slayer_desc"/>
+            <variable name="completion" value="zombie_slayer_completion"/>
+            <!-- Challenge Rewards are localized. Update challengeKillRewardMods if this list is changed. -->
+            <reward type="Exp" value="10000"/>
+            <reward type="Item" id="modArmorCigar" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modArmorHelmetLight" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modArmorBandolier" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modArmorTripleStoragePocket" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modArmorImpactBracing" ischosen="true" isfixed="true" value="1"/>
+        </quest>
+
+    <!-- Kill_battlewolf_Challenge_Reward -->
+        <quest id="quest_reward_battlewolf_zombie_slayer" template="challengegroup_reward_homesteading">
+            <variable name="name" value="zombie_slayer_name_battlewolf"/>
+            <variable name="subtitle" value="zombie_slayer_subtitle_battlewolf"/>
+            <variable name="description" value="zombie_slayer_desc"/>
+            <variable name="completion" value="zombie_slayer_completion"/>
+            <!-- Challenge Rewards are localized. Update challengeKillRewardMods if this list is changed. -->
+            <reward type="Exp" value="10000"/>
+            <reward type="Item" id="modGunCrippleEm" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modGunSoundSuppressorSilencer" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modGunShotgunTubeExtenderMagazine" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modGunDrumMagazineExtender" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modGunMeleeRadRemover" ischosen="true" isfixed="true" value="1"/>
+        </quest>
+
+    <!-- Kill_flamincop_Challenge_Reward -->
+        <quest id="quest_reward_flamincop_zombie_slayer" template="challengegroup_reward_homesteading">
+            <variable name="name" value="zombie_slayer_name_flamincop"/>
+            <variable name="subtitle" value="zombie_slayer_subtitle_flamincop"/>
+            <variable name="description" value="zombie_slayer_desc"/>
+            <variable name="completion" value="zombie_slayer_completion"/>
+            <!-- Challenge Rewards are localized. Update challengeKillRewardMods if this list is changed. -->
+            <reward type="Exp" value="10000"/>
+            <reward type="Item" id="modArmorPerception" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modArmorStrength" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modArmorFortitude" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modArmorAgility" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="modArmorIntellect" ischosen="true" isfixed="true" value="1"/>
+        </quest>
+
+    <!-- Kill_Wight_Challenge_Reward -->
+        <quest id="quest_reward_ragechicken_zombie_slayer" template="challengegroup_reward_homesteading">
+            <variable name="name" value="zombie_slayer_name_wight"/>
+            <variable name="subtitle" value="zombie_slayer_subtitle_wight"/>
+            <variable name="description" value="zombie_slayer_desc"/>
+            <variable name="completion" value="zombie_slayer_completion"/>
+            <!-- Challenge Rewards are localized. Update challengeKillRewardLegendary if this list is changed. -->
+            <reward type="Exp" value="10000"/>
+            <reward type="Item" id="questRewardLegendarySteelSpearCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="questRewardLegendarySteelClubCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="questRewardLegendarySteelKnuckleCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="questRewardLegendaryMacheteCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+            <reward type="Item" id="questRewardLegendaryBatonCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+        </quest>
+
+    </append>
+
+	<append xpath="/quests">
+	
+		<!-- Generic Skill Point Quest-->
+		<quest id="quest_genericskillpoints">
+			<property name="name_key" value="quest_genericskillpoints" />
+			<property name="subtitle_key" value="quest_genericskillpoints_subtitle" />
+			<property name="description_key" value="quest_genericskillpoints_description" />
+			<property name="icon" value="ui_game_symbol_tailoring" />
+			<property name="category_key" value="challenge" />
+			<property name="offer_key" value="quest_genericskillpoints_offer" />
+			<property name="repeatable" value="true" />
+			<property name="difficulty" value="veryeasy" />
+			<property name="shareable" value="false" />
+
+			<reward type="SkillPoints" value="1" /> 
+		</quest>
+
+		<quest id="quest_Multigenericskillpoints">
+			<property name="name_key" value="quest_Multigenericskillpoints" />
+			<property name="subtitle_key" value="quest_Multigenericskillpoints_subtitle" />
+			<property name="description_key" value="quest_Multigenericskillpoints_description" />
+			<property name="icon" value="ui_game_symbol_tailoring" />
+			<property name="category_key" value="challenge" />
+			<property name="offer_key" value="quest_Multigenericskillpoints_offer" />
+			<property name="repeatable" value="true" />
+			<property name="difficulty" value="veryeasy" />
+			<property name="shareable" value="false" />
+
+			<reward type="SkillPoints" value="25" /> 
+		</quest>
+
+
+	</append>
+
+</configs>

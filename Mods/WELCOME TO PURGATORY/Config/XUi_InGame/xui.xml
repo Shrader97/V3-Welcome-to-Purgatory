@@ -1,0 +1,208 @@
+<configs>
+    <remove xpath="/xui/window_group[@name='workstation_chemistryStation']" />
+
+	<append xpath="/xui">
+
+		<window_group name="workstation_chemistryStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+			<window name="windowToolschemistryStation" />
+            <window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+
+        <window_group name="workstation_GunsmithBence" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowToolsGunsmithBence" />
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_AmmoBench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowToolsAmmoBench" />
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_JewelryBench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_AlchemyTable" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowToolsAlchemyTable" />
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+		<window_group name="workstation_PreciousMetalForge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsPreciousMetalForge" />
+			<window name="windowFuel" />
+			<window name="windowOutputtwelve" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+
+        <window_group name="workstation_BenchtopLathe" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowToolsBenchtopLathe" />
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_Recycler" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_CowStable001" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+            <window name="windowToolsCowStable" />
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_ChickenCoop001" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+            <window name="windowToolsChickenCoop" />
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_PigStable001" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+            <window name="windowToolsCowStable" />
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_GoatStable001" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+            <window name="windowToolsCowStable" />
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_SheepStable001" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+            <window name="windowToolsCowStable" />
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+		<window_group name="workstation_writingDesk" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutputtwelve" />
+			<window name="windowNonPagingHeader" />
+		</window_group>	
+
+		<window_group name="workstation_smallchemistryStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+			<window name="windowToolsSCS" />
+            <window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowFuel" />
+			<window name="windowOutputtwelve" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+
+        <window_group name="workstation_AdvChemistryStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+		<window_group name="workstation_WorkingStove" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowToolsStove" />
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowFuel" />
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutputtwelve" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+
+		<window_group name="workstation_CoffeeMaker" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowToolsCoffeeMaker" />
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutputtwelve" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+
+		<window_group name="workstation_CommercialCoffeeMaker" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowToolsCommercialCoffeeMaker" />
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutputtwelve" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+        
+		<window_group name="workstation_workingMicrowave" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+    </append>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--insertAfter xpath="/xui/ruleset/window_group[@name='workstation_chemistryStation']" >
+		<window_group name="workstation_workingMicrowave" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+	</insertAfter--> 
+
+
+</configs>

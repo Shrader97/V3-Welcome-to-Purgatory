@@ -1,0 +1,492 @@
+<config>
+
+<insertAfter xpath="/challenges/challenge_category[@name='Twitch']">
+	<challenge_category name="Shrader971's Challenge's" title_key="xuiChallenge" icon="ui_game_symbol_star"/>
+	<!--challenge_category name="Shrader971's Challenge's Stage 2" title_key="xuiChallenge" icon="ui_game_symbol_rank2"/-->
+</insertAfter>
+
+<insertAfter xpath="/challenges/challenge_group[@category='Twitch'][@name='Silly']">
+	<!-- *** CHALLENGE_REWARDS_PAGE_04 -->
+	<challenge_group category="Shrader971's Challenge's" name="Advanced Hunter" title_key="challengeGroupAdvancedHunter"
+	reward_text_key="challengeRewardBonusAdvancedHunterReward" reward_event="challenge_group_reward_advanced_hunter" link_challenges="true" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's" name="Advanced Farmer" title_key="challengeGroupAdvancedFarmer"
+	reward_text_key="challengeRewardBonusAdvancedFarmerReward" reward_event="challenge_group_reward_advanced_farmer" link_challenges="true" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's" name="Advanced Gatherer" title_key="challengeGroupAdvancedGatherer"
+	reward_text_key="challengeRewardBonusAdvancedGathererReward" reward_event="challenge_group_reward_advanced_gatherer" link_challenges="true" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's" name="Advanced Workstations" title_key="challengeGroupAdvancedCrafting"
+	reward_text_key="challengeRewardBonusAdvancedCraftingReward" reward_event="challenge_group_reward_Advanced_crafting" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's" name="Advanced Zombies" title_key="challengeGroupAdvancedZombieSlayer"
+	reward_text_key="challengeRewardBonusAdvancedSlayerReward" reward_event="challenge_group_reward_zombie_advanced_slayer" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's" name="Elite Zombes" title_key="challengeGroupEliteZombieSlayer"
+	reward_text_key="challengeRewardBonusEliteSlayerReward" reward_event="challenge_group_reward_zombie_elite_slayer" hidden_by="Basics"/>
+
+	<!-- *** CHALLENGE_REWARDS_PAGE_05
+	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Hunter" title_key="challengeGroupAdvancedHunter"
+	reward_text_key="challengeRewardBonusAdvancedHunterReward" reward_event="challenge_group_reward_advanced_hunter" link_challenges="true" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Farmer" title_key="challengeGroupAdvancedFarmer"
+	reward_text_key="challengeRewardBonusAdvancedFarmerReward" reward_event="challenge_group_reward_advanced_farmer" link_challenges="true" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Gatherer" title_key="challengeGroupAdvancedGatherer"
+	reward_text_key="challengeRewardBonusAdvancedGathererReward" reward_event="challenge_group_reward_advanced_gatherer" link_challenges="true" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Workstations" title_key="challengeGroupAdvancedCrafting"
+	reward_text_key="challengeRewardBonusAdvancedCraftingReward" reward_event="challenge_group_reward_Advanced_crafting" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Zombies" title_key="challengeGroupAdvancedZombieSlayer"
+	reward_text_key="challengeRewardBonusAdvancedSlayerReward" reward_event="challenge_group_reward_zombie_advanced_slayer" hidden_by="Basics"/>
+
+	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Elite Zombes" title_key="challengeGroupEliteZombieSlayer"
+	reward_text_key="challengeRewardBonusEliteSlayerReward" reward_event="challenge_group_reward_zombie_elite_slayer" hidden_by="Basics"/>
+ -->
+
+</insertAfter>
+
+<insertAfter xpath="/challenges/challenge[@name='twitchHomerunDerby']">
+	<!-- Hunter -->
+	<challenge name="killExplodingZombieDog" title_key="challengeKillExplodingZombieDog" icon="ui_game_symbol_tracking_wolf" icon_color="0,0,255" group="Advanced Hunter"
+	short_description_key="challengeKillExplodingZombieDogShort" description_key="challengeKillExplodingZombieDogDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_Exploding_Zombie_Dog_hunter">
+		<objective type="Kill" entity_names="animalExplodingZombieDog" count="50"/>
+	</challenge>
+
+	<challenge name="killExplodingDireWolf" title_key="challengeKillExplodingDireWolf" icon="ui_game_symbol_tracking_wolf" group="Advanced Hunter"
+	short_description_key="challengeKillExplodingDireWolfShort" description_key="challengeKillExplodingDireWolfDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_ExplodingDireWolf_hunter">
+		<objective type="Kill" entity_names="animalExplodingDireWolf" count="50"/>
+	</challenge>
+
+	<challenge name="killChihuahua" title_key="challengeKillChihuahua" icon="ui_game_symbol_tracking_wolf" group="Advanced Hunter"
+	short_description_key="challengeKillChihuahuaShort" description_key="challengeKillChihuahuaDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_coyote_hunter">
+		<objective type="Kill" entity_names="animalChihuahua" count="50"/>
+	</challenge>
+
+	<challenge name="killMiniBossGrace" title_key="challengeKillMiniBossGrace" icon="ui_game_symbol_tracking_pig" group="Advanced Hunter"
+	short_description_key="challengeKillMiniBossGraceShort" description_key="challengeKillMiniBossGraceDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_MiniBossGrace_hunter">
+		<objective type="Kill" entity_names="animalMiniBossGrace" count="50"/>
+	</challenge>
+
+	<challenge name="killCottonMouth" title_key="challengeKillCottonMouth" icon="ui_game_symbol_tracking_snake" group="Advanced Hunter"
+	short_description_key="challengeKillCottonMouthShort" description_key="challengeKillCottonMouthDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_snake_hunter">
+		<objective type="Kill" entity_names="animalCottonMouth" count="50"/>
+	</challenge>
+
+	<challenge name="killPainDeers" title_key="challengeKillPainDeers" icon="ui_game_symbol_tracking_deer" group="Advanced Hunter"
+	short_description_key="challengeKillPainDeersShort" description_key="challengeKillPainDeersDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_boar_hunter">
+		<objective type="Kill" entity_names="animalPainDoe,animalPainStag" count="50"/>
+	</challenge>
+
+	<challenge name="killAnaconda" title_key="challengeKillAnaconda" icon="ui_game_symbol_tracking_snake" group="Advanced Hunter"
+	short_description_key="challengeKillAnacondaShort" description_key="challengeKillAnacondaDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_wolf_hunter">
+		<objective type="Kill" entity_names="animalAnacondaSnake" count="50"/>
+	</challenge>
+
+	<challenge name="killFeralHouseCat" title_key="challengeKillFeralHouseCats" icon="ui_game_symbol_tracking_mountain_lion" group="Advanced Hunter"
+	short_description_key="challengeKillFeralHouseCatsShort" description_key="challengeKillFeralHouseCatsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_lion_hunter">
+		<objective type="Kill" entity_names="animalFeralHouseCat" count="50"/>
+	</challenge>
+
+	<challenge name="killAlphaBears" title_key="challengeKillAlphaBears" icon="ui_game_symbol_tracking_bear" group="Advanced Hunter"
+	short_description_key="challengeKillAlphaBearsShort" description_key="challengeKillAlphaBearsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_bear_hunter">
+		<objective type="Kill" entity_names="animalAlphaBear" count="50"/>
+	</challenge>
+
+	<challenge name="killAnySpecialAnimal" title_key="challengeHuntSpecialAnimals" icon="ui_game_symbol_animal_tracker" group="Advanced Hunter"
+	short_description_key="challengeSpecialHuntAnimalsShort" description_key="challengeHuntSpecialAnimalsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_any_animal_hunter">
+		<objective type="KillByTag" entity_tags="animalExplodingZombieDog,animalExplodingDireWolf,animalChihuahua,animalMiniBossGrace,animalCottonMouth,animalPainDoe,animalPainStag,animalAnacondaSnake,animalFeralHouseCat,animalAlphaBear" target_name_key="xuiAnimals" count="500"/>
+	</challenge>
+
+	<!-- Farmer -->
+	
+	<challenge name="farmingBellPepper" title_key="challengeFarmingBellPepper" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingBellPepperShort" description_key="challengeFarmingBellPepperDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropBellPepper" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingCabbage" title_key="challengeFarmingCabbage" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingCabbageShort" description_key="challengeFarmingCabbageDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropCabbage" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingCantaloupe" title_key="challengeFarmingCantaloupe" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingCantaloupeShort" description_key="challengeFarmingCantaloupeDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropCantaloupe" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingChiliPepper" title_key="challengeFarmingChiliPepper" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingChiliPepperShort" description_key="challengeFarmingChiliPepperDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropChiliPepper" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingEggplant" title_key="challengeFarmingEggplant" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingEggplantShort" description_key="challengeFarmingEggplantDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropEggplant" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingStrawberry" title_key="challengeFarmingStrawberry" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingStrawberryShort" description_key="challengeFarmingStrawberryDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropStrawberry" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingGarlic" title_key="challengeFarmingGarlic" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingGarlicShort" description_key="challengeFarmingGarlicDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropGarlic" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingGrapes" title_key="challengeFarmingGrapes" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingGrapesShort" description_key="challengeFarmingGrapesDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropGrapes" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingLeek" title_key="challengeFarmingLeek" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingLeekShort" description_key="challengeFarmingLeekDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropLeek" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingOnion" title_key="challengeFarmingOnion" icon="ui_game_symbol_crops" group="Advanced Farmer"
+		short_description_key="challengeFarmingOnionShort" description_key="challengeFarmingOnionDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropOnion" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<!-- Advanced Gatherer -->
+
+	<challenge name="gathererTitanium" title_key="challengeGathererTitanium" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererTitaniumShort" description_key="challengeGathererTitaniumDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="resourceTitanium" count="10000"/>
+	</challenge>
+
+	<challenge name="gathererCopper" title_key="challengeGathererCopper" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererCopperShort" description_key="challengeGathererCopperDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="resourceCopper" count="10000"/>
+	</challenge>
+
+	<challenge name="gathererZinc" title_key="challengeGathererZinc" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererZincShort" description_key="challengeGathererZincDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="resourceZinc" count="10000"/>
+	</challenge>
+
+	<challenge name="gathererTungsten" title_key="challengeGathererTungsten" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererTungstenShort" description_key="challengeGathererTungstenDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="resourceTungsten" count="10000" disable_tracking="true"/>
+	</challenge>
+
+	<challenge name="gathererTantalum" title_key="challengeGathererTantalum" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererTantalumShort" description_key="challengeGathererTantalumDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="resourceTantalum" count="10000" block_tag="ore"/>
+	</challenge>
+
+	<!--challenge name="gathererLead" title_key="challengeGathererLead" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererLeadShort" description_key="challengeGathererLeadDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="resourceScrapLead" count="1000" block_tag="ore"/>
+	</challenge>
+
+	<challenge name="gathererCoal" title_key="challengeGathererCoal" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererCoalShort" description_key="challengeGathererCoalDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="resourceCoal" count="1000" block_tag="ore"/>
+	</challenge>
+
+	<challenge name="gathererPotassium" title_key="challengeGathererPotassium" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererPotassiumShort" description_key="challengeGathererPotassiumDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="resourcePotassiumNitratePowder" count="1000" block_tag="ore"/>
+	</challenge>
+
+	<challenge name="gathererOilShale" title_key="challengeGathererOilShale" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererOilShaleShort" description_key="challengeGathererOilShaleDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="resourceOilShale" count="1000" block_tag="ore"/>
+	</challenge>
+
+	<challenge name="gathererPrecious" title_key="challengeGathererPrecious" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererPreciousShort" description_key="challengeGathererPreciousDesc"
+		reward_text_key="challenge_reward_10000xp" reward_event="challenge_reward_10000">
+		<objective type="Harvest" item="resourceSilverNugget" count="20" block_tag="ore"/>
+		<objective type="Harvest" item="resourceGoldNugget" count="20" block_tag="ore"/>
+		<objective type="Harvest" item="resourceRawDiamond" count="20" block_tag="ore"/>
+	</challenge-->
+
+	<!-- Workstations CRAFTING -->
+	<!--challenge name="placeAdvForge" title_key="challengePlaceAdvForge" icon="ui_game_symbol_forge" group="Advanced Workstations"
+		short_description_key="challengePlaceAdvForgeShort" description_key="challengePlaceAdvForgeDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="BlockPlace" block="AdvForge" count="1"/>
+	</challenge>
+
+	<challenge name="placeBenchtopLathe" title_key="challengePlaceBenchtopLathe" icon="ui_game_symbol_BenchtopLathe" group="Advanced Workstations"
+		short_description_key="challengePlaceBenchtopLatheShort" description_key="challengePlaceBenchtopLatheDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="BlockPlace" block="BenchtopLathe" count="1"/>
+	</challenge-->
+
+	<challenge name="craftForgedTitanium" title_key="challengeCraftForgedTitanium" icon="ui_game_symbol_hammer" group="Advanced Workstations"
+		short_description_key="challengeCraftForgedTitaniumShort" description_key="challengeCraftForgedTitaniumDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Craft" item="resourceForgedTitanium" count="500" show_requirements="false"/>
+	</challenge>
+
+	<challenge name="placeAmmoBench" title_key="challengePlaceAmmoBench" icon="ui_game_symbol_AmmoBench" group="Advanced Workstations"
+		short_description_key="challengePlaceAmmoBenchShort" description_key="challengePlaceAmmoBenchDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="BlockPlace" block="AmmoBench" count="1"/>
+	</challenge>
+
+	<challenge name="craftAdvGrenadeContact" title_key="challengeCraftAdvGrenadeContact" icon="ui_game_symbol_hammer" group="Advanced Workstations"
+		short_description_key="challengeCraftAdvGrenadeContactShort" description_key="challengeCraftAdvGrenadeContactDesc"
+		reward_text_key="challenge_reward_2500xp" reward_event="challenge_reward_2500">
+		<objective type="Craft" item="thrownAdvGrenadeContact" count="50"/>
+	</challenge>
+
+	<challenge name="craftAdvGrenade" title_key="challengeCraftAdvGrenade" icon="ui_game_symbol_hammer" group="Advanced Workstations"
+		short_description_key="challengeCraftAdvGrenadeShort" description_key="challengeCraftAdvGrenadeDesc"
+		reward_text_key="challenge_reward_2500xp" reward_event="challenge_reward_2500">
+		<objective type="Craft" item="thrownAdvGrenade" count="50"/>
+	</challenge>
+
+	<challenge name="placeRecycler" title_key="challengePlaceRecycler" icon="ui_game_symbol_drillpress" group="Advanced Workstations"
+		short_description_key="challengePlaceRecyclerShort" description_key="challengePlaceRecyclerDesc"
+		reward_text_key="challenge_reward_2500xp" reward_event="challenge_reward_2500">
+		<objective type="BlockPlace" block="Recycler" count="1"/>
+	</challenge>
+
+	<challenge name="craftStainLessSteelPolish" title_key="challengeCraftStainLessSteelPolish" icon="ui_game_symbol_hammer" group="Advanced Workstations"
+		short_description_key="challengeCraftStainLessSteelPolishShort" description_key="challengeCraftStainLessSteelPolishDesc"
+		reward_text_key="challenge_reward_2500xp" reward_event="challenge_reward_2500">
+		<objective type="Craft" item="StainLessSteelPolish" count="1000"/>
+	</challenge>
+
+	<!--challenge name="placeChemistryStation" title_key="challengePlaceChemistryStation" icon="ui_game_symbol_chemistry" group="Advanced Workstations"
+		short_description_key="challengePlaceChemistryStationShort" description_key="challengePlaceChemistryStationDesc"
+		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
+		<objective type="BlockPlace" block="chemistryStation" count="1"/>
+	</challenge>
+
+	<challenge name="craftGasCan" title_key="challengeCraftGasCan" icon="ui_game_symbol_hammer" group="Advanced Workstations"
+		short_description_key="challengeCraftGasCanShort" description_key="challengeCraftGasCanDesc"
+		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
+		<objective type="Craft" item="ammoGasCan" count="100"/>
+	</challenge-->
+
+	<!-- *** ZOMBIE_SLAYER_CHALLENGES -->
+
+	<challenge name="killHornets" title_key="challengeKillHornets" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillHornetsShort" description_key="challengeKillHornetsDesc"
+		reward_text_key="challengeKillRewardRegAmmo" reward_event="reward_hornet_zombie_slayer">
+		<objective type="Kill" entity_names="animalHornet,animalQueenHornet,animalRadiatedHornet,animalInfernalHornet,animalChargedHornet" count="50"/>
+	</challenge>
+
+	<challenge name="killBehemoths" title_key="challengeKillBehemoths" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillBehemothsShort" description_key="challengeKillBehemothsDesc"
+		reward_text_key="challengeKillRewardRegAmmo" reward_event="reward_behemoth_zombie_slayer">
+		<objective type="Kill" entity_names="zombieBehemoth,zombieBehemothRadiated" count="50"/>
+	</challenge>
+
+	<challenge name="killTickleMeDemo" title_key="challengeKillTickleMeDemos" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillTickleMeDemosShort" description_key="challengeKillTickleMeDemosDesc"
+		reward_text_key="challengeKillRewardExplosives" reward_event="reward_Tickle_Me_Demo_zombie_slayer">
+		<objective type="Kill" entity_names="zombieTickleMeDemo" count="50"/>
+	</challenge>
+
+	<challenge name="killPickleRick" title_key="challengeKillPickle RickZombies" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillPickle RickZombiesShort" description_key="challengeKillPickle RickZombiesDesc"
+		reward_text_key="challengeKillRewardMods" reward_event="reward_pickle_rick_zombie_slayer">
+		<objective type="Kill" entity_names="Pickle Rick" count="50"/>
+	</challenge>
+
+	<challenge name="killJumpingBean" title_key="challengeKillJumping Bean" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillJumpingBeanShort" description_key="challengeKillJumpingBeanDesc"
+		reward_text_key="challengeKillRewardMods" reward_event="reward_jumpingbean_zombie_slayer">
+		<objective type="Kill" entity_names="Jumping Bean" count="50"/>
+	</challenge>
+
+	<challenge name="killBattleChicken" title_key="challengeKillBattleChickenZombies" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillBattleChickenZombiesShort" description_key="challengeKillBattleChickenZombiesDesc"
+		reward_text_key="challengeKillRewardMods" reward_event="reward_battlechicken_zombie_slayer">
+		<objective type="Kill" entity_names="animalBattleChicken" count="50"/>
+	</challenge>
+
+	<challenge name="killBattleWolf" title_key="challengeKillBattleWolf" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillBattleWolfShort" description_key="challengeKillBattleWolfDesc"
+		reward_text_key="challengeKillRewardMods" reward_event="reward_battlewolf_zombie_slayer">
+		<objective type="Kill" entity_names="animalBattleWolf" count="50"/>
+	</challenge>
+
+	<challenge name="killFlaminCop" title_key="challengeKillFlaminCops" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillFlaminCopsShort" description_key="challengeKillFlaminCopsDesc"
+		reward_text_key="challengeKillRewardRareItems" reward_event="reward_flamincop_zombie_slayer">
+		<objective type="Kill" entity_names="zombieFatCopFlamin" count="50"/>
+	</challenge>
+
+	<challenge name="killRageChicken" title_key="challengeKillRageChicken" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillRageChickenShort" description_key="challengeKillRageChickenDesc"
+		reward_text_key="challengeKillRewardLegendary" reward_event="reward_ragechicken_zombie_slayer">
+		<objective type="Kill" entity_names="animalRageChicken" count="50"/>
+	</challenge>
+
+	<!--challenge name="killDemolitions" title_key="challengeKillDemolitions" icon="ui_game_symbol_zombie" group="Advanced Zombies"
+		short_description_key="challengeKillDemolitionsShort" description_key="challengeKillDemolitionsDesc"
+		reward_text_key="challengeKillRewardLegendary" reward_event="reward_demolition_zombie_slayer">
+		<objective type="Kill" entity_names="zombieDemolition" count="50"/>
+	</challenge-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- More Farmer 
+	<challenge name="farmingTomato" title_key="challengeFarmingTomato" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingTomatoShort" description_key="challengeFarmingTomatoDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropTomato" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingWheat" title_key="challengeFarmingWheat" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingWheatShort" description_key="challengeFarmingWheatDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropWheat" count="50" block_tag="challenge_farming"/>
+	</challenge>-->
+	
+
+	<!--challenge name="farmingCantaloupe" title_key="challengeFarmingCantaloupe" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingCantaloupeShort" description_key="challengeFarmingCantaloupeDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropCantaloupe" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingChiliPepper" title_key="challengeFarmingChiliPepper" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingChiliPepperShort" description_key="challengeFarmingChiliPepperDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="resourceCropChiliPepper" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingEggplant" title_key="challengeFarmingEggplant" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingEggplantShort" description_key="challengeFarmingEggplantDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="resourceCropEggplant" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingStrawberry" title_key="challengeFarmingStrawberry" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingStrawberryShort" description_key="challengeFarmingStrawberryDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="resourceCropStrawberry" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingGarlic" title_key="challengeFarmingGarlic" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingGarlicShort" description_key="challengeFarmingGarlicDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="resourceCropGarlic" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingGrapes" title_key="challengeFarmingGrapes" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingGrapesShort" description_key="challengeFarmingGrapesDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="resourceCropGrapes" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingLeek" title_key="challengeFarmingLeek" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingLeekShort" description_key="challengeFarmingLeekDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="resourceCropLeek" count="50" block_tag="challenge_farming"/>
+	</challenge>
+
+	<challenge name="farmingOnion" title_key="challengeFarmingOnion" icon="ui_game_symbol_crops" group="More Advanced Farmer"
+		short_description_key="challengeFarmingOnionShort" description_key="challengeFarmingOnionDesc"
+		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
+		<objective type="Harvest" item="foodCropOnion" count="50" block_tag="challenge_farming"/>
+	</challenge-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</insertAfter>
+
+</config>

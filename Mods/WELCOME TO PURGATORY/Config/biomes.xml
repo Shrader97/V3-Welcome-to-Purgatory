@@ -1,0 +1,28 @@
+<configs>
+
+	<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/layers/layer/resource[@blockname='terrOreCoal']/@blockname">terrOreCopper</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@name='deco_coal_vein']/@name">deco_copper_vein</set>
+
+	<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/layers/layer/resource[@blockname='terrOreLead']/@blockname">terrOreZinc</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@name='deco_lead_vein']/@name">deco_zinc_vein</set>
+
+	<set xpath="/worldgeneration/biomes/biome[@name='desert']/subbiome/layers/layer/resource[@blockname='terrOreIron']/@blockname">terrOreTitanium</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='desert']/subbiome/decorations/decoration[@name='deco_iron_vein']/@name">deco_titanium_vein</set>
+
+	<set xpath="/worldgeneration/biomes/biome[@name='snow']/subbiome/layers/layer/resource[@blockname='terrOreLead']/@blockname">terrOreTungsten</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='snow']/subbiome/decorations/decoration[@name='deco_lead_vein']/@name">deco_tungsten_vein</set>
+
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome/layers/layer/resource[@blockname='terrOreLead']/@blockname">terrOreTantalum</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations/decoration[@name='deco_lead_vein']/@name">deco_tantalum_vein</set>
+
+	<append xpath="worldgeneration/biomes//biome[@name='pine_forest']/subbiome[@noise='.0095, 0, .21']/decorations">
+		<decoration type="block" blockname="plantedShroom3Harvest" prob="0.001" rotatemax="7"/>
+	</append>
+
+	<append xpath="worldgeneration/biomes//biome[@name='wasteland']/subbiome[@noise='.033, 0, .3']/decorations">
+		<decoration type="block" blockname="plantedLactariusIndigo3Harvest" prob="0.001" rotatemax="7"/>
+		<decoration type="block" blockname="plantedOmphalotusIlludens3Harvest" prob="0.001" rotatemax="7"/>
+		<decoration type="block" blockname="plantedAleuriaAurantia3Harvest" prob="0.001" rotatemax="7"/>
+	</append>
+
+</configs> 

@@ -1,0 +1,427 @@
+<configs>
+
+	<append xpath="gameevents">
+
+			<!-- single spawns -->
+		
+		<action_sequence name="spawn_TickleMeDemo" template="spawn_boom">
+			<variable name="zombiename" value="zombieTickleMeDemo" />
+			<variable name="alertsound" value="hulkalert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_JumpingBean" template="spawn_single">
+			<variable name="zombiename" value="Jumping Bean" />
+			<variable name="alertsound" value="spideralert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_CottonMouth" template="spawn_single">
+			<variable name="zombiename" value="animalCottonMouth" />
+			<variable name="alertsound" value="snakealert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_ExplodingZombieDog" template="spawn_single">
+			<variable name="zombiename" value="animalExplodingZombieDog" />
+			<variable name="alertsound" value="zombiedogalert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_ExplodingDireWolf" template="spawn_single">
+			<variable name="zombiename" value="animalExplodingDireWolf" />
+			<variable name="alertsound" value="wolfalert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_FeralHouseCat" template="spawn_single">
+			<variable name="zombiename" value="animalFeralHouseCat" />
+			<variable name="alertsound" value="mlionalert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_AnacondaSnake" template="spawn_single">
+			<variable name="zombiename" value="animalAnacondaSnake" />
+			<variable name="alertsound" value="snakealert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_MiniBossGrace" template="spawn_single">
+			<variable name="zombiename" value="animalMiniBossGrace" />
+			<variable name="alertsound" value="animalBossGrace" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_PainDoe" template="spawn_single">
+			<variable name="zombiename" value="animalPainDoe"/>
+			<variable name="alertsound" value="hulkalert"/>
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_PainStag" template="spawn_single">
+			<variable name="zombiename" value="animalPainStag" />
+			<variable name="alertsound" value="hulkalert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_RageChicken" template="spawn_single">
+			<variable name="zombiename" value="animalRageChicken" />
+			<variable name="alertsound" value="Animals/Chicken/chickenpain" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_CluckingKing" template="spawn_single">
+			<variable name="zombiename" value="Clucking King" />
+			<variable name="alertsound" value="Animals/Chicken/chickenpain" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_PickleRick" template="spawn_single">
+			<variable name="zombiename" value="Pickle Rick" />
+			<variable name="alertsound" value="hulkalert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_BattleWolf" template="spawn_single">
+			<variable name="zombiename" value="animalBattleWolf" />
+			<variable name="alertsound" value="wolfalert" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+		<action_sequence name="spawn_BattleChicken" template="spawn_single">
+			<variable name="zombiename" value="animalBattleChicken" />
+			<variable name="alertsound" value="Animals/Chicken/chickenpain" />
+			<variable name="gamestage" value="75" />
+		</action_sequence>
+
+			<!-- hordes -->
+
+		<action_sequence name="spawn_TickleMeDemo_horde" template="spawn_horde">
+			<variable name="zombiename" value="zombieTickleMeDemo" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="hulkalert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_jumpingbean_horde" template="spawn_horde">
+			<variable name="zombiename" value="Jumping Bean" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="spideralert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_CottonMouth_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalCottonMouth"/>
+			<variable name="spawncount" value="5"/>
+			<variable name="alertsound" value="snakealert"/>
+		</action_sequence>
+
+		<action_sequence name="spawn_ExplodingZombieDog_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalExplodingZombieDog"/>
+			<variable name="spawncount" value="5"/>
+			<variable name="alertsound" value="zombiedogalert"/>
+		</action_sequence>
+
+		<action_sequence name="spawn_ExplodingDireWolf_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalExplodingDireWolf"/>
+			<variable name="spawncount" value="5"/>
+			<variable name="alertsound" value="wolfalert"/>
+		</action_sequence>
+
+		<action_sequence name="spawn_FeralHouseCat_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalFeralHouseCat"/>
+			<variable name="spawncount" value="5"/>
+			<variable name="alertsound" value="mlionalert"/>
+		</action_sequence>
+
+		<action_sequence name="spawn_MiniBossGrace_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalMiniBossGrace"/>
+			<variable name="spawncount" value="5"/>
+			<variable name="alertsound" value="animalBossGrace"/>
+		</action_sequence>
+
+		<action_sequence name="spawn_PainDoe_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalPainDoe"/>
+			<variable name="spawncount" value="5"/>
+			<variable name="alertsound" value="hulkalert"/>
+		</action_sequence>
+
+		<action_sequence name="spawn_PainStag_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalPainStag" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="hulkalert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_RageChicken_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalRageChicken" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="Animals/Chicken/chickenpain" />
+		</action_sequence>
+
+		<action_sequence name="spawn_BattleChicken_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalBattleChicken"/>
+			<variable name="spawncount" value="5"/>
+			<variable name="alertsound" value="Animals/Chicken/chickenpain"/>
+		</action_sequence>
+
+			<!--  mixed horde spawns  -->
+
+	
+		<action_sequence name="spawn_Deer_Family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+			<variable name="alertsound" value="hulkalert"/>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalPainStag" />
+				<property name="spawn_count" value="3" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalPainDoe" param1="zombiename" />
+				<property name="spawn_count" value="3" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_Piggy_Family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+			<variable name="alertsound" value="animalBossGrace"/>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalMiniBossGrace" />
+				<property name="spawn_count" value="3" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalBossGrace" param1="zombiename" />
+				<property name="spawn_count" value="2" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_Kitty_Family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+			<variable name="alertsound" value="mlionalert"/>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalFeralHouseCat" />
+				<property name="spawn_count" value="3" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalMountainLion" param1="zombiename" />
+				<property name="spawn_count" value="2" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_Puppy_family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+			<variable name="alertsound" value="zombiedogalert"/>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalExplodingZombieDog" />
+				<property name="spawn_count" value="3" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalExplodingDireWolf" param1="zombiename" />
+				<property name="spawn_count" value="2" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+		
+		<action_sequence name="spawn_Demo_family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+			<variable name="alertsound" value="hulkalert"/>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="zombieTickleMeDemo" />
+				<property name="spawn_count" value="2" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="zombieDemolition" param1="zombiename" />
+				<property name="spawn_count" value="3" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+		</append>
+
+    <append xpath="/gameevents">
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_behemoth_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_behemoth_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_Tickle_Me_Demo_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_Tickle_Me_Demo_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_jumpingbean_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_jumpingbean_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_battlechicken_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_battlechicken_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_battlewolf_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_battlewolf_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_flamincop_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_flamincop_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_ragechicken_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_ragechicken_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <!--action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence-->
+
+
+	</append>
+
+</configs>

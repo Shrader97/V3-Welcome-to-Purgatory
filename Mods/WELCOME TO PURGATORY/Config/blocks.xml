@@ -1,0 +1,3710 @@
+<configs>
+
+	<set xpath="blocks/block[@name='spawnTrader']/property[@name='SpawnClass']/@value">npcTraderJoel,npcTraderRekt,npcTraderHugh,npcTraderBob,npcTraderJen,npcTraderNoah,npcTraderBartender,npcTraderBouner,npcTraderCommanderInChief,npcTraderHomelessDude,npcTraderMechanic,npcTraderSecretary</set>
+	
+	<append xpath="/blocks/block[@name='trapSpikesIronDmg0']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+			<property name="Item" value="resourceForgedSteel"/>
+			<property name="ItemCount" value="4"/>
+			<property name="UpgradeHitCount" value="4"/>
+		</property>
+	</append>
+
+	<append xpath="/blocks/block[@name='treeGrassMaster']">
+		<drop event="Harvest" name="foodSnail" count="2" tag="allHarvest,perkJunkMiner"/>
+	</append>
+
+	<append xpath="/blocks">
+
+			<!-- *** Steel_SPIKES -->
+		<block name="trapSpikesScrapSteelMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="TrunkTip"/>
+			<property name="Damage" value="66"/>
+			<property name="Damage_received" value="6"/>
+			<property name="DescriptionKey" value="trapSpikesGroupDesc"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="Material" value="MtrapSpikesSteel"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?SteelSpikesTrap.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="LightOpacity" value="6"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="false"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property name="MaxDamage" value="400"/>
+			<property name="SoundPickup" value="trapiron_grab"/>
+			<property name="SoundPlace" value="trapiron_place"/>
+			<property class="RepairItems">
+				<property name="resourceForgedSteel" value="2"/>
+			</property>
+			<property name="UpgradeSound" value="place_block_metal"/>
+			<drop event="Destroy" name="resourceScrapIron" count="10,20"/>
+			<drop event="Fall" count="0"/>
+			<property name="SortOrder1" value="B751"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Building"/>
+			<property name="BlockTag" value="Spike"/>
+			<property name="FilterTags" value="MC_building,SC_traps"/>
+		</block>
+
+		<!-- Player made Stage 3 with blood -->
+		<block name="trapSpikesSteelDmg2">
+			<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?SteelSpikesTrap2.prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="SortOrder2" value="0001"/>
+		</block>
+
+		<!-- Player made Stage 2 with blood -->
+		<block name="trapSpikesSteelDmg1">
+			<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?SteelSpikesTrap1.prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesSteelDmg2"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+
+		<!-- Player made Stage 1 with no blood -->
+		<block name="trapSpikesSteelDmg0">
+			<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CustomIcon" value="trapSpikesScrapIronMaster"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesTitaniumDmg0"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesSteelDmg1"/>
+			<property name="SortOrder2" value="0003"/>
+		</block>
+
+			<!-- *** Titanium_SPIKES -->
+		<block name="trapSpikesScrapTitaniumMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="TrunkTip"/>
+			<property name="Damage" value="99"/>
+			<property name="Damage_received" value="99"/>
+			<property name="DescriptionKey" value="trapSpikesGroupDesc"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="Material" value="MtrapSpikesTitanium"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?TitaniumSpikesTrap.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="LightOpacity" value="6"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="false"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="SoundPickup" value="trapiron_grab"/>
+			<property name="SoundPlace" value="trapiron_place"/>
+			<property class="RepairItems">
+				<property name="resourceForgedTitanium" value="2"/>
+			</property>
+			<property name="UpgradeSound" value="place_block_metal"/>
+			<drop event="Destroy" name="resourceScrapIron" count="10,20"/>
+			<drop event="Fall" count="0"/>
+			<property name="SortOrder1" value="B751"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Building"/>
+			<property name="BlockTag" value="Spike"/>
+			<property name="FilterTags" value="MC_building,SC_traps"/>
+		</block>
+
+		<!-- Player made Stage 3 with blood -->
+		<block name="trapSpikesTitaniumDmg2">
+			<property name="Extends" value="trapSpikesScrapTitaniumMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?TitaniumSpikesTrap2.prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesTitaniumDmg0"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="SortOrder2" value="0001"/>
+		</block>
+
+		<!-- Player made Stage 2 with blood -->
+		<block name="trapSpikesTitaniumDmg1">
+			<property name="Extends" value="trapSpikesScrapTitaniumMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?TitaniumSpikesTrap1.prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesTitaniumDmg0"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesTitaniumDmg2"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+
+		<!-- Player made Stage 1 with no blood -->
+		<block name="trapSpikesTitaniumDmg0">
+			<property name="Extends" value="trapSpikesScrapTitaniumMaster"/>
+			<property name="CustomIcon" value="trapSpikesScrapIronMaster"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesTitaniumDmg0"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesTitaniumDmg1"/>
+			<property name="SortOrder2" value="0003"/>
+		</block>
+
+	</append>
+
+	<append xpath="/blocks/block[@name='wallClock']">
+		<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedMushroom1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedYucca1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedCotton1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedCoffee3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedCoffee1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedGoldenrod1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedAloe1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedBlueberry3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedBlueberry1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedPotato3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedPotato1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedChrysanthemum1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedCorn3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedCorn1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedGraceCorn1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedHop3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedHop1"/>
+	</append>
+	
+	<append xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedPumpkin1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='decoCarTireSmallFlat']">
+		<property name="CanPickup" value="true"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='trophy']">
+		<property name="CanPickup" value="true"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='trophyOffset']">
+		<property name="CanPickup" value="true"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='steelMaster']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="stainlessSteelMaster"/>
+			<property name="Item" value="StainLessSteelPolish"/>
+			<property name="ItemCount" value="2"/>
+			<property name="UpgradeHitCount" value="2"/></property>
+	</append>
+
+	<append xpath="/blocks/block[@name='steelShapes']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="stainlessSteelShapes"/>
+			<property name="Item" value="StainLessSteelPolish"/>
+			<property name="ItemCount" value="2"/>
+			<property name="UpgradeHitCount" value="2"/></property>
+	</append>
+
+
+
+
+	<append xpath="/blocks">
+
+ 		<block name="stainlessSteelMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="Material" value="MstainlessSteel"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="PassThroughDamage" value="false"/>
+			<property name="TintColor" value="f9e6ff"/>
+			<property name="Texture" value="191"/>
+			<property class="RepairItems">
+				<property name="StainLessSteelPolish" value="5"/></property>
+			<property name="CustomUpgradeSound" value="place_block_metal"/>
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="DowngradeBlock" value="steelMaster"/>
+			<property name="FilterTags" value="MC_building"/>
+			<property name="SortOrder1" value="40p0"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+
+		<block name="stainlessSteelShapes" shapes="All">
+			<property name="DescriptionKey" value="steelBlockGroupDesc" />
+			<property name="Material" value="Mstainlesssteel_shapes" />
+			<property name="TintColor" value="f9e6ff"/>
+			<property name="Shape" value="New"/>
+			<property name="DisplayType" value="blockHardened" />
+			<property name="PassThroughDamage" value="false" />
+			<property name="Texture" value="191" />
+			<property name="UiBackgroundTexture" value="191" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumShapes"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="5"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property class="RepairItems">
+				<property name="StainLessSteelPolish" value="5" />
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal" />
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest" />
+			<drop event="Destroy" count="0" />
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1" />
+			<property name="EconomicValue" value="160" />
+			<property name="Group" value="Building,advBuilding" />
+			<property name="DowngradeBlock" value="steelShapes"/>
+			<property name="FilterTags" value="MC_Shapes" />
+			<property name="SortOrder1" value="0011" />
+		</block>
+
+		<block name="TitaniumShapes" shapes="All">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIconTint" value="47556e" />
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Texture" value="435"/>
+			<property name="UiBackgroundTexture" value="435"/>
+			<property name="TintColor" value="47556e"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cube"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TungstenShapes"/>
+				<property name="Item" value="resourceForgedTungsten"/>
+				<property name="ItemCount" value="5"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property class="RepairItems"> 
+				<property name="resourceForgedTitanium" value="1"/>
+			</property>
+			<!--property name="DowngradeBlock" value="stainlessSteelShapes"/-->
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SortOrder1" value="S200"/> 
+			<property name="CanPickup" value="false"/>
+		</block>
+
+		<block name="TungstenShapes" shapes="All">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIconTint" value="47556e" />
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="Material" value="MresourceTungsten"/>
+			<property name="Texture" value="543"/>
+			<property name="UiBackgroundTexture" value="435"/>
+			<property name="TintColor" value="47556e"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cube"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TantalumShapes"/>
+				<property name="Item" value="resourceForgedTantalum"/>
+				<property name="ItemCount" value="5"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property class="RepairItems"> 
+				<property name="resourceForgedTungsten" value="1"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SortOrder1" value="S200"/> 
+			<property name="CanPickup" value="false"/>
+		</block>
+
+		<block name="TantalumShapes" shapes="All">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIconTint" value="47556e" />
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="Material" value="MresourceTantalum"/>
+			<property name="Texture" value="62"/>
+			<property name="UiBackgroundTexture" value="435"/>
+			<property name="TintColor" value="47556e"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cube"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+			<property class="RepairItems"> 
+				<property name="resourceForgedTantalum" value="1"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SortOrder1" value="S200"/> 
+			<property name="CanPickup" value="false"/>
+		</block>
+
+
+
+	<!-- drawbridges -->
+		<block name="TitaniumReinforcedDrawBridge">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="metalReinforcedWoodDrawBridge"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="metalReinforcedWoodDrawBridge" param1="DowngradeBlock"/>
+			<property name="CanPickup" value="false"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="OpenSound" value="open_bridge"/>
+			<property name="CloseSound" value="close_bridge"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="100"/>
+				<property name="resourceWood" value="800"/>
+			</property>
+			<drop event="Harvest" name="TitaniumDrawBridge" count="1" tag="allHarvest"/>
+			<property name="SortOrder1" value="B400"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumReinforcedDrawBridge_Powered"/>
+				<property name="Item" value="resourceForgedSpring,resourceForgedTitanium"/>
+				<property name="ItemCount" value="2"/>
+				<property name="UpgradeHitCount" value="5"/>
+			</property>
+		</block>
+		<block name="TitaniumReinforcedDrawBridge_Powered">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="TitaniumReinforcedDrawBridge" param1="UpgradeBlock.Item"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+	<!-- vault doors -->
+		<block name="TitaniumvaultDoor01">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="vaultDoor01"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="vaultDoor01" param1="DowngradeBlock"/>
+			<property name="CanPickup" value="false"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="MaxDamage" value="18000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 18000,
+			Door/DMG1, 12000,
+			Door/DMG2, 8000,
+			Door/DMG3, 4000,
+			-, 1
+			"/>
+			<property class="RepairItems"> <property name="TitaniumresourceSpring" value="5"/> </property>
+			<drop event="Harvest" name="TitaniumvaultDoor01" count="1" tag="allHarvest"/>
+			<property name="SortOrder1" value="B360"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumvaultDoor01_Powered"/>
+				<property name="Item" value="resourceForgedSpring,resourceForgedTitanium"/>
+				<property name="ItemCount" value="2"/>
+				<property name="UpgradeHitCount" value="5"/>
+			</property>
+		</block>
+		<block name="TitaniumvaultDoor01_Powered">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="TitaniumvaultDoor01"  param1="UpgradeBlock.Item"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+		<block name="TitaniumvaultDoor01Double">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="vaultDoor01Double"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="vaultDoor01Double" param1="UpgradeBlock.Item"/>
+			<property name="CanPickup" value="false"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="MaxDamage" value="18000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 18000,
+			Door/DMG1, 12000,
+			Door/DMG2, 8000,
+			Door/DMG3, 4000,
+			-, 1
+			"/>
+			<property class="RepairItems"> <property name="TitaniumresourceSpring" value="5"/> </property>
+			<drop event="Harvest" name="TitaniumVaultDoorDouble" count="1" tag="allHarvest"/>
+			<property name="SortOrder1" value="B370"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumvaultDoor01Double_Powered"/>
+				<property name="Item" value="resourceForgedSpring,resourceForgedTitanium"/>
+				<property name="ItemCount" value="2"/>
+				<property name="UpgradeHitCount" value="5"/>
+			</property>
+		</block>
+		<block name="TitaniumvaultDoor01Double_Powered">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="TitaniumvaultDoor01Double" param1="DowngradeBlock"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+	<!-- hatches -->
+		<block name="TitaniumvaultHatch01">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="vaultHatch01" param1="UpgradeBlock.Item"/>
+			<property name="CustomIcon" value="vaultHatch01"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="MaxDamage" value="24000"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumvaultHatch01_Powered"/>
+				<property name="Item" value="resourceForgedSpring,resourceForgedTitanium"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="5"/>
+			</property>
+		</block>
+		<block name="TitaniumvaultHatch01_Powered">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="TitaniumvaultHatch01" param1="DowngradeBlock"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="CustomIcon" value="vaultHatch01"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+	<!-- bars -->
+			<block name="TitaniumBarsCentered">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="ironBarsCentered"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property class="RepairItems"> <property name="TitaniumMix" value="1"/> </property>
+			<drop event="Harvest" name="TitaniumBarsCentered" count="1" tag="allHarvest"/>
+		</block>
+		<block name="TitaniumBars">
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="Extends" value="TitaniumBarsCentered"/>
+			<property name="CustomIcon" value="ironBarsCentered"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<drop event="Harvest" name="TitaniumBars" count="1" tag="allHarvest"/>
+		</block>
+
+	<!-- jail doors -->
+			<block name="TitaniumjailDoorSingle">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="jailDoorWhite"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="jailDoorWhite"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 10000,
+			Door/DMG1, 7000,
+			Door/DMG2, 5000,
+			Door/DMG3, 2500,
+			"/>
+			<property class="RepairItems"> <property name="TitaniumMix" value="1"/> </property>
+			<drop event="Harvest" name="TitaniumjailDoorWhite" count="1" tag="allHarvest"/>
+		</block>
+		<block name="TitaniumjailDoorDouble">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="Extends" value="jailDoorDoubleWhite"/>
+			<property name="CustomIcon" value="jailDoorDoubleWhite"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="MaxDamage" value="10000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 10000,
+			Door/DMG1, 7000,
+			Door/DMG2, 5000,
+			Door/DMG3, 2500,
+			"/>
+			<drop event="Harvest" name="TitaniumjailDoorDoubleWhite" count="1" tag="allHarvest"/>
+		</block>
+
+	<!-- garage doors -->
+		<block name="TitaniumGarageDoor">
+			<property name="Extends" value="ironGarageDoorWhite"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="ironGarageDoorWhite"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MaxDamage" value="15000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 15000,
+			Door/DMG1, 10000,
+			Door/DMG2, 5000,
+			Door/DMG3, 2500,
+			"/>
+			<property class="RepairItems"> <property name="TitaniumresourceSpring" value="5"/> </property>
+			<property name="CustomUpgradeSound" value="place_block_metal"/>
+			<drop event="Harvest" name="TitaniumGarageDoor" count="1" tag="allHarvest"/>/>
+		</block>
+
+		<block name="TitaniumGarageDoor_Powered">
+			<property name="Extends" value="TitaniumGarageDoor" param1="DowngradeBlock"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="CustomIcon" value="ironGarageDoorWhite"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+        <block name="WaterTank001"> <!-- biome decoration -->
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DisplayType" value="blockHardenedMulti"/>
+            <property name="Material" value="Mplastics"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/BunkerBlocks.unity3d?WaterTank.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="MultiBlockDim" value="2,2,2"/>
+            <property name="ImposterDontBlock" value="true"/>
+			<property name="MaxDamage" value="5000"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="BigDecorationRadius" value="3"/>
+			<property class="RepairItems">
+				<property name="resourceScrapPolymers" value="2"/>
+			</property>
+            <property name="StabilitySupport" value="true"/>
+			<drop event="Harvest" name="resourceWood" count="2,5" tag="allHarvest,lumberjackHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="25,50" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="drinkJarBoiledWater" count="2,5"/>
+			<drop event="Destroy" name="resourceWood" count="2,5"/>
+            <drop event="Destroy" count="0"/>
+            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
+        </block>
+
+        <block name="resourceSulfurRock01"> <!-- biome decoration -->
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DisplayType" value="blockHardenedMulti"/>
+            <property name="MapColor" value="160,32,240"/>
+            <property name="Material" value="Mboulder"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/ore1.unity3d?SulfurOreBoulder.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="MultiBlockDim" value="3,2,3"/>
+            <property name="ImposterDontBlock" value="true"/>
+			<property name="MaxDamage" value="5000"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="BigDecorationRadius" value="3"/>
+            <property name="IsDistantDecoration" value="false"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="true"/>
+            <drop event="Harvest" name="resourceSulfur" count="250" tag="oreWoodHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
+        </block>
+
+		<block name="oreTitaniumBoulder">
+			<property name="Extends" value="oreBoulderMaster"/>
+			<property name="MapColor" value="135,135,134"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Model" value="#@modfolder:Resources/ore2.unity3d?TitaniumOreBoulder.prefab"/>
+			<drop event="Harvest" name="resourceTitanium" count="105" tag="oreWoodHarvest"/>
+			<property name="SortOrder2" value="0101"/>
+		</block>
+
+		<block name="oreCopperBoulder">
+			<property name="Extends" value="oreBoulderMaster"/>
+			<property name="MapColor" value="184,115,51"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Model" value="#@modfolder:Resources/ore1.unity3d?CopperOreBoulder.prefab"/>
+			<drop event="Harvest" name="resourceCopper" count="105" tag="oreWoodHarvest"/>
+			<property name="SortOrder2" value="0101"/>
+		</block>
+
+		<block name="oreZincBoulder">
+			<property name="Extends" value="oreBoulderMaster"/>
+			<property name="MapColor" value="144,137,136"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Model" value="#@modfolder:Resources/ore2.unity3d?ZincOreBoulder.prefab"/>
+			<drop event="Harvest" name="resourceZinc" count="105" tag="oreWoodHarvest"/>
+			<property name="SortOrder2" value="0101"/>
+		</block>
+
+		<block name="OreTungstenBoulder">
+			<property name="Extends" value="oreBoulderMaster"/>
+			<property name="MapColor" value="187,184,178"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Model" value="#@modfolder:Resources/ore2.unity3d?TungstenOreBoulder.prefab"/>
+			<drop event="Harvest" name="resourceTungsten" count="105" tag="oreWoodHarvest"/>
+			<property name="SortOrder2" value="0101"/>
+		</block>
+
+		<block name="OreTantalumBoulder">
+			<property name="Extends" value="oreBoulderMaster"/>
+			<property name="MapColor" value="105,110,118"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Model" value="#@modfolder:Resources/ore1.unity3d?TantalumOreBoulder.prefab"/>
+			<drop event="Harvest" name="resourceTantalum" count="105" tag="oreWoodHarvest"/>
+			<property name="SortOrder2" value="0101"/>
+		</block>
+
+		<!--block name="terrOreCopper">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+			<property name="MapColor" value="184,115,51"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="MaxDamage" value="750"/>
+			<drop event="Harvest" name="resourceCopper" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceCopper" count="150" prob="0.4" stick_chance="0"/>
+		</block-->		
+				
+		<block name="terrOreCopper">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="MapColor" value="184,115,51"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="ImposterExclude" value="true"/>
+			<drop event="Harvest" name="resourceCopper" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceCopper" count="150" prob="0.4" stick_chance="0"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
+
+		<block name="terrOreTitanium">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="MapColor" value="135,134,129"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="ImposterExclude" value="true"/>
+			<drop event="Harvest" name="resourceTitanium" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceTitanium" count="150" prob="0.4" stick_chance="0"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
+
+		<block name="terrOreZinc">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="MapColor" value="144,137,136"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="ImposterExclude" value="true"/>
+			<drop event="Harvest" name="resourceZinc" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceZinc" count="150" prob="0.4" stick_chance="0"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
+
+		<block name="terrOreTungsten">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="MapColor" value="187,184,178"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="ImposterExclude" value="true"/>
+			<drop event="Harvest" name="resourceTungsten" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceZinc" count="150" prob="0.4" stick_chance="0"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
+
+		<block name="terrOreTantalum">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="MapColor" value="105,110,118"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="ImposterExclude" value="true"/>
+			<drop event="Harvest" name="resourceTantalum" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceZinc" count="150" prob="0.4" stick_chance="0"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
+
+	</append>
+		
+	<append xpath="/blocks">
+
+		<block name="cntInformationQuestfile">
+			<property name="CreativeMode" value="None" />
+			<property name="Class" value="CompositeTileEntity" />
+			<property class="CompositeFeatures">
+				<property class="TEFeatureStorage">
+					<property name="LootList" value="questSatchel" />
+					<property name="IsQuestLoot" value="true" />
+				</property>
+			</property>
+			<property name="IndexName" value="FetchContainer" />
+			<property name="CustomIconTint" value="80ff80" />
+			<property name="Material" value="Mcloth" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="@:Entities/LootContainers/loot_satchelPrefab.prefab" />
+			<property name="ModelOffset" value="0,0,0" />
+			<property name="GndAlign" value="1" />
+			<property name="LightOpacity" value="0" />
+			<property name="WaterFlow" value="permitted" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="Collide" value="melee,bullet,arrow,rocket" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="StabilitySupport" value="false" />
+			<property name="StabilityIgnore" value="true" />
+			<property name="MaxDamage" value="500" />
+			<drop event="Destroy" name="resourceCloth" count="0" />
+			<property name="SortOrder1" value="LD01" />
+			<property name="SortOrder2" value="0001" />
+			<property name="FilterTags" value="MC_building,SC_loot" />
+		</block>
+
+		<block name="Mercenary Board">
+			<property name="Class" value="VendingMachine" />
+			<property name="CreativeMode" value="Player" />
+			<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
+			<property name="DisplayType" value="blockHardenedMulti" />
+			<property name="Stacknumber" value="10" />
+			<property name="Material" value="Mmetal_medium" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="@:Entities/Commercial/bulletinBoard02Prefab.prefab" />
+			<property name="MultiBlockDim" value="2,1,1" />
+			<property name="ImposterExchange" value="imposterBlock" param1="143" />
+			<property name="LightOpacity" value="0" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="OnlySimpleRotations" value="true" />
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket" />
+			<property name="Path" value="solid" />
+			<property name="StabilitySupport" value="false" />
+			<property name="EconomicValue" value="2000" />
+			<property name="TraderID" value="13" />
+			<property name="TraderStageTemplate" value="midTier1" /><!-- cntVendingMachine -->
+			<property name="Buff" value="buffShocked" />
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5" />
+			</property>
+			<drop event="Destroy" count="0" />
+			<property name="SortOrder1" value="B456" />
+			<property name="SortOrder2" value="0000" />
+			<property name="Group" value="Science,TCScience" />
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical" />
+		</block>
+	</append>
+
+
+
+
+
+
+	<append xpath="/blocks">
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="busCityTraderOnly1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="cntBusCity"/>
+			<property name="CustomIconTint" value="FF00FF"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/bus_city_traderPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/> <!-- buses are shifted in the fbx file -->
+			<property name="MultiBlockDim" value="3,3,9"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="PlacementDistance" value="15"/>
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0600"/>
+			<property name="FilterTags" value="MC_building,SC_automotive"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="bicycleStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="vehicleBicyclePlaceable"/>
+			<property name="TintColor" value="218,200,135"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMountainBikeStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="1.2,0,0"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0700"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="minibikeStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="vehicleMinibikePlaceable"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="TintColor" value="798991"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMiniBikeStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0701"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="motorcycleStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
+			<property name="TintColor" value="808080"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMotorcycleStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0702"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="4x4Static1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="TintColor" value="D45454"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/Trader4x4StaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,4"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0703"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="gyrocopterStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="TintColor" value="132,105,84"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderGyrocopterStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,4"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0704"/>
+		</block>
+
+	</append>
+
+	<append xpath="blocks">
+
+		<block name="Heatedfloor">
+			<property name="CustomIcon" value="looseCorrugatedMetalTrapCube"/>
+			<property name="CustomIconTint" value="#25e9ff"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_building"/>
+			<property name="ItemTypeIcon" value="fire"/>
+			<property name="DescriptionKey" value="heatedfloorDesc"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="@:Shapes/cube.fbx"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
+			<property name="LightOpacity" value="3"/>
+			<property name="Path" value="solid"/>
+			<property name="DestroyFX" value="blockdestroy_metal,trapCatwalkMetalDestroy"/>
+			<property name="MaxDamage" value="1000"/>
+			<property name="SortOrder1" value="B754"/>
+			<property name="SortOrder2" value="0100"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Texture" value="194"/>
+			<property name="EconomicValue" value="12"/>
+			<drop event="Harvest" name="Heatedfloor" count="0" tag="allHarvest"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="2"/>
+			</property>
+
+			<!-- Buff applied on setting off -->
+			<property name="BuffsWhenWalkedOn" value="heatedfloor"/>
+		</block>
+
+		<block name="Cooledfloor">
+			<property name="CustomIcon" value="looseCorrugatedMetalTrapCube"/>
+			<property name="CustomIconTint" value="#25e9ff"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_building"/>
+			<property name="ItemTypeIcon" value="cold"/>
+			<property name="DescriptionKey" value="ColdfloorDesc"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="@:Shapes/cube.fbx"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
+			<property name="LightOpacity" value="3"/>
+			<property name="Path" value="solid"/>
+			<property name="DestroyFX" value="blockdestroy_metal,trapCatwalkMetalDestroy"/>
+			<property name="MaxDamage" value="1000"/>
+			<property name="SortOrder1" value="B754"/>
+			<property name="SortOrder2" value="0100"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Texture" value="194"/>
+			<property name="EconomicValue" value="12"/>
+			<drop event="Harvest" name="Cooledfloor" count="0" tag="allHarvest"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="2"/>
+			</property>
+
+			<!-- Buff applied on setting off -->
+			<property name="BuffsWhenWalkedOn" value="Cooledfloor"/>
+		</block>
+
+		<block name="PreciousMetalForge">
+			<property name="Class" value="Forge"/>
+			<property class="Workstation">
+				<property name="CraftingAreaRecipes" value="PreciousMetalForge"/>
+				<property name="Modules" value="tools,output,fuel"/>
+				<property name="ToolNames" value="1,2,3"/>
+			</property>
+			<property name="CustomIcon" value="cntWoodBurningStove"/>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="forgeDesc"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_forge"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Mstone_scrap"/>
+			<property name="Model" value="@:Entities/Furniture/woodBurningStovePrefab.prefab"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="TraderStageTemplate" value="midTier0"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="HeatMapStrength" value="6"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+			<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
+			<property name="OpenSound" value="forge_open"/>
+			<property name="CloseSound" value="forge_close"/>
+			<property name="CraftSound" value="forge_smelt_click"/>
+			<property name="CraftCompleteSound" value="forge_item_complete"/>
+			<property name="TakeDelay" value="15"/>
+			<property class="RepairItems">
+				<property name="resourceCobblestones" value="50"/>
+			</property>
+			<drop event="Harvest" name="resourceRockSmall" count="40" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceClayLump" count="20" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="5" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0200"/>
+			<property name="Group" value="Building,TCScience,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="forge_grab"/>
+			<property name="SoundPlace" value="forge_place"/>
+		</block>
+
+		<block name="JewelryBench">
+			<property name="CustomIcon" value="cntCollapsedWorkbenchEmpty" />
+			<!-- Class -->
+			<property name="Class" value="Workstation"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="JewelryBench"/>
+			</property>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+			<!-- UI_Info -->
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="workbenchDesc"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+			<property name="Stacknumber" value="1"/>
+			<!-- Visual -->
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Crafting/woodWorkBenchCollapsedEmptyPrefab.prefab"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<!-- Placement -->
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- Value -->
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="TraderStageTemplate" value="midTier1"/><!-- workbench -->
+			<!-- Interaction -->
+			<property name="MaxDamage" value="800"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="TakeDelay" value="15"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="25"/>
+				<property name="resourceMechanicalParts" value="20"/>
+				<property name="resourceWood" value="50"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest,lumberjackHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<!-- Sorting -->
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0300"/>
+			<property name="Group" value="Building,TCScience,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="workbench_grab"/>
+			<property name="SoundPlace" value="workbench_place"/>
+		</block>
+
+        <block name="smallchemistryStation">
+            <!-- Class -->
+            <property name="Class" value="Campfire"/>
+            <property class="Workstation">
+                <property name="Modules" value="tools,output,fuel,input"/>
+            </property>
+            <!-- UI_Info -->
+            <property name="CreativeMode" value="Player"/>
+            <property name="DisplayType" value="blockMulti"/>
+            <property name="CustomIcon" value="cntChemPileSmall" />
+            <property name="WorkstationIcon" value="ui_game_symbol_chemistry"/>
+            <property name="CraftIcon" value="ui_game_symbol_chemistry"/>
+            <property name="CraftActionName" value="lblContextActionMix"/>
+            <property name="Stacknumber" value="1"/>
+            <!-- Visual -->
+            <property name="Material" value="Miron_scrap"/>
+            <property name="Shape" value="ModelEntity"/>
+	        <property name="Model" value="@:Entities/Crafting/chemistrySetSmallPrefab.prefab"/>
+            <property name="MultiBlockDim" value="1,1,1"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <!-- Placement -->
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="Path" value="solid"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <!-- Value -->
+            <property name="Weight" value="0"/>
+            <property name="EconomicValue" value="5000"/>
+            <property name="EconomicBundleSize" value="1"/>
+            <property name="TraderStageTemplate" value="midTier2"/><!-- chemistryStation -->
+            <!-- Interaction -->
+            <property name="MaxDamage" value="800"/>
+            <property name="HeatMapStrength" value="5"/>
+            <property name="HeatMapTime" value="2500"/>
+            <property name="HeatMapFrequency" value="500"/>
+            <property name="OpenSound" value="chem_station_open"/>
+            <property name="CloseSound" value="chem_station_close"/>
+            <property name="CraftSound" value="chem_station_mix_click"/>
+            <property name="CraftCompleteSound" value="chem_station_complete_item"/>
+            <property name="TakeDelay" value="15"/>
+            <property class="RepairItems">
+                <property name="resourceForgedIron" value="10"/>
+                <property name="resourceMetalPipe" value="10"/>
+                <property name="resourceWood" value="40"/>
+            </property>
+            <drop event="Harvest" name="resourceScrapIron" count="80" tag="allHarvest"/>
+            <drop event="Harvest" name="resourceWood" count="16" tag="allHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceForgedIron" count="4" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceMetalPipe" count="4" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceWood" count="15" tag="salvageHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+            <!-- Sorting -->
+            <property name="SortOrder1" value="B281"/>
+            <property name="SortOrder2" value="0500"/>
+            <property name="Group" value="Building,Science,TCScience,advBuilding"/>
+            <property name="Tags" value="workstationSkill,twitch_workstation"/>
+            <property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+            <property name="SoundPickup" value="chemistrystation_grab"/>
+            <property name="SoundPlace" value="chemistrystation_place"/>
+        </block>
+
+		<!--block name="AdvForge">
+-
+			<property name="Class" value="Forge"/>
+			<property class="Workstation">
+				<property name="CraftingAreaRecipes" value="Advforge"/>
+				<property name="Modules" value="tools,output,fuel"/>
+				<property name="ToolNames" value="1,2,3"/>
+			</property>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+-
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="forgeDesc"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_forge"/>
+			<property name="Stacknumber" value="1"/>
+-
+			<property name="Material" value="Mstone_scrap"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?AdvForge"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+-
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="true"/>
+-
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="TraderStageTemplate" value="midTier0"/>
+-
+			<property name="MaxDamage" value="800"/>
+			<property name="HeatMapStrength" value="6"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+			<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
+			<property name="OpenSound" value="forge_open"/>
+			<property name="CloseSound" value="forge_close"/>
+			<property name="CraftSound" value="forge_smelt_click"/>
+			<property name="CraftCompleteSound" value="forge_item_complete"/>
+			<property name="TakeDelay" value="15"/>
+			<property class="RepairItems">
+				<property name="resourceCobblestones" value="50"/>
+			</property>
+			<drop event="Harvest" name="resourceRockSmall" count="40" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceClayLump" count="20" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="5" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0200"/>
+			<property name="Group" value="Building,TCScience,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="forge_grab"/>
+			<property name="SoundPlace" value="forge_place"/>
+		</block-->
+
+		<block name="GunsmithBence">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ModelOffset" value="0,0.9,0.5"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?GunsmithBence"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="2500"/>
+			<property name="HeatMapFrequency" value="500"/>
+			<property name="Stacknumber" value="10"/>
+            <property name="UnlockedBy" value="craftingWorkstations"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="GunsmithBence"/>
+				<property name="ToolNames" value="1,2,3"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="CraftIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="30" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="DescriptionKey" value="CombiningAnvilDesc"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+
+		<block name="AmmoBench">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ModelOffset" value="0.08,0.5,-0.5"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?AmmoBench"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="2500"/>
+			<property name="HeatMapFrequency" value="500"/>
+			<property name="Stacknumber" value="10"/>
+            <property name="UnlockedBy" value="craftingWorkstations"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="AmmoBench"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="CraftIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="30" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="DescriptionKey" value="CombiningAnvilDesc"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+
+		<!--block name="BenchtopLathe">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?BenchtopLathe"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="2500"/>
+			<property name="HeatMapFrequency" value="500"/>
+			<property name="Stacknumber" value="10"/>
+            <property name="UnlockedBy" value="craftingWorkstations"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="BenchtopLathe"/>
+				<property name="ToolNames" value="1,2,3"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="CraftIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="30" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="DescriptionKey" value="CombiningAnvilDesc"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block-->
+
+		<block name="Recycler">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="2500"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?Recycler"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="2500"/>
+			<property name="HeatMapFrequency" value="500"/>
+			<property name="Stacknumber" value="1"/>
+            <property name="UnlockedBy" value="craftingWorkstations"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Recycler"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_drillpress"/>
+			<property name="CraftIcon" value="ui_game_symbol_drillpress"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="30" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="DescriptionKey" value="CombiningAnvilDesc"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+
+		<block name="writingDesk">
+			<property name="CustomIcon" value="cntCollapsedWorkbenchEmpty" />
+			<property name="DescriptionKey" value="writingDeskDesc"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Crafting/woodWorkBenchCollapsedEmptyPrefab.prefab"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="Path" value="solid"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="81"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="writingDesk"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="CraftIcon" value="ui_game_symbol_workbench"/>
+			<property name="DescriptionKey" value="writingDeskDesc"/>
+			<property class="RepairItems"> <property name="resourceWood" value="15"/> </property>
+			<drop event="Destroy" name="resourceWood" count="2,6" />
+			<property name="TakeDelay" value="15"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="EconomicValue" value="750"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor,fdecor,fother,ffurniture"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+
+	<!-- Electricle -->
+
+		<block name="solarbankT2">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="SolarPanel"/>
+			<property name="SlotItem" value="solarCell"/>
+			<property name="MaxPower" value="1200"/>
+			<property name="OutputPerStack" value="200"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="DisplayType" value="blockElectricalMulti"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/electrical.unity3d?SolarPanelT2Prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="2,2,2"/>
+			<property name="ImposterExchange" value="imposterRamp" param1="18"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="TraderStageTemplate" value="electricTier3"/><!-- solarbank -->
+			<property name="ActivationDistance" value="6"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="SoundPickup" value="banksolar_grab"/>
+			<property name="SoundPlace" value="banksolar_place"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceElectricParts" value="5"/>
+				<property name="resourceScrapPolymers" value="2"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="3,5" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B155"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="Group" value="Science,TCScience"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
+		</block>
+
+		<block name="solarbankT3">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="SolarPanel"/>
+			<property name="SlotItem" value="solarCell"/>
+			<property name="MaxPower" value="3000"/>
+			<property name="OutputPerStack" value="500"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="DisplayType" value="blockElectricalMulti"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/electrical.unity3d?SolarPanelT3Prefab"/>
+			<property name="ModelOffset" value="0.5,0.2,0"/>
+			<property name="MultiBlockDim" value="2,2,3"/>
+			<property name="ImposterExchange" value="imposterRamp" param1="18"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="TraderStageTemplate" value="electricTier3"/><!-- solarbank -->
+			<property name="ActivationDistance" value="6"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="SoundPickup" value="banksolar_grab"/>
+			<property name="SoundPlace" value="banksolar_place"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceElectricParts" value="5"/>
+				<property name="resourceScrapPolymers" value="2"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="3,5" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B155"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="Group" value="Science,TCScience"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
+		</block>
+
+		<block name="batterybankT2">
+			<property name="Class" value="BatteryBank"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="SlotItem" value="carBattery"/>
+			<property name="InputPerTick" value="5"/>
+			<property name="ChargePerInput" value="1"/>
+			<property name="MaxPower" value="1200"/>
+			<property name="OutputPerCharge" value="90"/>
+			<property name="OutputPerStack" value="200"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/electrical.unity3d?batterybank"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Path" value="solid"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="EconomicValue" value="400"/>
+			<property name="SoundPickup" value="bankbattery_grab"/>
+			<property name="SoundPlace" value="bankbattery_place"/>
+			<property name="TraderStageTemplate" value="electricTier2"/><!-- batterybank -->
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="8"/>
+				<property name="resourceElectricParts" value="8"/>
+				<property name="resourceScrapPolymers" value="4"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="3,5" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B155"/>
+			<property name="SortOrder2" value="0004"/>
+			<property name="Group" value="Science,TCScience"/>
+			<property name="Tags" value="electricianSkill"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
+		</block>
+
+		<!--block name="WindTurineT1">
+			<property name="Class" value="BatteryBank"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="SlotItem" value="carBattery"/>
+			<property name="InputPerTick" value="5"/>
+			<property name="ChargePerInput" value="1"/>
+			<property name="MaxPower" value="1200"/>
+			<property name="OutputPerCharge" value="90"/>
+			<property name="OutputPerStack" value="200"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/electrical.unity3d?WindTurbineT1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="MultiBlockDim" value="1,8,1"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Path" value="solid"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="EconomicValue" value="400"/>
+			<property name="SoundPickup" value="bankbattery_grab"/>
+			<property name="SoundPlace" value="bankbattery_place"/>
+			<property name="TraderStageTemplate" value="electricTier2"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="8"/>
+				<property name="resourceElectricParts" value="8"/>
+				<property name="resourceScrapPolymers" value="4"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="3,5" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B155"/>
+			<property name="SortOrder2" value="0004"/>
+			<property name="Group" value="Science,TCScience"/>
+			<property name="Tags" value="electricianSkill"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
+		</block-->
+
+
+			<!-- *** CAMPFIRE -->
+		<block name="CowStable001">
+			<!-- Class -->
+			<property name="Class" value="Workstation"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="CowStable001"/>
+			</property>
+			<!-- UI_Info -->
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="workbenchDesc"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+			<property name="Stacknumber" value="1"/>
+			<!-- Visual -->
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/husbandry.unity3d?Stable0001"/>
+			<property name="MultiBlockDim" value="4,5,4"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<!-- Placement -->
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- Value -->
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<!-- Interaction -->
+			<property name="MaxDamage" value="5000"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="50"/>
+			<property name="HeatMapFrequency" value="10"/>
+			<property name="OpenSound" value="open_cowstable"/>
+			<property name="CloseSound" value="open_cowstable"/>
+			<property name="CraftSound" value="open_cowstable"/>
+			<property name="CraftCompleteSound" value="open_cowstable"/>
+			<property class="RepairItems">
+				<property name="resourceRockSmall" value="5"/>
+			</property>
+			<drop event="Destroy" name="resourceRockSmall" count="3"/>
+			<!-- Sorting -->
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="campfire_grab"/>
+			<property name="SoundPlace" value="campfire_place"/>
+		</block>
+
+		<block name="ChickenCoop001">
+			<!-- Class -->
+			<property name="Class" value="Workstation"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="ChickenCoop001"/>
+			</property>
+			<!-- UI_Info -->
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="workbenchDesc"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+			<property name="Stacknumber" value="1"/>
+			<!-- Visual -->
+			<property name="Material" value="MstoneNoGlue"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/husbandry.unity3d?ChickenCoop0001"/>
+			<property name="MultiBlockDim" value="3,3,2"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<!-- Placement -->
+			<property name="Place" value="TowardsPlacer90"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- Value -->
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<!-- Interaction -->
+			<property name="MaxDamage" value="5000"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="50"/>
+			<property name="HeatMapFrequency" value="10"/>
+			<property name="OpenSound" value="open_chickenstable"/>
+			<property name="CloseSound" value="open_chickenstable"/>
+			<property name="CraftSound" value="open_chickenstable"/>
+			<property name="CraftCompleteSound" value="open_chickenstable"/>
+			<property class="RepairItems">
+				<property name="resourceRockSmall" value="5"/>
+			</property>
+			<drop event="Destroy" name="resourceRockSmall" count="3"/>
+			<!-- Sorting -->
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="campfire_grab"/>
+			<property name="SoundPlace" value="campfire_place"/>
+		</block>
+
+		<block name="PigStable001">
+			<!-- Class -->
+			<property name="Class" value="Workstation"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="PigStable001"/>
+			</property>
+			<!-- UI_Info -->
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="workbenchDesc"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+			<property name="Stacknumber" value="1"/>
+			<!-- Visual -->
+			<property name="Material" value="MstoneNoGlue"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/husbandry.unity3d?Stable0003"/>
+			<property name="MultiBlockDim" value="3,3,2"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<!-- Placement -->
+			<property name="Place" value="TowardsPlacer90"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- Value -->
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<!-- Interaction -->
+			<property name="MaxDamage" value="5000"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="50"/>
+			<property name="HeatMapFrequency" value="10"/>
+			<property name="OpenSound" value="open_pigstable"/>
+			<property name="CloseSound" value="open_pigstable"/>
+			<property name="CraftSound" value="open_pigstable"/>
+			<property name="CraftCompleteSound" value="open_pigstable"/>
+			<property class="RepairItems">
+				<property name="resourceRockSmall" value="5"/>
+			</property>
+			<drop event="Destroy" name="resourceRockSmall" count="3"/>
+			<!-- Sorting -->
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="campfire_grab"/>
+			<property name="SoundPlace" value="campfire_place"/>
+		</block>
+
+		<block name="GoatStable001">
+			<!-- Class -->
+			<property name="Class" value="Workstation"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="GoatStable001"/>
+			</property>
+			<!-- UI_Info -->
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="workbenchDesc"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+			<property name="Stacknumber" value="1"/>
+			<!-- Visual -->
+			<property name="Material" value="MstoneNoGlue"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/husbandry.unity3d?Stable0002"/>
+			<property name="MultiBlockDim" value="3,3,2"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<!-- Placement -->
+			<property name="Place" value="TowardsPlacer90"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- Value -->
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<!-- Interaction -->
+			<property name="MaxDamage" value="5000"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="50"/>
+			<property name="HeatMapFrequency" value="10"/>
+			<property name="OpenSound" value="open_goatstable"/>
+			<property name="CloseSound" value="open_goatstable"/>
+			<property name="CraftSound" value="open_goatstable"/>
+			<property name="CraftCompleteSound" value="open_goatstable"/>
+			<property class="RepairItems">
+				<property name="resourceRockSmall" value="5"/>
+			</property>
+			<drop event="Destroy" name="resourceRockSmall" count="3"/>
+			<!-- Sorting -->
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="campfire_grab"/>
+			<property name="SoundPlace" value="campfire_place"/>
+		</block>
+
+		<block name="SheepStable001">
+			<!-- Class -->
+			<property name="Class" value="Workstation"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="SheepStable001"/>
+			</property>
+			<!-- UI_Info -->
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="workbenchDesc"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+			<property name="Stacknumber" value="1"/>
+			<!-- Visual -->
+			<property name="Material" value="MstoneNoGlue"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/husbandry.unity3d?Stable0004"/>
+			<property name="MultiBlockDim" value="3,3,2"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<!-- Placement -->
+			<property name="Place" value="TowardsPlacer90"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- Value -->
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<!-- Interaction -->
+			<property name="MaxDamage" value="5000"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="50"/>
+			<property name="HeatMapFrequency" value="10"/>
+			<property name="OpenSound" value="open_sheepstable"/>
+			<property name="CloseSound" value="open_sheepstable"/>
+			<property name="CraftSound" value="open_sheepstable"/>
+			<property name="CraftCompleteSound" value="open_sheepstable"/>
+			<property class="RepairItems">
+				<property name="resourceRockSmall" value="5"/>
+			</property>
+			<drop event="Destroy" name="resourceRockSmall" count="3"/>
+			<!-- Sorting -->
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="campfire_grab"/>
+			<property name="SoundPlace" value="campfire_place"/>
+		</block>
+
+		<block name="AnimalGrowingMaster">
+			<!-- Class -->
+			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="PlantGrowing"/>
+				<property name="Next" value="AnimalHarvestableMaster"/>
+				<property name="GrowthRate" value="63.0"/> <!-- For testing, this rate (in minutes) should be set no lower than 2 -->
+				<property name="FertileLevel" value="0"/>
+			<property name="HarvestOverdamage" value="false"/>
+			<!-- UI_Info -->
+			<property name="CustomIcon" value="plantedBlueberry1"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+			<!-- Visual -->
+			<property name="Material" value="Mplants"/>
+			<property name="Shape" value="BillboardPlant"/>
+			<property name="Mesh" value="grass"/>
+			<property name="Texture" value="395"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="WaterFlow" value="permitted"/>
+			<!-- Placement -->
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="melee"/>
+			<property name="IsDecoration" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="CanDecorateOnSlopes" value="true"/>
+			<!-- Value -->
+			<property name="VehicleHitScale" value=".1"/>
+			<property name="EconomicValue" value="20"/>
+			<!-- Interaction -->
+			<drop event="Destroy" count="0"/>
+			<!-- Sorting -->
+			<property name="SortOrder1" value="M180"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FilterTags" value="MC_outdoor,SC_crops"/>
+		</block>
+
+		<block name="AnimalHarvestableMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="FertileLevel" value="0"/>
+			<property name="HarvestOverdamage" value="false"/>
+			<property name="DisplayInfo" value="Description"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mplants"/>
+			<property name="Shape" value="BillboardPlant"/>
+			<property name="Mesh" value="grass"/>
+			<property name="Texture" value="395"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="IsDecoration" value="true"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+			<property name="SortOrder1" value="M190"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Tags" value="challenge_farming"/>
+			<property name="FilterTags" value="MC_outdoor,SC_crops"/>
+		</block>
+
+        <block name="plantedFemaleChicken">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="ChickenSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedFemaleChicken2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingChickenStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedChicken" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedFemaleChicken2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedFemaleChicken3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingChickenStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedChicken" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedFemaleChicken3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingChickenStage3.prefab"/>
+            <drop event="Destroy" name="animalChickenFemale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedFemaleChicken3HarvestPlayer">
+            <property name="Extends" value="plantedFemaleChicken3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Chicken3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedChicken3HarvestDesc"/>
+            <drop event="Destroy" name="animalChickenFemale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+        <block name="plantedmaleChicken">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="ChickenSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedmaleChicken2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingRoosterStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedChicken" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedmaleChicken2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedmaleChicken3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingRoosterStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedChicken" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedmaleChicken3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingRoosterStage3.prefab"/>
+            <drop event="Destroy" name="animalChickenMale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedmaleChicken3HarvestPlayer">
+            <property name="Extends" value="plantedmaleChicken3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Chicken3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedChicken3HarvestDesc"/>
+            <drop event="Destroy" name="animalChickenMale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+        <block name="plantedFemaleGoat">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="GoatSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedFemaleGoat2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFGoatStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedGoat" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedFemaleGoat2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedFemaleGoat3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFGoatStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedGoat" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedFemaleGoat3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFGoatStage3.prefab"/>
+            <drop event="Destroy" name="animalGoatFemale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedFemaleGoat3HarvestPlayer">
+            <property name="Extends" value="plantedFemaleGoat3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Goat3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedGoat3HarvestDesc"/>
+            <drop event="Destroy" name="animalGoatFemale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+        <block name="plantedmaleGoat">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="GoatSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedmaleGoat2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingMGoatStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedGoat" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedmaleGoat2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedmaleGoat3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingMGoatStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedGoat" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedmaleGoat3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingMGoatStage3.prefab"/>
+            <drop event="Destroy" name="animalGoatFemale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedmaleGoat3HarvestPlayer">
+            <property name="Extends" value="plantedmaleGoat3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Goat3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedGoat3HarvestDesc"/>
+            <drop event="Destroy" name="animalGoatFemale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+        <block name="plantedFemaleCow">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="CowSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedFemaleCow2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFCowStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedCow" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedFemaleCow2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedFemaleCow3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFCowStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedCow" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedFemaleCow3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFCowStage3.prefab"/>
+            <drop event="Destroy" name="animalCowFemale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedFemaleCow3HarvestPlayer">
+            <property name="Extends" value="plantedFemaleCow3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Cow3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedCow3HarvestDesc"/>
+            <drop event="Destroy" name="animalCowFemale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+        <block name="plantedmaleCow">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="CowSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedmaleCow2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingMCowStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedCow" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedmaleCow2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedmaleCow3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingMCowStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedCow" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedmaleCow3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingMCowStage3.prefab"/>
+            <drop event="Destroy" name="animalCowMale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedmaleCow3HarvestPlayer">
+            <property name="Extends" value="plantedmaleCow3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Cow3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedCow3HarvestDesc"/>
+            <drop event="Destroy" name="animalCowMale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+
+
+
+        <block name="plantedmalePig">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="PigSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedmalePig2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFPigStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedPig" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedmalePig2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedmalePig3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFPigStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedPig" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedmalePig3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFPigStage3.prefab"/>
+            <drop event="Destroy" name="animalPigMale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedmalePig3HarvestPlayer">
+            <property name="Extends" value="plantedmalePig3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Pig3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedPig3HarvestDesc"/>
+            <drop event="Destroy" name="animalPigMale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+        <block name="plantedFemalePig">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="PigSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedFemalePig2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFPigStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedPig" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedFemalePig2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedFemalePig3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFPigStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedPig" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedFemalePig3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFPigStage3.prefab"/>
+            <drop event="Destroy" name="animalPigFemale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedFemalePig3HarvestPlayer">
+            <property name="Extends" value="plantedFemalePig3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Pig3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedPig3HarvestDesc"/>
+            <drop event="Destroy" name="animalPigFemale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+        <block name="plantedmaleSheep">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="SheepSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedmaleSheep2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingMSheepStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedSheep" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedmaleSheep2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedmaleSheep3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingMSheepStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedSheep" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedmaleSheep3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingMSheepStage3.prefab"/>
+            <drop event="Destroy" name="animalSheepMale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedmaleSheep3HarvestPlayer">
+            <property name="Extends" value="plantedmaleSheep3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Sheep3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedSheep3HarvestDesc"/>
+            <drop event="Destroy" name="animalSheepMale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+        <block name="plantedFemaleSheep">
+            <property name="Extends" value="AnimalGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="SheepSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="Next" value="plantedFemaleSheep2"/>
+            <!--property name="UnlockedBy" value="craftingSeeds"/-->
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFSheepStage1.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedSheep" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedFemaleSheep2">
+            <property name="Extends" value="AnimalGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedFemaleSheep3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFSheepStage2.prefab"/>
+			<property name="GrowthRate" value="2.0"/> 
+            <drop event="Destroy" name="plantedSheep" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedFemaleSheep3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/husbandry.unity3d?GrowingFSheepStage3.prefab"/>
+            <drop event="Destroy" name="animalSheepFemale" count="1" prob="1"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedFemaleSheep3HarvestPlayer">
+            <property name="Extends" value="plantedFemaleSheep3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Sheep3"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedSheep3HarvestDesc"/>
+            <drop event="Destroy" name="animalSheepFemale" count="1" prob="1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>-->
+
+	<!-- Plants -->
+
+		<!-- *** SEEDS_BellPepper1 -->
+        <block name="plantedBellPepper1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedBellPepper2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?BellPepper1.prefab"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedBellPepper1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedBellPepper2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedBellPepper3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?BellPepper2.prefab"/>
+            <drop event="Destroy" name="plantedBellPepper1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedBellPepper3Harvest">
+            <property name="Extends" value="AnimalHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?BellPepper3.prefab"/>
+            <drop event="Harvest" name="foodCropBellPepper" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropBellPepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropBellPepper" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedBellPepper3HarvestPlayer">
+            <property name="Extends" value="plantedBellPepper3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="BellPepper3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedBellPepper3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropBellPepper" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropBellPepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropBellPepper" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedBellPepper1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedBellPepper1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedBellPepper1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Cabbage -->
+        <block name="plantedCabbage1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedCabbage2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Cabbage1.prefab"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedCabbage1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedCabbage2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedCabbage3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Cabbage2.prefab"/>
+            <drop event="Destroy" name="plantedCabbage1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedCabbage3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Cabbage3.prefab"/>
+            <drop event="Harvest" name="foodCropCabbage1" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropCabbage1" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropCabbage1" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedCabbage3HarvestPlayer">
+            <property name="Extends" value="plantedCabbage3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Cabbage3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedCabbage3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropCabbage1" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropCabbage1" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropCabbage1" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedCabbage1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedCabbage1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedCabbage1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Cantaloupe -->
+        <block name="plantedCantaloupe1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedCantaloupe2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Cantaloupe1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedCantaloupe1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedCantaloupe2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedCantaloupe3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Cantaloupe2.prefab"/>
+            <drop event="Destroy" name="plantedCantaloupe" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedCantaloupe3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Cantaloupe3.prefab"/>
+            <drop event="Harvest" name="foodCropCantaloupe" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropCantaloupe" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropCantaloupe" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedCantaloupe3HarvestPlayer">
+            <property name="Extends" value="plantedCantaloupe3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Cantaloupe3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedCantaloupe3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropCantaloupe" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropCantaloupe" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropCantaloupe" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedCantaloupe1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedCantaloupe1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedCantaloupe1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_ChiliPepper -->
+        <block name="plantedChiliPepper1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedChiliPepper2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?ChiliPepper1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedChiliPepper1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedChiliPepper2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedChiliPepper3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?ChiliPepper2.prefab"/>
+            <drop event="Destroy" name="plantedChiliPepper1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedChiliPepper3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?ChiliPepper3.prefab"/>
+            <drop event="Harvest" name="foodCropChiliPepper" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropChiliPepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropChiliPepper" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedChiliPepper3HarvestPlayer">
+            <property name="Extends" value="plantedChiliPepper3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="ChiliPepper3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedChiliPepper3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropChiliPepper" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropChiliPepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropChiliPepper" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedChiliPepper1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedChiliPepper1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedChiliPepper1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Eggplant -->
+        <block name="plantedEggplant1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedEggplant2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Eggplant1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedEggplant1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedEggplant2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedEggplant3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Eggplant2.prefab"/>
+            <drop event="Destroy" name="plantedEggplant1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedEggplant3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Eggplant3.prefab"/>
+            <drop event="Harvest" name="foodCropEggplant" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropEggplant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropEggplant" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedEggplant3HarvestPlayer">
+            <property name="Extends" value="plantedEggplant3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Eggplant3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedEggplant3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropEggplant" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropEggplant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropEggplant" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedEggplant1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedEggplant1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedEggplant1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Garlic -->
+        <block name="plantedGarlic1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedGarlic2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Garlic1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedGarlic1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedGarlic2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedGarlic3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Garlic2.prefab"/>
+            <drop event="Destroy" name="plantedGarlic1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedGarlic3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Garlic3.prefab"/>
+            <drop event="Harvest" name="foodCropGarlic" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropGarlic" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropGarlic" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedGarlic3HarvestPlayer">
+            <property name="Extends" value="plantedGarlic3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Garlic3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedGarlic3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropGarlic" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropGarlic" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropGarlic" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedGarlic1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedGarlic1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedGarlic1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Grapes -->
+        <block name="plantedGrapes1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedGrapes2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Grapes1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedGrapes1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedGrapes2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedGrapes3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Grapes2.prefab"/>
+            <drop event="Destroy" name="plantedGrapes1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedGrapes3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Grapes3.prefab"/>
+            <drop event="Harvest" name="foodCropGrapes" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropGrapes" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropGrapes" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedGrapes3HarvestPlayer">
+            <property name="Extends" value="plantedGrapes3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Grapes3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedGrapes3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropGrapes" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropGrapes" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropGrapes" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedGrapes1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedGrapes1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedGrapes1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Leek -->
+        <block name="plantedLeek1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedLeek2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Leek1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedLeek1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedLeek2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedLeek3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Leek2.prefab"/>
+            <drop event="Destroy" name="plantedLeek1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedLeek3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Leek3.prefab"/>
+            <drop event="Harvest" name="foodCropLeek" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropLeek" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropLeek" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedLeek3HarvestPlayer">
+            <property name="Extends" value="plantedLeek3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Leek3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedLeek3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropLeek" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropLeek" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropLeek" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedLeek1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedLeek1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedLeek1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Onion -->
+        <block name="plantedOnion1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedOnion2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Onion1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedOnion1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedOnion2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedOnion3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Onion2.prefab"/>
+            <drop event="Destroy" name="plantedOnion1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedOnion3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Onion3.prefab"/>
+            <drop event="Harvest" name="foodCropOnion" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropOnion" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropOnion" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedOnion3HarvestPlayer">
+            <property name="Extends" value="plantedOnion3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Onion3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedOnion3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropOnion" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropOnion" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropOnion" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedOnion1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedOnion1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedOnion1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Strawberry -->
+        <block name="plantedStrawberry1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedStrawberry2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Strawberry1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedStrawberry1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedStrawberry2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedStrawberry3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Strawberry2.prefab"/>
+            <drop event="Destroy" name="plantedStrawberry1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedStrawberry3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Strawberry3.prefab"/>
+            <drop event="Harvest" name="foodCropStrawberry" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropStrawberry" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropStrawberry" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedStrawberry3HarvestPlayer">
+            <property name="Extends" value="plantedStrawberry3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Strawberry3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedStrawberry3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropStrawberry" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropStrawberry" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropStrawberry" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedStrawberry1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedStrawberry1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedStrawberry1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Tomato -->
+        <block name="plantedTomato1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedTomato2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?TomatoPlant1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedTomato1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedTomato2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedTomato3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?TomatoPlant2.prefab"/>
+            <drop event="Destroy" name="plantedTomato1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedTomato3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?TomatoPlant3.prefab"/>
+            <drop event="Harvest" name="foodCropTomato" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropTomato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropTomato" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedTomato3HarvestPlayer">
+            <property name="Extends" value="plantedTomato3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Tomato3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedTomato3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropTomato" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropTomato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropTomato" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedTomato1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedTomato1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedTomato1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Wheat -->
+        <block name="plantedWheat1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedWheat2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Wheat1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedWheat1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedWheat2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedWheat3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Wheat2.prefab"/>
+            <drop event="Destroy" name="plantedWheat1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedWheat3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Wheat3.prefab"/>
+            <drop event="Harvest" name="foodCropWheat" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropWheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropWheat" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedWheat3HarvestPlayer">
+            <property name="Extends" value="plantedWheat3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Wheat3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedWheat3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropWheat" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropWheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropWheat" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedWheat1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedWheat1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedWheat1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+	<!-- mushrooms -->
+
+		<!-- *** SEEDS_AleuriaAurantia -->
+        <block name="plantedAleuriaAurantia1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedAleuriaAurantia2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?AleuriaAurantia1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedAleuriaAurantia1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedAleuriaAurantia2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedAleuriaAurantia3HarvestPlayer"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?AleuriaAurantia3.prefab"/>
+            <drop event="Destroy" name="plantedAleuriaAurantia1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedAleuriaAurantia3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="LightLevelGrow" value="0"/>
+			<property name="LightLevelStay" value="0"/>
+			<property name="FertileLevel" value="0"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?AleuriaAurantia3.prefab"/>
+            <drop event="Harvest" name="foodCropAleuriaAurantia" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropAleuriaAurantia" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropAleuriaAurantia" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedAleuriaAurantia3HarvestPlayer">
+            <property name="Extends" value="plantedAleuriaAurantia3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="DescriptionKey" value="plantedAleuriaAurantia3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropAleuriaAurantia" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropAleuriaAurantia" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropAleuriaAurantia" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedAleuriaAurantia1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedAleuriaAurantia1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedAleuriaAurantia1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+
+		<!-- *** SEEDS_OmphalotusIlludens -->
+        <block name="plantedOmphalotusIlludens1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedOmphalotusIlludens2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?OmphalotusIlludens1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedOmphalotusIlludens1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedOmphalotusIlludens2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedOmphalotusIlludens3HarvestPlayer"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?OmphalotusIlludens3.prefab"/>
+            <drop event="Destroy" name="plantedOmphalotusIlludens1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedOmphalotusIlludens3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="LightLevelGrow" value="0"/>
+			<property name="LightLevelStay" value="0"/>
+			<property name="FertileLevel" value="0"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?OmphalotusIlludens3.prefab"/>
+            <drop event="Harvest" name="foodCropOmphalotusIlludens" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropOmphalotusIlludens" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropOmphalotusIlludens" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedOmphalotusIlludens3HarvestPlayer">
+            <property name="Extends" value="plantedOmphalotusIlludens3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="DescriptionKey" value="plantedOmphalotusIlludens3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropOmphalotusIlludens" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropOmphalotusIlludens" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropOmphalotusIlludens" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedOmphalotusIlludens1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedOmphalotusIlludens1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedOmphalotusIlludens1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+
+		<!-- *** SEEDS_LactariusIndigo -->
+        <block name="plantedLactariusIndigo1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedLactariusIndigo2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?LactariusIndigo1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedLactariusIndigo1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedLactariusIndigo2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedLactariusIndigo3HarvestPlayer"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?LactariusIndigo3.prefab"/>
+            <drop event="Destroy" name="plantedLactariusIndigo1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedLactariusIndigo3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="LightLevelGrow" value="0"/>
+			<property name="LightLevelStay" value="0"/>
+			<property name="FertileLevel" value="0"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?LactariusIndigo3.prefab"/>
+            <drop event="Harvest" name="foodCropLactariusIndigo" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropLactariusIndigo" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropLactariusIndigo" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedLactariusIndigo3HarvestPlayer">
+            <property name="Extends" value="plantedLactariusIndigo3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="DescriptionKey" value="plantedLactariusIndigo3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropLactariusIndigo" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropLactariusIndigo" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropLactariusIndigo" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedLactariusIndigo1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedLactariusIndigo1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedLactariusIndigo1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Shroom -->
+        <block name="plantedShroom1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Next" value="plantedShroom2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Shroom1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedShroom1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedShroom2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Next" value="plantedShroom3HarvestPlayer"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Shroom3.prefab"/>
+            <drop event="Destroy" name="plantedShroom1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedShroom3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="LightLevelGrow" value="0"/>
+			<property name="LightLevelStay" value="0"/>
+			<property name="FertileLevel" value="0"/>
+            <property name="Model" value="#@modfolder:Resources/plants001.unity3d?Shroom3.prefab"/>
+            <drop event="Harvest" name="foodCropShroom" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropShroom" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropShroom" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedShroom3HarvestPlayer">
+            <property name="Extends" value="plantedShroom3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="DescriptionKey" value="plantedShroom3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropShroom" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropShroom" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropShroom" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedShroom1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedShroom1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedShroom1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<block name="terrSulfurWaterPOI">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Liquidv2"/>
+			<property name="Count" value="16"/>
+			<property name="MapColor" value="20,20,120"/>
+			<property name="MapColor" value="119,136,204"/>
+			<property name="Material" value="Mwater"/>
+			<property name="Shape" value="Water"/>
+			<property name="Mesh" value="water"/>
+			<property name="Model" value="@:Shapes/water_full.fbx"/>
+			<property name="Texture" value="223"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="1555"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<block name="ThugModel">
+			<property name="DescriptionKey" value="ThugModelDesc"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="Material" value="Mconcrete_shapes"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Taxidermy.unity3d?ThugModel.prefab"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property class="RepairItems">
+				<property name="resourceConcreteMix" value="8"/>
+			</property>
+			<drop event="Harvest" name="resourceRockSmall" count="25" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SoundPickup" value="concreteblock_grab"/>
+			<property name="SoundPlace" value="concreteblock_place"/>
+			<property name="SortOrder1" value="S030"/>
+			<!-- SortOrder2 is assigned in code to keep all of the shapes in the same order for each material -->
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+		</block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</append>
+
+    <insertAfter xpath="/blocks/block[@name='terrOreLead']/drop[@event='Harvest' and @name='resourceGoldNugget']">
+        <drop event="Harvest" name="resourceRadioactiveDust" prob=".08" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+        <drop event="Harvest" name="resourceRadioactiveCrystal" prob=".08" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+        <drop event="Harvest" name="resourcesapphire" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceJade" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceturquoise" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+    </insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceScrapIron']">
+		<drop event="Harvest" name="resourceRosequartz" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceGarnet" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceCarnelian" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceTopaz" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+	</insertAfter>
+
+
+	<append xpath="/blocks">
+
+		<block name="workingMicrowave">
+			<property name="Material" value="MmetalNoGlue"/>
+			<property name="MaxDamage" value="400"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Workstation"/>
+			<property name="CustomIcon" value="cntMicrowaveOvenVer1Closed"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/LootContainers/microwaveElectricModern_01Prefab.prefab"/>
+			<property name="Place" value="TowardsPlacer90"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="microwave"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+			<property name="CraftActionName" value="lblContextActionCook"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="microwaveTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceElectricParts" value="2"/>
+				<property name="resourceMechanicalParts" value="2"/>
+				<property name="resourceScrapIron" value="5"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceElectricParts" count="0" tag="salvageHarvest"/>
+			<drop event="Destroy" name="workingMicrowave" count="1" prob="0.7"/>
+			<drop event="Destroy" name="resourceScrapIron" count="0"/>
+			<property name="EconomicValue" value="450"/>
+			<property name="FilterTags" value="floot,ffurniture,fdesign"/>
+			<property name="TakeDelay" value="15"/>
+		</block>
+
+            <!-- *** Working Stove -->
+        <block name="WorkingStove">
+            <!-- Class -->
+            <property name="Class" value="Campfire"/>
+            <property name="MaxDamage" value="2500"/>
+            <property class="Workstation">
+                <property name="Modules" value="tools,output,fuel,input"/>
+                <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            </property>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <!-- UI_Info -->
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="cntStoveOldVer1Closed" />
+            <property name="DescriptionKey" value="campfireDesc"/>
+            <property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+            <property name="CraftIcon" value="ui_game_symbol_spatula"/>
+            <property name="CraftActionName" value="lblContextActionCook"/>
+            <property name="Stacknumber" value="1"/>
+            <!-- Visual -->
+            <property name="Material" value="Mmetal"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/LootContainers/stoveElectricRetro_01Prefab.prefab"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <!-- Placement -->
+            <property name="Place" value="TowardsPlacer90"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="true"/>
+            <!-- Value -->
+            <property name="EconomicValue" value="5"/>
+            <property name="EconomicBundleSize" value="1"/>
+            <property name="SellableToTrader" value="false"/>
+            <!-- Interaction -->
+            <property name="HeatMapStrength" value="1"/>
+            <property name="HeatMapTime" value="1"/>
+            <property name="HeatMapFrequency" value="100"/>
+            <property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+            <property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+            <property name="OpenSound" value="campfire_open"/>
+            <property name="CloseSound" value="campfire_close"/>
+            <property name="CraftSound" value="campfire_cook_click"/>
+            <property name="CraftCompleteSound" value="campfire_complete_item"/>
+            <property class="RepairItems">
+                <property name="resourceScrapIron" value="5"/>
+            </property>
+            <drop event="Destroy" name="resourceScrapIron" count="3,6"/>
+            <!-- Sorting -->
+            <property name="SortOrder1" value="B281"/>
+            <property name="SortOrder2" value="0000"/>
+            <property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+            <property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+            <property name="SoundPickup" value="campfire_grab"/>
+            <property name="SoundPlace" value="campfire_place"/>
+        </block>
+
+
+
+
+
+
+
+
+
+
+
+
+	</append>
+
+
+	<append xpath="/blocks/block[@name='cntMicrowaveOvenVer1Open']">
+		<drop event="Destroy" name="workingMicrowave" count="1" prob="1"/>
+
+	</append>
+
+</configs>
