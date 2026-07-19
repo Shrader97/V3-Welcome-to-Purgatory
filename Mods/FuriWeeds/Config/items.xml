@@ -1,0 +1,1791 @@
+<configs>
+
+	<append xpath="/items">
+
+	<!-- Stoned Magazine -->
+		<item name="stonedMagazine">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Meshfile" value="@Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Stacknumber" value="250"/> 
+			<property name="CustomIcon" value="bookstonedmagazine"/>
+			<property name="DescriptionKey" value="stonedMagazineDesc"/>
+			<property name="Unlocks" value="craftingWeed"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingWeed" level="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffNerdOutfit"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
+					<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
+			</effect_group>
+		</item>
+
+		<!-- TESTE DA FUMAZERA -->
+
+		<item name="BECKTESTE">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjoint"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dFortitude" value="1"/>
+				<display_value name="dPhysicalDamageResist" value="5"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="add" value="240"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="set" value="360">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint1Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint1Desc"/>
+		</item>
+
+		<item name="BECKVOMITO">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis6"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?JointSuperfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedsuperjoint"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dHealthLoss" value=".15"/>
+				<display_value name="dPlayerExpGain" value=".2"/>
+				<display_value name="dEntityDamage" value=".2"/>
+				<display_value name="$waterAmountAdd" value="-20"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint6Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint6Duration" operation="set" value="660">
+				<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint6Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint6"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffPuke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint6Desc"/>
+		</item>
+
+		<!-- WEED STEM - HASTE DE LA MACONHITA SUCULENTA -->
+
+		<item name="WeedStemAk47">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+		<item name="WeedStemChemDawg">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem2Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemchemdawg"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+		<item name="WeedStemWeddingCake">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemweddingcake"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+		<item name="WeedStemBlueDream">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stembluedream"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+		<item name="WeedStemPurpleHaze">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem3Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stempurplehaze"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<!-- Splicing Chamber -->
+		
+		<item name="WeedStemChem-47">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemAkCake">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemSky47">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemAkHaze">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemFrostedFuel">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemDreamDawg">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemHazeDawg">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemPurpleDreamCake">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemBridalHaze">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemHazeDream">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<!-- SUPER WEED -->
+		<item name="SuperWeed">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedBud4"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="superweed"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="100"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="SuperWeedBudDesc"/>
+		</item>
+
+		<!-- MACONHADA -->
+		<item name="Grams Of Ak47">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedBud1"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="budak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="resourceCropCannabisBudDesc"/>
+		</item>
+
+		<item name="Grams Of Blue Dream">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedBud1"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="budbluedream"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="resourceCropCannabisBudDesc"/>
+		</item>
+
+		<item name="Grams Of Wedding Cake">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedBud1"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="budweddingcake"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="resourceCropCannabisBudDesc"/>
+		</item>
+
+
+		<item name="Grams Of ChemDawg">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedBud2"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="budchemdawg"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="resourceCropCannabisBudDesc"/>
+		</item>
+
+		<item name="Grams Of Purple Haze">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedBud3"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="budpurplehaze"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="resourceCropCannabisBudDesc"/>
+		</item>
+
+		<!-- EXTRATOS -->
+
+		<item name="Grams Of Shatter">
+			<property name="HoldType" value="23"/>
+			<property name="UnlockedBy" value="craftingWeed,Weed Extraction Schematic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?Paperoil"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="extractionshatter"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="20"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="GramsOfOilDesc"/>
+		</item>
+
+		<item name="Grams Of Diamonds">
+			<property name="HoldType" value="23"/>
+			<property name="UnlockedBy" value="craftingWeed,Weed Extraction Schematic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?Paperoil"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="extractiondiamonds"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="20"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="GramsOfOilDesc"/>
+		</item>
+
+
+		<item name="Grams Of Wax">
+			<property name="HoldType" value="23"/>
+			<property name="UnlockedBy" value="craftingWeed,Weed Extraction Schematic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?Paperoil"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="extractionwax"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="20"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="GramsOfOilDesc"/>
+		</item>
+
+
+		<item name="Grams Of Sauce">
+			<property name="HoldType" value="23"/>
+			<property name="UnlockedBy" value="craftingWeed,Weed Extraction Schematic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?Paperoil"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="extractionsauce"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="20"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="GramsOfOilDesc"/>
+		</item>
+
+
+		<item name="Grams Of Crumble">
+			<property name="HoldType" value="23"/>
+			<property name="UnlockedBy" value="craftingWeed,Weed Extraction Schematic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?Paperoil"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="extractioncrumble"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="20"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="GramsOfOilDesc"/>
+		</item>
+
+		<!-- BUT -->
+
+		<item name="Butane">
+			<property name="HoldType" value="45"/>
+			<property name="UnlockedBy" value="craftingWeed,Butane Schematic"/>
+			<property name="Meshfile" value="@Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="butane"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="45"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="ButaneDesc"/>
+		</item>
+
+		<item name="Box Of Butane">
+			<property name="Extends" value="resourceRockSmallBundle"/>
+			<property name="UnlockedBy" value="craftingWeed"/>
+			<property name="Meshfile" value="@Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="boxofbutane"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="250"/> 
+			<property name="EconomicValue" value="450"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="300"/> -->
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property class="Action0">
+				<property name="Create_item" value="Butane"/>
+				<property name="Create_item_count" value="12"/>
+			</property>
+
+			<property name="DescriptionKey" value="BoxOfButaneDesc"/>
+		</item>
+
+		<item name="Empty Vape">
+			<property name="HoldType" value="16"/>
+			<property name="UnlockedBy" value="craftingWeed,Weed Extraction Schematic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/WeedVape.unity3d?Vape"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedvape"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="20"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="EmptyVapeDesc"/>
+		</item>
+
+		<item name="Cannabutter">
+			<property name="HoldType" value="16"/>
+			<property name="UnlockedBy" value="craftingWeed,Weed Extraction Schematic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/edibles.unity3d?Butter"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value=""/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="20"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<!-- <property name="SellableToTrader" value="false"/> -->
+			<!-- <property name="CraftingIngredientTime" value="20"/> -->
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="GramsOfOilDesc"/>
+		</item>
+
+
+		<!-- AGORA VAI COMECAR A BRINCADEIRA -->
+
+		<item name="AK-47 Joint">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis1"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjoint"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dFortitude" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint1Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint1Desc"/>
+		</item>
+
+		<item name="AK-47 Joint With Oil">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis1"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointwaxfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjointoil"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dFortitude" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="900"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong1Duration" operation="add" value="903"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong1Duration" operation="set" value="966">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong1Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJointWax1Desc"/>
+		</item>
+
+
+		<item name="AK-47 Brownie">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis1"/>
+			<property name="HoldType" value="31"/>
+			<property name="Meshfile" value="#@modfolder:Resources/edibles.unity3d?Brownie"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjoint"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dFortitude" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint1Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint1Desc"/>
+		</item>
+
+		<item name="AK-47 Wax Vape">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis1"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/WeedVape.unity3d?Vape"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedvape"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<property name="Create_item" value="Empty Vape"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dFortitude" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint1Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint1Desc"/>
+		</item>
+
+		<!-- CHEMDAWG BECK 2 -->
+
+		<item name="ChemDawg Joint">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis2"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjoint"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dPerception" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint2Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint2Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint2Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint2Desc"/>
+		</item>
+
+		<item name="ChemDawg Joint With Oil">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis2"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointwaxfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjointoil"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dPerception" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="900"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong2Duration" operation="add" value="903"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong2Duration" operation="set" value="966">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong2Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJointWax2Desc"/>
+		</item>
+
+		<item name="ChemDawg Wax Vape">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis2"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/WeedVape.unity3d?Vape"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedvape"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<property name="Create_item" value="Empty Vape"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dPerception" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint2Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint2Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint2Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint2Desc"/>
+		</item>
+
+
+		<!-- WEDDING CAKE 3 -->
+
+		<item name="Wedding Cake Joint">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis3"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjoint"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dAgility" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint3Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint3Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint3Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint3Desc"/>
+		</item>
+
+		<item name="Wedding Cake Joint With Oil">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis3"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointwaxfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjointoil"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<property name="Create_item" value="Empty Vape"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dAgility" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="900"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong3Duration" operation="add" value="903"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong3Duration" operation="set" value="966">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong3Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJointWax3Desc"/>
+		</item>
+
+		<item name="Wedding Cake Wax Vape">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis3"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/WeedVape.unity3d?Vape"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedvape"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dAgility" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint3Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint3Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint3Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint3Desc"/>
+		</item>
+
+		<!-- BLUE DREAM 4 -->
+
+		<item name="Blue Dream Joint">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis4"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjoint"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dStrength" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint4Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint4Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint4Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint4"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint4Desc"/>
+		</item>
+
+		<item name="Blue Dream Joint With Oil">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis4"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointwaxfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjointoil"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<property name="Create_item" value="Empty Vape"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dStrength" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="900"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong4Duration" operation="add" value="903"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong4Duration" operation="set" value="966">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong4Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong4"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJointWax4Desc"/>
+		</item>
+
+		<item name="Blue Dream Wax Vape">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis4"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/WeedVape.unity3d?Vape"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedvape"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dStrength" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint4Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint4Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint4Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint4"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint4Desc"/>
+		</item>
+
+		<!-- PURPLE HAZE 5 -->
+
+		<item name="Purple Haze Joint">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis5"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjoint"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dIntellect" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint5Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint5Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint5Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint5Desc"/>
+		</item>
+
+		<item name="Purple Haze Joint With Oil">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis5"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Jointfumasa.unity3d?Jointwaxfumasao"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedjointoil"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dIntellect" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="900"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong5Duration" operation="add" value="900"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong5Duration" operation="set" value="966">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong5Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJointWax5Desc"/>
+		</item>
+
+		<item name="Purple Haze Wax Vape">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis5"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/WeedVape.unity3d?Vape"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="weedvape"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="torch_swoosh"/>
+				<property name="Create_item" value="Empty Vape"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-20"/>
+				<display_value name="dIntellect" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint5Duration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint5Duration" operation="set" value="300">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint5Duration" operation="GT" value="183"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="drugJoint5Desc"/>
+		</item>
+
+		<item name="Bong">
+			<property name="HoldType" value="3"/>
+			<property name="Tags" value="junk"/>
+			<property name="UnlockedBy" value="craftingWeed,Bong Schematic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/bong.unity3d?bong"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="bong"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="DescriptionKey" value="toolBongDesc"/>
+		</item>
+
+		<item name="Oil Rig">
+			<property name="HoldType" value="3"/>
+			<property name="Tags" value="junk"/>
+			<property name="UnlockedBy" value="craftingWeed,Oil Rig Schematic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Oil Rig.unity3d?Oil Rig"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="oilrig"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="150"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="DescriptionKey" value="OilRigDesc"/>
+		</item>
+
+		<!-- BONG DE AK-47 1 -->
+
+		<item name="Bong Filled With AK-47">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis1"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/bong.unity3d?bong"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="bongfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="92"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Bong"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dFortitude" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="set" value="600">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint1Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="toolBongFilled1Desc"/>
+		</item>
+
+		<!-- BONG DE CHEMDAWG 2 -->
+
+		<item name="Bong Filled With ChemDawg">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis2"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/bong.unity3d?bong"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="bongfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="92"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Bong"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dPerception" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint2Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint2Duration" operation="set" value="600">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint2Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="toolBongFilled2Desc"/>
+		</item>
+
+		<!-- BONG DE WEDDING CAKE 3 -->
+
+		<item name="Bong Filled With Wedding Cake">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis3"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/bong.unity3d?bong"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="bongfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="92"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Bong"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dAgility" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint3Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint3Duration" operation="set" value="600">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint3Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="toolBongFilled3Desc"/>
+		</item>
+
+		<!-- BONG DE BLUE DREAM 4 -->
+
+		<item name="Bong Filled With Blue Dream">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis4"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/bong.unity3d?bong"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="bongfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="92"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Bong"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dStrength" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint4Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint4Duration" operation="set" value="600">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint4Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint4"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="toolBongFilled4Desc"/>
+		</item>
+
+		<!-- BONG DE PURPLE HAZE 5 -->
+
+		<item name="Bong Filled With Purple Haze">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis5"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/bong.unity3d?bong"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="bongfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="92"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Bong"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="10"/>
+				<display_value name="$foodAmountAdd" value="-30"/>
+				<display_value name="dIntellect" value="1"/>
+				<display_value name="dHealthLoss" value=".03"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint5Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSmokedJoint5Duration" operation="set" value="600">
+					<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint5Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSmokedJoint5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="toolBongFilled5Desc"/>
+		</item>
+
+		<!-- BORA DAR DAB DE WAX -->
+
+		<item name="Oil Rig Filled with Wax">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis1"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Oil Rig.unity3d?Oil Rig"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="oilrigfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Oil Rig"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-40"/>
+				<display_value name="dFortitude" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong1Duration" operation="add" value="603"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong1Duration" operation="set" value="663">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong1Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="OilRigFilled1Desc"/>
+		</item>
+
+		<!-- BORA DAR DAB DE CRUMBLE -->
+
+		<item name="Oil Rig Filled with Crumble">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis2"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Oil Rig.unity3d?Oil Rig"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="oilrigfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Oil Rig"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-40"/>
+				<display_value name="dPerception" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong2Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong2Duration" operation="set" value="663">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong2Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="OilRigFilled2Desc"/>
+		</item>
+
+		<!-- BORA DAR DAB DE DIAMONDS -->
+
+		<item name="Oil Rig Filled with Diamonds">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis3"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Oil Rig.unity3d?Oil Rig"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="oilrigfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Oil Rig"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-40"/>
+				<display_value name="dAgility" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong3Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong3Duration" operation="set" value="663">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong3Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="OilRigFilled3Desc"/>
+		</item>
+
+		<!-- BORA DAR DAB DE SAUCE -->
+
+		<item name="Oil Rig Filled with Sauce">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis4"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Oil Rig.unity3d?Oil Rig"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="oilrigfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Oil Rig"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-40"/>
+				<display_value name="dStrength" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong4Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong4Duration" operation="set" value="663">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong4Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong4"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="OilRigFilled4Desc"/>
+		</item>
+
+		<!-- BORA DAR DAB DE SHATTER -->
+
+		<item name="Oil Rig Filled with Shatter">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="drugCannabis5"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Oil Rig.unity3d?Oil Rig"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="oilrigfilled"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="15"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="chem_station_mix_click"/>
+				<property name="Create_item" value="Oil Rig"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint1"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong1"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint2"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong2"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint3"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong3"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint4"/>
+				<requirement name="NotHasBuff" buff="buffDrugRippedBong4"/>
+				<requirement name="NotHasBuff" buff="buffDrugSmokedJoint5"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<effect_group tiered="false">
+				<display_value name="dInstantHealth" value="20"/>
+				<display_value name="$foodAmountAdd" value="-40"/>
+				<display_value name="dIntellect" value="2"/>
+				<display_value name="dHealthLoss" value=".05"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong5Duration" operation="add" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRippedBong5Duration" operation="set" value="663">
+					<requirement name="CVarCompare" cvar="$buffDrugRippedBong5Duration" operation="GT" value="543"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRippedBong5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSmoke"/>
+			</effect_group>
+			<property name="DescriptionKey" value="OilRigFilled5Desc"/>
+		</item>
+
+		<item name="Bong Schematic">
+			<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bong"/>
+			<property name="Unlocks" value="Bong"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Bong" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<property name="DescriptionKey" value="BongSchematicDesc"/>
+		</item>
+
+		<item name="Oil Rig Schematic">
+			<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="oilrig"/>
+			<property name="Unlocks" value="Oil Rig"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Oil Rig" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<property name="DescriptionKey" value="OilRigSchematicDesc"/>
+		</item>
+
+		<item name="Weed Extraction Schematic">
+			<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+			<property name="EconomicValue" value="800"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bookextractionmagazine"/>
+			<property name="Unlocks" value="Grams Of Wax"/>
+			<property name="Unlocks" value="Grams Of Shatter"/>
+			<property name="Unlocks" value="Grams Of Diamonds"/>
+			<property name="Unlocks" value="Grams Of Crumble"/>
+			<property name="Unlocks" value="Grams Of Sauce"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grams Of Wax" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grams Of Shatter" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grams Of Diamonds" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grams Of Crumble" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grams Of Sauce" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<property name="DescriptionKey" value="WeedExtractionSchematicDesc"/>
+		</item>
+
+		<item name="Butane Schematic">
+			<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="butane"/>
+			<property name="Unlocks" value="Butane"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Butane" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+			<property name="DescriptionKey" value="ButaneSchematicDesc"/>
+		</item>
+
+
+
+
+	</append>
+
+</configs>

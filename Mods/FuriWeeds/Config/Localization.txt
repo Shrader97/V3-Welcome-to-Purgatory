@@ -1,0 +1,211 @@
+Key,english,brazilian
+PlantedAk471,Ak47 (Seed),Ak47 (Semente)
+PlantedAk471Desc,"Plant Ak47 seeds in fertilized dirt to grow Ak47 plants.","Plante em terrenos agricolas para nascer uma linda planta."
+PlantedAk471Schematic,Ak47 (Seed) Recipe,Recipe de Ak47 (Semente)
+PlantedAk472,Ak47 (Growing),Ak47 (Crescendo)
+PlantedAk473Harvest,Ak47 Plant 3 (POI),Planta de Ak47 3 (POI)
+PlantedAk473HarvestDesc,"Ak47 Plant","Planta de Ak47"
+PlantedAk473HarvestPlayerDesc,"Ak47 Plant","Planta de Ak47"
+PlantedAk47HarvestRandomHelper,= Ak47 = Random Helper,
+PlantedChemDawg1,ChemDawg (Seed),ChemDawg (Semente)
+PlantedChemDawg1Desc,"Plant ChemDawg seeds in fertilized dirt to grow ChemDawg plants.","Plante em terrenos agricolas para nascer uma linda planta."
+PlantedChemDawg1Schematic,ChemDawg (Seed) Recipe,Recipe de ChemDawg (Semente)
+PlantedChemDawg2,ChemDawg (Growing),ChemDawg (Crescendo)
+PlantedChemDawg3Harvest,ChemDawg Plant 3 (POI),Planta de ChemDawg 3 (POI)
+PlantedChemDawg3HarvestDesc,"ChemDawg Plant","Planta de ChemDawg"
+PlantedChemDawg3HarvestPlayerDesc,"ChemDawg Plant","Planta de ChemDawg"
+PlantedChemDawgHarvestRandomHelper,= ChemDawg = Random Helper,
+PlantedWeddingCake1,WeddingCake (Seed),WeddingCake (Semente)
+PlantedWeddingCake1Desc,"Plant WeddingCake seeds in fertilized dirt to grow WeddingCake plants.","Plante em terrenos agricolas para nascer uma linda planta."
+PlantedWeddingCake1Schematic,WeddingCake (Seed) Recipe,Recipe de WeddingCake (Semente)
+PlantedWeddingCake2,WeddingCake (Growing),WeddingCake (Crescendo)
+PlantedWeddingCake3Harvest,WeddingCake Plant 3 (POI),Planta de WeddingCake 3 (POI)
+PlantedWeddingCake3HarvestDesc,"WeddingCake Plant","Planta de WeddingCake"
+PlantedWeddingCake3HarvestPlayerDesc,"WeddingCake Plant","Planta de WeddingCake"
+PlantedWeddingCakeHarvestRandomHelper,= WeddingCake = Random Helper,
+PlantedBlueDream1,BlueDream (Seed),BlueDream (Semente)
+PlantedBlueDream1Desc,"Plant BlueDream seeds in fertilized dirt to grow BlueDream plants.","Plante em terrenos agricolas para nascer uma linda planta."
+PlantedBlueDream1Schematic,BlueDream (Seed) Recipe,Recipe de BlueDream (Semente)
+PlantedBlueDream2,BlueDream (Growing),BlueDream (Crescendo)
+PlantedBlueDream3Harvest,,BlueDream Plant 3 (POI),Planta de BlueDream 3 (POI)
+PlantedBlueDream3HarvestDesc,"Blue Dream Plant","Planta de Blue Dream"
+PlantedBlueDream3HarvestPlayerDesc,"Blue Dream Plant","Planta de Blue Dream"
+PlantedBlueDreamHarvestRandomHelper,= BlueDream = Random Helper,
+PlantedPurpleHaze1,PurpleHaze (Seed),PurpleHaze (Semente)
+PlantedPurpleHaze1Desc,"Plant PurpleHaze seeds in fertilized dirt to grow PurpleHaze plants.","Plante em terrenos agricolas para nascer uma linda planta."
+PlantedPurpleHaze1Schematic,PurpleHaze (Seed) Recipe,,Recipe de PurpleHaze (Semente)
+PlantedPurpleHaze2,PurpleHaze (Growing),PurpleHaze (Crescendo)
+PlantedPurpleHaze3Harvest,PurpleHaze Plant 3 (POI),Planta de PurpleHaze 3 (POI)
+PlantedPurpleHaze3HarvestDesc,"Purple Haze Plant","Planta de Purple Haze"
+PlantedPurpleHaze3HarvestPlayerDesc,"Purple Haze Plant","Planta de Purple Haze"
+PlantedPurpleHazeHarvestRandomHelper,= PurpleHaze = Random Helper,
+
+plantedSuperWeed1,Super Weed Bonsai (Growing),Bonsai da Super Erva (Crescendo)
+plantedSuperWeed1Desc,"You've reached the pinnacle of Grower!\nSnoop Dogg would be proud..\nThis bonsai of a strange weed always blooms after harvest.","Você chegou ao ápice como Grower!\nSnoop Dogg estaria orgulhoso..\nEsse bonsai de uma erva estranha sempre floresce após a colheita."
+plantedSuperWeed2,Super Weed Bonsai (Growing),Bonsai da Super Erva (Crescendo)
+plantedSuperWeed3Harvest,Super Weed Bonsai,Bonsai da Super Erva
+plantedSuperWeed3HarvestPlayerDesc,"Super Weed Bonsai","Bonsai da Super Erva"
+plantedSuperWeedHarvestRandomHelper,= Super Weed Bonsai = Random Helper,
+SuperWeed,Acid Weed,Maconha Ácida
+SuperWeedBudDesc,"Wat?\nDo you want to smoke this green weeed that glows?\nHehe....","Como assim?\nVocê quer fumar essa erva verde que brilha?\nHehe...."
+
+WeedStemAk47,Weed Stem (AK-47),Haste de AK-47
+WeedStemChemDawg,Weed Stem (ChemDawg),Haste de ChemDawg
+WeedStemWeddingCake,Weed Stem (Wedding Cake),Haste de Wedding Cake
+WeedStemBlueDream,Weed Stem (Blue Dream),Haste de Blue Dream
+WeedStemPurpleHaze,Weed Stem (PurpleHaze),Haste de PurpleHaze
+
+WeedStemDesc,"It smells so good...\nSo fresh...\nLet it dry and cure on the [9acc8b]weed workstation[-] for beautiful smokable buds.","O cheiro é tão bom...\nTão fresco...\nDeixe secar e curar na [9acc8b]bancada da erva[-] para obter lindos buds fumáveis."
+
+Weedworkstation,Weed Workstation,Bancada da Erva
+WeedworkstationDesc,"This is where you will dry, trim and cure your beautiful weeds!","Aqui é onde você vai secar, trimmar e curar suas ervas lindas!"
+
+BECKVOMITO,Acid Weed Joint,Beck de Maconha Ácida
+drugJoint6Desc,"If there is madness in the world, it is in this joint.\nAdds some small buffs in EXP gain, damage reduction and ranged weapons.","Se existe a loucura no mundo, ela está nesse joint.\nAdiciona pequenos buffs no ganho de EXP, redução de danos e dano com armas de longo alcance."
+
+ratrasta,Rasta Rat,Rasta Rat
+ratrastaDesc,"A RASTA RAT!\nServes as a decorative item as well as emitting light.","UM RATO RASTA!\nServe como item decorativo além de emitir luz."
+
+buffDrugSmokedJoint6Name,"[9acc8b]Smoked Joint(Acid)[-]","[9acc8b]Fumou um (Acid)[-]"
+buffDrugSmokedJoint6Desc,"You're stoned on the bright green grass!\n+20% XP\n+15% Damage Reduction\n+20% Firearms Damage","Ficou chapado com a erva verde brilhante!\n+20% XP\n+15% Redução de dano\n+20% Dano com armas de fogo"
+
+buffDrugSmokedJoint1Name,"[9acc8b]Smoked Joint(AK-47)[-]","[9acc8b]Fumou um (AK-47)[-]"
+buffDrugSmokedJoint1Desc,"You got high on Cannabis and it made you feel better and also pretty hungry.\nGained 5% damage reduction and +1 to Fortitude.","Ficou bem loco fumando a erva.\nGanhou 5% de redução de dano e +1 em Fortitude."
+buffDrugRippedBong1Name,"[9acc8b]Really High(AK-47)[-]","[9acc8b]Bateu forte (AK-47)[-]"
+buffDrugRippedBong1Desc,"So..\nLet's machine gun everyone..\nGained 10% damage reduction and +2 to Fortitude.","Então..\nVamos metralhar todo mundo..\nGanhou 10% de redução de dano e +2 em Fortitude."
+
+buffDrugSmokedJoint2Name,"[9acc8b]Smoked Joint(ChemDawg)[-]","[9acc8b]Fumou um (ChemDawg)[-]"
+buffDrugSmokedJoint2Desc,"You got high on Cannabis and it made you feel better and also pretty hungry.\nGained 5% damage reduction and +1 to Perception.","Ficou bem loco fumando a erva.\nGanhou 5% de redução de dano e +1 em Percepção."
+buffDrugRippedBong2Name,"[9acc8b]Really High(ChemDawg)[-]","[9acc8b]Bateu forte (ChemDawg)[-]"
+buffDrugRippedBong2Desc,"Oh my Dawg this weed..\nWOOF WOOF!\nGained 10% damage reduction and +2 to Perception.","Essa erva.. AU AU!\nGanhou 10% de redução de dano e +2 em Percepção."
+
+buffDrugSmokedJoint3Name,"[9acc8b]Smoked Joint(Wedding Cake)[-]","[9acc8b]Fumou um (Wedding Cake)[-]"
+buffDrugSmokedJoint3Desc,"You got high on Cannabis and it made you feel better and also pretty hungry.\nGained 5% damage reduction and +1 to Agility.","Ficou bem loco fumando a erva.\nGanhou 5% de redução de dano e +1 em Agilidade."
+buffDrugRippedBong3Name,"[9acc8b]Really High(Wedding Cake)[-]","[9acc8b]Bateu forte (Wedding Cake)[-]"
+buffDrugRippedBong3Desc,"Hummm..\nSo sweet..\nGained 10% damage reduction and +2 to Agility.","Hummm..\nDocinho..\nGanhou 10% de redução de dano e +2 em Agilidade."
+
+buffDrugSmokedJoint4Name,"[9acc8b]Smoked Joint(Blue Dream)[-]","[9acc8b]Fumou um (Blue Dream)[-]"
+buffDrugSmokedJoint4Desc,"You got high on Cannabis and it made you feel better and also pretty hungry.\nGained 5% damage reduction and +1 to Strength.","Ficou bem loco fumando a erva.\nGanhou 5% de redução de dano e +1 em Força."
+buffDrugRippedBong4Name,"[9acc8b]Really High(Blue Dream)[-]","[9acc8b]Bateu forte (Blue Dream)[-]"
+buffDrugRippedBong4Desc,"This weed makes me numb!\nGained 10% damage reduction and +2 to Strength.","Essa erva me deixa anestesiado!\nGanhou 10% de redução de dano e +2 em Força."
+
+buffDrugSmokedJoint5Name,"[9acc8b]Smoked Joint(Purple Haze)[-]","[9acc8b]Fumou um (Purple Haze)[-]"
+buffDrugSmokedJoint5Desc,"You got high on Cannabis and it made you feel better and also pretty hungry.\nGained 5% damage reduction and +1 to Intellect.","Ficou bem loco fumando a erva.\nGanhou 5% de redução de dano e +1 em Intelecto."
+buffDrugRippedBong5Name,"[9acc8b]Really High(Purple Haze)[-]","[9acc8b]Bateu forte (Purple Haze)[-]"
+buffDrugRippedBong5Desc,"Humm..\nHamm..\nOh, wat?\nGained 10% damage reduction and +2 to Intellect.","A CABESA CRESCE... CERTO MANO!\nGanhou 10% de redução de dano e +2 em Intelecto."
+
+
+buffDrugRippedBongTooltip,You got really high.,Está muito chapado.
+
+resourceCropCannabisBud,Cannabis Bud,Broto de Cannabis
+resourceCropCannabisBudDesc,"HOW DELICIOUS MAN.\nThe sacred herb.\nIt can be used to roll joints and/or make extracts if you have the knowledge.","QUE DELISIA CARA.\nA erva sagrada.\nPode ser usada para enrolar becks e ou fazer extratos se possuir conhecimento."
+GramsOfOilDesc,"Want to get REALLY high?\nYep?\nUse this concentrate in a joint or a dab rig.","Quer ficar MUITO CHAPADO?\nSim?\nUse esse concentrado em um beck ou no Dab rig."
+Butane,Butane,Butano
+ButaneDesc,"Useful for making grams of oil in the [9acc8b]weed extraction kit[-].","Útil para fazer gramas de óleo no [9acc8b]kit de extração com maconha[-]."
+
+Box Of Butane,Box Of Butane,Caixa de Butano
+BoxOfButaneDesc,"Useful for bundle crafting butane for a little less supplies.","Útil para fazer butano em conjunto e economizar suprimentos."
+
+AK-47 Joint,AK-47 Joint,Beck de AK-47
+drugJoint1Desc,"A joint of AK-47!\nSmoking will make you a little hungry but will increase your health.\nGain 5% damage reduction and +1 Fortitude.","Um beck de AK-47!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 5% de redução de dano e +1 em Fortitude."
+AK-47 Joint With Oil,AK-47 Joint with Wax,Beck de AK-47 com Wax
+drugJointWax1Desc,"A joint of AK-47 with Wax!\nSmoking will make you a little hungry but will increase your health.\nGain 10% damage reduction and +2 Fortitude.","Um beck de AK-47 com Wax!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 10% de redução de dano e +2 em Fortitude."
+
+Purple Haze Joint,Purple Haze Joint,Beck de Purple Haze
+drugJoint5Desc,"A joint of Purple Haze!\nSmoking will make you a little hungry but will increase your health.\nGain 5% damage reduction and +1 Intellect.","Um beck de Purple Haze!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 5% de redução de dano e +1 em Intelecto."
+Purple Haze Joint With Oil,Purple Haze Joint with Shatter,Beck de Purple Haze com Shatter
+drugJointWax5Desc,"A joint of Purple Haze with Shatter!\nSmoking will make you a little hungry but will increase your health.\nGain 10% damage reduction and +2 Intellect.","Um beck de Purple Haze com Shatter!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 10% de redução de dano e +2 em Intelecto."
+
+ChemDawg Joint,ChemDawg Joint,Beck de ChemDawg
+drugJoint2Desc,"A joint of ChemDawg!\nSmoking will make you a little hungry but will increase your health.\nGain 5% damage reduction and +1 Perception.","Um beck de ChemDawg!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 5% de redução de dano e +1 em Percepção."
+ChemDawg Joint With Oil,ChemDawg Joint with Crumble,Beck de ChemDawg com Crumble
+drugJointWax2Desc,"A joint of ChemDawg with Crumble!\nSmoking will make you a little hungry but will increase your health.\nGain 10% damage reduction and +2 Perception.","Um beck de ChemDawg com Crumble!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 10% de redução de dano e +2 em Percepção."
+
+
+Wedding Cake Joint,Weeding Cake Joint,Beck de Weeding Cake
+drugJoint3Desc,"A joint of Wedding Cake!\nSmoking will make you a little hungry but will increase your health.\nGain 5% damage reduction and +1 Agility.","Um beck de Wedding Cake!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 5% de redução de dano e +1 em Agilidade."
+Wedding Cake Joint With Oil,Weeding Cake Joint with Diamonds,Beck de Weeding Cake com Diamonds
+drugJointWax3Desc,"A joint of Wedding Cake with Diamonds!\nSmoking will make you a little hungry but will increase your health.\nGain 10% damage reduction and +2 Agility.","Um beck de Wedding Cake com Diamonds!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 10% de redução de dano e +2 em Agilidade."
+
+Blue Dream Joint,Blue Dream Joint,Beck de Blue Dream
+drugJoint4Desc,"A joint of Blue Dream!\nSmoking will make you a little hungry but will increase your health.\nGain 5% damage reduction and +1 Strength.","Um beck de Blue Dream!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 5% de redução de dano e +1 em Força."
+Blue Dream Joint With Oil,Blue Dream Joint with Sauce,Beck de Blue Dream com Sauce
+drugJointWax4Desc,"A joint of Blue Dream with Sauce!\nSmoking will make you a little hungry but will increase your health.\nGain 10% damage reduction and +2 Intellect.","Um beck de Blue Dream com Sauce!\nFumar vai te deixar com um pouco de fome mas aumentará sua vida.\nGanhe 10% de redução de dano e +2 em Intelecto."
+
+Bong Filled With AK-47,"Bong [9acc8b](AK-47)[-]","Bong [9acc8b](AK-47)[-]"
+toolBongFilled1Desc,"Ripping this bong filled with AK-47 will make you a little hungry, but will increase your health slightly.\nGain 5% damage reduction and +1 Fortitude.","Fumar esse bong com AK-47 te deixará com um pouco de fome mas aumentará um pouco sua vida.\nGanhe 5% de redução de dano e +1 em Fortitude."
+Bong Filled With ChemDawg,"Bong [9acc8b](ChemDawg)[-]","Bong [9acc8b](ChemDawg)[-]"
+toolBongFilled2Desc,"Ripping this bong filled with ChemDawg will make you a little hungry, but will increase your health slightly.\nGain 5% damage reduction and +1 Perception.","Fumar esse bong com ChemDawg te deixará com um pouco de fome mas aumentará um pouco sua vida.\nGanhe 5% de redução de dano e +1 em Percepção."
+Bong Filled With Wedding Cake,"Bong [9acc8b](Wedding Cake)[-]","Bong [9acc8b](Wedding Cake)[-]"
+toolBongFilled3Desc,"Ripping this bong filled with Wedding Cake will make you a little hungry, but will increase your health slightly.\nGain 5% damage reduction and +1 Agility.","Fumar esse bong com Wedding Cake te deixará com um pouco de fome mas aumentará um pouco sua vida.\nGanhe 5% de redução de dano e +1 em Agilidade."
+Bong Filled With Blue Dream,"Bong [9acc8b](Blue Dream)[-]","Bong [9acc8b](Blue Dream)[-]"
+toolBongFilled4Desc,"Ripping this bong filled with Blue Dream will make you a little hungry, but will increase your health slightly.\nGain 5% damage reduction and +1 Strength.","Fumar esse bong com Blue Dream te deixará com um pouco de fome mas aumentará um pouco sua vida.\nGanhe 5% de redução de dano e +1 em Força."
+Bong Filled With Purple Haze,"Bong [9acc8b](Purple Haze)[-]","Bong [9acc8b](Purple Haze)[-]"
+toolBongFilled5Desc,"Ripping this bong filled with Purple Haze will make you a little hungry, but will increase your health slightly.\nGain 5% damage reduction and +1 Intellect.","Fumar esse bong com Purple Haze te deixará com um pouco de fome mas aumentará um pouco sua vida.\nGanhe 5% de redução de dano e +1 em Intelecto."
+
+Oil Rig,Dab Rig,Dab Rig
+OilRigDesc,"This is something precious.\nHow about combining it with some weed extracts?","Isto é algo precioso.\nQue tal combinar com alguns extratos da erva?"
+
+Oil Rig Filled with Wax,Dab Rig filled with Wax,Dab Rig cheio de Wax
+OilRigFilled1Desc,"Ripping this dab rig will make you a little hungry, but will increase your health slightly.\nGain 10% damage reduction and +2 Fortitude.","Puxar esse dab rig te deixará DOIDO!\nVai dar fome mas aumentará um pouco sua vida.\nGanhe 10% de redução de dano e +2 em Fortitude."
+Oil Rig Filled with Crumble,Dab Rig Filled with Crumble,Dab Rig cheio de Crumble
+OilRigFilled2Desc,"Ripping this dab rig will make you a little hungry, but will increase your health slightly.\nGain 10% damage reduction and +2 Perception.","Puxar esse dab rig te deixará DOIDO!\nVai dar fome mas aumentará um pouco sua vida.\nGanhe 10% de redução de dano e +2 em Percepção."
+Oil Rig Filled with Diamonds,Dab Rig Filled with Diamonds,Dab Rig cheio de Diamonds
+OilRigFilled3Desc,"Ripping this dab rig will make you a little hungry, but will increase your health slightly.\nGain 10% damage reduction and +2 Agility.","Puxar esse dab rig te deixará DOIDO!\nVai dar fome mas aumentará um pouco sua vida.\nGanhe 10% de redução de dano e +2 em Agilidade."
+Oil Rig Filled with Sauce,Dab Rig Filled with Sauce,Dab Rig cheio de Sauce
+OilRigFilled4Desc,"Ripping this dab rig will make you a little hungry, but will increase your health slightly.\nGain 10% damage reduction and +2 Strength.","Puxar esse dab rig te deixará DOIDO!\nVai dar fome mas aumentará um pouco sua vida.\nGanhe 10% de redução de dano e +2 em Força."
+Oil Rig Filled with Shatter,Dab Rig Filled with Shatter,Dab Rig cheio de Shatter
+OilRigFilled5Desc,"Ripping this dab rig will make you a little hungry, but will increase your health slightly.\nGain 10% damage reduction and +2 Intellect.","Puxar esse dab rig te deixará DOIDO!\nVai dar fome mas aumentará um pouco sua vida.\nGanhe 10% de redução de dano e +2 em Intelecto."
+
+toolBong,Bong,Bong
+toolBongDesc,"You can combine this with some Cannabis buds to fill it up.","Pode combinar isto com algumas flores de cannabis..\nVamos encher para dar aquela fumada?."
+
+stonedMagazine,Stoned Magazine,Revista Stoned
+stonedMagazineDesc,"Learn what to do with marijuana, the sacred herb.","Aprende o que fazer com a maconha, a erva sagrada"
+
+craftingWeed,"Weed Lover"
+craftingWeedName,"Weed Lover"
+craftingWeedDesc,"Reading [9acc8b]Stoned Magazines[-], learn what to do with marijuana, the sacred herb.","Leia as [9acc8b]Revistas Stoned[-] para aprender o que diabos fazer com essa erva deliciosa."
+craftingWeedLongDesc,"Long desc"
+
+Bong Schematic,Bong Schematic,Receita de bong
+BongSchematicDesc,"Recipe that teaches you how to make a [ccba8b]bong[-] to smoke weed.","Receita que ensina a fazer um [ccba8b]bong[-] para fumar a erva."
+Oil Rig Schematic,Dab Rig Schematic,Receita de Dab Rig
+OilRigSchematicDesc,"Recipe that teaches you how to make a [ccba8b]dab rig[-] to use weed concentrates.", "Receita que ensina a fazer um [ccba8b]dab rig[-] para usar concentrados da erva."
+Weed Extraction Schematic,Weed Extraction Schematic,Receita de Extratos
+WeedExtractionSchematicDesc,"Recipe that teaches how to extract [ccba8b]concentrates[-] from weed.","Receita que ensina extrair [ccba8b]concentratos[-] da erva."
+Butane Schematic,Butane Schematic,Receita de Butano
+ButaneSchematicDesc,"Recipe that teaches you how to make Butane gas.", "Receita que ensina a fazer gás Butano."
+
+Rolling Tray,Rolling Tray,Bandeija de Bolar
+rollingtrayDesc,"Tray to roll your delicious joints.","Bandeija para bolar seus becks deliciosos."
+
+Extractionkit,Weed Extraction Kit,Kit de Extração da Erva
+ExtractionkitDesc,"Install and combine [9acc8b]weeds[-] with [9acc8b]butane[-] to make delicious extracts!\nYUMMMMMMMM...","Instale e combine [9acc8b]ervas[-] com [9acc8b]butano[-] para fazer extratos deliciosos!\nHUMMMMMMMMM..."
+
+weedsT1-1,"Tier 1: Seeds","Tier 1: Sementes"
+weedsT1-2,"Tier 1: Bong","Tier 1: Bong"
+weedsT1-3,"Tier 1: Oil Rig","Tier 1: Oil Rig"
+
+weedsT2-1,"Tier 2: Extraction Kit","Tier 2: Kit de extratos"
+weedsT2-2,"Tier 2: Butane","Tier 2: Butano"
+weedsT2-3,"Tier 2: Weed Bonsai", "Tier 2: Bonsai da Erva"
+
+EmptyVapeDesc,"Just a empty vape."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

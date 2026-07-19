@@ -1,0 +1,362 @@
+<configs>
+
+	<append xpath="/buffs">
+
+	<!-- BUFF DA FUMASA KKKKKKK -->
+		<buff name="buffSmoke" name_key="buffSmokeName" description_key="buffSmokeDesc">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value value=".buffSmokeDisplay"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Player$Thirsty"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_smokePuff" local_offset="0,0.55,0.3" parent_transform="LOD0"/>
+			</effect_group>
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffbuffSmokeDisplay"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_twitch_smokePuff"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffPuke" name_key="buffPukeName" description_key="buffPukeDesc">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value value=".buffPukeDisplay"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="player#vomit" play_in_head="true"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_vomitMouth" local_offset="0,0.52,0.22" parent_transform="LOD0"/>
+			</effect_group>
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffbuffPukeDisplay"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_vomitMouth"/>
+			</effect_group>
+		</buff>
+	<!-- BUFF DA BUD AK47 -->
+		<buff name="buffDrugSmokedJoint1" name_key="buffDrugSmokedJoint1Name" description_key="buffDrugSmokedJoint1Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugSmokedJoint1Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint1Display" operation="set" value="@$buffDrugSmokedJoint1Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint1Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint1Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugSmokedJoint1Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint1Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugSmokedJoint1"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.100"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attFortitude"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.03"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".05" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkArchery,admin"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".05"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="10"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffDrugRippedBong1" name_key="buffDrugRippedBong1Name" description_key="buffDrugRippedBong1Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugRippedBong1Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong1Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong1Display" operation="set" value="@$buffDrugRippedBong1Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong1Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugRippedBong1Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugRippedBong1Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong1Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugRippedBong1"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.150"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="2" tags="attFortitude"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".05" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkArchery,admin"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="20"/>
+			</effect_group>
+		</buff>
+
+			<!-- BUFF DA BUD CHEMDAWG -->
+		<buff name="buffDrugSmokedJoint2" name_key="buffDrugSmokedJoint2Name" description_key="buffDrugSmokedJoint2Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugSmokedJoint2Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint2Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint2Display" operation="set" value="@$buffDrugSmokedJoint2Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint2Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint2Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugSmokedJoint2Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint2Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugSmokedJoint2"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.100"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attPerception"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.03"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".15"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.05" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkArchery,admin"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="10"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffDrugRippedBong2" name_key="buffDrugRippedBong2Name" description_key="buffDrugRippedBong2Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugRippedBong2Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong2Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong2Display" operation="set" value="@$buffDrugRippedBong2Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong2Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugRippedBong2Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugRippedBong2Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong2Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugRippedBong2"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.150"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="2" tags="attPerception"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".3"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.1" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkArchery,admin"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="20"/>
+			</effect_group>
+		</buff>
+
+			<!-- BUFF DA BUD WEDDING CAKE -->
+		<buff name="buffDrugSmokedJoint3" name_key="buffDrugSmokedJoint3Name" description_key="buffDrugSmokedJoint3Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugSmokedJoint3Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint3Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint3Display" operation="set" value="@$buffDrugSmokedJoint3Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint3Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint3Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugSmokedJoint3Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint3Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugSmokedJoint3"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.100"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attAgility"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.03"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".0281" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".0562" tags="running"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="10"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffDrugRippedBong3" name_key="buffDrugRippedBong3Name" description_key="buffDrugRippedBong3Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugRippedBong3Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong3Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong3Display" operation="set" value="@$buffDrugRippedBong3Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong3Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugRippedBong3Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugRippedBong3Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong3Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugRippedBong3"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.150"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="2" tags="attAgility"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".045" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".09" tags="running"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="20"/>
+			</effect_group>
+		</buff>
+
+			<!-- BUFF DA BUD BLUE DREAM -->
+		<buff name="buffDrugSmokedJoint4" name_key="buffDrugSmokedJoint4Name" description_key="buffDrugSmokedJoint4Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugSmokedJoint4Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint4Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint4Display" operation="set" value="@$buffDrugSmokedJoint4Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint4Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint4Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugSmokedJoint4Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint4Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugSmokedJoint4"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.100"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attStrength"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.03"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="10"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffDrugRippedBong4" name_key="buffDrugRippedBong4Name" description_key="buffDrugRippedBong4Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugRippedBong4Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong4Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong4Display" operation="set" value="@$buffDrugRippedBong4Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong4Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugRippedBong4Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugRippedBong4Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong4Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugRippedBong4"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.150"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="2" tags="attStrength"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".3"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="20"/>
+			</effect_group>
+		</buff>
+
+			<!-- BUFF DA BUD PURPLE HAZE -->
+		<buff name="buffDrugSmokedJoint5" name_key="buffDrugSmokedJoint5Name" description_key="buffDrugSmokedJoint5Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugSmokedJoint5Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint5Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint5Display" operation="set" value="@$buffDrugSmokedJoint5Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint5Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint5Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugSmokedJoint5Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint5Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugSmokedJoint5"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.100"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.03"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="10"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffDrugRippedBong5" name_key="buffDrugRippedBong5Name" description_key="buffDrugRippedBong5Desc" icon="ui_game_symbol_crops">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugRippedBong5Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong5Duration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong5Display" operation="set" value="@$buffDrugRippedBong5Duration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRippedBong5Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffDrugRippedBong5Duration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugRippedBong5Display" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRippedBong5Duration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugRippedBong5"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value="0.150"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="2" tags="attIntellect"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".2" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="20"/>
+			</effect_group>
+		</buff>
+
+		<!--  *** buffDrugSmokedJoint6  -->
+		<!--  TRIGGERED_BY: Items = Super Weed  -->
+		<buff name="buffDrugSmokedJoint6" name_key="buffDrugSmokedJoint6Name" description_key="buffDrugSmokedJoint6Desc" icon="ui_game_symbol_drunk">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffDrugSmokedJoint6Display"/>
+			<display_value_format value="time"/>
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugSmokedJoint6Duration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint6Display" operation="set" value="@$buffDrugSmokedJoint6Duration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugSmokedJoint6Display" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugSmokedJoint6">
+			<requirement name="CVarCompare" cvar="$buffDrugSmokedJoint6Duration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffDrugSmokedJoint6Display,$buffDrugSmokedJoint6Duration"/>
+			</effect_group>
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="1" effect_name="Trippy"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Trippy"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".2" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkArchery,admin"/>
+			<passive_effect name="GeneralDamageResist" operation="base_add" value="0.15"/>
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value=".05"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".2"/>
+			</effect_group>
+		</buff>
+
+
+	</append>
+
+</configs>

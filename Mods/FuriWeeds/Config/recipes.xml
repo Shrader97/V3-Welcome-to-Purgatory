@@ -1,0 +1,256 @@
+<configs>
+	<append xpath="/recipes">
+
+		<recipe name="PlantedAk471" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
+			<ingredient name="Grams Of Ak47" count="1"/>
+		</recipe>
+
+		<recipe name="PlantedChemDawg1" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
+			<ingredient name="Grams Of ChemDawg" count="1"/>
+		</recipe>
+
+		<recipe name="PlantedWeddingCake1" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
+			<ingredient name="Grams Of Wedding Cake" count="1"/>
+		</recipe>
+
+		<recipe name="PlantedBlueDream1" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
+			<ingredient name="Grams Of Blue Dream" count="1"/>
+		</recipe>
+
+		<recipe name="PlantedPurpleHaze1" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
+			<ingredient name="Grams Of Purple Haze" count="1"/>
+		</recipe>
+
+		<recipe name="Grams Of Ak47" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="WeedStemAk47" count="1"/>
+		</recipe>
+
+		<recipe name="Grams Of ChemDawg" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="WeedStemChemDawg" count="1"/>
+		</recipe>
+
+		<recipe name="Grams Of Wedding Cake" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="WeedStemWeddingCake" count="1"/>
+		</recipe>
+
+		<recipe name="Grams Of Blue Dream" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="WeedStemBlueDream" count="1"/>
+		</recipe>
+
+		<recipe name="Grams Of Purple Haze" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="WeedStemPurpleHaze" count="1"/>
+		</recipe>
+
+		<recipe name="Grams Of Shatter" count="7" craft_time="180" craft_area="Extractionkit" craft_exp_gain="10" tags="learnable">
+			<ingredient name="Butane" count="2"/>
+			<ingredient name="Grams Of Purple Haze" count="28"/>
+		</recipe>
+
+		<recipe name="Grams Of Wax" count="7" craft_time="180" craft_area="Extractionkit" craft_exp_gain="10" tags="learnable">
+			<ingredient name="Butane" count="2"/>
+			<ingredient name="Grams Of Ak47" count="28"/>
+		</recipe>
+
+		<recipe name="Grams Of Crumble" count="7" craft_time="180" craft_area="Extractionkit" craft_exp_gain="10" tags="learnable">
+			<ingredient name="Butane" count="2"/>
+			<ingredient name="Grams Of ChemDawg" count="28"/>
+		</recipe>
+
+		<recipe name="Grams Of Sauce" count="7" craft_time="180" craft_area="Extractionkit" craft_exp_gain="10" tags="learnable">
+			<ingredient name="Butane" count="2"/>
+			<ingredient name="Grams Of Blue Dream" count="28"/>
+		</recipe>
+
+		<recipe name="Grams Of Diamonds" count="7" craft_time="180" craft_area="Extractionkit" craft_exp_gain="10" tags="learnable">
+			<ingredient name="Butane" count="2"/>
+			<ingredient name="Grams Of Wedding Cake" count="28"/>
+		</recipe>
+
+		<recipe name="Butane" count="1" craft_time="120" craft_exp_gain="10" tags="learnable">
+			<ingredient name="ammoGasCan" count="50"/>
+		</recipe>
+
+		<recipe name="Box Of Butane" count="1" craft_time="120" craft_exp_gain="100" tags="learnable">
+			<ingredient name="ammoGasCan" count="500"/>
+		</recipe>
+
+		<recipe name="AK-47 Joint" count="2" craft_time="10" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of Ak47" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+		</recipe>
+
+		<recipe name="Purple Haze Joint" count="2" craft_time="10" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of Purple Haze" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+		</recipe>
+
+		<recipe name="ChemDawg Joint" count="2" craft_time="10" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of ChemDawg" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+		</recipe>
+
+		<recipe name="Wedding Cake Joint" count="2" craft_time="10" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of Wedding Cake" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+		</recipe>
+
+		<recipe name="Blue Dream Joint" count="2" craft_time="10" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of Blue Dream" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+		</recipe>
+
+		<recipe name="AK-47 Wax Vape" count="2" craft_time="15" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Empty Vape" count="1"/>
+			<ingredient name="Grams Of Wax" count="1"/>
+		</recipe>
+
+		<recipe name="Purple Haze Wax Vape" count="2" craft_time="15" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Empty Vape" count="1"/>
+			<ingredient name="Grams Of Shatter" count="1"/>
+		</recipe>
+
+		<recipe name="ChemDawg Wax Vape" count="2" craft_time="15" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Empty Vape" count="1"/>
+			<ingredient name="Grams Of Crumble" count="1"/>
+		</recipe>
+
+		<recipe name="Wedding Cake Wax Vape" count="2" craft_time="15" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Empty Vape" count="1"/>
+			<ingredient name="Grams Of Diamonds" count="1"/>
+		</recipe>
+
+		<recipe name="Blue Dream Wax Vape" count="2" craft_time="15" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Empty Vape" count="1"/>
+			<ingredient name="Grams Of Sauce" count="1"/>
+		</recipe>
+
+		<recipe name="AK-47 Joint With Oil" count="2" craft_time="15" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of Ak47" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="Grams Of Wax" count="1"/>
+		</recipe>
+
+		<recipe name="Purple Haze Joint With Oil" count="2" craft_time="15" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of Purple Haze" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="Grams Of Shatter" count="1"/>
+		</recipe>
+
+		<recipe name="ChemDawg Joint With Oil" count="2" craft_time="15" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of ChemDawg" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="Grams Of Crumble" count="1"/>
+		</recipe>
+
+		<recipe name="Wedding Cake Joint With Oil" count="2" craft_time="15" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of Wedding Cake" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="Grams Of Diamonds" count="1"/>
+		</recipe>
+
+		<recipe name="Blue Dream Joint With Oil" count="2" craft_time="15" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Grams Of Blue Dream" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="Grams Of Sauce" count="1"/>
+		</recipe>
+
+		<recipe name="Bong" count="1" craft_area="chemistryStation" craft_time="120" tags="learnable">
+			<ingredient name="toolBeaker" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+
+		<recipe name="Oil Rig" count="1" craft_area="chemistryStation" craft_time="120" tags="learnable">
+			<ingredient name="toolBeaker" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+
+		<recipe name="Bong Filled With AK-47" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Bong" count="1"/>
+			<ingredient name="Grams Of Ak47" count="1"/>
+		</recipe>
+
+		<recipe name="Bong Filled With ChemDawg" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Bong" count="1"/>
+			<ingredient name="Grams Of ChemDawg" count="1"/>
+		</recipe>
+
+		<recipe name="Bong Filled With Wedding Cake" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Bong" count="1"/>
+			<ingredient name="Grams Of Wedding Cake" count="1"/>
+		</recipe>
+
+		<recipe name="Bong Filled With Blue Dream" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Bong" count="1"/>
+			<ingredient name="Grams Of Blue Dream" count="1"/>
+		</recipe>
+
+		<recipe name="Bong Filled With Purple Haze" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Bong" count="1"/>
+			<ingredient name="Grams Of Purple Haze" count="1"/>
+		</recipe>
+
+		<recipe name="Oil Rig Filled with Shatter" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Oil Rig" count="1"/>
+			<ingredient name="Grams Of Shatter" count="1"/>
+		</recipe>
+
+		<recipe name="Oil Rig Filled with Wax" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Oil Rig" count="1"/>
+			<ingredient name="Grams Of Wax" count="1"/>
+		</recipe>
+
+		<recipe name="Oil Rig Filled with Sauce" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Oil Rig" count="1"/>
+			<ingredient name="Grams Of Sauce" count="1"/>
+		</recipe>
+
+		<recipe name="Oil Rig Filled with Diamonds" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Oil Rig" count="1"/>
+			<ingredient name="Grams Of Diamonds" count="1"/>
+		</recipe>
+
+		<recipe name="Oil Rig Filled with Crumble" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="Oil Rig" count="1"/>
+			<ingredient name="Grams Of Crumble" count="1"/>
+		</recipe>
+
+		<recipe name="Rolling Tray" count="1" craft_time="120" craft_area="workbench" craft_exp_gain="0" always_unlocked="true" tags="workbenchCrafting">
+			<ingredient name="resourceWood" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="2"/>
+		</recipe>
+
+		<recipe name="Extractionkit" count="1" craft_time="300" craft_area="workbench" craft_exp_gain="0" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="1"/>
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+		</recipe>
+
+		<recipe name="Weedworkstation" count="1" craft_time="180" craft_area="workbench" craft_exp_gain="0" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMetalPipe" count="3"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="25"/>
+		</recipe>
+
+		<recipe name="plantedSuperWeed2" count="1" craft_time="120" craft_exp_gain="0" tags="learnable">
+			<ingredient name="Grams Of Ak47" count="50"/>
+			<ingredient name="Grams Of ChemDawg" count="50"/>
+			<ingredient name="Grams Of Wedding Cake" count="50"/>
+			<ingredient name="Grams Of Blue Dream" count="50"/>
+			<ingredient name="Grams Of Purple Haze" count="50"/>
+		</recipe>
+
+		<recipe name="BECKVOMITO" count="2" craft_time="15" craft_area="Rolling Tray" craft_exp_gain="10" always_unlocked="true">
+			<ingredient name="SuperWeed" count="2"/>
+			<ingredient name="resourcePaper" count="1"/>
+		</recipe>
+
+		<recipe name="ratrasta" count="1" craft_time="60" craft_area="workbench" craft_exp_gain="0" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceWood" count="1"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="SuperWeed" count="1"/>
+		</recipe>
+
+	</append>
+
+</configs>	

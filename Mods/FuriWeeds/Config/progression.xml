@@ -1,0 +1,28 @@
+<configs>
+<!--  ### New Stoned System  -->
+<insertAfter xpath="//crafting_skill[@name='craftingFood']">
+	<crafting_skill name="craftingWeed" max_level="20" parent="attCrafting" name_key="craftingWeedName" desc_key="craftingWeedDesc" long_desc_key="craftingWeedLongDesc" icon="ui_game_symbol_drunk">
+		<display_entry icon="Weedworkstation,PlantedChemDawg1,PlantedWeddingCake1,PlantedBlueDream1,PlantedPurpleHaze1,PlantedAk471,Bong,Oil Rig" name_key="weedsT1-1,weedsT1-2,weedsT1-3" has_quality="false" unlock_level="2,6,10">
+		<unlock_entry item="Weedworkstation,PlantedChemDawg1,PlantedWeddingCake1,PlantedBlueDream1,PlantedPurpleHaze1,PlantedAk471" unlock_tier="1"/>
+		<unlock_entry item="Bong" unlock_tier="2"/>
+		<unlock_entry item="Oil Rig" unlock_tier="3"/>
+		</display_entry>
+		<display_entry icon="Extractionkit,Grams Of Wax,Grams Of Shatter,Grams Of Crumble,Grams Of Diamonds,Grams Of Sauce,Butane,Box Of Butane,plantedSuperWeed2,ratrasta" name_key="weedsT2-1,weedsT2-2,weedsT2-3" has_quality="false" unlock_level="12,15,20">
+		<unlock_entry item="Extractionkit,Grams Of Wax,Grams Of Shatter,Grams Of Crumble,Grams Of Diamonds,Grams Of Sauce" unlock_tier="1"/>
+		<unlock_entry item="Butane,Box Of Butane" unlock_tier="2"/>
+		<unlock_entry item="plantedSuperWeed2,ratrasta" unlock_tier="3"/>
+		</display_entry>
+
+		<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="Weedworkstation,PlantedChemDawg1,PlantedWeddingCake1,PlantedBlueDream1,PlantedPurpleHaze1,PlantedAk471"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,100" value="1" tags="Bong"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="Oil Rig"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,100" value="1" tags="Extractionkit,Grams Of Wax,Grams Of Shatter,Grams Of Crumble,Grams Of Diamonds,Grams Of Sauce"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,100" value="1" tags="Butane,Box Of Butane"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="plantedSuperWeed2,ratrasta"/>
+		</effect_group>
+	</crafting_skill>
+</insertAfter>
+
+
+</configs>
