@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Servers>
+  <ServerGroup Name="Welcome to Purgatory">
+    <Server Name="Welcome to Purgatory" Logo="https://i.imgur.com/xXWU4ys.jpeg">
+      <Description>Welcome to Purgatory - Hell Awaits You!
+      
+Welcome to Purgatory is a world where the pits of Hell have come to the Earth itself and chaos reigns supreme.
+You will have to survive pestilence, and Zombies.
+Will you survive Purgatory?
+
+This is unknown.
+
+Brought to the community by MrCavemanTTV.
+      </Description>
+        <Version>Latest</Version>
+        <RSS/>
+        <Excludes></Excludes>
+        <ReleaseNotes></ReleaseNotes>
+        <Discord>https://discord.gg/mVphN3bwzf</Discord>
+        <Donate></Donate>
+        <DownloadMode>Clone</DownloadMode>
+      <Downloads><Download>https://github.com/Shrader97/V3-Welcome-to-Purgatory</Download></Downloads>
+    </Server>
+  </ServerGroup>
+</Servers>
