@@ -8041,7 +8041,38 @@
             </effect_group>
         </item>
 
+        <item name="foodGroundPork">
+            <property name="Tags" value="food"/>
+            <property name="HoldType" value="31"/>
+            <property name="CustomIcon" value="FoodSteakRaw"/>
+            <property name="DisplayType" value="foodRawMeat"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="MfoodRawMeat"/>
+            <property name="Stacknumber" value="250"/>
+            <property name="CraftingIngredientTime" value="3"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <property name="Smell" value="1"/>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="25"/><display_value name="dDysenteryRisk" value=".25"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+                </triggered_effect>
+                <display_value name="dSmell" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
+		        <display_value name="dSmellUse" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
+            </effect_group>
+        </item>
 
 
 
@@ -8202,276 +8233,11 @@
             </effect_group>
         </item>
 
-        <item name="foodCrawfish">
-            <property name="Tags" value="food,foodSkill,fitness"/>
-            <property name="HoldType" value="31"/>
-            <property name="DisplayType" value="foodRawMeat"/>
-            <property name="Meshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="DropMeshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="Material" value="MfoodRawMeat"/>
-            <property name="Stacknumber" value="500"/> <!-- STK food -->
-            <!-- <property name="EconomicBundleSize" value="5"/> -->
-            <property name="EconomicValue" value="20"/>
-            <property name="CraftingIngredientTime" value="3"/>
-            <property name="SoundPickup" value="meat_raw_grab"/>
-            <property name="SoundPlace" value="meat_raw_place"/>
-            <property class="Action0">
-                <property name="Class" value="Eat"/>
-                <property name="Delay" value="1.0"/>
-                <property name="Sound_start" value="player_eating"/>
-                <property name="SmellUse" value="50"/>
-            </property>
-            <property name="Smell" value="1"/>
-            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-
-            <effect_group tiered="false" name="Food Tier 0">
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
-                <display_value name="foodHealthAmount" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
-                <display_value name="dDysenteryRisk" value=".12"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
-                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-                </triggered_effect>
-                <display_value name="dSmell" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-                <display_value name="dSmellUse" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-            </effect_group>
-        </item>
-
-        <item name="foodCrab">
-            <property name="Tags" value="food,foodSkill,fitness"/>
-            <property name="HoldType" value="31"/>
-            <property name="DisplayType" value="foodRawMeat"/>
-            <property name="Meshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="DropMeshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="Material" value="MfoodRawMeat"/>
-            <property name="Stacknumber" value="500"/> <!-- STK food -->
-            <!-- <property name="EconomicBundleSize" value="5"/> -->
-            <property name="EconomicValue" value="20"/>
-            <property name="CraftingIngredientTime" value="3"/>
-            <property name="SoundPickup" value="meat_raw_grab"/>
-            <property name="SoundPlace" value="meat_raw_place"/>
-            <property class="Action0">
-                <property name="Class" value="Eat"/>
-                <property name="Delay" value="1.0"/>
-                <property name="Sound_start" value="player_eating"/>
-                <property name="SmellUse" value="50"/>
-            </property>
-            <property name="Smell" value="1"/>
-            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-
-            <effect_group tiered="false" name="Food Tier 0">
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
-                <display_value name="foodHealthAmount" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
-                <display_value name="dDysenteryRisk" value=".12"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
-                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-                </triggered_effect>
-                <display_value name="dSmell" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-                <display_value name="dSmellUse" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-            </effect_group>
-        </item>
-
-        <item name="foodRawShrimp">
-            <property name="Tags" value="food,foodSkill,fitness"/>
-            <property name="HoldType" value="31"/>
-            <property name="DisplayType" value="foodRawMeat"/>
-            <property name="Meshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="DropMeshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="Material" value="MfoodRawMeat"/>
-            <property name="Stacknumber" value="500"/> <!-- STK food -->
-            <!-- <property name="EconomicBundleSize" value="5"/> -->
-            <property name="EconomicValue" value="20"/>
-            <property name="CraftingIngredientTime" value="3"/>
-            <property name="SoundPickup" value="meat_raw_grab"/>
-            <property name="SoundPlace" value="meat_raw_place"/>
-            <property class="Action0">
-                <property name="Class" value="Eat"/>
-                <property name="Delay" value="1.0"/>
-                <property name="Sound_start" value="player_eating"/>
-                <property name="SmellUse" value="50"/>
-            </property>
-            <property name="Smell" value="1"/>
-            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-
-            <effect_group tiered="false" name="Food Tier 0">
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
-                <display_value name="foodHealthAmount" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
-                <display_value name="dDysenteryRisk" value=".12"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
-                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-                </triggered_effect>
-                <display_value name="dSmell" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-                <display_value name="dSmellUse" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-            </effect_group>
-        </item>
-
-        <item name="foodClam">
-            <property name="Tags" value="food,foodSkill,fitness"/>
-            <property name="HoldType" value="31"/>
-            <property name="DisplayType" value="foodRawMeat"/>
-            <property name="Meshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="DropMeshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="Material" value="MfoodRawMeat"/>
-            <property name="Stacknumber" value="500"/> <!-- STK food -->
-            <!-- <property name="EconomicBundleSize" value="5"/> -->
-            <property name="EconomicValue" value="20"/>
-            <property name="CraftingIngredientTime" value="3"/>
-            <property name="SoundPickup" value="meat_raw_grab"/>
-            <property name="SoundPlace" value="meat_raw_place"/>
-            <property class="Action0">
-                <property name="Class" value="Eat"/>
-                <property name="Delay" value="1.0"/>
-                <property name="Sound_start" value="player_eating"/>
-                <property name="SmellUse" value="50"/>
-            </property>
-            <property name="Smell" value="1"/>
-            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-
-            <effect_group tiered="false" name="Food Tier 0">
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
-                <display_value name="foodHealthAmount" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
-                <display_value name="dDysenteryRisk" value=".12"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
-                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-                </triggered_effect>
-                <display_value name="dSmell" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-                <display_value name="dSmellUse" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-            </effect_group>
-        </item>
-
-        <item name="resourceCatfish">
-            <property name="Tags" value="food,foodSkill,fitness"/>
-            <property name="HoldType" value="31"/>
-            <property name="DisplayType" value="foodRawMeat"/>
-            <property name="Meshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="DropMeshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="Material" value="MfoodRawMeat"/>
-            <property name="Stacknumber" value="500"/> <!-- STK food -->
-            <!-- <property name="EconomicBundleSize" value="5"/> -->
-            <property name="EconomicValue" value="20"/>
-            <property name="CraftingIngredientTime" value="3"/>
-            <property name="SoundPickup" value="meat_raw_grab"/>
-            <property name="SoundPlace" value="meat_raw_place"/>
-            <property class="Action0">
-                <property name="Class" value="Eat"/>
-                <property name="Delay" value="1.0"/>
-                <property name="Sound_start" value="player_eating"/>
-                <property name="SmellUse" value="50"/>
-            </property>
-            <property name="Smell" value="1"/>
-            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-
-            <effect_group tiered="false" name="Food Tier 0">
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
-                <display_value name="foodHealthAmount" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
-                <display_value name="dDysenteryRisk" value=".12"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
-                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-                </triggered_effect>
-                <display_value name="dSmell" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-                <display_value name="dSmellUse" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-            </effect_group>
-        </item>
-
-        <item name="resourceCod">
-            <property name="Tags" value="food,foodSkill,fitness"/>
-            <property name="HoldType" value="31"/>
-            <property name="DisplayType" value="foodRawMeat"/>
-            <property name="Meshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="DropMeshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-            <property name="Material" value="MfoodRawMeat"/>
-            <property name="Stacknumber" value="500"/> <!-- STK food -->
-            <!-- <property name="EconomicBundleSize" value="5"/> -->
-            <property name="EconomicValue" value="20"/>
-            <property name="CraftingIngredientTime" value="3"/>
-            <property name="SoundPickup" value="meat_raw_grab"/>
-            <property name="SoundPlace" value="meat_raw_place"/>
-            <property class="Action0">
-                <property name="Class" value="Eat"/>
-                <property name="Delay" value="1.0"/>
-                <property name="Sound_start" value="player_eating"/>
-                <property name="SmellUse" value="50"/>
-            </property>
-            <property name="Smell" value="1"/>
-            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-
-            <effect_group tiered="false" name="Food Tier 0">
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
-                <display_value name="foodHealthAmount" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
-                <display_value name="dDysenteryRisk" value=".12"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
-                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-                </triggered_effect>
-                <display_value name="dSmell" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-                <display_value name="dSmellUse" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-            </effect_group>
-        </item>
-
-        <item name="resourceFishBait">
-                <property name="DescriptionKey" value="resourceFishBaitDesc"/>
-                <property name="CustomIcon" value="foodSnail"/>
-                <property name="Meshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
-                <property name="Material" value="Morganic" />
-                <property name="HoldType" value="74" />
-                <property name="CraftingIngredientTime" value="8" />
-                <property name="Stacknumber" value="250" />
-                <property class="Action1">
-                    <property name="Class" value="Repair"/>
-                    <property name="Repair_amount" value="50"/>
-                    <property name="Upgrade_hit_offset" value="-4"/>
-                    <property name="Sound_start" value="repair_block"/>
-                    <property name="Delay" value="1.3"/>
-                    <property name="Upgrade_action_sound" value="ImpactSurface/metalhitearth"/>
-                    <property name="Allowed_upgrade_items" value="resourceFishBait"/>
-                    <requirement name="HasBuff" buff="buffFishTrapEmptyWater"/>			
-                </property>
-                <effect_group name="Base Effects" tiered="false">
-                    <passive_effect name="MaxRange" operation="base_set" value="3"/>
-                    <passive_effect name="BlockRange" operation="base_set" value="3"/>
-                    <passive_effect name="EntityDamage" operation="base_set" value="0"/>
-                    <passive_effect name="BlockDamage" operation="base_set" value="0"/>
-                    <passive_effect name="AttacksPerMinute" operation="base_set" value="70"/>
-                    <passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
-                    <passive_effect name="DegradationMax" operation="base_set" value="100" />
-                    <passive_effect name="ModSlots" operation="base_set" value="0" />
-                </effect_group>
-                <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-            </item>
-
-
     <!-- chopped stuff -->
 
         <item name="foodChoppedBellPepper">
             <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="CustomIcon" value="foodCropBellPepper"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
@@ -8498,6 +8264,7 @@
 
         <item name="foodChoppedCabbage">
             <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="CustomIcon" value="foodCropCabbage"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
@@ -8524,6 +8291,7 @@
 
         <item name="foodChoppedCantaloupe">
             <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="CustomIcon" value="foodCropCantaloupe"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
@@ -8550,6 +8318,7 @@
 
         <item name="foodChoppedChiliPepper">
             <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="CustomIcon" value="foodCropChiliPepper"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
@@ -8576,6 +8345,7 @@
 
         <item name="foodChoppedEggplant">
             <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="CustomIcon" value="foodCropEggplant"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
@@ -8602,6 +8372,7 @@
 
         <item name="foodChoppedGarlic">
             <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="CustomIcon" value="foodCropGarlic"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
@@ -8628,6 +8399,7 @@
 
         <item name="foodChoppedOnion">
             <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="CustomIcon" value="foodCropOnion"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
@@ -8654,6 +8426,7 @@
 
         <item name="foodChoppedStrawberry">
             <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="CustomIcon" value="foodCropStrawberry"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
@@ -8680,6 +8453,7 @@
 
         <item name="foodChoppedTomato">
             <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="CustomIcon" value="foodCropTomato"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
@@ -13699,7 +13473,7 @@
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
-            <property name="EconomicValue" value="500"/>
+            <property name="EconomicValue" value="50"/>
             <property name="EconomicBundleSize" value="1"/>
             <property name="Group" value="Science,Medical,TCMedical"/>
             <property name="SoundPickup" value="bloodbag_grab"/>
@@ -13713,7 +13487,7 @@
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
-            <property name="EconomicValue" value="500"/>
+            <property name="EconomicValue" value="100"/>
             <property name="EconomicBundleSize" value="1"/>
             <property name="Group" value="Science,Medical,TCMedical"/>
             <property name="SoundPickup" value="bloodbag_grab"/>
@@ -14963,6 +14737,63 @@
             <property name="Group" value="Animals"/>
         </item>
 
+    <!-- animal resources -->
+
+        <item name="resourcePhoenixTearDuct">
+            <property name="Tags" value="alchemy"/>
+            <property name="DescriptionKey" value="phoenixtearductdesc"/>
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="MfoodRawMeat"/>
+            <property name="Group" value="Resources"/>
+            <property name="Stacknumber" value="500"/> <!-- STK food -->
+            <!-- <property name="EconomicBundleSize" value="5"/> -->
+            <property name="EconomicValue" value="20"/>
+            <property name="CraftingIngredientTime" value="3"/>
+            <property name="SoundPickup" value="meat_raw_grab"/>
+            <property name="SoundPlace" value="meat_raw_place"/>
+        </item>
+
+        <item name="resourcePhoenixFeather">
+            <property name="Tags" value="alchemy"/>
+            <property name="DescriptionKey" value="phoenixfeatherdesc"/>
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="MfoodRawMeat"/>
+            <property name="Group" value="Resources"/>
+            <property name="Stacknumber" value="500"/> <!-- STK food -->
+            <!-- <property name="EconomicBundleSize" value="5"/> -->
+            <property name="EconomicValue" value="20"/>
+            <property name="CraftingIngredientTime" value="3"/>
+            <property name="SoundPickup" value="feather_grab"/>
+            <property name="SoundPlace" value="feather_place"/>
+        </item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15596,6 +15427,68 @@
                 <passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
                 <passive_effect name="BuffProcChance" operation="base_set" value="0.66" tags="buffBurningMolotov"/>		
             </effect_group>	
+        </item>
+
+        <item name="meleeHandPhoenix">
+            <property name="Extends" value="meleeHandZombieCopFeral"/>
+            <property name="CreativeMode" value="None"/>
+            <property class="Action0">
+                <property name="Delay" value=".7"/>
+                <property name="DamageEntity" value="10"/>
+                <property name="DamageBlock" value="32"/>
+            </property>
+            <property class="Action1">
+                <property name="Class" value="Vomit"/>
+                <property name="Hitmask_override" value="Arrow"/>
+                <property name="Delay" value=".5"/>
+                <property name="Infinite_ammo" value="true"/>
+                <property name="Magazine_items" value="ammoProjectilePhoenixVomitRadiated"/>
+                <property name="Particles_muzzle_fire" value="vomitVulture"/>
+                <property name="Sound_warning" value="vulturevomitwarning"/>
+                <property name="Sound_start" value="vulturevomitattack"/>
+                <property name="Sound_repeat" value=""/>
+                <property name="Sound_end" value=""/>
+                <property name="Sound_empty" value=""/>
+                <property name="Sound_reload" value=""/>
+            </property>
+            <effect_group name="meleeHandPhoenix" tiered="false">
+                <!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/> A16 .8 -->
+                <passive_effect name="MagazineSize" operation="base_set" value="1"/>
+                <passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
+                <passive_effect name="SpreadDegreesVertical" operation="base_set" value="10"/>
+                <passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="40"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+                    buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+                    weights=".11,.07,.07,.05,.29,.36,.11"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="20"><!--InfectionRadiated-->
+                    <requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="3200"/><!--AbrasionRadiated-->
+            </effect_group>
+        </item>
+
+        <item name="ammoProjectilePhoenixVomitRadiated">
+            <property name="Extends" value="ammoProjectileZombieVomit"/>
+            <property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+            <property class="Action1">
+                <property name="DamageEntity" value="5"/>
+                <property name="DamageBlock" value="20"/>
+                <property name="Velocity" value="18"/>
+                <property name="FlyTime" value="2"/>
+                <property name="LifeTime" value="4"/>
+                <property name="ParticleIndex" value="7"/>
+                <property name="RadiusBlocks" value="2"/>
+                <property name="RadiusEntities" value="1"/>
+            </property>
+            <effect_group name="ammoProjectilePhoenixVomitRadiated" tiered="false">
+                <passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+                <passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+                <passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffBurningMolotov"/>
+                <passive_effect name="BlockDamage" operation="base_set" value="5"/>
+                <passive_effect name="EntityDamage" operation="base_set" value="1"/>
+            </effect_group>
         </item>
 
     </append>

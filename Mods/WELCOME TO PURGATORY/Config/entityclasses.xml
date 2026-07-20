@@ -174,7 +174,7 @@
 
     <append xpath="/entity_classes">
 
-       <entity_class name="animalShark" extends="animalTemplateHostile">
+       	<entity_class name="animalShark" extends="animalTemplateHostile">
             <property name="Class" value="EntityVulture"/>
             <property name="SizeScale" value="0.75"/>
             <property name="PhysicsBody" value="Shark"/>
@@ -706,11 +706,12 @@
 
             <property name="ExperienceGain" value="130"/><!-- XP Snake -->
             <property name="DeadBodyHitPoints" value="150"/>
-            <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalSnake -->
-            <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-            <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
-            <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+		<!-- Snake Variables -->
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="10,25"/>	
+			<!-- Snake Harvesting -->
+			<drop event="Destroy" name="Raw Snake Eggs" tag="butcherHarvest" count="2,4"/>
+			<drop event="Destroy" name="Raw Snake Meat" tag="butcherHarvest" count="1"/>
+			<drop event="Destroy" name="resourceLeather" tag="butcherHarvest" count="2"/>
             <drop event="Harvest" name="venom" tag="allToolsHarvest" count="2"/>
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="100"/>
@@ -724,87 +725,6 @@
     </append>
 
     <append xpath="entity_classes">
-
-		<entity_class name="npcTraderNoah" extends="npcTraderTemplate">
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,npc,human,trader"/>
-			<property name="Mesh" value="#@modfolder:Resources/Traders.unity3d?Noah"/>
-			<property name="NPCID" value="traderNoah"/>
-            <property name="DanceType" value="1" />
-			<property name="AvatarController" value="AvatarNpcController"/>
-			<property name="HasRagdoll" value="false"/>
-			<property name="LookAtAngle" value="0"/>
-		</entity_class>
-
-		<entity_class name="npcTraderBartender" extends="npcTraderTemplate">
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,npc,human,trader"/>
-			<property name="Mesh" value="#@modfolder:Resources/Traders.unity3d?Bartender"/>
-			<property name="NPCID" value="traderBartender"/>
-            <property name="DanceType" value="1" />
-			<property name="AvatarController" value="AvatarNpcController"/>
-			<property name="HasRagdoll" value="false"/>
-			<property name="LookAtAngle" value="0"/>
-		</entity_class>
-
-		<entity_class name="npcTraderBouner" extends="npcTraderTemplate">
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,npc,human,trader"/>
-			<property name="Mesh" value="#@modfolder:Resources/Traders.unity3d?Bouner"/>
-			<property name="NPCID" value="traderBouner"/>
-            <property name="DanceType" value="1" />
-			<property name="AvatarController" value="AvatarNpcController"/>
-			<property name="HasRagdoll" value="false"/>
-			<property name="LookAtAngle" value="0"/>
-		</entity_class>
-
-		<entity_class name="npcTraderCommanderInChief" extends="npcTraderTemplate">
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,npc,human,trader"/>
-			<property name="Mesh" value="#@modfolder:Resources/Traders.unity3d?CommanderInChief"/>
-			<property name="NPCID" value="traderCommanderInChief"/>
-            <property name="DanceType" value="1" />
-			<property name="AvatarController" value="AvatarNpcController"/>
-			<property name="HasRagdoll" value="false"/>
-			<property name="LookAtAngle" value="0"/>
-		</entity_class>
-
-		<entity_class name="npcTraderHomelessDude" extends="npcTraderTemplate">
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,npc,human,trader"/>
-			<property name="Mesh" value="#@modfolder:Resources/Traders.unity3d?HomelessDude"/>
-			<property name="NPCID" value="traderHomelessDude"/>
-            <property name="DanceType" value="1" />
-			<property name="AvatarController" value="AvatarNpcController"/>
-			<property name="HasRagdoll" value="false"/>
-			<property name="LookAtAngle" value="0"/>
-		</entity_class>
-
-		<entity_class name="npcTraderMechanic" extends="npcTraderTemplate">
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,npc,human,trader"/>
-			<property name="Mesh" value="#@modfolder:Resources/Traders.unity3d?Mechanic"/>
-			<property name="NPCID" value="traderMechanic"/>
-            <property name="DanceType" value="2" />
-			<property name="AvatarController" value="AvatarNpcController"/>
-			<property name="HasRagdoll" value="false"/>
-			<property name="LookAtAngle" value="0"/>
-		</entity_class>
-
-		<entity_class name="npcTraderSecretary" extends="npcTraderTemplate">
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,npc,human,trader"/>
-			<property name="Mesh" value="#@modfolder:Resources/Traders.unity3d?Secretary"/>
-			<property name="NPCID" value="traderSecretary"/>
-            <property name="DanceType" value="2" />
-			<property name="AvatarController" value="AvatarNpcController"/>
-			<property name="HasRagdoll" value="false"/>
-			<property name="LookAtAngle" value="0"/>
-		</entity_class>
-
-
-
-
                 <!-- *** ZOMBIE_DOG -->
         <entity_class name="animalExplodingZombieDog" extends="animalWolf">
            	<property name="Class" value="EntityZombieCop"/>
@@ -990,12 +910,15 @@
             <property name="HandItem" value="meleeHandAnimalMountainLion"/>
             <property name="PainResistPerHit" value=".8"/>
 
-            <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/>
-            <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
-            <drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="4"/>
-            <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
-            <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<!-- Lion Variables -->
+			<drop event="Harvest" name="foodRawIntestine" tag="butcherHarvest" count="1,12"/> 
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,4"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="10,30"/>
+			<drop event="Harvest" name="Pure Animal Milk" tag="butcherHarvest" count="4,8"/>		
+			<!-- Lion Harvesting -->
+			<drop event="Destroy" name="foodRawMeat" tag="butcherHarvest" count="2"/>
+			<drop event="Destroy" name="Small Raw Animal Meat" tag="butcherHarvest" count="2"/>
+			<drop event="Destroy" name="resourceLeather" tag="butcherHarvest" count="4"/>		
 
             <property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_mountainlion,clear_sleeper"/>
 
@@ -1060,11 +983,12 @@
 
             <property name="ExperienceGain" value="130"/><!-- XP Snake -->
             <property name="DeadBodyHitPoints" value="150"/>
-            <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalSnake -->
-            <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-            <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
-            <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+		<!-- Snake Variables -->
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="10,25"/>	
+			<!-- Snake Harvesting -->
+			<drop event="Destroy" name="Raw Snake Eggs" tag="butcherHarvest" count="2,4"/>
+			<drop event="Destroy" name="Raw Snake Meat" tag="butcherHarvest" count="3"/>
+			<drop event="Destroy" name="resourceLeather" tag="butcherHarvest" count="5"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="10"/>
@@ -1167,13 +1091,15 @@
             <property name="MoveSpeedPanic" value="1.6"/>
             <property name="ExperienceGain" value="245"/><!-- XP Stag -->
             <property name="TimeStayAfterDeath" value="300"/>
-
-            <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> <!-- this triggers the special harvesting animation like on the knife -->
-            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalStag -->
-            <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="9"/>
-            <drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
-            <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
-            <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="7"/>
+			<!-- Deer and Stag Variables -->
+			<drop event="Harvest" name="foodRawIntestine" tag="butcherHarvest" count="1,12"/> 
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,4"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="10,30"/>	
+			<drop event="Harvest" name="Pure Animal Milk" tag="butcherHarvest" count="4,8"/>	<!-- Doe gets Milk -->
+			<!-- Butcher Mod Harvesting -->
+			<drop event="Destroy" name="Raw Animal Leg" tag="butcherHarvest" count="2"/>
+			<drop event="Destroy" name="Raw Venison" tag="butcherHarvest" count="8"/>
+			<drop event="Destroy" name="resourceLeather" tag="butcherHarvest" count="3"/>	
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="200"/>
@@ -1189,13 +1115,15 @@
             <property name="PrefabCombined" value="true"/>
             <property name="Mass" value="110"/>
 
-            <!-- Gameplay -->
-            <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="20"/> <!-- animalStag -->
-            <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="6"/>
-            <drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-            <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
-            <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<!-- Deer and Stag Variables -->
+			<drop event="Harvest" name="foodRawIntestine" tag="butcherHarvest" count="1,12"/> 
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,4"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="10,30"/>	
+			<drop event="Harvest" name="Pure Animal Milk" tag="butcherHarvest" count="4,8"/>	<!-- Doe gets Milk -->
+			<!-- Butcher Mod Harvesting -->
+			<drop event="Destroy" name="Raw Animal Leg" tag="butcherHarvest" count="2"/>
+			<drop event="Destroy" name="Raw Venison" tag="butcherHarvest" count="8"/>
+			<drop event="Destroy" name="resourceLeather" tag="butcherHarvest" count="3"/>	
 
             <property name="NavObject" value="animaltracking_doe"/>
 
@@ -1250,11 +1178,12 @@
             <property name="MoveSpeedPanic" value="1.5"/>
             <property name="ExperienceGain" value="130"/><!-- XP Murder Chicken -->
             <property name="DeadBodyHitPoints" value="175"/>
-            <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/> <!-- animalChicken -->
-            <drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="12"/>
-            <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
-            <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="4"/>
+
+			<drop event="Destroy" name="foodRawChickenWings" tag="butcherHarvest" count="1"/>
+			<drop event="Destroy" name="foodRawChickenLegs" tag="butcherHarvest" count="1"/>
+			<drop event="Destroy" name="foodRawChickenBreast" tag="butcherHarvest" count="1,2"/>
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="25,50"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,4"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="100"/>
@@ -1375,11 +1304,12 @@
             <property name="MoveSpeedPanic" value="1.5"/>
             <property name="ExperienceGain" value="130"/><!-- XP Murder Chicken -->
             <property name="DeadBodyHitPoints" value="175"/>
-            <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/> <!-- animalChicken -->
-            <drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="12"/>
-            <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
-            <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="4"/>
+
+			<drop event="Destroy" name="foodRawChickenWings" tag="butcherHarvest" count="1"/>
+			<drop event="Destroy" name="foodRawChickenLegs" tag="butcherHarvest" count="1"/>
+			<drop event="Destroy" name="foodRawChickenBreast" tag="butcherHarvest" count="1,2"/>
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="25,50"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,4"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="100"/>
@@ -1574,11 +1504,12 @@
             <property name="MoveSpeedPanic" value="1.5"/>
             <property name="ExperienceGain" value="130"/><!-- XP Murder Chicken -->
             <property name="DeadBodyHitPoints" value="175"/>
-            <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/> <!-- animalChicken -->
-            <drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="12"/>
-            <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
-            <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="4"/>
+
+			<drop event="Destroy" name="foodRawChickenWings" tag="butcherHarvest" count="1"/>
+			<drop event="Destroy" name="foodRawChickenLegs" tag="butcherHarvest" count="1"/>
+			<drop event="Destroy" name="foodRawChickenBreast" tag="butcherHarvest" count="1,2"/>
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="25,50"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,4"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="100"/>
@@ -1693,12 +1624,6 @@
 			<property name="Tags" value="entity,zombie,walker,allbiome"/>
 			<property name="Mesh" value="@:Entities/Zombies/Mechanic/ZInmate.prefab"/>
 
-			<property name="TintMaterial0" value="#654321"/>
-			<property name="TintMaterial1" value="#654321"/>
-			<property name="TintMaterial2" value="#654321"/>
-			<property name="TintMaterial3" value="#654321"/>
-			<property name="TintMaterial4" value="#654321"/>
-
             <property name="SoundRandom" value="Butt"/>
             <property name="SoundAlert" value="Butt"/>
             <property name="SoundHurt" value="Look"/>
@@ -1781,121 +1706,21 @@
 			<property name="DeadBodyHitPoints" value="600"/>
 
 			<property name="ExperienceGain" value="3000"/><!-- XP Bear -->
-
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="75"/> <!-- animalBear -->
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="20"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="10"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="50"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
-			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="5"/>
+			<!-- Bear Variables -->
+			<drop event="Harvest" name="foodRawIntestine" tag="butcherHarvest" count="1,12"/> 
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,4"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="10,30"/>	
+			<drop event="Harvest" name="Pure Animal Milk" tag="butcherHarvest" count="10,25"/>		
+			<!-- Bear Harvesting -->
+			<drop event="Destroy" name="Raw Steak" tag="butcherHarvest" count="4"/>
+			<drop event="Destroy" name="resourceLeather" tag="butcherHarvest" count="5"/>	
+			<drop event="Destroy" name="resourceTestosteroneExtract" tag="butcherHarvest" count="1,3"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
 			</effect_group>
 
 			<property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_bear,clear_sleeper"/>
-		</entity_class>
-
-				<!-- *** RABBIT -->
-		<entity_class name="animalCannibalRabbit" extends="animalTemplateHostile">
-			<property name="Class" value="EntityAnimalRabbit"/>
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,animal,rabbit,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
-			<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
-			<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
-			<property name="AvatarController" value="AvatarAnimalController"/>
-			<property name="ModelType" value="Standard"/>
-			<property name="Prefab" value="@:Entities/Animals/Rabbit/animalRabbitPrefab.prefab"/>
-			<property name="PrefabCombined" value="true"/>
-			<property name="Parent" value="Animals"/>
-			<property name="Faction" value="animals"/>
-			<property name="PhysicsBody" value="rabbit"/>
-			<property name="Mass" value="33"/>
-			<property name="Weight" value="11"/>
-			<property name="SoundHurt" value="rabbitpain"/>
-			<property name="SoundDeath" value="rabbitdeath"/>
-			<property name="SoundStepType" value="animallightstep"/>
-			<property name="SwimOffset" value="2"/>
-			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="true"/>
-			<property name="HasRagdoll" value="true"/>
-			<property name="CanBigHead" value="false"/>
-
-			<property name="AITask-1" value="RunawayWhenHurt"/>
-			<property name="AITask-2" value="Look"/>
-			<property name="AITask-3" value="Wander"/>
-
-			<property name="AITarget-1" value="SetNearestCorpseAsTarget" data="class=EntityAnimalRabbit,animalChicken;cannibalismChance=1"/>
-
-			<!-- Gameplay -->
-			<property name="MoveSpeedPanic" value="1.55"/>
-
-			<property name="ExperienceGain" value="130"/><!-- XP Rabbit -->
-			<property name="DeadBodyHitPoints" value="175"/>
-
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalRabbit -->
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="10"/>
-			</effect_group>
-
-			<property name="NavObject" value="animaltracking_rabbit"/>
-		</entity_class>
-
-				<!-- *** CHICKEN -->
-		<entity_class name="animalCannibalChicken" extends="animalTemplateHostile">
-			<property name="Class" value="EntityAnimalRabbit"/>
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,animal,chicken,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
-			<property name="MapIcon" value="ui_game_symbol_tracking_chicken"/>
-			<property name="TrackerIcon" value="ui_game_symbol_tracking_chicken"/>
-			<property name="AvatarController" value="AvatarAnimalController"/>
-			<property name="ModelType" value="Standard"/>
-			<property name="Prefab" value="@:Entities/Animals/Bird/animalBirdChickenPrefab.prefab"/>
-			<property name="PrefabCombined" value="true"/>
-			<property name="Parent" value="Animals"/>
-			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="true"/>
-			<property name="HasRagdoll" value="true"/>
-			<property name="Faction" value="animals"/>
-			<property name="PhysicsBody" value="chicken"/>
-			<property name="Mass" value="36"/>
-			<property name="Weight" value="12"/>
-			<property name="SoundHurt" value="chickenpain"/>
-			<property name="SoundDeath" value="chickendeath"/>
-			<property name="SoundStepType" value="animallightstep"/>
-			<property name="SwimOffset" value="2"/>
-			<property name="HasRagdoll" value="true"/>
-			<property name="HasDeathAnim" value="true"/>
-			<property name="CanBigHead" value="false"/>
-
-			<property name="AITask-1" value="RunawayWhenHurt"/>
-			<property name="AITask-2" value="Look"/>
-			<property name="AITask-3" value="Wander"/>
-
-			<property name="AITarget-1" value="SetNearestCorpseAsTarget" data="class=EntityAnimalRabbit,animalChicken;cannibalismChance=1"/>
-
-
-			<!-- Gameplay -->
-			<property name="MoveSpeedPanic" value="1.5"/>
-			<property name="ExperienceGain" value="130"/><!-- XP Chicken -->
-			<property name="DeadBodyHitPoints" value="175"/>
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="10"/>
-			</effect_group>
-
-			<property name="NavObject" value="animaltracking_chicken"/>
 		</entity_class>
 
 	<!-- Custom Zeds -->
