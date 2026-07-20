@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+
+zombieOakravenZombieBigFoot,entityclasses,Entity,,,,Oakraven Big Foot,,,,,,,,,,,,,
+zombieOakravenZombieBigFootSnow,entityclasses,Entity,,,,Snow Oakraven Big Foot,,,,,,,,,,,,,
+zombieOakravenZombieBigFootCharged,entityclasses,Entity,,,,Charged Oakraven Big Foot,,,,,,,,,,,,,
+zombieOakravenZombieBigFootInfernal,entityclasses,Entity,,,,Infernal Oakraven Big Foot,,,,,,,,,,,,,

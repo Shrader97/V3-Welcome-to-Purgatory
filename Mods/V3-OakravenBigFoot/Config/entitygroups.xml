@@ -1,0 +1,93 @@
+<configs>
+
+<!-- *** BIOME_GROUPS -->
+	<!-- *** BIOME_ALL_ZOMBIES_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+		<e n="zombieOakravenZombieBigFoot" p="0.15" />
+	</append>
+
+	<!-- *** BIOME_ZOMBIES_NIGHT_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<e n="zombieOakravenZombieBigFoot" p="0.25" />
+	</append>
+	
+<!-- *** BIOME_ZOMBIES_DOWNTOWN_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesDowntown']">
+		<e n="zombieOakravenZombieBigFoot" p="0.35" />
+	</append>
+
+	<!-- *** BIOME_ZOMBIES_FOREST_DOWNTOWN_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntown']">
+		<e n="zombieOakravenZombieBigFoot" p="0.15" />
+	</append>
+
+	<!-- *** BIOME_ZOMBIES_FOREST_DOWNTOWN_NIGHT_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntownNight']">
+		<e n="zombieOakravenZombieBigFoot" p="0.3" />
+	</append>
+	
+<!-- *** BIOME_ZOMBIES_BURNT_FOREST_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesBurntForest']">
+		<e n="zombieOakravenZombieBigFoot" p="0.05" />
+		<e n="zombieOakravenZombieBigFootInfernal" p="0.05" />
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesBurntForestNight']">
+		<e n="zombieOakravenZombieBigFoot" p="0.1" />
+		<e n="zombieOakravenZombieBigFootInfernal" p="0.1" />
+	</append>
+	
+<!-- *** BIOME_ZOMBIES_DESERT_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesDesert']">
+		<e n="zombieOakravenZombieBigFootInfernal" p="0.15" />
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesDesertNight']">
+		<e n="zombieOakravenZombieBigFootInfernal" p="0.2" />
+	</append>
+	
+<!-- *** BIOME_ZOMBIES_SNOW_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesSnow']">
+		<e n="zombieOakravenZombieBigFootSnow" p="0.2" />
+	</append>
+
+<!-- *** BIOME_ZOMBIES_SNOW_GROUP_NIGHT -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesSnowNight']">
+		<e n="zombieOakravenZombieBigFootSnow" p="0.25" />
+	</append>
+
+<!-- *** BIOME_ZOMBIES_WASTELAND_GROUP -->
+
+<!-- *** BIOME_ZOMBIES_ALL_WASTELAND_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesAllWasteland']">
+		<e n="zombieOakravenZombieBigFoot" p="0.3" />
+		<e n="zombieOakravenZombieBigFootSnow" p="0.3" />	
+		<e n="zombieOakravenZombieBigFootCharged" p="0.5" />
+		<e n="zombieOakravenZombieBigFootInfernal" p="0.5" />
+	</append>
+	
+<!-- *** BIOME_ZOMBIES_WASTELAND_NIGHT_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+		<e n="zombieOakravenZombieBigFoot" p="0.3" />
+		<e n="zombieOakravenZombieBigFootSnow" p="0.3" />	
+		<e n="zombieOakravenZombieBigFootCharged" p="0.5" />
+		<e n="zombieOakravenZombieBigFootInfernal" p="0.5" />
+	</append>
+
+<!-- *** BIOME_ZOMBIES_WASTELAND_DOWNTOWN_GROUP -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandDowntown']">
+		<e n="zombieOakravenZombieBigFoot" p="0.3" />
+		<e n="zombieOakravenZombieBigFootSnow" p="0.3" />	
+		<e n="zombieOakravenZombieBigFootCharged" p="0.5" />
+		<e n="zombieOakravenZombieBigFootInfernal" p="0.5" />
+	</append>
+	
+<!-- *** FERAL_HORDE_STAGES -->
+	<insertAfter xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]/e[@n='zombieDemolition']">
+		<e n="zombieOakravenZombieBigFoot" p="0.3" />
+		<e n="zombieOakravenZombieBigFootSnow" p="0.3" />
+		<e n="zombieOakravenZombieBigFootCharged" p="0.3" />
+		<e n="zombieOakravenZombieBigFootInfernal" p="0.3" />
+	</insertAfter>
+
+</configs>
