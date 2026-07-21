@@ -1,93 +1,142 @@
 <configs>
 
 	<append xpath="/entitygroups/entitygroup[@name='WildGameForest']">
-		animalBattleChicken, 5
-		animalRageChicken, 5
-		Clucking King, 2
-		animalCannibalRabbit, 5
-		animalCannibalChicken, 5
+		<e n="animalBattleChicken" p="5"/>
+		<e n="animalRageChicken" p="5"/>
+		<e n="Clucking King" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='WildGameForestNight']">
-		animalPainDoe, 5
-		animalPainStag, 5
+		<e n="animalPainDoe" p="5"/>
+		<e n="animalPainStag" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']">
-		animalCottonMouth, 5
-		animalAnacondaSnake,5
+		<e n="animalCottonMouth" p="5"/>
+		<e n="animalAnacondaSnake" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForestAny']">
-		animalCottonMouth, 5
-		animalAnacondaSnake,5
+		<e n="animalCottonMouth" p="5"/>
+		<e n="animalAnacondaSnake" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForestNight']">
-		animalCottonMouth, 5
-		animalAnacondaSnake,5
-		animalMiniBossGrace, 5
+		<e n="animalCottonMouth" p="5"/>
+		<e n="animalAnacondaSnake" p="5"/>
+		<e n="animalMiniBossGrace" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">
-		animalCottonMouth, 5
-		animalAnacondaSnake,5
+		<e n="animalCottonMouth" p="5"/>
+		<e n="animalAnacondaSnake" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesertNight']">
-		animalCottonMouth, 5
-		animalAnacondaSnake, 5
-		animalFeralHouseCat, 5
+		<e n="animalCottonMouth" p="5"/>
+		<e n="animalAnacondaSnake" p="5"/>
+		<e n="animalFeralHouseCat" p="5"/>
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">
-		animalFeralHouseCat, 5
+		<e n="animalFeralHouseCat" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnowNight']">
-		animalExplodingZombieDog, 5
-		animalExplodingDireWolf, 5
+		<e n="animalExplodingZombieDog" p="5"/>
+		<e n="animalExplodingDireWolf" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
-		animalExplodingZombieDog, 5
-		animalExplodingDireWolf, 5
-		animalFeralHouseCat, 5
-		animalCottonMouth, 5
-		animalAnacondaSnake,5
-		animalCannibalRabbit, 5
-		animalCannibalChicken, 5
+		<e n="animalExplodingZombieDog" p="5"/>
+		<e n="animalExplodingDireWolf" p="5"/>
+		<e n="animalFeralHouseCat" p="5"/>
+		<e n="animalCottonMouth" p="5"/>
+		<e n="animalAnacondaSnake" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWastelandNight']">
-		animalExplodingZombieDog, 5
-		animalExplodingDireWolf, 5
-		animalFeralHouseCat, 5
-		animalCottonMouth, 5
-		animalAnacondaSnake,5
+		<e n="animalExplodingZombieDog" p="5"/>
+		<e n="animalExplodingDireWolf" p="5"/>
+		<e n="animalFeralHouseCat" p="5"/>
+		<e n="animalCottonMouth" p="5"/>
+		<e n="animalAnacondaSnake" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='WildGameStagNight']">
-		animalPainDoe, 5
-		animalPainStag, 5
+		<e n="animalPainDoe" p="5"/>
+		<e n="animalPainStag" p="5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='WolfPack']">
-		animalBattleWolf, .75
-		animalExplodingZombieDog, .5
-		animalExplodingDireWolf, .25
+		<e n="animalBattleWolf" p=".25"/>
+		<e n="animalExplodingZombieDog" p=".5"/>
+		<e n="animalExplodingDireWolf" p=".25"/>
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
-		Pickle Rick,0.25
-		Jumping Bean, 0.25
-		zombieTickleMeDemo, 0.45
+		<e n="Pickle Rick" p=".25"/>
+		<e n="Jumping Bean" p=".25"/>
+		<e n="zombieTickleMeDemo" p=".25"/>
+		<e n="animalAlphaBear" p="0.5"/>
+		<e n="zombieHunter" p="0.5"/>
+		<e n="zombieMummy" p="0.5"/>
+		<e n="zombieParasite" p="0.5"/>
+		<e n="zombieParasiteCrawler" p="1"/>
+		<e n="zombieParasiteSpider" p=".75"/>
+		<e n="zombieSkinless" p="0.5"/>
+		<e n="zombieSkinlessSpider" p="0.5"/>
+		<e n="zombieMutant" p="0.5"/>
+		<e n="zombieWalker" p="0.5"/>
+		<e n="zombieColonelClank" p="0.5"/>
+		<e n="zombieButcher" p="0.5"/>
+		<e n="zombieSniper" p="0.5"/>
+		<e n="zombieDrowned" p="1"/>
+		<e n="zombieDryedMummy" p=".75"/>
+		<e n="zombieMale" p="0.5"/>
+		<e n="zombieCheerLeader" p="0.5"/>
+		<e n="zombieCheerLeaderFeral" p="0.25"/>
+		<e n="zombieCowboy" p="0.5"/>
+		<e n="zombieCowboyFeral" p="0.25"/>
+		<e n="zombieFarmer" p="0.5"/>
+		<e n="zombieFarmerFeral" p="0.25"/>
+		<e n="zombieStripper" p="1"/>
+		<e n="zombieStripperFeral" p=".75"/>
+		<e n="zombieClown" p="0.5"/>
+		<e n="zombieFeralSpaceman" p="0.5"/>
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
-		Pickle Rick, 1
-		Jumping Bean, 1
-		zombieTickleMeDemo, 1
+		<e n="Pickle Rick" p="0.75"/>
+		<e n="Jumping Bean" p="0.75"/>
+		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="animalAlphaBear" p="0.75"/>
+		<e n="zombieHunter" p="0.75"/>
+		<e n="zombieMummy" p="0.75"/>
+		<e n="zombieParasite" p="0.75"/>
+		<e n="zombieParasiteCrawler" p="1"/>
+		<e n="zombieParasiteSpider" p=".75"/>
+		<e n="zombieSkinless" p="0.75"/>
+		<e n="zombieSkinlessSpider" p="0.75"/>
+		<e n="zombieMutant" p="0.75"/>
+		<e n="zombieWalker" p="0.75"/>
+		<e n="zombieColonelClank" p="0.75"/>
+		<e n="zombieButcher" p="0.75"/>
+		<e n="zombieSniper" p="0.75"/>
+		<e n="zombieDrowned" p="1"/>
+		<e n="zombieDryedMummy" p=".75"/>
+		<e n="zombieMale" p="0.75"/>
+		<e n="zombieCheerLeader" p="0.75"/>
+		<e n="zombieCheerLeaderFeral" p="0.75"/>
+		<e n="zombieCowboy" p="0.75"/>
+		<e n="zombieCowboyFeral" p="0.75"/>
+		<e n="zombieFarmer" p="0.75"/>
+		<e n="zombieFarmerFeral" p="0.75"/>
+		<e n="zombieStripper" p="1"/>
+		<e n="zombieStripperFeral" p=".75"/>
+		<e n="zombieClown" p="0.75"/>
+		<e n="zombieFeralSpaceman" p="0.75"/>
+	</append>
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
@@ -96,12 +145,65 @@
 		<e n="animalCottonMouth" p="0.25"/>
 		<e n="Pickle Rick" p="0.1"/>
 		<e n="Jumping Bean" p="0.1"/>
+		<e n="animalAlphaBear" p="0.5"/>
+		<e n="zombieHunter" p="0.5"/>
+		<e n="zombieMummy" p="0.5"/>
+		<e n="zombieParasite" p="0.5"/>
+		<e n="zombieParasiteCrawler" p="1"/>
+		<e n="zombieParasiteSpider" p=".75"/>
+		<e n="zombieSkinless" p="0.5"/>
+		<e n="zombieSkinlessSpider" p="0.5"/>
+		<e n="zombieMutant" p="0.5"/>
+		<e n="zombieWalker" p="0.5"/>
+		<e n="zombieColonelClank" p="0.5"/>
+		<e n="zombieButcher" p="0.5"/>
+		<e n="zombieSniper" p="0.5"/>
+		<e n="zombieDrowned" p="1"/>
+		<e n="zombieDryedMummy" p=".75"/>
+		<e n="zombieMale" p="0.5"/>
+		<e n="zombieCheerLeader" p="0.5"/>
+		<e n="zombieCheerLeaderFeral" p="0.25"/>
+		<e n="zombieCowboy" p="0.5"/>
+		<e n="zombieCowboyFeral" p="0.25"/>
+		<e n="zombieFarmer" p="0.5"/>
+		<e n="zombieFarmerFeral" p="0.25"/>
+		<e n="zombieStripper" p="1"/>
+		<e n="zombieStripperFeral" p=".75"/>
+		<e n="zombieClown" p="0.5"/>
+		<e n="zombieFeralSpaceman" p="0.5"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
 		<e n="zombieBehemothRadiated" p="0.1"/>
 		<e n="animalHornet" p="0.2"/>
 		<e n="animalCottonMouth" p="0.5"/>
+		<e n="animalAlphaBear" p="0.5"/>
+		<e n="animalAlphaBear" p="0.75"/>
+		<e n="zombieHunter" p="0.75"/>
+		<e n="zombieMummy" p="0.75"/>
+		<e n="zombieParasite" p="0.75"/>
+		<e n="zombieParasiteCrawler" p="1"/>
+		<e n="zombieParasiteSpider" p=".75"/>
+		<e n="zombieSkinless" p="0.75"/>
+		<e n="zombieSkinlessSpider" p="0.75"/>
+		<e n="zombieMutant" p="0.75"/>
+		<e n="zombieWalker" p="0.75"/>
+		<e n="zombieColonelClank" p="0.75"/>
+		<e n="zombieButcher" p="0.75"/>
+		<e n="zombieSniper" p="0.75"/>
+		<e n="zombieDrowned" p="1"/>
+		<e n="zombieDryedMummy" p=".75"/>
+		<e n="zombieMale" p="0.75"/>
+		<e n="zombieCheerLeader" p="0.75"/>
+		<e n="zombieCheerLeaderFeral" p="0.75"/>
+		<e n="zombieCowboy" p="0.75"/>
+		<e n="zombieCowboyFeral" p="0.75"/>
+		<e n="zombieFarmer" p="0.75"/>
+		<e n="zombieFarmerFeral" p="0.75"/>
+		<e n="zombieStripper" p="1"/>
+		<e n="zombieStripperFeral" p=".75"/>
+		<e n="zombieClown" p="0.75"/>
+		<e n="zombieFeralSpaceman" p="0.75"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']">

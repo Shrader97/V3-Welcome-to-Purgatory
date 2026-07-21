@@ -814,7 +814,23 @@
 			</effect_group>
 		</item>
 
-
+		<item name="meleeHandZombieHunter003">
+			<property name="Extends" value="meleeHandZombiePartyGirl"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="10"/>
+				<property name="DamageBlock" value="5"/>
+				<property name="Range" value="2.5"/>
+				<property name="Sphere" value="1"/>
+				<property name="Block_range" value="2"/>
+			</property>
+			<effect_group name="meleeHandZombieHunter" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInjuryBleedingTwo"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInjuryStunned01"/>
+			</effect_group>
+		</item>
 
 
 
@@ -2018,7 +2034,7 @@
             <property name="RepairExpMultiplier" value="10.8"/>
             <property name="LightValue" value=".45"/>
             <property name="EconomicValue" value="3500"/>
-            <property name="TraderStageTemplate" value="baseTier8"/>
+            <property name="TraderStageTemplate" value="baseTier3"/>
             <property name="UnlockedBy" value="craftingHeavyMachineGuns"/>
             <property name="ShowQuality" value="true"/>
 
@@ -2111,7 +2127,7 @@
             <property name="RepairExpMultiplier" value="10.8"/>
             <property name="LightValue" value=".45"/>
             <property name="EconomicValue" value="3500"/>
-            <property name="TraderStageTemplate" value="baseTier8"/>
+            <property name="TraderStageTemplate" value="baseTier3"/>
             <property name="UnlockedBy" value="craftingMachineGuns"/>
             <property name="ShowQuality" value="true"/>
 
@@ -2211,7 +2227,7 @@
             <property name="RepairExpMultiplier" value="10.8"/>
             <property name="LightValue" value=".45"/>
             <property name="EconomicValue" value="2500"/>
-            <property name="TraderStageTemplate" value="baseTier6"/>
+            <property name="TraderStageTemplate" value="baseTier3"/>
             <property name="UnlockedBy" value="craftingHandguns"/>
             <property name="ShowQuality" value="true"/>
             <property name="SoundUnholster" value="weapon_unholster"/>
@@ -2377,95 +2393,6 @@
                 <display_value name="dStatStunEffect" value="4"/>
             </effect_group>
         </item>
-
-        <!--item name="gunShotgunT4ViperShotgun">
-            <property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,magazine,drumMagazine,firingMode,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill"/>
-            <property name="DisplayType" value="rangedShotgun"/>
-            <property name="HoldType" value="48"/>
-            <property name="Meshfile" value="#@modfolder:Resources/ViperShotgun.unity3d?T4ViperShotgun"/>
-            <property name="Material" value="MShotgunParts"/>
-            <property name="Weight" value="7"/>
-            <property name="ScrapTimeOverride" value="10.0"/>
-            <property name="RepairTools" value="resourceRepairKit"/>
-            <property name="DegradationBreaksAfter" value="false"/>
-            <property name="SoundJammed" value="weapon_jam"/>
-            <property name="Attachments" value="meleeToolFlashlight02"/>
-            <property name="CrosshairOnAim" value="true"/>
-            <property name="CrosshairUpAfterShot" value="true"/>
-            <property name="Sound_Sight_In" value="rifle_sight_in"/>
-            <property name="Sound_Sight_Out" value="rifle_sight_out"/>
-            <property name="LightSource" value="lightSource"/>
-            <property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
-            <property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> 
-            <property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
-            <property name="RepairExpMultiplier" value="10.8"/>
-            <property name="LightValue" value=".45"/>
-            <property name="EconomicValue" value="250"/>
-            <property name="TraderStageTemplate" value="baseTier3"/>
-            <property name="UnlockedBy" value="craftingShotguns"/>
-            <property name="ShowQuality" value="true"/>
-            <property name="SoundUnholster" value="weapon_unholster"/>
-            <property name="SoundHolster" value="weapon_holster"/>
-            <property name="SoundPickup" value="shotgun_polymer_grab"/>
-            <property name="SoundPlace" value="shotgun_polymer_place"/>
-
-            <property class="Action0">
-                <property name="Class" value="Ranged"/>
-                <property name="Delay" value=".8"/> 
-                <property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette"/>
-                <property name="Reload_time" value="2.6"/>
-                <property name="Sound_start" value="autoshotgun_fire"/>
-                <property name="Sound_loop" value="autoshotgun_fire"/>
-                <property name="Sound_repeat" value=""/>
-                <property name="Sound_end" value=""/>
-                <property name="Sound_empty" value="dryfire"/>
-                <property name="AutoReload" value="false"/>
-                <property name="Particles_muzzle_fire" value="gunfire_SG_auto"/>
-                <property name="ScopeOffset" value="-.00062,.088,.065"/>
-                <property name="SideOffset" value="0,0,0"/>
-                <property name="BarrelOffset" value="0,0,0"/>
-                <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-                <property name="triggerEffectTriggerPullDualsense" value="ShotgunTrigger"/>
-                <property name="triggerEffectTriggerPullXbox" value="ShotgunTrigger"/>
-                <property name="triggerEffectShootDualsense" value="ShotgunShoot"/>
-                <property name="triggerEffectShootXbox" value="PistolShoot"/>
-            </property>
-            <property class="Action1">
-                <property name="Class" value="Zoom"/>
-                <property name="Zoom_max_out" value="55"/>
-                <property name="Zoom_max_in" value="55"/>
-                <property name="SightsCameraOffset" value="0,0,0.35"/>
-                <property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
-                <property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
-            </property>
-            <effect_group name="gunShotgunT3AutoShotgun">
-                <passive_effect name="RoundsPerMinute" operation="base_set" value="200" tags="perkBoomstick"/>
-                <passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
-                <passive_effect name="MagazineSize" operation="base_set" value="16" tags="perkBoomstick"/>
-                <passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/>
-                <passive_effect name="ModSlots" operation="base_set" value="4,4,4,5,5,5" tier="1,2,3,4,5,6"/>
-                <passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
-                <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-                <passive_effect name="EntityDamage" operation="base_add" value="10" tags="perkBoomstick"/>
-                <passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/>
-                <passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/>
-                <passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> 
-                <passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> 
-                <passive_effect name="WeaponHandling" operation="perc_add" value="-.085,.085" tags="perkBoomstick"/>
-
-                <passive_effect name="KickDegreesVerticalMin" operation="base_set" value="4.2" tags="perkBoomstick"/>
-                <passive_effect name="KickDegreesVerticalMax" operation="base_set" value="4.2" tags="perkBoomstick"/>
-                <passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.5" tags="perkBoomstick"/>
-                <passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.5" tags="perkBoomstick"/>
-
-                <passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
-                <passive_effect name="WeaponHandling" operation="base_set" value="1.7" tags="perkBoomstick"/>
-
-                <passive_effect name="DegradationMax" operation="base_set" value="700,1100" tier="1,6" tags="perkBoomstick"/>
-                <passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
-                <display_value name="dStatStunEffect" value="4"/>
-            </effect_group>
-        </item-->
 
         <item name="gunShotgunT3SR410">
             <property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,magazine,drumMagazine,firingMode,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill"/>
@@ -8197,7 +8124,7 @@
         <item name="foodSnail">
             <property name="Tags" value="food,foodSkill,fitness"/>
             <property name="HoldType" value="31"/>
-            <property name="DisplayType" value="foodRawMeat"/>
+            <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
             <property name="DropMeshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
@@ -8211,25 +8138,12 @@
                 <property name="Class" value="Eat"/>
                 <property name="Delay" value="1.0"/>
                 <property name="Sound_start" value="player_eating"/>
-                <property name="SmellUse" value="50"/>
             </property>
-            <property name="Smell" value="1"/>
             <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
             <effect_group tiered="false" name="Food Tier 0">
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
-                <display_value name="foodHealthAmount" value="-1"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
-                <display_value name="dDysenteryRisk" value=".12"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
-                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-                </triggered_effect>
-                <display_value name="dSmell" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
-                <display_value name="dSmellUse" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
             </effect_group>
         </item>
 
