@@ -79,172 +79,371 @@
 		<e n="Jumping Bean" p=".25"/>
 		<e n="zombieTickleMeDemo" p=".25"/>
 		<e n="animalAlphaBear" p="0.5"/>
-		<e n="zombieHunter" p="0.5"/>
-		<e n="zombieMummy" p="0.5"/>
-		<e n="zombieParasite" p="0.5"/>
-		<e n="zombieParasiteCrawler" p="1"/>
-		<e n="zombieParasiteSpider" p=".75"/>
-		<e n="zombieSkinless" p="0.5"/>
-		<e n="zombieSkinlessSpider" p="0.5"/>
-		<e n="zombieMutant" p="0.5"/>
-		<e n="zombieWalker" p="0.5"/>
-		<e n="zombieColonelClank" p="0.5"/>
-		<e n="zombieButcher" p="0.5"/>
-		<e n="zombieSniper" p="0.5"/>
-		<e n="zombieDrowned" p="1"/>
-		<e n="zombieDryedMummy" p=".75"/>
-		<e n="zombieMale" p="0.5"/>
-		<e n="zombieCheerLeader" p="0.5"/>
-		<e n="zombieCheerLeaderFeral" p="0.25"/>
-		<e n="zombieCowboy" p="0.5"/>
-		<e n="zombieCowboyFeral" p="0.25"/>
-		<e n="zombieFarmer" p="0.5"/>
-		<e n="zombieFarmerFeral" p="0.25"/>
-		<e n="zombieStripper" p="1"/>
-		<e n="zombieStripperFeral" p=".75"/>
-		<e n="zombieClown" p="0.5"/>
-		<e n="zombieFeralSpaceman" p="0.5"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" p="0.1"/>
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" p="0.1"/>
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" p="0.1"/>
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" p=".1"/>
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" p="0.1" />
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
-		<e n="Pickle Rick" p="0.75"/>
-		<e n="Jumping Bean" p="0.75"/>
-		<e n="zombieTickleMeDemo" p="0.75"/>
-		<e n="animalAlphaBear" p="0.75"/>
-		<e n="zombieHunter" p="0.75"/>
-		<e n="zombieMummy" p="0.75"/>
-		<e n="zombieParasite" p="0.75"/>
-		<e n="zombieParasiteCrawler" p="1"/>
-		<e n="zombieParasiteSpider" p=".75"/>
-		<e n="zombieSkinless" p="0.75"/>
-		<e n="zombieSkinlessSpider" p="0.75"/>
-		<e n="zombieMutant" p="0.75"/>
-		<e n="zombieWalker" p="0.75"/>
-		<e n="zombieColonelClank" p="0.75"/>
-		<e n="zombieButcher" p="0.75"/>
-		<e n="zombieSniper" p="0.75"/>
-		<e n="zombieDrowned" p="1"/>
-		<e n="zombieDryedMummy" p=".75"/>
-		<e n="zombieMale" p="0.75"/>
-		<e n="zombieCheerLeader" p="0.75"/>
-		<e n="zombieCheerLeaderFeral" p="0.75"/>
-		<e n="zombieCowboy" p="0.75"/>
-		<e n="zombieCowboyFeral" p="0.75"/>
-		<e n="zombieFarmer" p="0.75"/>
-		<e n="zombieFarmerFeral" p="0.75"/>
-		<e n="zombieStripper" p="1"/>
-		<e n="zombieStripperFeral" p=".75"/>
-		<e n="zombieClown" p="0.75"/>
-		<e n="zombieFeralSpaceman" p="0.75"/>
-	</append>
+		<e n="Pickle Rick" />
+		<e n="Jumping Bean" />
+		<e n="zombieTickleMeDemo" />
+		<e n="animalAlphaBear" p="0.3"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" p="0.3"/>
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" p="0.3"/>
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" p=".3"/>
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" p=".3"/>
 	</append>
 
+
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
-		<e n="zombieBehemoth" p="0.1"/>
-		<e n="animalHornet" p="0.1"/>
-		<e n="animalCottonMouth" p="0.25"/>
-		<e n="Pickle Rick" p="0.1"/>
-		<e n="Jumping Bean" p="0.1"/>
-		<e n="animalAlphaBear" p="0.5"/>
-		<e n="zombieHunter" p="0.5"/>
-		<e n="zombieMummy" p="0.5"/>
-		<e n="zombieParasite" p="0.5"/>
-		<e n="zombieParasiteCrawler" p="1"/>
-		<e n="zombieParasiteSpider" p=".75"/>
-		<e n="zombieSkinless" p="0.5"/>
-		<e n="zombieSkinlessSpider" p="0.5"/>
-		<e n="zombieMutant" p="0.5"/>
-		<e n="zombieWalker" p="0.5"/>
-		<e n="zombieColonelClank" p="0.5"/>
-		<e n="zombieButcher" p="0.5"/>
-		<e n="zombieSniper" p="0.5"/>
-		<e n="zombieDrowned" p="1"/>
-		<e n="zombieDryedMummy" p=".75"/>
-		<e n="zombieMale" p="0.5"/>
-		<e n="zombieCheerLeader" p="0.5"/>
-		<e n="zombieCheerLeaderFeral" p="0.25"/>
-		<e n="zombieCowboy" p="0.5"/>
-		<e n="zombieCowboyFeral" p="0.25"/>
-		<e n="zombieFarmer" p="0.5"/>
-		<e n="zombieFarmerFeral" p="0.25"/>
-		<e n="zombieStripper" p="1"/>
-		<e n="zombieStripperFeral" p=".75"/>
-		<e n="zombieClown" p="0.5"/>
-		<e n="zombieFeralSpaceman" p="0.5"/>
+		<e n="zombieBehemoth" />
+		<e n="animalHornet" />
+		<e n="animalCottonMouth" />
+		<e n="Pickle Rick" />
+		<e n="Jumping Bean" />
+		<e n="animalAlphaBear" />
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
-		<e n="zombieBehemothRadiated" p="0.1"/>
-		<e n="animalHornet" p="0.2"/>
-		<e n="animalCottonMouth" p="0.5"/>
-		<e n="animalAlphaBear" p="0.5"/>
-		<e n="animalAlphaBear" p="0.75"/>
-		<e n="zombieHunter" p="0.75"/>
-		<e n="zombieMummy" p="0.75"/>
-		<e n="zombieParasite" p="0.75"/>
-		<e n="zombieParasiteCrawler" p="1"/>
-		<e n="zombieParasiteSpider" p=".75"/>
-		<e n="zombieSkinless" p="0.75"/>
-		<e n="zombieSkinlessSpider" p="0.75"/>
-		<e n="zombieMutant" p="0.75"/>
-		<e n="zombieWalker" p="0.75"/>
-		<e n="zombieColonelClank" p="0.75"/>
-		<e n="zombieButcher" p="0.75"/>
-		<e n="zombieSniper" p="0.75"/>
-		<e n="zombieDrowned" p="1"/>
-		<e n="zombieDryedMummy" p=".75"/>
-		<e n="zombieMale" p="0.75"/>
-		<e n="zombieCheerLeader" p="0.75"/>
-		<e n="zombieCheerLeaderFeral" p="0.75"/>
-		<e n="zombieCowboy" p="0.75"/>
-		<e n="zombieCowboyFeral" p="0.75"/>
-		<e n="zombieFarmer" p="0.75"/>
-		<e n="zombieFarmerFeral" p="0.75"/>
-		<e n="zombieStripper" p="1"/>
-		<e n="zombieStripperFeral" p=".75"/>
-		<e n="zombieClown" p="0.75"/>
-		<e n="zombieFeralSpaceman" p="0.75"/>
+		<e n="zombieBehemothRadiated" />
+		<e n="animalHornet" />
+		<e n="animalCottonMouth" />
+		<e n="animalAlphaBear" />
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']">
 		<e n="zombieBehemoth" p="0.02"/>
 		<e n="animalHornet" p="0.02"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']">
 		<e n="zombieBehemoth" p="0.05"/>
 		<e n="animalHornet" p="0.05"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']">
 		<e n="zombieBehemoth" p="0.07"/>
 		<e n="animalHornet" p="0.07"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']">
 		<e n="zombieBehemoth" p="0.09"/>
 		<e n="animalHornet" p="0.09"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']">
 		<e n="zombieBehemoth" p="0.1"/>
 		<e n="animalHornet" p="0.1"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']">
 		<e n="zombieBehemoth" p="0.15"/>
 		<e n="animalHornet" p="0.15"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']">
 		<e n="zombieBehemoth" p="0.2"/>
 		<e n="animalHornet" p="0.2"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']">
 		<e n="zombieBehemoth" p="0.25"/>
 		<e n="animalHornet" p="0.25"/>
 		<e n="zombieTickleMeDemo" p="0.25"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']">
@@ -257,6 +456,31 @@
 		<e n="zombieBehemoth" p="0.35"/>
 		<e n="animalHornet" p="0.35"/>
 		<e n="zombieTickleMeDemo" p="0.35"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']">
@@ -264,6 +488,31 @@
 		<e n="animalHornet" p="0.4"/>
 		<e n="animalQueenHornet" p="0.4"/>
 		<e n="zombieTickleMeDemo" p="0.4"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']">
@@ -271,6 +520,31 @@
 		<e n="animalHornet" p="0.45"/>
 		<e n="animalQueenHornet" p="0.45"/>
 		<e n="zombieTickleMeDemo" p="0.45"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']">
@@ -278,6 +552,31 @@
 		<e n="animalHornet" p="0.5"/>
 		<e n="animalQueenHornet" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.5"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']">
@@ -286,6 +585,31 @@
 		<e n="animalQueenHornet" p="0.6"/>
 		<e n="zombieBehemothRadiated" p="0.02"/>
 		<e n="zombieTickleMeDemo" p="0.6"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']">
@@ -294,6 +618,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.04"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']">
@@ -302,6 +651,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.06"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']">
@@ -309,6 +683,31 @@
 		<e n="animalHornet" p="0.75"/>
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.08"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']">
@@ -317,6 +716,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.1"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']">
@@ -325,6 +749,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.12"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']">
@@ -333,6 +782,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.14"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']">
@@ -341,6 +815,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.16"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']">
@@ -349,6 +848,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.18"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']">
@@ -357,6 +881,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.2"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']">
@@ -365,6 +914,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.22"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']">
@@ -373,6 +947,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.24"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']">
@@ -381,6 +980,31 @@
 		<e n="animalQueenHornet" p="0.75"/>
 		<e n="zombieBehemothRadiated" p="0.26"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']">
@@ -390,6 +1014,31 @@
 		<e n="zombieBehemothRadiated" p="0.28"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.02"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']">
@@ -399,6 +1048,31 @@
 		<e n="zombieBehemothRadiated" p="0.3"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.04"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']">
@@ -408,6 +1082,31 @@
 		<e n="zombieBehemothRadiated" p="0.32"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.06"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']">
@@ -417,6 +1116,31 @@
 		<e n="zombieBehemothRadiated" p="0.34"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.08"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']">
@@ -426,6 +1150,31 @@
 		<e n="zombieBehemothRadiated" p="0.36"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.1"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']">
@@ -435,6 +1184,31 @@
 		<e n="zombieBehemothRadiated" p="0.38"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.12"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']">
@@ -444,6 +1218,31 @@
 		<e n="zombieBehemothRadiated" p="0.4"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.14"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']">
@@ -453,6 +1252,31 @@
 		<e n="zombieBehemothRadiated" p="0.42"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.16"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']">
@@ -462,6 +1286,31 @@
 		<e n="zombieBehemothRadiated" p="0.44"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.18"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']">
@@ -471,6 +1320,31 @@
 		<e n="zombieBehemothRadiated" p="0.46"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.2"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']">
@@ -480,6 +1354,31 @@
 		<e n="zombieBehemothRadiated" p="0.48"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.22"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']">
@@ -489,6 +1388,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.24"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']">
@@ -498,6 +1422,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.26"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']">
@@ -507,6 +1456,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.28"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']">
@@ -516,6 +1490,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.3"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']">
@@ -525,6 +1524,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.32"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']">
@@ -534,6 +1558,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.34"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']">
@@ -543,6 +1592,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.36"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']">
@@ -552,6 +1626,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.38"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']">
@@ -561,6 +1660,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.4"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']">
@@ -570,6 +1694,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.42"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']">
@@ -579,6 +1728,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.44"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']">
@@ -588,6 +1762,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.46"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']">
@@ -597,6 +1796,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.48"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']">
@@ -606,6 +1830,31 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.5"/>
+		<e n="zombieHunter" />
+		<e n="zombieMummy" />
+		<e n="zombieParasite" />
+		<e n="zombieParasiteCrawler" />
+		<e n="zombieParasiteSpider" />
+		<e n="zombieSkinless" />
+		<e n="zombieSkinlessSpider" />
+		<e n="zombieMutant" />
+		<e n="zombieWalker" />
+		<e n="zombieColonelClank" />
+		<e n="zombieButcher" />
+		<e n="zombieSniper" />
+		<e n="zombieDrowned" />
+		<e n="zombieDryedMummy" />
+		<e n="zombieMale" />
+		<e n="zombieCheerLeader" />
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboy" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmer" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripper" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieClown" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']">
@@ -615,6 +1864,11 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.52"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']">
@@ -624,6 +1878,11 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.54"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']">
@@ -633,6 +1892,11 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.56"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']">
@@ -642,6 +1906,11 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.58"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']">
@@ -660,6 +1929,11 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.62"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']">
@@ -669,6 +1943,11 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.64"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']">
@@ -678,6 +1957,11 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.66"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']">
@@ -687,72 +1971,137 @@
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.68"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.7"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.72"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.74"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.76"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.78"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieTickleMeDemo" p="0.75"/>
 		<e n="zombieFatCopFlamin" p="0.78"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieFatCopFlamin" p="0.80"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieFatCopFlamin" p="0.82"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieFatCopFlamin" p="0.84"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieFatCopFlamin" p="0.86"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieFatCopFlamin" p="0.88"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']">
 		<e n="zombieBehemothRadiated" p="0.5"/>
 		<e n="zombieFatCopFlamin" p="0.90"/>
+		<e n="zombieCheerLeaderFeral" />
+		<e n="zombieCowboyFeral" />
+		<e n="zombieFarmerFeral" />
+		<e n="zombieStripperFeral" />
+		<e n="zombieFeralSpaceman" />
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']">

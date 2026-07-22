@@ -760,12 +760,30 @@
 			<property name="Group" value="Resources"/>
 		</item>
 
+		<item name="meleeHandZombieMiniBehemoth">
+			<property name="Extends" value="meleeHandZombiePartyGirl"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="10"/>
+				<property name="Range" value="3"/>
+				<property name="Sphere" value="1"/>
+				<property name="Block_range" value="2"/>
+			</property>
+			<effect_group name="meleeHandZombieBehemoth" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInjuryBleedingTwo"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInjuryStunned01"/>
+			</effect_group>
+		</item>
+
 		<item name="meleeHandZombieBehemoth">
 			<property name="Extends" value="meleeHandZombiePartyGirl"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action0">
-				<property name="DamageEntity" value="500"/>
-				<property name="DamageBlock" value="2000"/>
+				<property name="DamageEntity" value="50"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="3"/>
 				<property name="Sphere" value="1"/>
 				<property name="Block_range" value="2"/>
