@@ -1212,10 +1212,18 @@ challenge62Zombie,Challenge 62
 challenge62ZombieDesc,Challenge - Survive The Batnado. Win and claim your prize. This quest cannot be shared. Good Luck
 
 
-
-
-
-
+perkTurretsDesc,You are fascinated with robotics. Learn to use and deploy robotic weapons.\nBoost loot odds of [DECEA3]Tech Planet[-] magazines.
+perkTurretsName,Robotics Inventor
+perkTurretsRank1Desc,Science Projects
+perkTurretsRank1LongDesc,"You have some crazy innovative ideas but your implementation could use some work. Robotic weapons deal 10% more damage, 30% faster fire rate and reload an extra 50 rounds. Robot active range is increased from 20 to 28 meters.\nYou can deploy multiple robots but only the closest will be active."
+perkTurretsRank2Desc,Basic Robotics
+perkTurretsRank2LongDesc,"You are taking your projects to the next level now. Robotic weapons deal 20% more damage, 70% faster fire rate and reload an extra 100 rounds. Robot active range is 32 meters."
+perkTurretsRank3Desc,Automated Weaponry
+perkTurretsRank3LongDesc,"You have mastered the basics of automated weaponry. Robotic weapons deal 30% more damage, 90% faster fire rate and reload an extra 150 rounds. Robot active range is 44 meters. \nTwo deployed robots can be active at once."
+perkTurretsRank4Desc,Advanced Robotics
+perkTurretsRank4LongDesc,"You must be from the year 2077. You are creating some futuristic technology. Robotic weapons deal 40% more damage, 150% faster fire rate and reload an extra 200 rounds. Reload robotic weapons  10% faster. Robot active range is 42 meters."
+perkTurretsRank5Desc,Robotics Expert
+perkTurretsRank5LongDesc,"You are now a top expert in robotics. Reload robotic weapons 20% faster and reload an extra 250 rounds. Robot active range is 60 meters.\nFour deployed robots can be active at once."
 
 
 

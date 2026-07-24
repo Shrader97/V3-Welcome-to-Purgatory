@@ -174,7 +174,10 @@
 			<display_entry name="dCraftingTime" title_key="statCraftingTimeForge" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
 		</item_display_info>
 
-
+		<item_display_info display_type="modLightWeight" display_group="groupAttire">
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dWalkSpeed" title_key="statWalkSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
 
 
 

@@ -1,0 +1,808 @@
+<FNSLootAllTheThings>
+	<append xpath="/blocks/block[@name='tvLargeStand2x2']">
+		<property name="EconomicValue" value="300" />
+	</append>
+	<append xpath="/blocks/block[@name='tvSmallWall1x1']">
+		<property name="EconomicValue" value="150" />
+	</append>
+	<append xpath="/blocks/block[@name='chandelierLight']">
+		<property name="EconomicValue" value="200" />
+		<property name="Material" value="MresourceScrapBrassLarge" />
+		<property name="Weight" value="250" />
+	</append>
+	<append xpath="/blocks/block[@name='tableCommunion']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="wineBarrel1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='piano']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="piano1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='urinalCommercialMounted']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="toilet" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='standIV']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="standIV" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntBarrelPlasticSingle00']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="waterBarrel1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntBarrelPlasticSingle45']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="waterBarrel1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntBarrelPlasticQuadA']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="waterBarrel2" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntBarrelPlasticQuadB']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="waterBarrel2" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='drinkingfountainSingle']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="waterCooler" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoComputerDeskTopPC']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="computer1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoComputerMonitorKeyboardMousePC']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="computer1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoLargePetCage']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="petCage1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoClassicDogHouse']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="petCage1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBrownBoxesBase']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="boxes1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntStoreElectronicsPalletTvFallen']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletTV" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBagBlankBaseFull')]">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagBlankBaseFull" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBagBlankTile')]">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagBlankTile" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBagBlankBaseMed')]">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagBlankBaseMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBagBlankCapMed')]">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagBlankCapMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBagBlankCapSml')]">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagBlankCapSml" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBagBlankSingleBent')]">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagBlankSingleBent" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[contains(@name,'palletBagBlankSingleFlat')]">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagBlankSingleFlat" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBricksBase']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBricks1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletTarpBaseWhite']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletTarpBase1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletCompressedCardboard']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletCompressedCardboard1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletCans']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletCans1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='OSBWoodStack']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="OSBWoodStack1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='plywoodStack']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="plywoodStack1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='woodPlanksStack']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="woodPlanksStack1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='dryWallStack']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="dryWallStack1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='metalPipeStack']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="metalPipeStack1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='metalPipeStackLoose']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="metalPipeStackLoose1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='bricksStack']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="bricksStack1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFertilizerBaseFull']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFertilizerBaseFull" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFertilizerTile']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFertilizerTile" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFertilizerBaseMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFertilizerBaseMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFertilizerCapMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFertilizerCapMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFertilizerCapSml']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFertilizerCapSml" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFertilizerSingleBent']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFertilizerSingleBent" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFertilizerSingleFlat']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFertilizerSingleFlat" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagCowFeedBaseFull']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagCowFeedBaseFull" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagCowFeedTile']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagCowFeedTile" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagCowFeedBaseMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagCowFeedBaseMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagCowFeedCapMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagCowFeedCapMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagCowFeedCapSml']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagCowFeedCapSml" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagCowFeedSingleBent']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagCowFeedSingleBent" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagCowFeedSingleFlat']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagCowFeedSingleFlat" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagSandBaseFull']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagSandBaseFull" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagSandTile']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagSandTile" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagSandBaseMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagSandBaseMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagSandCapMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagSandCapMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagSandCapSml']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagSandCapSml" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagSandSingleBent']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagSandSingleBent" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagSandSingleFlat']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagSandSingleFlat" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagConcreteBaseFull']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagConcreteBaseFull" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagConcreteTile']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagConcreteTile" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagConcreteBaseMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagConcreteBaseMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagConcreteCapMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagConcreteCapMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagConcreteBaseSml']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagConcreteBaseSml" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagConcreteCapSml']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagConcreteCapSml" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagConcreteSingleBent']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagConcreteSingleBent" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagConcreteSingleFlat']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagConcreteSingleFlat" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFlourBaseFull']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFlourBaseFull" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFlourTile']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFlourTile" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFlourBaseMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFlourBaseMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFlourCapMed']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFlourCapMed" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFlourCapSml']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFlourCapSml" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFlourSingleBent']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFlourSingleBent" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletBagFlourSingleFlat']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="palletBagFlourSingleFlat" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntToaster']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="toaster1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntIceMachine']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="iceMachine1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='wineBarrel']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="wineBarrel1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='wineBarrelSet']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="wineBarrel2" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='wineBarrelPlain']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="wineBarrel3" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoWineBottle']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="wineBottle1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoSodaCanSingle']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="SodaCanSingle" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoSodaCan6Pack']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="SodaCan6Pack" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='palletCartonMilitaryCap']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="munitions1" />
+			</property>
+		</property>
+		<property name="DowngradeBlock" value="palletCartonMilitaryBase" />
+	</append>
+	<append xpath="/blocks/block[@name='palletCartonMilitaryTile']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="munitions1" />
+			</property>
+		</property>
+		<property name="DowngradeBlock" value="palletCartonMilitaryBase" />
+	</append>
+	<append xpath="/blocks/block[@name='palletCartonMilitaryTileCovered']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="munitions1" />
+			</property>
+		</property>
+		<property name="DowngradeBlock" value="palletCartonMilitaryBase" />
+	</append>
+	<append xpath="/blocks/block[@name='sectionalPlaidCouchSofaMiddle']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="sofa1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='sectionalLeatherCouchSofaArm']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="sofa1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='couchUglySingleWhite']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="sofa1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='couchUglyLargeWhite']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="sofa1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='couchModernArm']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="sofa1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='bodyBagBlack']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="bodyBag1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarTireSmallFlat']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="flatTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarTireFlat']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="flatTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarTirePile']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="goodTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarTireStack']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="goodTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarWheelFlat']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="flatTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarTireSmallFlat02']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="flatTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarTireFlat02']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="flatTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarTirePile02']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="goodTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarTireStack02']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="goodTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarWheelFlat02']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="flatTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarWheelOffset01']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="goodTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarWheelOffset02']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="goodTires1" />
+			</property>
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='decoCarWheelOffset03']">
+		<property name="Class" value="CompositeTileEntity" />
+		<property class="CompositeFeatures">
+			<property class="TEFeatureStorage">
+				<property name="LootList" value="goodTires1" />
+			</property>
+		</property>
+	</append>
+</FNSLootAllTheThings>

@@ -22,6 +22,7 @@
         <item name="modMaxDegradation"/>
         <item name="modSuperMaxDegradation"/>
         <item name="modUltraMaxDegradation"/>
+        <item name="modLightWeight"/>
     </append>
 
     <append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsModsCommon']">
@@ -31,7 +32,8 @@
         <item name="modUltraMaxDegradationSchematic"/>
         <item name="modBikecycleSpeedBoostSchematic"/>
         <item name="modVehicleTurboChargerSchematic"/>
-        <item name="modVehicleDoubleTurboChargerSchematic"/>        
+        <item name="modVehicleDoubleTurboChargerSchematic"/>  
+        <item name="modLightWeightSchematic"/>
     </append>
 		
 	<append xpath="//trader_item_group[@name='groupRangedAll']">

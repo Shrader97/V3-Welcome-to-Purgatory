@@ -21,7 +21,6 @@
     <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue'][@cols='9']/@cols">10</set>
     <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue'][@cell_width='75']/@cell_width">62</set>
     <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue'][@cell_height='75']/@cell_height">62</set>
-    <setattribute xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/item_stack[@name='0']" name="cell_size">62</setattribute>
 
 	<remove xpath="windows/window[@name='windowForgeInput']" />
 

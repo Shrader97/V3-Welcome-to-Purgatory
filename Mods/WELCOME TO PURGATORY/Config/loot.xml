@@ -245,8 +245,15 @@
 		<item name="modArmorFireRetardantLiner" loot_prob_template="veryLowDelayed"/>
 	</append>
 
+	<append xpath="/lootcontainers/lootgroup[@name='modArmorT3']">
+		<item name="modLightWeight" loot_prob_template="veryLowDelayed"/>
+	</append>
+
+
 	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
 		<item name="modArmorFireRetardantLinerSchematic" loot_prob_template="veryLowDelayed"/>
+		<item name="modLightWeightSchematic" loot_prob_template="veryLowDelayed"/>
+	
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">

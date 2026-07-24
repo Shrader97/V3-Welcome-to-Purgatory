@@ -615,12 +615,18 @@
 
         <item_modifier name="modSpeedLoader" installable_tags="revolver,dbarrel" modifier_tags="magazine" blocked_tags="noMods,magazine" type="attachment">
             <property name="Extends" value="modGeneralMaster"/>
+            <property name="DisplayType" value="modSpeedLoader"/>
             <property name="CustomIcon" value="modSpeedLoader"/>
             <property name="UnlockedBy" value="modSpeedLoaderSchematic"/>
             <property name="TraderStageTemplate" value="modsTier2"/>
-            <effect_group tiered="false">
-                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".75"/>
+            <property name="ShowQuality" value="true"/>
+            <property name="QualityMin" value="1"/>
+            
+            <effect_group>
+                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".25,.5,.75,1,1.25,1.5" tier="1,2,3,4,5,6"/>
+                    <display_value name="dReloadSpeed" value=".25,.5,.75,1,1.25,1.5" tier="1,2,3,4,5,6"/>
             </effect_group>
+                            
         </item_modifier>
 
         <item_modifier name="modCopperBand" installable_tags="armorHands" modifier_tags="armor" blocked_tags="noMods" type="attachment">
@@ -859,9 +865,43 @@
             </effect_group>
         </item_modifier>
 
+        <item_modifier name="modGunDrumTurretMagazineExtender" installable_tags="perkTurrets" modifier_tags="magazine" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="modGunDrumMagazineExtender"/>
+            <property name="CustomIconTint" value="#FF0000"/>
+            <property name="UnlockedBy" value="perkAutoWeaponsDrumMag"/>
+            <property name="TraderStageTemplate" value="modsTier3"/>
+            <property name="ShowQuality" value="true"/>
+            <property name="DisplayType" value="modGunDrumMagazineExtender"/>
+            <property name="QualityMin" value="1"/>
 
+            <effect_group>
+                <passive_effect name="MagazineSize" operation="perc_add" value="1,1.5,2,2.5,3,4" tier="1,2,3,4,5,6"/>
+                <display_value name="dMagazineSize" value="1,1.5,2,2.5,3,4" tier="1,2,3,4,5,6"/>
+                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-.25,-.2,-.15,-.1,-.05,0" tier="1,2,3,4,5,6"/>
+                <display_value name="dReloadSpeedMul" value="-.25,-.2,-.149,-.1,-.05,0" tier="1,2,3,4,5,6"/>
+            </effect_group>
+        </item_modifier>
 
+        <item_modifier name="modLightWeight" installable_tags="armorHead,armorChest,armorHands,armorFeet" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="CustomIcon" value="resourceFeather"/>
+            <property name="CustomIconTint" value="#FF0000"/>
+            <property name="UnlockedBy" value=""/>
+            <property name="TraderStageTemplate" value="modsTier3"/>
+            <property name="ShowQuality" value="true"/>
+            <property name="DisplayType" value="modLightWeight"/>
+            <property name="QualityMin" value="1"/>
 
+            <effect_group>
+                <passive_effect name="RunSpeed" operation="perc_add" value="0.1,0.15,0.2,0.25,0.3,0.35" tier="1,2,3,4,5,6"/>
+                <display_value name="dRunSpeed" value="0.1,0.15,0.2,0.25,0.3,0.35" tier="1,2,3,4,5,6"/>
+                <passive_effect name="WalkSpeed" operation="perc_add" value="0.1,0.15,0.2,0.25,0.3,0.35" tier="1,2,3,4,5,6"/>
+                <display_value name="dWalkSpeed" value="0.1,0.15,0.2,0.25,0.3,0.35" tier="1,2,3,4,5,6"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+
+            </effect_group>
+        </item_modifier>
 
 
 

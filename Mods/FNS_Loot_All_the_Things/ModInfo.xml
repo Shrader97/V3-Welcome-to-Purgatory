@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="ZZZ_FNS_Loot_All_the_Things" />
+	<DisplayName value="FNS Loot All the Things" />
+	<Version value="3.0.1.1" />
+    <Description value="Adds many containers as lootable to make the game more immersive." />
+    <Author value="FlufferNutterSandwich" />
+	<Website value="https://www.nexusmods.com/7daystodie/mods/5100" />
+</xml>
