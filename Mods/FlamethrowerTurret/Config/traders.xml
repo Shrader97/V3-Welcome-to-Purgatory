@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll']/item[@name='gunBotT1JunkSledge']">
+		<item name="gunBotT2flameTurretMK1" quality="1,6"/>
+	</insertAfter>
+
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll']/item[@name='gunBotT2JunkTurret']">
+		<item name="gunBotT2flameTurretMK2" quality="1,6"/>
+	</insertAfter>
+
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll']/item[@name='gunBotT3JunkDrone']">
+		<item name="gunBotT2flameTurretMK3" quality="1,6"/>
+	</insertAfter>
+
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='rareBooks']/item[@name='modRoboticDroneMoraleBoosterModSchematic']">
+		<!-- Low relative weights inside rareBooks keep these offers exceptional. -->
+		<item name="modRoboticDroneFlamethrowerModSchematic" prob="0.20"/>
+		<item name="modRoboticDroneFlamethrowerModMk2Schematic" prob="0.10"/>
+		<item name="modRoboticDroneFlamethrowerModMk3Schematic" prob="0.05"/>
+	</insertAfter>
+
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='traderRobotics']/item[@name='gunBotT1JunkSledge']">
+		<item name="gunBotT2flameTurretMK1" quality="1,6"/>
+	</insertAfter>
+
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='traderRobotics']/item[@name='gunBotT2JunkTurret']">
+		<item name="gunBotT2flameTurretMK2" quality="1,6"/>
+	</insertAfter>
+
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='traderRobotics']/item[@name='gunBotT3JunkDrone']">
+		<item name="gunBotT2flameTurretMK3" quality="1,6"/>
+		<item name="modRoboticDroneFlamethrowerMod" quality="1,6"/>
+		<item name="modRoboticDroneFlamethrowerModMk2" quality="1,6"/>
+		<item name="modRoboticDroneFlamethrowerModMk3" quality="1,6"/>
+	</insertAfter>
+
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='traderElectrical']/item[@name='dartTrap']">
+		<item name="flamethrowerTrapMk1" count="1,2" prob="1.0"/>
+		<item name="flamethrowerTrapMk2" count="1,2" prob="1.0"/>
+		<item name="flamethrowerTrapMk3" count="1,2" prob="1.0"/>
+	</insertAfter>
+</configs>

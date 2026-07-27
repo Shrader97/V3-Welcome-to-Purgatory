@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+	<!-- Drone flame config - dopisane do aktualnego entityJunkDrone z Config 3.0 -->
+	<append xpath="/entity_classes/entity_class[@name='entityJunkDrone']">
+		<property name="DroneFlameTier1DamageBuffs" value="buffBurningFlamingArrow"/>
+		<property name="DroneFlameTier2DamageBuffs" value="buffBurningFlamingArrow"/>
+		<property name="DroneFlameTier3DamageBuffs" value="buffBurningMolotov"/>
+		<property name="DroneFlameTier1DirectDamage" value="15"/>
+		<property name="DroneFlameTier2DirectDamage" value="25"/>
+		<property name="DroneFlameTier3DirectDamage" value="35"/>
+		<property name="DroneFlameHitPlayers" value="false"/>
+		<property name="DroneFlameHitOwner" value="false"/>
+		<property name="DroneFlameEngageDistance" value="7.0"/>
+		<property name="DroneFlameAttackDistance" value="3.25"/>
+		<property name="DroneFlameApproachFollowDistance" value="1.60"/>
+		<property name="DroneFlameMaxFuel" value="10000"/>
+	</append>
+
+	<append xpath="/entity_classes">
+
+		<entity_class name="flameTurretGunMK1">
+			<property name="Class" value="EntityTurret"/>
+			<property name="UserSpawnType" value="Console"/>
+			<property name="Tags" value="turret,turretRanged,deployed,noMedBuffs"/>
+			<property name="Parent" value="NPC"/>
+			<property name="Prefab" value="@:Other/Items/Weapons/Ranged/JunkTurret/junkTurret_Prefab.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootList" value="roboticTurret"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="WakeUpTime" value="0.5"/>
+			<property name="FallAsleepTime" value="10"/>
+			<property name="YawRange" value="90"/>
+			<property name="PitchRange" value="70"/>
+			<property name="TurnSpeed" value="22.5"/>
+			<property name="MaxDistance" value="6"/>
+			<property name="RaySpread" value="5"/>
+			<property name="BurstRoundCount" value="1"/>
+			<property name="BurstFireRate" value="1"/>
+			<property name="CooldownTime" value="1"/>
+			<property name="OvershootTime" value="0"/>
+			<property name="MaxOwnerDistance" value="16"/>
+			<property name="TargetingSound" value="turret_retarget_lp"/>
+			<property name="OverheatSound" value="turret_overheat_lp"/>
+			<property name="WakeUpSound" value="turret_windup"/>
+			<property name="FireSound" value="junkturret_fire"/>
+			<property name="ParticlesMuzzleFire" value="flame_hazard"/>
+			<property name="TimeStayAfterDeath" value="0"/>
+			<property class="Explosion">
+				<property name="ParticleIndex" value="6"/>
+				<property name="RadiusBlocks" value="1"/>
+				<property name="RadiusEntities" value="1"/>
+			</property>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="NavObject" value="junk_turret"/>
+			<property name="TrackerIcon" value="ui_game_symbol_assemble"/>
+
+			<property name="FlameTurret" value="true"/>
+			<property name="FlameEngageDistance" value="6"/>
+			<property name="FlameAmmoPerSecond" value="3"/>
+			<property name="FlameTick" value="0.05"/>
+			<property name="FlameDirectDamage" value="-1"/>
+			<property name="FlameDamageBuffs" value="buffBurningFlamingArrow"/>
+			<property name="FlameHitPlayers" value="true"/>
+			<property name="FlameHitOwner" value="true"/>
+		</entity_class>
+
+		<entity_class name="flameTurretGunMK2">
+			<property name="Class" value="EntityTurret"/>
+			<property name="UserSpawnType" value="Console"/>
+			<property name="Tags" value="turret,turretRanged,deployed,noMedBuffs"/>
+			<property name="Parent" value="NPC"/>
+			<property name="Prefab" value="@:Other/Items/Weapons/Ranged/JunkTurret/junkTurret_Prefab.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootList" value="roboticTurret"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="WakeUpTime" value="0.5"/>
+			<property name="FallAsleepTime" value="10"/>
+			<property name="YawRange" value="90"/>
+			<property name="PitchRange" value="70"/>
+			<property name="TurnSpeed" value="22.5"/>
+			<property name="MaxDistance" value="6"/>
+			<property name="RaySpread" value="5"/>
+			<property name="BurstRoundCount" value="1"/>
+			<property name="BurstFireRate" value="1"/>
+			<property name="CooldownTime" value="1"/>
+			<property name="OvershootTime" value="0"/>
+			<property name="MaxOwnerDistance" value="16"/>
+			<property name="TargetingSound" value="turret_retarget_lp"/>
+			<property name="OverheatSound" value="turret_overheat_lp"/>
+			<property name="WakeUpSound" value="turret_windup"/>
+			<property name="FireSound" value="junkturret_fire"/>
+			<property name="ParticlesMuzzleFire" value="flame_hazard"/>
+			<property name="TimeStayAfterDeath" value="0"/>
+			<property class="Explosion">
+				<property name="ParticleIndex" value="6"/>
+				<property name="RadiusBlocks" value="1"/>
+				<property name="RadiusEntities" value="1"/>
+			</property>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="NavObject" value="junk_turret"/>
+			<property name="TrackerIcon" value="ui_game_symbol_assemble"/>
+
+			<property name="FlameTurret" value="true"/>
+			<property name="FlameEngageDistance" value="6"/>
+			<property name="FlameAmmoPerSecond" value="3"/>
+			<property name="FlameTick" value="0.05"/>
+			<property name="FlameDirectDamage" value="-1"/>
+			<property name="FlameDamageBuffs" value="buffBurningFlamingArrow"/>
+			<property name="FlameHitPlayers" value="true"/>
+			<property name="FlameHitOwner" value="true"/>
+		</entity_class>
+
+		<entity_class name="flameTurretGunMK3">
+			<property name="Class" value="EntityTurret"/>
+			<property name="UserSpawnType" value="Console"/>
+			<property name="Tags" value="turret,turretRanged,deployed,noMedBuffs"/>
+			<property name="Parent" value="NPC"/>
+			<property name="Prefab" value="@:Other/Items/Weapons/Ranged/JunkTurret/junkTurret_Prefab.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootList" value="roboticTurret"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="WakeUpTime" value="0.5"/>
+			<property name="FallAsleepTime" value="10"/>
+			<property name="YawRange" value="90"/>
+			<property name="PitchRange" value="70"/>
+			<property name="TurnSpeed" value="22.5"/>
+			<property name="MaxDistance" value="6"/>
+			<property name="RaySpread" value="5"/>
+			<property name="BurstRoundCount" value="1"/>
+			<property name="BurstFireRate" value="1"/>
+			<property name="CooldownTime" value="1"/>
+			<property name="OvershootTime" value="0"/>
+			<property name="MaxOwnerDistance" value="16"/>
+			<property name="TargetingSound" value="turret_retarget_lp"/>
+			<property name="OverheatSound" value="turret_overheat_lp"/>
+			<property name="WakeUpSound" value="turret_windup"/>
+			<property name="FireSound" value="junkturret_fire"/>
+			<property name="ParticlesMuzzleFire" value="flame_hazard"/>
+			<property name="TimeStayAfterDeath" value="0"/>
+			<property class="Explosion">
+				<property name="ParticleIndex" value="6"/>
+				<property name="RadiusBlocks" value="1"/>
+				<property name="RadiusEntities" value="1"/>
+			</property>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="NavObject" value="junk_turret"/>
+			<property name="TrackerIcon" value="ui_game_symbol_assemble"/>
+
+			<property name="FlameTurret" value="true"/>
+			<property name="FlameEngageDistance" value="6"/>
+			<property name="FlameAmmoPerSecond" value="3"/>
+			<property name="FlameTick" value="0.05"/>
+			<property name="FlameDirectDamage" value="-1"/>
+			<property name="FlameDamageBuffs" value="buffBurningMolotov"/>
+			<property name="FlameHitPlayers" value="true"/>
+			<property name="FlameHitOwner" value="true"/>
+		</entity_class>
+
+	</append>
+</configs>

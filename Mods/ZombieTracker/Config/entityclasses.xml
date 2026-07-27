@@ -1,0 +1,32 @@
+<configs>
+
+<append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='NavObject']/@value"> ,animaltracking_Zombie </append>
+<append xpath="/entity_classes/entity_class[starts-with(@name,'zombie')]/property[@name='Tags']/@value"> ,perkAT05 </append>
+
+<append xpath="/entity_classes/entity_class[@name='animalBeeSwarm']/property[@name='Tags']/@value"> ,perkAT02,perkAT03,perkAT04,perkAT05 </append>
+<append xpath="/entity_classes/entity_class[@name='animalBeeSwarm']">
+	<property name="NavObject" value="animaltracking_Fly" />
+</append>
+<append xpath="/entity_classes/entity_class[@name='animalInsectSwarm']/property[@name='Tags']/@value"> ,perkAT03,perkAT04,perkAT05 </append>
+<append xpath="/entity_classes/entity_class[@name='animalInsectSwarm']">
+	<property name="NavObject" value="animaltracking_Fly" />
+</append>
+<append xpath="/entity_classes/entity_class[@name='animalZombieVulture']/property[@name='Tags']/@value"> ,perkAT03,perkAT04,perkAT05 </append>
+<append xpath="/entity_classes/entity_class[@name='animalZombieVulture']">
+	<property name="NavObject" value="animaltracking_Fly" />
+</append>
+<append xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/property[@name='Tags']/@value"> ,perkAT04,perkAT05 </append>
+<append xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']">
+	<property name="NavObject" value="animaltracking_Fly" />
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='animalZombieBoar']/property[@name='Tags']/@value"> ,perkAT04,perkAT05 </append>
+<append xpath="/entity_classes/entity_class[@name='animalZombieBoar']">
+	<property name="NavObject" value="animaltracking_BossGrace" />
+</append>
+<append xpath="/entity_classes/entity_class[@name='animalBossGrace']/property[@name='Tags']/@value"> ,perkAT05 </append>
+<append xpath="/entity_classes/entity_class[@name='animalBossGrace']">
+	<property name="NavObject" value="animaltracking_BossGrace" />
+</append>
+
+</configs>

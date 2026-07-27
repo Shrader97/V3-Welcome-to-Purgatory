@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<!--
+		Add the flame turrets to the existing native Robotics rows. This is the
+		same integration pattern used by working weapon packs and avoids extra
+		display rows that the Knowledge tooltip can clip.
+
+		Drone flamethrower mods are deliberately not listed here. Their recipes
+		are unlocked exclusively by their corresponding schematic items.
+	-->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[@item='gunBotT1JunkSledge']">
+		<unlock_entry item="gunBotT2flameTurretMK1" unlock_tier="1" tags="gunBotT2flameTurretMK1"/>
+	</append>
+
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[@item='gunBotT2JunkTurret']">
+		<unlock_entry item="gunBotT2flameTurretMK2" unlock_tier="1" tags="gunBotT2flameTurretMK2"/>
+	</append>
+
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[@item='gunBotT3JunkDrone']">
+		<unlock_entry item="gunBotT2flameTurretMK3" unlock_tier="1" tags="gunBotT2flameTurretMK3"/>
+	</append>
+
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group">
+		<!-- Flame Turret MK1 follows the native Robotics level 11-25 quality band. -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunBotT2flameTurretMK1"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,100" value="1,2,3,4,5,5" tags="gunBotT2flameTurretMK1"/>
+
+		<!-- Flame Turret MK2 follows the native Robotics level 51-75 quality band. -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,100" value="1" tags="gunBotT2flameTurretMK2"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="55,60,65,70,75,100" value="1,2,3,4,5,5" tags="gunBotT2flameTurretMK2"/>
+
+		<!-- Flame Turret MK3 follows the native Robotics level 76-100 quality band. -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="76,100" value="1" tags="gunBotT2flameTurretMK3"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="80,85,90,95,100" value="1,2,3,4,5" tags="gunBotT2flameTurretMK3"/>
+	</append>
+
+	<!-- Add each flame trap to the native Trap Crafting hover/unlock groups. -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT1']">
+		<unlock_entry item="flamethrowerTrapMk1" unlock_tier="1"/>
+	</append>
+
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT2']">
+		<unlock_entry item="flamethrowerTrapMk2" unlock_tier="1"/>
+	</append>
+
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT3']">
+		<unlock_entry item="flamethrowerTrapMk3" unlock_tier="1"/>
+	</append>
+
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingTraps']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,100" value="1" tags="flamethrowerTrapMk1"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="flamethrowerTrapMk2"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,100" value="1" tags="flamethrowerTrapMk3"/>
+	</append>
+</configs>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="TokimekisuMod_ZombieTracker" />
+	<DisplayName value="ZombieTracker" />
+	<Description value="for v3.0" />
+	<Author value="tokimekisu" />
+	<Version value="1.0.0" />
+	<Website value="https://www.nexusmods.com/profile/tokimekibakasu/mods" />
+	<SkipWithAntiCheat value="true" />
+</xml>

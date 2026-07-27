@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<append xpath="/blocks">
+		<block name="flamethrowerTrapMk1">
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="flamethrowerTrapMk1Desc"/>
+			<property name="Class" value="Launcher"/>
+			<property name="CustomIcon" value="flamethrowertrap"/>
+			<property name="RequiredPower" value="10"/>
+			<property name="PlaySound" value="darttrap_fire"/>
+			<property name="EndSound" value="darttrap_end"/>
+			<property name="BurstFireRate" value="0.5"/>
+			<property name="ShowTargeting" value="false"/>
+			<property name="AmmoItem" value="ammoGasCan"/>
+			<property name="FlameDartTrap" value="true"/>
+			<property name="FlameAmmoPerSecond" value="3"/>
+			<property name="FlameTick" value="0.10"/>
+			<property name="FlameDirectDamage" value="15"/>
+			<property name="FlameDamageBuffs" value="buffBurningFlamingArrow"/>
+			<property name="FlameHitPlayers" value="true"/>
+			<property name="FlameHitOwner" value="true"/>
+			<property name="FlameBuffDuration" value="2.0"/>
+			<property name="FlameBuffNetSyncInterval" value="0.75"/>
+			<property name="UnlockedBy" value="craftingTraps"/>
+			<property name="DisplayType" value="flameTrap"/>
+			<property name="FlameDisplayRange" value="6"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Electrical/arrowTrapPrefab.prefab"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="59"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+			<property name="Path" value="solid"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="TraderStageTemplate" value="electricTier2"/>
+			<property name="TakeDelay" value="10"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="16"/>
+				<property name="resourceMechanicalParts" value="3"/>
+				<property name="resourceElectricParts" value="2"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="20,100" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B155"/>
+			<property name="SortOrder2" value="0019"/>
+			<property name="Group" value="Science,TCScience"/>
+			<property name="Tags" value="trapsSkill,scrap100"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical,SC_traps"/>
+			<property name="SoundPickup" value="darttrap_grab"/>
+			<property name="SoundPlace" value="darttrap_place"/>
+		</block>
+		<block name="flamethrowerTrapMk2">
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="flamethrowerTrapMk2Desc"/>
+			<property name="Class" value="Launcher"/>
+			<property name="CustomIcon" value="flamethrowertrap"/>
+			<property name="RequiredPower" value="10"/>
+			<property name="PlaySound" value="darttrap_fire"/>
+			<property name="EndSound" value="darttrap_end"/>
+			<property name="BurstFireRate" value="0.5"/>
+			<property name="ShowTargeting" value="false"/>
+			<property name="AmmoItem" value="ammoGasCan"/>
+			<property name="FlameDartTrap" value="true"/>
+			<property name="FlameAmmoPerSecond" value="3"/>
+			<property name="FlameTick" value="0.10"/>
+			<property name="FlameDirectDamage" value="25"/>
+			<property name="FlameDamageBuffs" value="buffBurningFlamingArrow"/>
+			<property name="FlameHitPlayers" value="true"/>
+			<property name="FlameHitOwner" value="true"/>
+			<property name="FlameBuffDuration" value="2.0"/>
+			<property name="FlameBuffNetSyncInterval" value="0.75"/>
+			<property name="UnlockedBy" value="craftingTraps"/>
+			<property name="DisplayType" value="flameTrap"/>
+			<property name="FlameDisplayRange" value="6"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Electrical/arrowTrapPrefab.prefab"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="59"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+			<property name="Path" value="solid"/>
+			<property name="EconomicValue" value="2850"/>
+			<property name="TraderStageTemplate" value="electricTier2"/>
+			<property name="TakeDelay" value="10"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="16"/>
+				<property name="resourceMechanicalParts" value="3"/>
+				<property name="resourceElectricParts" value="2"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="20,100" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B155"/>
+			<property name="SortOrder2" value="0019"/>
+			<property name="Group" value="Science,TCScience"/>
+			<property name="Tags" value="trapsSkill,scrap100"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical,SC_traps"/>
+			<property name="SoundPickup" value="darttrap_grab"/>
+			<property name="SoundPlace" value="darttrap_place"/>
+		</block>
+		<block name="flamethrowerTrapMk3">
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="flamethrowerTrapMk3Desc"/>
+			<property name="Class" value="Launcher"/>
+			<property name="CustomIcon" value="flamethrowertrap"/>
+			<property name="RequiredPower" value="10"/>
+			<property name="PlaySound" value="darttrap_fire"/>
+			<property name="EndSound" value="darttrap_end"/>
+			<property name="BurstFireRate" value="0.5"/>
+			<property name="ShowTargeting" value="false"/>
+			<property name="AmmoItem" value="ammoGasCan"/>
+			<property name="FlameDartTrap" value="true"/>
+			<property name="FlameAmmoPerSecond" value="3"/>
+			<property name="FlameTick" value="0.10"/>
+			<property name="FlameDirectDamage" value="35"/>
+			<property name="FlameDamageBuffs" value="buffBurningMolotov"/>
+			<property name="FlameHitPlayers" value="true"/>
+			<property name="FlameHitOwner" value="true"/>
+			<property name="FlameBuffDuration" value="2.0"/>
+			<property name="FlameBuffNetSyncInterval" value="0.75"/>
+			<property name="UnlockedBy" value="craftingTraps"/>
+			<property name="DisplayType" value="flameTrap"/>
+			<property name="FlameDisplayRange" value="6"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Electrical/arrowTrapPrefab.prefab"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="59"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+			<property name="Path" value="solid"/>
+			<property name="EconomicValue" value="4500"/>
+			<property name="TraderStageTemplate" value="electricTier2"/>
+			<property name="TakeDelay" value="10"/>
+			<property class="RepairItems">
+				<property name="resourceForgedSteel" value="5"/>
+				<property name="resourceMechanicalParts" value="3"/>
+				<property name="resourceElectricParts" value="2"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="20,100" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B155"/>
+			<property name="SortOrder2" value="0019"/>
+			<property name="Group" value="Science,TCScience"/>
+			<property name="Tags" value="trapsSkill,scrap100"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical,SC_traps"/>
+			<property name="SoundPickup" value="darttrap_grab"/>
+			<property name="SoundPlace" value="darttrap_place"/>
+		</block>
+	</append>
+</configs>

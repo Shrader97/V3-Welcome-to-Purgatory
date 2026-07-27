@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Author value="Byteblazar" />
+	<Description value="Detects, logs, and in some cases even solves conflicts between mods." />
+	<DisplayName value="RuntimeOCD" />
+	<Name value="RuntimeOCD" />
+	<Version value="0.15.2" />
+	<Website value="https://ko-fi.com/byteblazar" />
+</xml>

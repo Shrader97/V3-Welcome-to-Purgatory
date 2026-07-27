@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_TurretsSyndrome']">
+		<item name="gunBotT2flameTurretMK1"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_TurretsSyndrome']">
+		<item name="gunBotT2flameTurretMK2"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_TurretsSyndrome']">
+		<item name="gunBotT2flameTurretMK3"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='modGunT2']">
+		<item name="modRoboticDroneFlamethrowerMod"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='modGunT3']">
+		<item name="modRoboticDroneFlamethrowerModMk2"/>
+		<item name="modRoboticDroneFlamethrowerModMk3" loot_prob_template="low"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
+		<!-- Rare schematic route for drone modules. MK2/MK3 are deliberately much rarer. -->
+		<item name="modRoboticDroneFlamethrowerModSchematic" loot_prob_template="low"/>
+		<item name="modRoboticDroneFlamethrowerModMk2Schematic" loot_prob_template="veryLow"/>
+		<item name="modRoboticDroneFlamethrowerModMk3Schematic" loot_prob_template="veryLowDelayed"/>
+	</append>
+</configs>

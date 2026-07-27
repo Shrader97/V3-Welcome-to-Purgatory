@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<append xpath="/item_modifiers">
+		<item_modifier name="modRoboticDroneFlamethrowerMod" installable_tags="drone" modifier_tags="droneWeapon" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="Tags" value="T1,perkTurrets,turretRanged,roboticsSkill"/>
+			<property name="DisplayType" value="droneFlameMod"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="CustomIcon" value="dronflamethrowermod"/>
+			<property name="UnlockedBy" value="modRoboticDroneFlamethrowerModSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier1"/>
+			<property name="EconomicValue" value="1800"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="base_set" value="15,17.25,19.5,21.75,24,26.25" tier="1,2,3,4,5,6"/>
+				<passive_effect name="MaxRange" operation="base_set" value="3.25,3.4,3.55,3.7,3.85,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="120,126,132,138,144,150" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameDamage" value="15,17.25,19.5,21.75,24,26.25" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameRange" value="3.25,3.4,3.55,3.7,3.85,4" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameRPM" value="120,126,132,138,144,150" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameFuelCapacity" value="10000"/>
+				<display_value name="dFlameFuelUse" value="1"/>
+			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="modRoboticDroneFlamethrowerModMk2" installable_tags="drone" modifier_tags="droneWeapon" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="Tags" value="T2,perkTurrets,turretRanged,roboticsSkill"/>
+			<property name="DisplayType" value="droneFlameMod"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="CustomIcon" value="dronflamethrowermod"/>
+			<property name="UnlockedBy" value="modRoboticDroneFlamethrowerModMk2Schematic"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="EconomicValue" value="3000"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="base_set" value="25,28.75,32.5,36.25,40,43.75" tier="1,2,3,4,5,6"/>
+				<passive_effect name="MaxRange" operation="base_set" value="3.25,3.4,3.55,3.7,3.85,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="120,126,132,138,144,150" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameDamage" value="25,28.75,32.5,36.25,40,43.75" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameRange" value="3.25,3.4,3.55,3.7,3.85,4" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameRPM" value="120,126,132,138,144,150" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameFuelCapacity" value="10000"/>
+				<display_value name="dFlameFuelUse" value="1"/>
+			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="modRoboticDroneFlamethrowerModMk3" installable_tags="drone" modifier_tags="droneWeapon" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="Tags" value="T3,perkTurrets,turretRanged,roboticsSkill"/>
+			<property name="DisplayType" value="droneFlameMod"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="CustomIcon" value="dronflamethrowermod"/>
+			<property name="UnlockedBy" value="modRoboticDroneFlamethrowerModMk3Schematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="EconomicValue" value="4500"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="base_set" value="35,40.25,45.5,50.75,56,61.25" tier="1,2,3,4,5,6"/>
+				<passive_effect name="MaxRange" operation="base_set" value="3.25,3.4,3.55,3.7,3.85,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="120,126,132,138,144,150" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameDamage" value="35,40.25,45.5,50.75,56,61.25" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameRange" value="3.25,3.4,3.55,3.7,3.85,4" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameRPM" value="120,126,132,138,144,150" tier="1,2,3,4,5,6"/>
+				<display_value name="dFlameFuelCapacity" value="10000"/>
+				<display_value name="dFlameFuelUse" value="1"/>
+			</effect_group>
+		</item_modifier>
+	</append>
+</configs>

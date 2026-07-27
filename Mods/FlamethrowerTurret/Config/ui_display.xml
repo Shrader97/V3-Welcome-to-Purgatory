@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="droneFlameMod" display_group="groupDrone">
+			<display_entry name="dFlameDamage" display_type="Decimal1" title_key="statFlameDamage"/>
+			<display_entry name="dFlameRange" display_type="Decimal1" title_key="statFlameRange"/>
+			<display_entry name="dFlameRPM" title_key="statFlameRPM"/>
+			<display_entry name="dFlameFuelCapacity" title_key="statFlameFuelCapacity"/>
+			<display_entry name="dFlameFuelUse" title_key="statFlameFuelUse"/>
+		</item_display_info>
+
+		<item_display_info display_type="flameTrap" display_group="groupBlocks">
+			<display_entry name="FlameDirectDamage" display_type="Decimal1" title_key="statFlameDamage"/>
+			<display_entry name="FlameDisplayRange" display_type="Decimal1" title_key="statFlameRange"/>
+			<display_entry name="FlameAmmoPerSecond" title_key="statFlameFuelUse"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="RequiredPower" title_key="statRequiredPower"/>
+		</item_display_info>
+	</append>
+</configs>
