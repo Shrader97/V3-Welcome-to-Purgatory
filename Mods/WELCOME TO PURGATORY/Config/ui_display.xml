@@ -62,44 +62,7 @@
             <!--crafting_category name="Dust" icon="ui_game_symbol_gemstone_dust" display_name="GemStoneDust" /-->
         </crafting_category_list>
 
-
-		<crafting_category_list display_type="CowStable001">
-			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
-			<crafting_category name="By-Products" icon="ui_game_symbol_resource" display_name="Baby Animals" />
-		</crafting_category_list>
-
-		<crafting_category_list display_type="ChickenCoop001">
-			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
-			<crafting_category name="By-Products" icon="ui_game_symbol_resource" display_name="Baby Animals" />
-		</crafting_category_list>
-
-		<crafting_category_list display_type="PigStable001">
-			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
-		</crafting_category_list>
-
-		<crafting_category_list display_type="GoatStable001">
-			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
-		</crafting_category_list>
-
-		<crafting_category_list display_type="SheepStable001">
-			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
-			<crafting_category name="By-Products" icon="ui_game_symbol_resource" display_name="Baby Animals" />
-		</crafting_category_list>
-
-
-
-
-
-
-
-
-
-
-
-
-
     </append>
-
 
 	<append xpath="/ui_display_info/crafting_category_display/crafting_category_list[@display_type='chemistryStation']">
 		<crafting_category name="Food/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFoodCooking" />
@@ -108,7 +71,6 @@
 	<append xpath="/ui_display_info/crafting_category_display/crafting_category_list[@display_type='campfire']">
 		<crafting_category name="Canned" icon="ui_game_symbol_canned" display_name="Canned Food" />
 	</append>
-
 
 	<append xpath="/ui_display_info/item_display">
 
@@ -179,9 +141,20 @@
 			<display_entry name="dWalkSpeed" title_key="statWalkSpeed" display_type="Percent" display_leading_plus="true"/>
 		</item_display_info>
 
+		<item_display_info display_type="clothing" display_group="groupAttire" >
+			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler,admin"/>
+		</item_display_info>
 
-
-
+		<item_display_info display_type="clothingCigarette" display_group="groupAttire" >
+			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="dHealthAmount" title_key="statHealthChangeOT" display_leading_plus="true"/>
+			<display_entry name="dHealthMax" title_key="statMaxHealthBonus" display_leading_plus="true"/>
+			<display_entry name="dStaminaMax" title_key="statMaxStaminaBonus" negative_preferred="true"/>
+			<display_entry name="dStaminaChangeOT" title_key="statStaminaChangeOT" display_type="Decimal2" negative_preferred="true"/>
+		</item_display_info>
 
 
 

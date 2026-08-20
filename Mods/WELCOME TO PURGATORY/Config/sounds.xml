@@ -19,7 +19,7 @@
             <AudioClip ClipName="#@modfolder:Resources/4BoreSounds.unity3d?4bore"/>
 			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/>  <MaxRepeatRate value="0.001"/>
 		</SoundDataNode>
-
+		
 		<SoundDataNode name="Warrior"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 			<AudioClip ClipName="#@modfolder:Resources/Banana.unity3d?warrior.mp3"/>
 			<Channel name="Mouth"/>

@@ -1,6 +1,8 @@
 <configs>
+    <set xpath="/progression/level/@max_level">500</set>
+    <set xpath="/progression/attributes/@max_level">10</set>
     <set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@operation='base_add'][@level='1,2,3,4,5'][@value='3,6,10,14,18']/@value">7,14,21,28,35</set>
-    
+
     <remove xpath="/progression/perks/book[@name='perkShotgunMessiahBreachingSlugs']"/>
     <insertAfter xpath="/progression/perks/book[@name='perkShotgunMessiahDamage']">
         <!-- *** SHOTGUN_MESSIAH_VOLUME_02_BREACHING_SLUGS -->
@@ -668,33 +670,32 @@
 
             <!-- *** FOOD_SKILLS -->
         <crafting_skill name="craftingFood" min_level="1" max_level="100" parent="attCrafting" name_key="craftingFoodName" desc_key="craftingFoodDesc" long_desc_key="craftingFoodLongDesc" icon="ui_game_symbol_fork">
-
             <display_entry icon="foodCornOnTheCob,foodCornBread,foodGrilledMeat,foodBoiledMeat,foodBaconAndEggs" name_key="foodT1-1,foodT1-2,foodT1-3,foodT1-4,foodT1-5" has_quality="false" unlock_level="2,4,6,8,10" >
                 <unlock_entry item="foodCornOnTheCob,foodBakedPotato,Hashbrown,Mashed Potato,Grilled Ribs,Scrambled Eggs,Grilled Rabbit Leg" unlock_tier="1"/>
-                <unlock_entry item="foodCornBread,drinkJarGoldenRodTea,Corn Grits,Fried Egg,Grilled Bacon,Grilled Chicken Wings" unlock_tier="2"/>
-                <unlock_entry item="foodGrilledMeat,drinkJarRedTea,Blueberry Jam,Yucca Jam,HotdogLink,Grilled Chicken Breast" unlock_tier="3"/>
-                <unlock_entry item="foodBoiledMeat,drinkJarYuccaJuice,Fried Meat,Sugar Extract,Sausage,Boiled Snake Eggs,Grilled Rabbit" unlock_tier="4"/>
-                <unlock_entry item="foodBaconAndEggs,drinkJarCoffee,Iced Mixed Tea,Rock Candy,Grilled Steak,Chicken Tenders,Meatball" unlock_tier="5"/>
+                <unlock_entry item="foodCornBread,drinkJarGoldenRodTea,Corn Grits,Fried Egg,Grilled Bacon,Grilled Chicken Wings,foodPickledBoarsFeet" unlock_tier="2"/>
+                <unlock_entry item="foodGrilledMeat,drinkJarRedTea,Blueberry Jam,Yucca Jam,HotdogLink,Grilled Chicken Breast,foodCookedChickenBreast" unlock_tier="3"/>
+                <unlock_entry item="foodBoiledMeat,drinkJarYuccaJuice,Fried Meat,Sugar Extract,Sausage,Boiled Snake Eggs,Grilled Rabbit,foodCookedChitlins" unlock_tier="4"/>
+                <unlock_entry item="foodBaconAndEggs,drinkJarCoffee,Iced Mixed Tea,Rock Candy,Grilled Steak,Chicken Tenders,Meatball,foodCookedDeerChili" unlock_tier="5"/>
             </display_entry>
             <display_entry icon="foodPumpkinBread,foodPumpkinPie,foodPumpkinCheesecake,foodMeatStew,foodSteakAndPotato" name_key="foodT2-1,foodT2-2,foodT2-3,foodT2-4,foodT2-5" has_quality="false" unlock_level="11,14,18,22,26" >
-                <unlock_entry item="foodPumpkinBread,foodBlueberryPie,Iced Coffee,French Toast,Smoked Ribs,Egg And Cheese Taco,Meatloaf" unlock_tier="1"/>
-                <unlock_entry item="foodPumpkinPie,drinkJarHoneyTea,Blueberry Jam Sandwich,Smoked Brisket,Fried Chicken Leg,Pulled Pork" unlock_tier="2"/>
-                <unlock_entry item="foodPumpkinCheesecake,Egg Salad,Yucca Jam Sandwich,foodFrenchFryes,Chicken Jerky,Plain Burger" unlock_tier="3"/>
-                <unlock_entry item="foodVegetableStew,foodMeatStew,Corn Chips,Blueberry Candy,Grilled Snake,Rabbit Jerky,Roast Rabbit Leg" unlock_tier="4"/>
-                <unlock_entry item="foodSteakAndPotato,Yucca Chips,Fried Mushrooms,Plain Fudge,Animal Cheese,Plain Hotdog,Roast Chicken Breast" unlock_tier="5"/>
+                <unlock_entry item="foodPumpkinBread,foodBlueberryPie,foodChickenNuggets,Iced Coffee,French Toast,Smoked Ribs,Egg And Cheese Taco,Meatloaf" unlock_tier="1"/>
+                <unlock_entry item="foodPumpkinPie,drinkJarHoneyTea,Blueberry Jam Sandwich,Smoked Brisket,Fried Chicken Leg,Pulled Pork,foodCookedPorkSteak" unlock_tier="2"/>
+                <unlock_entry item="foodPumpkinCheesecake,foodRoadrunnerChickenJerky,Egg Salad,Yucca Jam Sandwich,foodFrenchFryes,Chicken Jerky,Plain Burger" unlock_tier="3"/>
+                <unlock_entry item="foodVegetableStew,foodMeatStew,Corn Chips,Blueberry Candy,Grilled Snake,Rabbit Jerky,Roast Rabbit Leg,foodCookedChickenBreastMeal" unlock_tier="4"/>
+                <unlock_entry item="foodSteakAndPotato,foodAshChickenStew,Yucca Chips,Fried Mushrooms,Plain Fudge,Animal Cheese,Plain Hotdog,Roast Chicken Breast" unlock_tier="5"/>
             </display_entry>
             <display_entry icon="drinkYuccaJuiceSmoothie,foodHoboStew,foodFishTacos,foodChiliDog,foodShamChowder" name_key="foodT3-1,foodT3-2,foodT3-3,foodT3-4,foodT3-5" has_quality="false" unlock_level="27,35,43,51,59" >
-                <unlock_entry item="drinkYuccaJuiceSmoothie,drinkJarBeer,Custard Pie,Snake Jerky,Grilled Chicken Leg,Sliced Chicken Sandwich" unlock_tier="1"/>
-                <unlock_entry item="foodHoboStew,Coffee Cake,Honey Glazed Meat,foodRamenNoodles,Pickled Eggs,Plain Pizza,Sliced Angus Sandwich" unlock_tier="2"/>
+                <unlock_entry item="drinkYuccaJuiceSmoothie,drinkJarBeer,Custard Pie,Snake Jerky,Grilled Chicken Leg,Sliced Chicken Sandwich,foodCookedPorkSteakMeal" unlock_tier="1"/>
+                <unlock_entry item="foodHoboStew,Coffee Cake,Honey Glazed Meat,foodRamenNoodles,Pickled Eggs,Plain Pizza,Sliced Angus Sandwich,foodCookedChitlinsMeal" unlock_tier="2"/>
                 <unlock_entry item="foodFishTacos,Mushroom Pie,Kvass Soda,WorkingStove,foodHamburger,Loaded Burger,Sliced Ham Sandwich,Egg Salad" unlock_tier="3"/>
-                <unlock_entry item="foodChiliDog,Meat and Beer Pie,Sponge Cake,foodCookedHamburger,Ham And Tomato Taco,Fried Chicken Sandwich" unlock_tier="4"/>
+                <unlock_entry item="foodChiliDog,Meat and Beer Pie,Sponge Cake,foodCookedHamburger,Ham And Tomato Taco,Fried Chicken Sandwich,foodCookedHamShank" unlock_tier="4"/>
                 <unlock_entry item="foodShamChowder,foodHoneyGlazedSham,Blueberry Sponge Cake,Mutton,BLT Sandwich,Omelet,Calzone,Pulled Pork Sandwich" unlock_tier="5"/>
             </display_entry>
             <display_entry icon="foodTunaFishGravyToast,foodShepardsPie,drinkJarGrandpasLearningElixir,foodSpaghetti,foodGumboStew" name_key="foodT4-1,foodT4-2,foodT4-3,foodT4-4,foodT4-5" has_quality="false" unlock_level="60,70,80,90,100" >
                 <unlock_entry item="foodTunaFishGravyToast,drinkJarGrandpasAwesomeSauce,Yucca Sponge Cake,All In One Sandwich" unlock_tier="1"/>
                 <unlock_entry item="foodShepardsPie,drinkJarGrandpasMoonshine,Energy Tablet,Cheese Burger,Pulled Pork Sandwich" unlock_tier="2"/>
-                <unlock_entry item="drinkJarGrandpasLearningElixir,foodHoneyBrisket,Angus Taco,Bacon Pizza,Meatball Sub" unlock_tier="3"/>
-                <unlock_entry item="foodSpaghetti,Carbonated Water,foodBurgerFrenchFryes,Bacon Burger,Pepperoni Pizza,Lasagna" unlock_tier="4"/>
+                <unlock_entry item="drinkJarGrandpasLearningElixir,foodHoneyBrisket,Angus Taco,Bacon Pizza,Meatball Sub,foodCookedDeerChiliwithMegaCrush" unlock_tier="3"/>
+                <unlock_entry item="foodSpaghetti,foodChickenWings,Carbonated Water,foodBurgerFrenchFryes,Bacon Burger,Pepperoni Pizza,Lasagna" unlock_tier="4"/>
                 <unlock_entry item="foodGumboStew,Distilled Vodka,foodstuffedbellpepper,Fried Chicken Burrito,BBQ Ribs" unlock_tier="5"/>
             </display_entry>
 
@@ -828,158 +829,8 @@
             </effect_group>
         </crafting_skill>
 
-
-
-
     </insertAfter>
 
-    <remove xpath="/progression/perks/perk[@name='perkInfiltrator']" />
-
-    <insertBefore xpath="/progression/perks/perk[@name='perkAnimalTracker']">
-    <!-- *** PERCEPTION:GENERAL_PERKS -->
-            <!-- *** INFILTRATOR -->
-        <perk name="perkInfiltrator" max_level="5" parent="skillPerceptionGeneral" name_key="perkInfiltratorName" desc_key="perkInfiltratorDesc" icon="ui_game_symbol_stealth">
-            <level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
-            <level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="reqPerceptionLevel02"/></level_requirements>
-            <level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
-            <level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
-            <level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/></level_requirements>
-            
-            <effect_group>
-                <passive_effect name="TrapDoorTriggerDelay" operation="base_add" level="1,2,3,4,5" value=".5,1,2,3,5"/>
-                <passive_effect name="LandMineTriggerDelay" operation="base_add" level="1,2,3,4,5" value=".5,1,2,3,5"/>
-                <passive_effect name="TrapIncomingDamage" operation="perc_add" level="1,2,3,4,5,6" value="-.2,-.35,-.5,-.6,-.75"/>
-
-                <!-- Allows the pick up of mineCandyTin, mineCookingPot, mineHubcap, and then mineAirFilter -->
-                <passive_effect name="BlockPickup" operation="base_set" level="1" value="1" tags="Mine1"/>
-                <passive_effect name="BlockPickup" operation="base_set" level="2" value="1" tags="Mine1,Mine2"/>
-                <passive_effect name="BlockPickup" operation="base_set" level="3" value="1" tags="Mine1,Mine2,Mine3"/>
-                <passive_effect name="BlockPickup" operation="base_set" level="4,5" value="1" tags="Mine1,Mine2,Mine3,Mine4"/>
-                <passive_effect name="LandMineImmunity" operation="base_set" level="5" value="1"/>
-
-                <effect_description level="1" desc_key="perkInfiltratorRank1Desc" long_desc_key="perkInfiltratorRank1LongDesc"/>
-                <effect_description level="2" desc_key="perkInfiltratorRank2Desc" long_desc_key="perkInfiltratorRank2LongDesc"/>
-                <effect_description level="3" desc_key="perkInfiltratorRank3Desc" long_desc_key="perkInfiltratorRank3LongDesc"/>
-                <effect_description level="4" desc_key="perkInfiltratorRank4Desc" long_desc_key="perkInfiltratorRank4LongDesc"/>
-                <effect_description level="5" desc_key="perkInfiltratorRank5Desc" long_desc_key="perkInfiltratorRank5LongDesc"/>
-            </effect_group>
-        </perk>
-
-    </insertBefore>
-
-    <remove xpath="/progression/perks/perk[@name='perkTurrets']" />
-
-    <insertBefore xpath="/progression/perks/perk[@name='perkFlurryOfIntellect']">
-        <perk name="perkTurrets" parent="skillIntellectCombat" name_key="perkTurretsName" desc_key="perkTurretsDesc" icon="ui_game_symbol_electric_turret">
-            <level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
-            <level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
-            <level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
-            <level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
-            <level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
-
-            <effect_group>
-                <passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".125,.25,.375,.5,.5" tags="turretMelee"/>
-                <!-- <passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".125,.25,.375,.5,.5" tags="turretMelee,deployed"/> -->
-
-                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="4,5" value="0.1,0.2" tags="perkTurrets"/>
-                <passive_effect name="MagazineSize" operation="base_add" level="1,2,3,4,5" value="50,100,150,200,250" tags="perkTurrets">
-                    <requirement name="!ItemHasTags" tags="turretMelee"/>
-                </passive_effect>
-
-                <passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".3,.7,1.1,1.5,1.5" tags="turretRanged"/>
-                <!-- <passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".3,.6,.9,1.2,1.2" tags="turretRanged"/> -->
-                <!-- <passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".3,.7,1.1,1.5,1.5" tags="turretRanged,deployed"/> -->
-
-                <passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.5" tags="perkTurrets"/>
-                <!-- <passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.4" tags="perkTurrets,deployed"/> -->
-                <passive_effect name="BlockDamage" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.5" tags="turretMelee"/>
-
-                <passive_effect name="JunkTurretActiveCount" operation="base_set" value="0"/>
-                <passive_effect name="JunkTurretActiveCount" operation="base_add" level="3" value="1"/>
-                <passive_effect name="JunkTurretActiveCount" operation="base_add" level="5" value="3"/>
-                    <!-- JunkTurretActiveCount,  default=1,  A value of 0 means that 1 turret can be active. Value of 2 means 3 turrets will be active. -->
-                <passive_effect name="JunkTurretActiveRange" operation="base_set" level="0,1,2,3,4,5" value="20,28,36,44,52,60"/>
-
-                <!-- Increase the chance to find batons and turrets with each perk rank -->
-                <passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="roboticsSkill"/>
-
-                <!-- Increase the chance to find robotic crafting skill magazines with each perk rank up to crafting skill 100 -->
-                <passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="roboticsCSM">
-                    <requirement name="ProgressionLevel" progression_name="craftingRobotics" operation="LT" value="100"/>
-                </passive_effect>
-
-                <!-- Once robotic crafting skill reaches 100, set the probability bonus of finding robotic crafting skill magazines to 0 -->
-                <passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="roboticsCSM">
-                    <requirement name="ProgressionLevel" progression_name="craftingRobotics" operation="Equals" value="100"/>
-                </passive_effect>
-
-                <!-- Increase the chance to find Tech Junkie books until each book is read -->
-                <passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="techJunkieProb">
-                    <requirement name="ProgressionLevel" progression_name="perkTechJunkie8Complete" operation="LT" value="1"/>
-                </passive_effect>
-
-                <!-- When all Tech Junkie books have been read, set the probability bonus of finding them to 0 -->
-                <passive_effect name="LootProb" operation="perc_add" level="1,5" value="1,1" tags="techJunkieProb">
-                    <requirement name="ProgressionLevel" progression_name="perkTechJunkie8Complete" operation="Equals" value="1"/>
-                </passive_effect>
-
-                <effect_description level="1" desc_key="perkTurretsRank1Desc" long_desc_key="perkTurretsRank1LongDesc"/>
-                <effect_description level="2" desc_key="perkTurretsRank2Desc" long_desc_key="perkTurretsRank2LongDesc"/>
-                <effect_description level="3" desc_key="perkTurretsRank3Desc" long_desc_key="perkTurretsRank3LongDesc"/>
-                <effect_description level="4" desc_key="perkTurretsRank4Desc" long_desc_key="perkTurretsRank4LongDesc"/>
-                <effect_description level="5" desc_key="perkTurretsRank5Desc" long_desc_key="perkTurretsRank5LongDesc"/>
-            </effect_group>
-        </perk>
-    </insertBefore>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <append xpath="/progression/skills">
-        <book_group name="skillJewelsoftheWasteland" parent="attBooks" name_key="perkbookJewelsoftheWastelandLuckyStrike0Name" desc_key="perkbookJewelsoftheWastelandLuckyStrike0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_book"><effect_group/></book_group>
-    </append>
-        
-    <append xpath="/progression/perks">
-        <book name="perkJewelsoftheWastelandLuckyStrike" parent="skillJewelsoftheWasteland" max_level="1" base_skill_point_cost="0" desc_key="perkJewelsoftheWastelandLuckyStrikeDesc" long_desc_key="perkJewelsoftheWastelandLuckyStrikeLongDesc">
-            <effect_group>
-                <passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="JewelsoftheWastelandLuckyStrikeHarvest"/>
-            </effect_group>
-        </book>
-
-        <book name="perkJewelsoftheWastelandHeartExtraction" parent="skillJewelsoftheWasteland" max_level="1" base_skill_point_cost="0" desc_key="perkJewelsoftheWastelandHeartExtractionDesc" long_desc_key="perkJewelsoftheWastelandHeartExtractionLongDesc">
-            <effect_group>
-                <passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="JewelsoftheWastelandHeartExtractionHarvest"/>
-            </effect_group>
-        </book>
-
-        <book name="perkJewelsoftheWastelandToothExtraction" parent="skillJewelsoftheWasteland" max_level="1" base_skill_point_cost="0" desc_key="perkJewelsoftheWastelandToothExtractionDesc" long_desc_key="perkJewelsoftheWastelandToothExtractionLongDesc">
-            <effect_group>
-                <passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="JewelsoftheWastelandToothExtractionHarvest"/>
-            </effect_group>
-        </book>
-
-        <book name="perkJewelsoftheWastelandComplete" parent="skillJewelsoftheWasteland" max_level="1" base_skill_point_cost="0" desc_key="perkJewelsoftheWastelandCompleteDesc" long_desc_key="perkJewelsoftheWastelandCompleteLongDesc">
-            <effect_group>
-                <passive_effect name="EntityDamage" operation="perc_add" level="1" value=".5">
-                    <requirement name="EntityTagCompare" target="other" tags="human,zombie"/>
-                    <requirement name="!EntityTagCompare" target="other" tags="bear,wolf,dog,coyote,mountainlion,deer,vulture"/>
-                </passive_effect>
-            </effect_group>
-        </book>
-    </append>
 
 
 

@@ -1,0 +1,14 @@
+<configs>
+	<remove xpath="templates/item_part_slot"/>
+	<append xpath="templates">
+		<item_part_slot>
+			<rect controller="${controller}" style="itemPartStack, hover" sound_play_on_hover="[default_hover]" width="124" height="60">
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-2,2" width="120" height="59" color="[black]" type="sliced" fillcenter="false" />
+				<sprite name="background" color="[darkGrey]" height="55" pos="0,0" width="118" type="sliced" />
+				<sprite name="itemIcon" depth="4" width="32" height="32" atlas="{partatlas}" sprite="{particon}" color="{particoncolor}" visible="{partvisible}" pos="60,-20" pivot="center" foregroundlayer="true" />
+				<label depth="4" pos="2,-42" width="116" height="16" text="{partname}" font_size="11" justify="center" />
+				<label depth="4" pos="2,-26" width="116" height="16" text="Empty" text_key="${empty_slot_text_key}" font_size="11" justify="center" visible="{emptyvisible}" />
+			</rect>
+		</item_part_slot>
+	</append>
+</configs>

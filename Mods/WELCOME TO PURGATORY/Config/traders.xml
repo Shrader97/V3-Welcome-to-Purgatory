@@ -23,6 +23,8 @@
         <item name="modSuperMaxDegradation"/>
         <item name="modUltraMaxDegradation"/>
         <item name="modLightWeight"/>
+        <item name="modCigarette"/>
+		<item name="modFacialPiercings"/>
     </append>
 
     <append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsModsCommon']">
@@ -34,6 +36,9 @@
         <item name="modVehicleTurboChargerSchematic"/>
         <item name="modVehicleDoubleTurboChargerSchematic"/>  
         <item name="modLightWeightSchematic"/>
+        <item name="modCrossbowMagazineExtenderSchematic"/>
+        <item name="modFacialPiercingsSchematic"/>
+        <item name="modCigaretteSchematic"/>
     </append>
 		
 	<append xpath="//trader_item_group[@name='groupRangedAll']">

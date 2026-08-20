@@ -122,6 +122,12 @@
 			<property name="ScopeCameraOffset" value="0,-0.0275,0"/>
 		</item_property_overrides>
 
+		<item_property_overrides name="GunAF2011A1">
+			<property name="ScopeOffset" value="0,0,0"/>
+			<property name="ScopeCameraOffset" value="0.0115,-0.0275,0"/>
+		</item_property_overrides>
+
+
 
 	</append>
 
@@ -353,16 +359,36 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modArrowReload" installable_tags="perkArchery" type="attachment" rarity="1">
-            <property name="Extends" value="modGeneralMaster"/>
+        <item_modifier name="modArrowReload" installable_tags="crossbow,bow" modifier_tags="ReloadSpeedMultiplier" blocked_tags="noMods" type="attachment" >
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="modGunMeleeTheHunter"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
             <property name="DescriptionKey" value="ArrowRDesc"/>
             <property name="CustomIconTint" value="#1e9d16"/>
             <property name="UnlockedBy" value="modGunBowPolymerStringSchematic"/>
-            <effect_group tiered="false">
-                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".40"/>
+            <property name="ShowQuality" value="true"/>
+		    <property name="QualityMin" value="1"/>
+            <effect_group>
+			    <passive_effect name="ReloadSpeedMultiplier" operation="base_add" value=".1,.2,.3,.4,.5,.6" tier="1,2,3,4,5,6"/>
+                <display_value name="dReloadSpeedMultiplier" value=".1,.2,.3,.4,.5,.6" tier="1,2,3,4,5,6"/>
+                <passive_effect name="RoundsPerMinute" operation="base_add" value="45"/>
             </effect_group>
         </item_modifier>
+
+		<item_modifier name="modCrossbowMagazineExtender" installable_tags="crossbow" modifier_tags="magazine" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="UnlockedBy" value="modCrossbowMagazineExtenderSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="CustomIcon" value="modCrossbowMagazineExtender"/>
+            <property name="ShowQuality" value="true"/>
+			<property name="DisplayType" value="modGunMagazineExtender"/>
+			<property name="QualityMin" value="1"/>
+			<effect_group>
+				<passive_effect name="MagazineSize" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/>
+				<display_value name="dMagazineSize" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/>
+				<passive_effect name="RoundsPerMinute" operation="base_add" value="45"/>
+			</effect_group>
+		</item_modifier>
 
         <item_modifier name="modBlessedMetal" installable_tags="weapon,tool" modifier_tags="DoubleDamage" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster"/>
@@ -377,18 +403,6 @@
                 <passive_effect name="EntityDamage" operation="perc_add" value="2.2"/>
             </effect_group>
         </item_modifier>
-
-        <!--item_modifier name="modAdvRadRemover" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
-            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-            <property name="CustomIcon" value="modGunMeleeRadRemover"/>
-            <property name="DescriptionKey" value="RadRemoveDesc"/>
-            <property name="CustomIconTint" value="#1e9d16"/>
-            <property name="UnlockedBy" value="modGunMeleeRadRemoverSchematic"/>
-            <effect_group tiered="false">
-                <requirement name="EntityTagCompare" target="other" tags="radiated"/>
-                    <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
-            </effect_group>
-        </item_modifier-->
 
         <item_modifier name="modFlammableOil" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage2" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
@@ -887,7 +901,7 @@
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="resourceFeather"/>
             <property name="CustomIconTint" value="#FF0000"/>
-            <property name="UnlockedBy" value=""/>
+            <property name="UnlockedBy" value="modLightWeightSchematic"/>
             <property name="TraderStageTemplate" value="modsTier3"/>
             <property name="ShowQuality" value="true"/>
             <property name="DisplayType" value="modLightWeight"/>
@@ -902,6 +916,69 @@
 
             </effect_group>
         </item_modifier>
+
+        <item_modifier name="modCigarette" installable_tags="armorHead" modifier_tags="Cigar" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="clothingCigarette"/>
+            <property name="DescriptionKey" value="modCigaretteDesc"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Material" value="Mcloth"/>
+            <property name="TraderStageTemplate" value="modsTier3"/>
+            <property name="UnlockedBy" value="modCigaretteSchematic"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="FuelValue" value="3"/>
+            <property name="EconomicValue" value="50"/>
+            <effect_group tiered="false">
+                <passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
+                <passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
+                <passive_effect name="HealthMax" operation="base_add" value="20"/>
+                <passive_effect name="StaminaMax" operation="base_subtract" value="20"/>
+                <passive_effect name="HealthChangeOT" operation="base_add" value=".01"/>
+                <passive_effect name="StaminaChangeOT" operation="base_subtract" value=".03" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="base_subtract" value=".06" tags="running"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dStaminaMax"  operation="base_add" value="-20"/>
+                <display_value name="dHealthMax" operation="base_subtract" value="20"/>
+                <display_value name="dStaminaChangeOT" value="-.1"/>
+                <display_value name="dHealthAmount" value=".01"/>
+                <display_value name="dBarteringSelling" value=".1"/>
+                <display_value name="dBarteringBuying" value=".1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modFacialPiercings" installable_tags="armorHead" modifier_tags="Piercing" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="Tags" value="clothing"/>
+            <property name="DisplayType" value="clothing"/>
+            <property name="TraderStageTemplate" value="modsTier3"/>
+            <property name="DescriptionKey" value="modFacialPiercingsDesc"/>
+            <property name="UnlockedBy" value="modFacialPiercingsSchematic"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Material" value="Mmetal"/>
+            <property name="DegradationBreaksAfter" value="true"/>
+            <property name="EconomicValue" value="50"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="ShowQuality" value="true"/>
+            <property name="QualityMin" value="1"/>
+            <property name="Group" value="Clothing"/>
+            <effect_group tiered="true">
+                <passive_effect name="DegradationMax" operation="base_set" value="500,1000" tier="1,6" tag="mod"/>
+                <passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

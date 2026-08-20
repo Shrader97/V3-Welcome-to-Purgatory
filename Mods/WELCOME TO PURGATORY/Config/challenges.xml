@@ -1,49 +1,68 @@
 <config>
 
+<remove xpath="/challenges/challenge[@name='burntSurvivalCraftReducer']"/>
+<remove xpath="/challenges/challenge[@name='burntSurvivalUseReducer']"/>
+
+<insertAfter xpath="/challenges/challenge[@name='burntSurvivalHarvestCrop']">
+		<!-- *** 03_CRAFT_HARZARD_REDUCER -->
+	<challenge name="burntSurvivalCraftReducer" title_key="challengeBurntCraftReducer" icon="ui_game_symbol_cookware" group="Burnt Survival"
+		short_description_key="challengeBurntCraftReducerShort" description_key="challengeBurntCraftReducerDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Craft" item="resourceFragileGasMask" count="1"/>
+	</challenge>
+
+		<!-- *** 04_USE_HARZARD_REDUCER -->
+	<challenge name="burntSurvivalUseReducer" title_key="challengeBurntUseReducer" icon="ui_game_symbol_steroids" group="Burnt Survival"
+		short_description_key="challengeBurntUseReducerShort" description_key="challengeBurntUseReducerDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="UseItem" item="resourceFragileGasMask" count="1"/>
+	</challenge>
+</insertAfter>
+
 <insertAfter xpath="/challenges/challenge_category[@name='Twitch']">
-	<challenge_category name="Shrader971's Challenge's" title_key="xuiChallenge" icon="ui_game_symbol_star"/>
-	<!--challenge_category name="Shrader971's Challenge's Stage 2" title_key="xuiChallenge" icon="ui_game_symbol_rank2"/-->
+	<challenge_category name="MrCaveman's Challenge's" title_key="xuiChallenge" icon="ui_game_symbol_star"/>
+	<challenge_category name="MrCaveman's Challenge's Stage 2" title_key="xuiChallenge" icon="ui_game_symbol_rank2"/>
 </insertAfter>
 
 <insertAfter xpath="/challenges/challenge_group[@category='Twitch'][@name='Silly']">
 	<!-- *** CHALLENGE_REWARDS_PAGE_04 -->
-	<challenge_group category="Shrader971's Challenge's" name="Advanced Hunter" title_key="challengeGroupAdvancedHunter"
+	<challenge_group category="MrCaveman's Challenge's" name="Advanced Hunter" title_key="challengeGroupAdvancedHunter"
 	reward_text_key="challengeRewardBonusAdvancedHunterReward" reward_event="challenge_group_reward_advanced_hunter" link_challenges="true" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's" name="Advanced Farmer" title_key="challengeGroupAdvancedFarmer"
+	<challenge_group category="MrCaveman's Challenge's" name="Advanced Farmer" title_key="challengeGroupAdvancedFarmer"
 	reward_text_key="challengeRewardBonusAdvancedFarmerReward" reward_event="challenge_group_reward_advanced_farmer" link_challenges="true" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's" name="Advanced Gatherer" title_key="challengeGroupAdvancedGatherer"
+	<challenge_group category="MrCaveman's Challenge's" name="Advanced Gatherer" title_key="challengeGroupAdvancedGatherer"
 	reward_text_key="challengeRewardBonusAdvancedGathererReward" reward_event="challenge_group_reward_advanced_gatherer" link_challenges="true" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's" name="Advanced Workstations" title_key="challengeGroupAdvancedCrafting"
+	<challenge_group category="MrCaveman's Challenge's" name="Advanced Workstations" title_key="challengeGroupAdvancedCrafting"
 	reward_text_key="challengeRewardBonusAdvancedCraftingReward" reward_event="challenge_group_reward_Advanced_crafting" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's" name="Advanced Zombies" title_key="challengeGroupAdvancedZombieSlayer"
+	<challenge_group category="MrCaveman's Challenge's" name="Advanced Zombies" title_key="challengeGroupAdvancedZombieSlayer"
 	reward_text_key="challengeRewardBonusAdvancedSlayerReward" reward_event="challenge_group_reward_zombie_advanced_slayer" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's" name="Elite Zombes" title_key="challengeGroupEliteZombieSlayer"
+	<challenge_group category="MrCaveman's Challenge's" name="Elite Zombes" title_key="challengeGroupEliteZombieSlayer"
 	reward_text_key="challengeRewardBonusEliteSlayerReward" reward_event="challenge_group_reward_zombie_elite_slayer" hidden_by="Basics"/>
 
-	<!-- *** CHALLENGE_REWARDS_PAGE_05
-	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Hunter" title_key="challengeGroupAdvancedHunter"
+	<!-- *** CHALLENGE_REWARDS_PAGE_05 -->
+	<challenge_group category="MrCaveman's Challenge's Stage 2" name="More Advanced Hunter" title_key="challengeGroupAdvancedHunter"
 	reward_text_key="challengeRewardBonusAdvancedHunterReward" reward_event="challenge_group_reward_advanced_hunter" link_challenges="true" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Farmer" title_key="challengeGroupAdvancedFarmer"
-	reward_text_key="challengeRewardBonusAdvancedFarmerReward" reward_event="challenge_group_reward_advanced_farmer" link_challenges="true" hidden_by="Basics"/>
+	<challenge_group category="MrCaveman's Challenge's Stage 2" name="More Advanced Hunter 2" title_key="challengeGroupAdvancedHunter"
+	reward_text_key="challengeRewardBonusAdvancedHunterReward" reward_event="challenge_group_reward_advanced_Hunter" link_challenges="true" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Gatherer" title_key="challengeGroupAdvancedGatherer"
+	<challenge_group category="MrCaveman's Challenge's Stage 2" name="More Advanced Gatherer" title_key="challengeGroupAdvancedGatherer"
 	reward_text_key="challengeRewardBonusAdvancedGathererReward" reward_event="challenge_group_reward_advanced_gatherer" link_challenges="true" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Workstations" title_key="challengeGroupAdvancedCrafting"
+	<challenge_group category="MrCaveman's Challenge's Stage 2" name="More Advanced Workstations" title_key="challengeGroupAdvancedCrafting"
 	reward_text_key="challengeRewardBonusAdvancedCraftingReward" reward_event="challenge_group_reward_Advanced_crafting" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Advanced Zombies" title_key="challengeGroupAdvancedZombieSlayer"
+	<challenge_group category="MrCaveman's Challenge's Stage 2" name="More Advanced Zombies" title_key="challengeGroupAdvancedZombieSlayer"
 	reward_text_key="challengeRewardBonusAdvancedSlayerReward" reward_event="challenge_group_reward_zombie_advanced_slayer" hidden_by="Basics"/>
 
-	<challenge_group category="Shrader971's Challenge's Stage 2" name="More Elite Zombes" title_key="challengeGroupEliteZombieSlayer"
+	<challenge_group category="MrCaveman's Challenge's Stage 2" name="More Elite Zombes" title_key="challengeGroupEliteZombieSlayer"
 	reward_text_key="challengeRewardBonusEliteSlayerReward" reward_event="challenge_group_reward_zombie_elite_slayer" hidden_by="Basics"/>
- -->
+
 
 </insertAfter>
 
@@ -103,7 +122,7 @@
 		<objective type="Kill" entity_names="animalAlphaBear" count="50"/>
 	</challenge>
 
-	<challenge name="killAnySpecialAnimal" title_key="challengeHuntSpecialAnimals" icon="ui_game_symbol_animal_tracker" group="Advanced Hunter"
+	<challenge name="killzombieCheerLeader" title_key="challengeHuntSpecialAnimals" icon="ui_game_symbol_animal_tracker" group="Advanced Hunter"
 	short_description_key="challengeSpecialHuntAnimalsShort" description_key="challengeHuntSpecialAnimalsDesc"
 	reward_text_key="challengeKillRewardReading" reward_event="reward_any_animal_hunter">
 		<objective type="KillByTag" entity_tags="animalExplodingZombieDog,animalExplodingDireWolf,animalChihuahua,animalMiniBossGrace,animalCottonMouth,animalPainDoe,animalPainStag,animalAnacondaSnake,animalFeralHouseCat,animalAlphaBear" target_name_key="xuiAnimals" count="500"/>
@@ -203,13 +222,13 @@
 		<objective type="Harvest" item="resourceTantalum" count="10000" block_tag="ore"/>
 	</challenge>
 
-	<!--challenge name="gathererLead" title_key="challengeGathererLead" icon="ui_game_symbol_mining" group="Advanced Gatherer"
-		short_description_key="challengeGathererLeadShort" description_key="challengeGathererLeadDesc"
+	<challenge name="gathererCharcoal" title_key="challengeGathererCharcoal" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererCharcoalShort" description_key="challengeGathererCharcoalDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
-		<objective type="Harvest" item="resourceScrapLead" count="1000" block_tag="ore"/>
+		<objective type="Harvest" item="resourceCharcoal" count="1000" block_tag="ore"/>
 	</challenge>
 
-	<challenge name="gathererCoal" title_key="challengeGathererCoal" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+	<!--challenge name="gathererCoal" title_key="challengeGathererCoal" icon="ui_game_symbol_mining" group="Advanced Gatherer"
 		short_description_key="challengeGathererCoalShort" description_key="challengeGathererCoalDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
 		<objective type="Harvest" item="resourceCoal" count="1000" block_tag="ore"/>
@@ -455,10 +474,120 @@
 		<objective type="Harvest" item="foodCropOnion" count="50" block_tag="challenge_farming"/>
 	</challenge-->
 
+	<challenge name="killzombieHunter" title_key="challengeKillzombieHunter" icon="ui_game_symbol_zombie" icon_color="0,0,255" group="More Advanced Hunter"
+	short_description_key="challengeKillzombieHunterShort" description_key="challengeKillzombieHunterDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieHunter_hunter">
+		<objective type="Kill" entity_names="zombieHunter,zombieFeralHunter,zombieRadiatedHunter,zombieChargedHunter,zombieInfernalHunter,zombieSuperRadiatedHunter" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieSkinless" title_key="challengeKillzombieSkinless" icon="ui_game_symbol_zombie" group="More Advanced Hunter"
+	short_description_key="challengeKillzombieSkinlessShort" description_key="challengeKillzombieSkinlessDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieSkinless_hunter">
+		<objective type="Kill" entity_names="zombieSkinless,zombieSkinlessSpider" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieMummy" title_key="challengeKillzombieMummy" icon="ui_game_symbol_zombie" group="More Advanced Hunter"
+	short_description_key="challengeKillzombieMummyShort" description_key="challengeKillzombieMummyDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieMummy">
+		<objective type="Kill" entity_names="zombieMummy,zombieFeralMummy,zombieMummyRadiated,zombieMummyCharged,zombieMummyInfernal,zombieMummySuperRadiated,zombieDryedMummy,zombieDryedFeralMummy,zombieDryedRadiatedMummy,zombieDryedChargedMummy,zombieDryedInfernalMummy,zombieDryedSuperRadiatedMummy" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieParasite" title_key="challengeKillzombieParasite" icon="ui_game_symbol_zombie" group="More Advanced Hunter"
+	short_description_key="challengeKillzombieParasiteShort" description_key="challengeKillzombieParasiteDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieParasite_hunter">
+		<objective type="Kill" entity_names="zombieParasite,zombieParasiteFeral,zombieParasiteRadiated,zombieParasiteCharged,zombieParasiteInfernal,zombieParasiteSuperRadiated,zombieParasiteCrawler,zombieParasiteFeralCrawler,zombieParasiteRadiatedCrawler,zombieParasiteChargedCrawler,zombieParasiteInfernalCrawler,zombieParasiteSuperRadiatedCrawler,zombieParasiteSpider,zombieParasiteFeralSpider,zombieParasiteRadiatedSpider,zombieParasiteChargedSpider,zombieParasiteInfernalSpider,zombieParasiteSuperRadiatedSpider" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieMutant" title_key="challengeKillzombieMutant" icon="ui_game_symbol_zombie" group="More Advanced Hunter"
+	short_description_key="challengeKillzombieMutantShort" description_key="challengeKillzombieMutantDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieMutant_hunter">
+		<objective type="Kill" entity_names="zombieMutant,zombieMutantFeral,zombieMutantRadiated,zombieMutantCharged,zombieMutantInfernal,zombieMutantSuperRadiated" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieWalker" title_key="challengeKillzombieWalker" icon="ui_game_symbol_zombie" group="More Advanced Hunter"
+	short_description_key="challengeKillzombieWalkerShort" description_key="challengeKillzombieWalkerDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieWalker_hunter">
+		<objective type="Kill" entity_names="zombieWalker,zombieFeralWalker,zombieRadiatedWalker,zombieChargedWalker,zombieInfernalWalker,zombieSuperRadiatedWalker" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieColonelClank" title_key="challengeKillzombieColonelClank" icon="ui_game_symbol_zombie" group="More Advanced Hunter"
+	short_description_key="challengeKillzombieColonelClankShort" description_key="challengeKillzombieColonelClankDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieColonelClank_hunter">
+		<objective type="Kill" entity_names="zombieColonelClank,zombieFeralColonelClank,zombieRadiatedColonelClank,zombieChargedColonelClank,zombieInfernalColonelClank,zombieSuperRadiatedColonelClank" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieButcher" title_key="challengeKillzombieButcher" icon="ui_game_symbol_zombie" group="More Advanced Hunter"
+	short_description_key="challengeKillzombieButcherShort" description_key="challengeKillzombieButcherDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieButcher_hunter">
+		<objective type="Kill" entity_names="zombieButcher,zombieFeralButcher,zombieRadiatedButcher,zombieChargedButcher,zombieInfernalButcher,zombieSuperRadiatedButcher" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieSniper" title_key="challengeKillzombieSniper" icon="ui_game_symbol_zombie" group="More Advanced Hunter"
+	short_description_key="challengeKillzombieSniperShort" description_key="challengeKillzombieSniperDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieButcher_hunter">
+		<objective type="Kill" entity_names="zombieSniper,zombieFeralSniper,zombieRadiatedSniper,zombieChargedSniper,zombieInfernalSniper,zombieSuperRadiatedSniper" count="50"/>
+	</challenge>
+
+	<!--challenge name="killzombieCheerLeader" title_key="challengezombieCheerLeader" icon="ui_game_symbol_zombie" group="More Advanced Hunter"
+	short_description_key="challengezombieCheerLeaderShort" description_key="challengezombieCheerLeaderDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieCheerLeader_hunter">
+		<objective type="KillByTag" entity_tags="zombieCheerLeader,zombieCheerLeaderFeral,zombieCheerLeaderRadiated" count="50"/>
+	</challenge-->
 
 
+	<challenge name="killzombieCowboy" title_key="challengeKillzombieCowboy" icon="ui_game_symbol_zombie" icon_color="0,0,255" group="More Advanced Hunter 2"
+	short_description_key="challengeKillzombieCowboyShort" description_key="challengeKillzombieCowboyDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_Exploding_Zombie_Dog_hunter">
+		<objective type="Kill" entity_names="zombieCowboy,zombieCowboyFeral,zombieCowboyRadiated" count="50"/>
+	</challenge>
 
+	<challenge name="killzombieFarmer" title_key="challengeKillzombieFarmer" icon="ui_game_symbol_zombie" group="More Advanced Hunter 2"
+	short_description_key="challengeKillzombieFarmerShort" description_key="challengeKillzombieFarmerDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieFarmer_hunter">
+		<objective type="Kill" entity_names="zombieFarmer,zombieFarmerFeral,zombieRadiatedFarmer" count="50"/>
+	</challenge>
 
+	<challenge name="killzombieStripper" title_key="challengeKillzombieStripper" icon="ui_game_symbol_zombie" group="More Advanced Hunter 2"
+	short_description_key="challengeKillzombieStripperShort" description_key="challengeKillzombieStripperDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieStripper_hunter">
+		<objective type="Kill" entity_names="zombieStripper,zombieStripperFeral,zombieRadiatedStripper" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieClown" title_key="challengeKillzombieClown" icon="ui_game_symbol_zombie" group="More Advanced Hunter 2"
+	short_description_key="challengeKillzombieClownShort" description_key="challengeKillzombieClownDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieClown_hunter">
+		<objective type="Kill" entity_names="zombieClown" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieFeralSpaceman" title_key="challengeKillzombieFeralSpaceman" icon="ui_game_symbol_zombie" group="More Advanced Hunter 2"
+	short_description_key="challengeKillzombieFeralSpacemanShort" description_key="challengeKillzombieFeralSpacemanDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieFeralSpaceman_hunter">
+		<objective type="Kill" entity_names="zombieFeralSpaceman,zombieRadiatedSpaceman" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieJason" title_key="challengeKillzombieJason" icon="ui_game_symbol_zombie" group="More Advanced Hunter 2"
+	short_description_key="challengeKillzombieJasonShort" description_key="challengeKillzombieJasonDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieJason_hunter">
+		<objective type="Kill" entity_names="zombieJason,zombieJasonFeral,zombieRadiatedJason" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieMrScream" title_key="challengeKillzombieMrScream" icon="ui_game_symbol_zombie" group="More Advanced Hunter 2"
+	short_description_key="challengeKillzombieMrScreamShort" description_key="challengeKillzombieMrScreamDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieMrScream_hunter">
+		<objective type="Kill" entity_names="zombieMrScream,zombieMrFeralScream,zombieMrRadiatedScream" count="50"/>
+	</challenge>
+
+	<challenge name="killzombieKaren" title_key="challengeKillzombieKaren" icon="ui_game_symbol_zombie" group="More Advanced Hunter 2"
+	short_description_key="challengeKillzombieKarenShort" description_key="challengeKillzombieKarenDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_zombieKaren_hunter">
+		<objective type="Kill" entity_names="zombieKaren,zombieKarenFeral,zombieKarenRadiated" count="50"/>
+	</challenge>
+
+	<!--challenge name="killzombieCheerLeader" title_key="challengezombieCheerLeader" icon="ui_game_symbol_zombie" group="More Advanced Hunter 2"
+	short_description_key="challengezombieCheerLeaderShort" description_key="challengezombieCheerLeaderDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_any_animal_hunter">
+		<objective type="KillByTag" entity_tags="zombieCheerLeader,zombieCheerLeaderFeral,zombieCheerLeaderRadiated" count="50"/>
+	</challenge-->
 
 
 

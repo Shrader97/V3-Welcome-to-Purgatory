@@ -3297,41 +3297,7 @@
 		<e n="zombieKaren" />
 		<e n="zombieKarenFeral" />
 	</append>
-		<e n="zombieFeralHunter" />
-		<e n="zombieFeralMummy" />
-		<e n="zombieParasiteFeral" />
-		<e n="zombieParasiteFeralCrawler" />
-		<e n="zombieParasiteFeralSpider" />
-		<e n="zombieSkinlessSpider" />
-		<e n="zombieMutantFeral" />
-		<e n="zombieFeralWalker" />
-		<e n="zombieFeralColonelClank" />
-		<e n="zombieFeralButcher" />
-		<e n="zombieFeralSniper" />
-		<e n="zombieDryedFeralMummy" />
-		<e n="zombieFeralHunter" />
-		<e n="zombieFeralMummy" />
-		<e n="zombieParasiteFeral" />
-		<e n="zombieParasiteFeralCrawler" />
-		<e n="zombieParasiteFeralSpider" />
-		<e n="zombieSkinlessSpider" />
-		<e n="zombieMutantFeral" />
-		<e n="zombieFeralWalker" />
-		<e n="zombieFeralColonelClank" />
-		<e n="zombieFeralButcher" />
-		<e n="zombieFeralSniper" />
-		<e n="zombieDryedFeralMummy" />
-		<e n="zombieCheerLeaderFeral" />
-		<e n="zombieCowboyFeral" />
-		<e n="zombieFarmerFeral" />
-		<e n="zombieStripperFeral" />
-		<e n="zombieFeralSpaceman" />
-		<e n="zombieJasonFeral" />
-		<e n="zombieMrFeralScream" />
-		<e n="zombieKarenFeral" />
-		<e n="zombieJasonFeral" />
-		<e n="zombieMrFeralScream" />
-		<e n="zombieKarenFeral" />
+
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']">
 		<e n="zombieBehemoth" p="0.75"/>
 		<e n="animalHornet" p="0.75"/>
@@ -7196,7 +7162,8 @@
 		<e n="zombieRadiatedSpaceman" />
 		<e n="zombieRadiatedJason" />
 		<e n="zombieMrRadiatedScream" />
-		<e n="zombieKarenRadiated" />	</append>	
+		<e n="zombieKarenRadiated" />	
+	</append>	
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2612']">
 		<e n="zombieBehemothRadiated" p="0.6"/>
@@ -7217,7 +7184,8 @@
 		<e n="zombieRadiatedSpaceman" />
 		<e n="zombieRadiatedJason" />
 		<e n="zombieMrRadiatedScream" />
-		<e n="zombieKarenRadiated" />	</append>
+		<e n="zombieKarenRadiated" />	
+	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2628']">
 		<e n="zombieBehemothRadiated" p="0.6"/>
@@ -7238,7 +7206,8 @@
 		<e n="zombieRadiatedSpaceman" />
 		<e n="zombieRadiatedJason" />
 		<e n="zombieMrRadiatedScream" />
-		<e n="zombieKarenRadiated" />	</append>
+		<e n="zombieKarenRadiated" />	
+	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2644']">
 		<e n="zombieBehemothRadiated" p="0.6"/>

@@ -815,6 +815,123 @@
             </effect_group>
         </buff>
 
+		<buff name="BuffClaimShield" name_key="TwitchBuff_Shield" description_key="TwitchBuff_ShieldDesc" icon="ui_game_symbol_twitch_tough" icon_color="0,255,255">
+			<stack_type value="replace"/>
+			<duration value="10"/>
+			<effect_group>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="BuffClaimShield"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="BuffClaimShield"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.25"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+				<passive_effect name="HealthLoss" operation="perc_subtract" value=".25"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="BuffClaimKnockdown" hidden="true">
+			<damage_type value="knockdown"/>
+			<stack_type value="ignore"/>
+			<duration value="3"/>
+			<requirements compare_type="or">
+				<requirement name="!HasBuff" buff="buffInjuryKnockdown01Cooldown"/>
+			</requirements>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_set" value="0"/>
+				<passive_effect name="WalkSpeed" operation="perc_set" value="0"/>
+				<passive_effect name="CrouchSpeed" operation="perc_set" value="0"/>
+				<passive_effect name="JumpStrength" operation="perc_set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="3">
+					<requirement name="!EntityTagCompare" tags="trader"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffInjuryKnockdown01Cooldown"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".knockdownDisplay" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".knockdownDisplay" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".knockdownDisplay"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="BuffClaimIncendiary" hidden="true">
+			<damage_type value="heat"/>
+			<stack_type value="ignore"/>
+			<duration value="0.1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="20"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffIsOnFire"/>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,5,10" value="10,20,30">
+				</passive_effect>
+				<passive_effect name="WaterChangeOT" operation="base_subtract" value="1.5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="35"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="-15"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="BuffClaimElectro" hidden="true">
+			<damage_type value="electrical"/>
+			<stack_type value="replace"/>
+			<duration value="5"/>
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="-10"/>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.5,0" duration="0,3.2"/>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.5,0" duration="0,3.2"/>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.5,0" duration="0,3.2"/>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.5,0" duration="0,3.2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,0.75,0"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,0.75,0"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact"/>
+				<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="BuffWarning" name_key="BuffWarningName" description_key="BuffWarningDesc" icon="ui_game_symbol_near_death_trauma" icon_color="255,0,0" icon_blink="true">	
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="PinToolbeltMessage" message_key="BuffWarningToolTip"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveToolbeltMessage" message_key="BuffWarningToolTip"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="BuffKnockdownHold" name_key="BuffKnockdownHoldName" description_key="BuffKnockdownHoldDesc" showonhud="true" icon="ui_game_symbol_twitch_tough" icon_color="192,192,192" icon_blink="true">
+			<stack_type value="ignore"/>
+			<duration value="300"/>
+			<update_rate value="1"/>
+			<effect_group>		
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="BuffClaimKnockdown"/>
+				<triggered_effect trigger="onSelfLeaveGame" action="RemoveBuff" buff="BuffClaimKnockdown"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="BuffClaimKnockdown"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="BuffIncendiaryHold" name_key="BuffIncendiaryHoldName" description_key="BuffIncendiaryHoldDesc" showonhud="true" icon="ui_game_symbol_twitch_tough" icon_color="0,0,205" icon_blink="true">
+			<stack_type value="ignore"/>
+			<duration value="300"/>
+			<update_rate value="1"/>
+			<effect_group>		
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="BuffClaimIncendiary"/>
+				<triggered_effect trigger="onSelfLeaveGame" action="RemoveBuff" buff="BuffClaimIncendiary"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="BuffClaimIncendiary"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="BuffElectroHold" name_key="BuffElectroHoldName" description_key="BuffElectroHoldDesc" showonhud="true" icon="ui_game_symbol_twitch_tough" icon_color="255,0,255" icon_blink="true">
+			<stack_type value="ignore"/>
+			<duration value="300"/>
+			<update_rate value="1"/>
+			<effect_group>		
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="BuffClaimElectro"/>
+				<triggered_effect trigger="onSelfLeaveGame" action="RemoveBuff" buff="BuffClaimElectro"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="BuffClaimElectro"/>
+			</effect_group>
+		</buff>
+
 	</append>
 
     <append xpath="buffs">
@@ -2007,5 +2124,7 @@
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffFireRetardantResistedDisplay"/>
 		</effect_group>
 	</append>
+
+
 
 </configs>

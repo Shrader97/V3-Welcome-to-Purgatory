@@ -174,7 +174,7 @@
 
     <append xpath="/entity_classes">
 
-       	<entity_class name="animalShark" extends="animalTemplateHostile">
+         <entity_class name="animalShark" extends="animalTemplateHostile">
             <property name="Class" value="EntityVulture"/>
             <property name="SizeScale" value="0.75"/>
             <property name="PhysicsBody" value="Shark"/>
@@ -365,8 +365,8 @@
             <property name="LootDropEntityClass" value="EntityLootContainerShark"/>
 
             <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/> <!-- animalShark -->
-            <drop event="Harvest" name="resourceBatWing" tag="butcherHarvest" count="2"/>
+            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalShark -->
+            <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
             <drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
             <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
             <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
@@ -382,15 +382,15 @@
         </entity_class>
 
         <entity_class name="animalPhoenix" extends="animalTemplateHostile">
-            <property name="PhysicsBody" value="Phoenix"/>
             <property name="Class" value="EntityVulture"/>
-            <property name="SizeScale" value="1"/>
-            <property name="Tags" value="entity,animal,hostile,Phoenix,perkAT03"/> <!-- Credit for icon https://www.flaticon.com/authors/bzzrincantation -->
+            <property name="SizeScale" value="0.1"/>
+            <property name="PhysicsBody" value="Phoenix"/>
+            <property name="Tags" value="entity,animal,hostile,Shark,perkAT03"/> <!-- Credit for icon https://www.flaticon.com/authors/bzzrincantation -->
             <property name="AvatarController" value="AvatarAnimalController"/>	
             <property name="ModelType" value="Standard"/>
             <property name="HasRagdoll" value="false"/>
             <property name="HasDeathAnim" value="true"/>
-            <property name="RootMotion" value="true"/>
+            <property name="RootMotion" value="false"/>
             <property name="RagdollOnDeathChance" value="0"/>
             <property name="Mass" value="200"/>
             <property name="Mesh" value="#@modfolder:Resources/Phoenixing.unity3d?Phoenix001.prefab"/>
@@ -400,10 +400,10 @@
             <property name="CanOpenDoors" value="false"/>
             <property name="UserSpawnType" value="Menu"/>	
             
-            <property name="MoveSpeed" value="0.8"/>
-            <property name="MoveSpeedAggro" value="0.8, 0.85"/>
+            <property name="MoveSpeed" value="1"/>
+            <property name="MoveSpeedAggro" value="1.1, 1.3"/>
 
-            <property name="SightRange" value="90"/>	
+            <property name="SightRange" value="70"/>	
 
             <property name="AITask-1" value="BreakBlock"/>
             <property name="AITask-2" value="DestroyArea"/>
@@ -418,30 +418,29 @@
             <property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,9,EntityBandit,0,-6,EntityZombie,0,-6"/>
             <property name="AITarget-4" value=""/>
 
-            <property name="SoundRandom" value="vultureroam"/>
-            <property name="SoundAlert" value="vulturealert"/>
-            <property name="SoundHurt" value="vulturepain"/>
-            <property name="SoundDeath" value="vulturedeath"/>
-            <property name="SoundAttack" value="vultureattack"/>
-            <property name="SoundSense" value="vulturesense"/>
-            <property name="SoundGiveUp" value="vulturegiveup"/>
+            <property name="SoundRandom" value="SharkRoam"/>
+            <property name="SoundAlert" value="SharkAlert"/>
+            <property name="SoundHurt" value="silencefiller"/>
+            <property name="SoundDeath" value="SharkDeath"/>
+            <property name="SoundAttack" value="SharkAttack"/>
+            <property name="SoundSense" value="SharkSense"/>
+            <property name="SoundGiveUp" value="SharkGiveup"/>
 
             <!-- Gameplay -->
             <property name="ExperienceGain" value="750"/> <!-- XP strong -->
             <property name="DeadBodyHitPoints" value="600"/>
-            <property name="HandItem" value="meleeHandPhoenix"/>
+            <property name="HandItem" value="meleeHandAnimalShark"/>
             <property name="LootDropProb" value=".05"/>
             <property name="LootDropEntityClass" value="EntityLootContainerShark"/>
 
             <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
             <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalShark -->
-            <drop event="Harvest" name="resourcePhoenixTearDuct" tag="butcherHarvest" count="2"/>
-            <drop event="Harvest" name="resourcePhoenixFeather" tag="butcherHarvest" count="15"/>
+            <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
             <drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
             <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
             <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
             <drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
-            <drop event="Harvest" name="resourcePhoenixFeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+            <drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
             <drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 
             <effect_group name="Base Effects">
@@ -1949,6 +1948,180 @@
 			</effect_group>
 		</entity_class>
 
+		<entity_class name="zombieChargedHunter" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?BlindChargedHunter001" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieInfernalHunter" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?BlindInfernalHunter001" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieSuperRadiatedHunter" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,superradiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?BlindSuperRadiatedHunter001" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
 		<entity_class name="zombieMummy" extends="zombieTemplateMale">
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,walker,allbiome"/>
@@ -2119,6 +2292,180 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieMummyCharged" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="mummyalert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="munnyhurt"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="mummyattack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ChargedMummy" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieMummyInfernal" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="mummyalert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="munnyhurt"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="mummyattack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?infernalMummy" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieMummySuperRadiated" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,superradiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="mummyalert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="munnyhurt"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="mummyattack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?SuperRadiatedMummy" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
@@ -2297,6 +2644,180 @@
 			</effect_group>
 		</entity_class>
 
+		<entity_class name="zombieParasiteCharged" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteCharged" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieParasiteInfernal" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteInfernal" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieParasiteSuperRadiated" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,superradiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteSuperRadiated" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
 		<entity_class name="zombieParasiteCrawler" extends="zombieTemplateMale">
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,walker,allbiome"/>
@@ -2471,6 +2992,180 @@
 			</effect_group>
 		</entity_class>
 
+		<entity_class name="zombieParasiteChargedCrawler" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteCharged" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="21"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieParasiteInfernalCrawler" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteInfernal" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="21"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieParasiteSuperRadiatedCrawler" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,radiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteSuperRadiated" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="21"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
 		<entity_class name="zombieParasiteSpider" extends="zombieTemplateMale">
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,walker,allbiome"/>
@@ -2598,6 +3293,180 @@
 			<property name="SoundDeath" value="crawler_death"/>
 			<property name="SoundAttack" value="crawler_attack"/>
 			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteRadiated" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="22"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieParasiteChargedSpider" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,Charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteCharged" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="22"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieParasiteInfernalSpider" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteInfernal" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="22"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieParasiteSuperRadiatedSpider" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,radiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ParasiteSuperRadiated" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="22"/>
@@ -2935,6 +3804,180 @@
 			</effect_group>
 		</entity_class>
 
+		<entity_class name="zombieMutantCharged" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MutantCharged" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieMutantInfernal" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MutantInfernal" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieMutantSuperRadiated" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,superradiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MutantSuperRadiated" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
 		<entity_class name="zombieWalker" extends="zombieTemplateMale">
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,walker,allbiome"/>
@@ -3109,6 +4152,180 @@
 			</effect_group>
 		</entity_class>
 
+		<entity_class name="zombieChargedWalker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?zombieCharged001" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieInfernalWalker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?zombieInfernal001" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieSuperRadiatedWalker" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,superradiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?zombieSuperRadiated001" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
 		<entity_class name="zombieColonelClank" extends="zombieTemplateMale">
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,walker,allbiome"/>
@@ -3236,6 +4453,180 @@
 			<property name="SoundDeath" value="crawler_death"/>
 			<property name="SoundAttack" value="crawler_attack"/>
 			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?WarZombieRadiated" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieChargedColonelClank" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?WarZombieCharged" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieInfernalColonelClank" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?WarZombieInfernal" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieSuperRadiatedColonelClank" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,superradiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?WarZombieSuperRadiated" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -3452,7 +4843,181 @@
 			<property name="SizeScale" value="1"/>
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieChargedButcher" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ZombiecCharged002" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieInfernalButcher" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ZombieInfernal002" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieSuperRadiatedButcher" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,radiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ZombieSuperRadiated002" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
@@ -3631,6 +5196,180 @@
 			</effect_group>
 		</entity_class>
 
+		<entity_class name="zombieChargedSniper" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ZombieCharged003" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieInfernalSniper" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ZombieInfernal003" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieSuperRadiatedSniper" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="crawler_alert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="crawler_pain"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="crawler_attack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?ZombieSuperRadiated003" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
 		<entity_class name="zombieDryedMummy" extends="zombieTemplateMale">
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,walker,allbiome"/>
@@ -3758,6 +5497,180 @@
 			<property name="SoundDeath" value="crawler_death"/>
 			<property name="SoundAttack" value="mummyattack"/>
 			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MummyRadiated002" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieDryedChargedMummy" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,charged"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="mummyalert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="munnyhurt"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="mummyattack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MummyCharged002" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieDryedInfernalMummy" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,infernal"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="mummyalert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="munnyhurt"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="mummyattack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MummyInfernal002" />
+			<property name="SoundStepType" value="barehvystep"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="200"/>
+			<property name="ExperienceGain" value="2735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="ZombieCustom001"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieHunter002"/>
+			<property name="DanceType" value="1" />
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+			<property name="PainResistPerHit" value="100"/>
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Dismemberment -->
+			<property name ="DismemberTag_L_HeadGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+			<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+			<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+			<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+			<property name="SizeScale" value="1"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieDryedSuperRadiatedMummy" extends="zombieTemplateMale">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,walker,allbiome,feral,radiated"/>
+			<property name="Censor" value="1,2"/>
+			<property name="SoundRandom" value="crawler_roam"/>
+			<property name="SoundAlert" value="mummyalert"/>
+			<property name="SoundSense" value="crawler_sense"/>
+			<property name="SoundHurt" value="munnyhurt"/>
+			<property name="SoundDeath" value="crawler_death"/>
+			<property name="SoundAttack" value="mummyattack"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MummySuperRadiated002" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>

@@ -220,6 +220,22 @@
 		</lootgroup>
     </insertBefore>
 
+	<append xpath="/lootcontainers">
+		<lootcontainer name="treeStump" count="0,2" size="6,1" sound_open="UseActions/open_stump" sound_close="UseActions/close_stump" loot_quality_template="qualBaseTemplate" buff="buffScavengingServerHack,buffScavengingSkillXPTick">
+			<item group="cannedfood" loot_prob_template="high" count="0,2" />
+			<item group="groupWeaponsT1_Melee" loot_prob_template="low" count="0,1" />
+			<item group="groupAmmoSmall" loot_prob_template="veryLow" count="0,2" />
+			<item group="groupWeaponsAllScaled" loot_prob_template="veryLow" count="0,1" />
+			<item name="drinkJarBoiledWater" count="1,2" loot_prob_template="low">
+		</item>
+			<item name="modArmorNightVision" count="0,1" loot_prob_template="veryLow">
+		</item>
+			<item name="drugPainkillers" loot_prob_template="veryLow" />
+			<item name="medicalFirstAidBandage" loot_prob_template="veryLow" />
+			<item name="drugVitamins" loot_prob_template="veryLow" />
+			<item name="meleeToolFlashlight02" loot_prob_template="low" />
+		</lootcontainer>
+	</append>
 
     <append xpath="lootcontainers/lootgroup[@name='groupShamwayShelves']">
         <item group="groupShradersShamwayShelves" count="2"/>
@@ -237,6 +253,8 @@
 		<item name="modRodandSpring"/>
 		<item name="modArmorShredder"/>
 		<item name="modSpeedLoader"/>
+		<item name="modCigarette"/>
+		<item name="modFacialPiercings"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='modArmorT2']">
@@ -386,10 +404,6 @@
 
     <append xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']" >
         <item name="toolSmallBeaker" count="1" loot_prob_template="QuestT1Prob"/>
-
-        <item name="toolSmallBeaker" count="1" loot_prob_template="QuestT2Prob"/>
-        
-        <item name="toolSmallBeaker" count="1" loot_prob_template="QuestT3Prob"/>
     </append>
 
 

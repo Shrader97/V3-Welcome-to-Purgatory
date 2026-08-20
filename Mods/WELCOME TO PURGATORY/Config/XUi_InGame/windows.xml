@@ -2,6 +2,10 @@
     <set xpath="/windows/window[@name='windowBackpack'][@width='606']/@width">1075</set>
     <set xpath="/windows/window[@name='windowBackpack'][@height='349']/@height">416</set>
 
+	<set xpath="//grid[@controller='ItemPartStackGrid']/@rows">3</set>
+	<set xpath="//grid[@controller='ItemPartStackGrid']/@cols">3</set>
+	<set xpath="//grid[@controller='ItemPartStackGrid']/@cell_width">124</set>
+
     <set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/rect[@controller='ContainerStandardControls'][@pos='320,0']/@pos">789,0</set>
     <set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/label[@name='windowName'][@width='180']/@width">600</set>
     <set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/label[@text='{currencyamount}'][@pos='492,-8']/@pos">961,-8</set>

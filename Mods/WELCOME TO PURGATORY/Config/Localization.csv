@@ -17,12 +17,109 @@ perkPackMuleRank4LongDesc,"You just passed inspection, private.\nCarry twenty ei
 perkPackMuleRank5LongDesc,Now you're showing off! You're either part mule or strongman.\nCarry thirty five more items without being encumbered.\nIncreases the crafting speed of items from your inventory by 50%.\nYour pack has a 25% chance to ignore physical damage when hit.,,"Jetzt gibst du an! Du bist entweder teils Maultier oder ein Kraftprotz.\nTrage fünfunddreißig weitere Gegenstände, ohne überladen zu sein.\nErhöht die Herstellungsgeschwindigkeit von Gegenständen aus deinem Inventar um 50%.\nDein Rucksack hat bei einem Treffer eine Chance von 25%, physischen Schaden zu ignorieren.",¡Ahora presumes! O eres mitad mula o un forzudo.\nLleva treinta y cinco objetos más sin sufrir penalización por carga.\nAumenta en un 50% la velocidad de fabricación de objetos desde tu inventario.\nTu mochila tiene un 25% de probabilidad de ignorar el daño físico al ser golpeada.,"Là, vous frimez ! Vous êtes soit à moitié mule, soit colosse.\nTransportez trente-cinq objets supplémentaires sans être encombré.\nAugmente de 50 % la vitesse de fabrication des objets depuis votre inventaire.\nVotre sac a 25 % de chances d'ignorer les dégâts physiques lorsqu'il est touché.",Adesso ti stai davvero mettendo in mostra! Sei metà mulo o un vero forzuto.\nTrasporta trentacinque oggetti in più senza essere appesantito.\nAumenta del 50% la velocità di creazione degli oggetti dal tuo inventario.\nIl tuo zaino ha il 25% di probabilità di ignorare i danni fisici quando viene colpito.,見せつけてきたな！ もはやラバの血が混じっているか、怪力自慢だ。\n重量超過にならずにアイテムをさらに35個持ち運べる。\nインベントリから作成するアイテムのクラフト速度が50%上昇する。\nバッグは攻撃を受けた際、25%の確率で物理ダメージを無効化する。,이제 자랑까지 하는군! 노새 피가 섞였거나 장사꾼이 아니라 장사 같은 힘꾼이야.\n짐 부담 없이 아이템을 35개 더 들고 다닐 수 있습니다.\n인벤토리에서 만드는 아이템의 제작 속도가 50% 증가합니다.\n가방은 맞았을 때 25% 확률로 물리 피해를 무시합니다.,"Teraz to już się popisujesz! Albo jesteś po części mułem, albo siłaczem.\nMożesz nosić o trzydzieści pięć przedmiotów więcej bez przeciążenia.\nZwiększa o 50% szybkość wytwarzania przedmiotów z ekwipunku.\nTwój plecak ma 25% szans na zignorowanie obrażeń fizycznych po trafieniu.","Agora você está se exibindo! Ou você é meio mula, ou um homem muito forte.\nCarregue mais trinta e cinco itens sem ficar sobrecarregado.\nAumenta em 50% a velocidade de fabricação de itens do seu inventário.\nSua mochila tem 25% de chance de ignorar dano físico quando for atingida.","Ну всё, теперь ты выпендриваешься! Ты либо наполовину мул, либо силач.\nНосите ещё на тридцать пять предметов больше без перегруза.\nУвеличивает скорость создания предметов из инвентаря на 50%.\nВаш рюкзак имеет 25% шанс игнорировать физический урон при попадании.",Artık hava atıyorsun! Ya yarı katırsın ya da tam bir güçlü adamsın.\nYük altında kalmadan otuz beş eşya daha taşı.\nEnvanterindeki eşyaların üretim hızını %50 artırır.\nÇantan vurulduğunda fiziksel hasarı yok sayma şansı %25'dir.,现在你可是在炫耀了！你不是半头骡子，就是个大力士。\n在不超负重的情况下额外携带35个物品。\n使从你的背包物品栏制作物品的速度提高50%。\n你的背包在受到击中时有25%的几率无视物理伤害。,現在你可是在炫耀了！你不是半頭騾子，就是個大力士。\n在不超負重的情況下額外攜帶35個物品。\n使從你的背包物品欄製作物品的速度提高50%。\n你的背包在受到擊中時有25%的機率無視物理傷害。
 
 
-
 animalShark,"SharkTimeGaming"
 animalBabyShark,"Baby Shark"
 resourcePhoenixTearDuct,"Phoenix Tear Duct"
 resourcePhoenixFeather,"Phoenix Feather"
 resourceBatWing,"Bat Wing"
+zombieHunter,Hunter
+zombieFeralHunter,Feral Hunter
+zombieRadiatedHunter,Radiated Hunter
+zombieChargedHunter,Charged Hunter
+zombieInfernalHunter,Infernal Hunter
+zombieSuperRadiatedHunter,Super Radiated Hunter
+zombieMummy,Mummy
+zombieFeralMummy,Feral Mummy
+zombieMummyRadiated,Radiated Mummy
+zombieMummyCharged,Mummy Charged
+zombieMummyInfernal,Mummy Infernal
+zombieMummySuperRadiated,Super Radiated Mummy
+zombieParasite,Parasite
+zombieParasiteFeral,Parasite Feral
+zombieParasiteRadiated,Radiated Parasite
+zombieParasiteCharged,Charged Parasite
+zombieParasiteInfernal,Infernal Parasite
+zombieParasiteSuperRadiated,Super Radiated Parasite
+zombieParasiteCrawler,Parasite Crawler
+zombieParasiteFeralCrawler,Feral Parasite Crawler
+zombieParasiteRadiatedCrawler,Radiated Parasite Crawler
+zombieParasiteChargedCrawler,Charged Parasite Crawler
+zombieParasiteInfernalCrawler,Infernal Parasite Crawler
+zombieParasiteSuperRadiatedCrawler,Super Radiated Parasite Crawler
+zombieParasiteSpider,Parasite Spider
+zombieParasiteFeralSpider,Feral Parasite Spider
+zombieParasiteRadiatedSpider,Radiated Parasite Spider
+zombieParasiteChargedSpider,Charged Parasite Spider
+zombieParasiteInfernalSpider,Infernal Parasite Spider
+zombieParasiteSuperRadiatedSpider,Super Radiated Parasite Spider
+zombieSkinless,Skinless
+zombieSkinlessSpider,Skinless Spider
+zombieMutant,Mutant
+zombieMutantFeral,Feral Mutant
+zombieMutantRadiated,Radiated Mutant
+zombieMutantCharged,Charged Mutant
+zombieMutantInfernal,Infernal Mutant
+zombieMutantSuperRadiated,Super Radiated Mutant
+zombieWalker,Walker
+zombieFeralWalker,Feral Walker
+zombieRadiatedWalker,Radiated Walker
+zombieChargedWalker,Charged Walker
+zombieInfernalWalker,Infernal Walker
+zombieSuperRadiatedWalker,Super Radiated Walker
+zombieColonelClank,Colonel Clank
+zombieFeralColonelClank,Feral Colonel Clank
+zombieRadiatedColonelClank,Radiated Colonel Clank
+zombieChargedColonelClank,Charged Colonel Clank
+zombieInfernalColonelClank,Infernal Colonel Clank
+zombieSuperRadiatedColonelClank,Super Radiated Colonel Clank
+zombieButcher,Butcher
+zombieFeralButcher,Feral Butcher
+zombieRadiatedButcher,Radiated Butcher
+zombieChargedButcher,Charged Butcher
+zombieInfernalButcher,Infernal Butcher
+zombieSuperRadiatedButcher,Super Radiated Butcher
+zombieSniper,Sniper
+zombieFeralSniper,Feral Sniper
+zombieRadiatedSniper,Radiated Sniper
+zombieChargedSniper,Charged Sniper
+zombieInfernalSniper,InfernalSniper
+zombieSuperRadiatedSniper,Super Radiated Sniper
+zombieDryedMummy,Dryed Mummy
+zombieDryedFeralMummy,Dryed Feral Mummy
+zombieDryedRadiatedMummy,Dryed Radiated Mummy
+zombieDryedChargedMummy,Dryed Charged Mummy
+zombieDryedInfernalMummy,Dryed Infernal Mummy
+zombieDryedSuperRadiatedMummy,Dryed Super Radiated Mummy
+zombieCheerLeader,Cheer Leader
+zombieCheerLeaderFeral,Feral Cheer Leader
+zombieCheerLeaderRadiated,Radiated Cheer Leader
+zombieCowboy,Cowboy
+zombieCowboyFeral,Feral Cowboy
+zombieCowboyRadiated,Radiated Cowboy
+zombieFarmer,Farmer
+zombieFarmerFeral,Feral Farmer
+zombieRadiatedFarmer,Radiated Farmer
+zombieStripper,Stripper
+zombieStripperFeral,Feral Stripper
+zombieRadiatedStripper,Radiated Stripper
+zombieClown,Clown
+zombieFeralSpaceman,Feral Spaceman
+zombieRadiatedSpaceman,Radiated Spaceman
+zombieJason,Jason
+zombieJasonFeral,Feral Jason
+zombieRadiatedJason,Radiated Jason
+zombieMrScream,Mr Scream
+zombieMrFeralScream,Mr Feral Scream
+zombieMrRadiatedScream,Mr Radiated Scream
+zombieKaren,Karen
+zombieKarenFeral,Feral Karen
+zombieKarenRadiated,Radiated Karen
+
+
+
+
+
+
 
 resourceSkillMagazineScrap,Skill Magazine Scrap
 resourceSkillMagazineScrapDesc,"Skill Magazine Scrap can assembled into a skill magazine."
@@ -244,6 +341,16 @@ buffTuberculosisImmunityName,Tuberculosis Immunity
 foodSharkStew,Shark Stew
 foodBurgerFrenchFryes,"Hamburger & French Fryes"
 foodRamenNoodles,"Ramen Noodles"
+foodBoneBroth,"Bone Broth"
+
+modCigarette,"Cigarette Mod"
+modCigaretteDesc,"Light up and get a better deal from traders."
+modFacialPiercings,"Facial Piercings Mod"
+modFacialPiercingsDesc,"The risk of infection is not enough of a challenge? Try putting piercings of questionable origin into your skin!"
+
+
+
+
 
 
 Heatedfloor,Heated Floor
@@ -306,18 +413,6 @@ FishingLootDesc,"Your catched Fishing-Loot. By opening you will get back your Fi
 FishingLootpro,"Catched PRO Loot"
 FishingLootv3,"Catched Triple Loot"
 
-CaughtFish,"Fresh Fish Salmon"
-CaughtFishDesc,"A fresh Salmon. "Open" it to get the raw fish meat and some scales."
-
-CaughtFish2,"Fresh Fish Tuna"
-CaughtFish2Desc,"A fresh Tuna "Open" it to get the raw fish meat and some scales."
-
-CaughtFish3,"Fresh Fish Golden Carp"
-CaughtFish3Desc,"A fresh Carp "Open" it to get the raw fish meat and some scales."
-
-CaughtFish4,"Fresh Fish Comb Perch"
-CaughtFish4Desc,"A fresh Perch "Open" it to get the raw fish meat and some scales."
-
 RawFish,"Raw Cat Fish"
 RawFishDesc,"Raw Cat Fish, could be cooked at the Campfire"
 
@@ -354,7 +449,7 @@ fishskillmagazinedesc,"By reading this magazine you increase your knowledge abou
 
 buffSugerRushTooltip,"WOOHOO You have a Suger Rush!!!"
 
-PickleRickTooltip."You Just Got Pickeled By Pickle Rick BITCH!!!"
+PickleRickTooltip,"You Just Got Pickeled By Pickle Rick BITCH!!!"
 PickleRick,Pickle Rick
 buffBrainDrainName,"Brain Drain"
 buffBrainDrainDesc,"Removes all perks and reset base health."
@@ -376,10 +471,6 @@ StartMinerDesc,"Pipe Baton \n Pickaxe \n Food Bundle \n Medical Supplies \n Lock
 
 StartBrawler,"Brawler Class"
 StartBrawlerDesc,"Iron Knuckles \n Fire Axe \n Food Bundle \n Medical Supplies \n LockPick Bundle \n Repair Kit \n Some Skill Magazines \n Melee Right Cross Mod \n Bicycle"
-
-StartSledgehammer,"Sledgehammer Class"
-StartSledgehammerDesc,"Iron Knuckles \n Fire Axe \n Food Bundle \n Medical Supplies \n LockPick Bundle \n Repair Kit \n Some Skill Magazines \n Melee Right Cross Mod \n Bicycle"
-
 
 
 BerryTeaDesc,A warm healing tea made from blueberries and snowberries
@@ -751,7 +842,7 @@ buffBrainDrainDesc,"Removes all perks and reset base health."
 
 BananaRick,"Banana Rick"
 
-xuiChallenge,"Shrader971's Challenge's"
+xuiChallenge,"MrCaveman's Challenge's"
 
 challengeGroupAdvancedHunter,"Advanced Hunter"
 challengeRewardBonusAdvancedHunterReward,"Advanced Hunter Reward"
@@ -1224,6 +1315,44 @@ perkTurretsRank4Desc,Advanced Robotics
 perkTurretsRank4LongDesc,"You must be from the year 2077. You are creating some futuristic technology. Robotic weapons deal 40% more damage, 150% faster fire rate and reload an extra 200 rounds. Reload robotic weapons  10% faster. Robot active range is 42 meters."
 perkTurretsRank5Desc,Robotics Expert
 perkTurretsRank5LongDesc,"You are now a top expert in robotics. Reload robotic weapons 20% faster and reload an extra 250 rounds. Robot active range is 60 meters.\nFour deployed robots can be active at once."
+
+
+keystoneBlockSilver,"Stormblock of land claims"
+keystoneBlockSilverDesc,"In the block coverage area: The player and members of his group receive +25% endurance, + 25% protected from damage. \n\nOther players and zombies are knocked down within the block's coverage area at intervals of 1.5 minutes. \n\nTeleports a hostile player outside the claim block a long distance."
+keystoneBlockGoldDesc,"In the block coverage area: The player and members of his group receive +25% endurance, + 25% protected from damage. \n\nOther players and zombies are damaged by fire within the block's range at intervals of 1.5 minutes. \n\nTeleports a hostile player outside the claim block a long distance."
+keystoneBlockDiamond,"Electricblock of land claims"
+keystoneBlockDiamondDesc,"In the block coverage area: The player and members of his group receive +25% endurance, + 25% protected from damage. \n\nOther players and zombies suffer electrical damage within the block's coverage area at intervals of 1.5 minutes. \n\nTeleports a hostile player outside the claim block a long distance."
+BuffWarningDesc,"Leave the zone! Or you will be teleported out of the zone!"
+BuffWarningToolTip,"[FF0000]Leave the zone! Private property!"
+BuffKnockdownHoldName,"Protection from Stormblock"
+BuffKnockdownHoldDesc,"Gives immunity to being knocked down for 5 minutes."
+BuffIncendiaryHoldName,"Protection from Fireblock"
+BuffIncendiaryHoldDesc,"Gives immunity to fire for 5 minutes."
+BuffElectroHoldName,"Protection from Electricblock"
+BuffElectroHoldDesc,"Gives immunity to electricity for 5 minutes."
+
+resourceFragileGasMask,"Fragile Gas Mask"
+
+challengeBurntCraftReducer,Craft Fragile Gas Mask,
+challengeBurntCraftReducerDesc,Craft a [DECEA3]Fragile Gas Mask[-] to help increase your survival time while exploring the [DECEA3]Burnt Forest[-].\n\nCraft a [DECEA3]Fragile Gas Mask[-].
+challengeBurntCraftReducerShort,Craft a Fragile Gas Mask.
+
+challengeBurntUseReducer,Use Fragile Gas Mask
+challengeBurntUseReducerDesc,A shot of [DECEA3]Fragile Gas Mask[-] will help increase your survival time while exploring the [DECEA3]Burnt Forest[-].\n\nUse a [DECEA3]Fragile Gas Mask[-].
+challengeBurntUseReducerShort,Use a Fragile Gas Mask.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

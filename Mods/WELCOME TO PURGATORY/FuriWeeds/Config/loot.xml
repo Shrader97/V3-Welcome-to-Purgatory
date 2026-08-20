@@ -1,0 +1,88 @@
+<configs>
+
+	<append xpath="/lootcontainers/lootgroup[@name='skillMagazines']">
+		<item name="stonedMagazine"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupQuestRewardSkillMagazinesAll01']">
+		<item name="stonedMagazine" count="2"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']">
+		<item name="stonedMagazine" count="2"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']">
+		<item name="Butane" count="2" loot_prob_template="QuestT0Prob"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='seeds']">
+		<item name="PlantedAk471"/>
+		<item name="PlantedChemDawg1"/>
+		<item name="PlantedWeddingCake1"/>
+		<item name="PlantedBlueDream1"/>
+		<item name="PlantedPurpleHaze1"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupJunk02']">
+		<item name="Empty Vape" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="AK-47 Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="ChemDawg Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Wedding Cake Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Blue Dream Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Purple Haze Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupJunk03']">
+		<item name="Empty Vape" loot_prob_template="Low"/>
+		<item name="Grams Of Ak47" count="1,3" loot_prob_template="low"/>
+		<item name="Grams Of Purple Haze" count="1,3" loot_prob_template="low"/>
+		<item name="Grams Of ChemDawg" count="1,3" loot_prob_template="low"/>
+		<item name="Grams Of Wedding Cake" count="1,3" loot_prob_template="low"/>
+		<item name="Grams Of Blue Dream" count="1,3" loot_prob_template="low"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupCupboard02']">
+		<item name="Bong" count="1" loot_prob_template="veryLow"/>
+		<item name="Oil Rig" count="1" loot_prob_template="veryLow"/>
+		<item name="Empty Vape" count="1" loot_prob_template="Low"/>
+		<item name="AK-47 Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="ChemDawg Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Wedding Cake Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Blue Dream Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Purple Haze Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupCardboardBox']">
+		<item name="Bong" count="1" loot_prob_template="veryLow"/>
+		<item name="Empty Vape" count="1" loot_prob_template="Low"/>
+		<item name="Oil Rig" count="1" loot_prob_template="veryLow"/>
+		<item name="Box Of Butane" count="1" loot_prob_template="veryLow"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupCars']">
+		<item name="Empty Vape" count="1" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="AK-47 Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="ChemDawg Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Wedding Cake Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Blue Dream Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Purple Haze Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupDesks02']">
+		<item name="AK-47 Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="ChemDawg Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Wedding Cake Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Blue Dream Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+		<item name="Purple Haze Joint" loot_prob_template="veryLowDelayed" force_prob="true"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='booksAllScaled']">
+		<item name="Butane Schematic" loot_prob_template="low"/>
+		<item name="Bong Schematic" loot_prob_template="low"/>
+		<item name="Oil Rig Schematic" loot_prob_template="low"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='booksRareOnlyScaled']">
+		<item name="Weed Extraction Schematic" loot_prob_template="low"/>
+	</append>
+
+</configs>
