@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ActivationDistance>8</ActivationDistance>
+	<ActivationLongDistance>15</ActivationLongDistance>
+	<MaximumDoorsToOpen>1</MaximumDoorsToOpen>
+	<AllowedHornClipNames>bicycle_horn,minibike_horn,motorbike_horn,suv_horn,gyrocopter_horn</AllowedHornClipNames>
+</xml>

@@ -1,0 +1,8 @@
+﻿<configs>
+	<!-- // ********  ******** -->
+	<append xpath="/blocks/block[@name='doorWoodLargeGate']/property[@name='Tags']/@value">,distlong</append>
+	<append xpath="/blocks/block[@name='chainlinkGateDoubleWide']/property[@name='Tags']/@value">,distlong</append>
+	<append xpath="/blocks/block[@name='metalReinforcedWoodDrawBridge']/property[@name='Tags']/@value">,distlong</append>
+	
+	<remove xpath="/blocks/block[(contains(@name, 'doorWoodLargeGate'))or(contains(@name, 'chainlinkGateDoubleWide'))or(contains(@name, 'chainlinkFenceDoor'))or(contains(@name, 'chainlinkFenceDoorDouble'))or(contains(@name, 'oldWoodDoor'))]/property[@class='CompositeFeatures']/property[@class='TEFeatureDoor']/property[@name='HonkOpenType']"/>
+</configs>
