@@ -15,6 +15,14 @@
 	<remove xpath="/blocks/block[@name='treeBurntMaple03']"/>
 	<remove xpath="/blocks/block[@name='treeBurntMaple04']"/>
 
+	<set xpath="blocks/block[@name='cntApiary']/property[@name='FuelTypes']/@value">{flower,resourceEmptyHoneycomb,resourceEmptyHoneycomb,resourceEmptyHoneycomb}</set>
+	<set xpath="blocks/block[@name='cntApiary']/property[@name='OutputTypes']/@value">{honey,flower,1,1,1,resourceFullHoneycomb,resourceFullHoneycomb,2,2,48000,48000,apiary_complete_item}</set>
+	<set xpath="blocks/block[@name='cntApiary']/property[@name='FuelTypesSprites']/@value">resourceEmptyHoneycomb,ItemIconAtlasGreyscale,resourceEmptyHoneycomb,ItemIconAtlasGreyscale,resourceEmptyHoneycomb,ItemIconAtlasGreyscale</set>
+	<set xpath="blocks/block[@name='cntApiary']/property[@name='FuelTitleSprite']/@value">ui_game_symbol_resource</set>
+
+
+
+
 	<insertAfter xpath="/blocks/block[@name='hangingMoss']">
 		<block name="emberPileDeco1">
 			<property name="Material" value="Mwood_weak" />
@@ -531,8 +539,40 @@
 			<property name="UpgradeHitCount" value="2"/></property>
 	</append>
 
+	<append xpath="/blocks">
 
+		<block name="terrSulfuricDirt">
+			<property name="TerrainIndex" value="9" />
+			<property name="CanMobsSpawnOn" value="false" />
+			<property name="DisplayType" value="blockTerrainFertile" />
+			<property name="MapColor" value="255,255,0" />
+			<property name="Material" value="Mdirt" />
+			<property name="Shape" value="Terrain" />
+			<property name="Mesh" value="terrain" />
+			<property name="Texture" value="2" />
+			<property name="ImposterExclude" value="true" />
+			<property name="EconomicValue" value="5" />
+			<property name="EconomicBundleSize" value="1" />
+			<property name="SellableToTrader" value="false" />
+			<property name="LPHardnessScale" value="2" />
+			<property name="SoundPickup" value="groundblock_grab" />
+			<property name="SoundPlace" value="groundblock_place" />
+			<property name="BuffsWhenWalkedOn" value="buffSulfurBurnCatch"/>
+			<property name="ActiveRadiusEffects" value="buffSulferPitWarning,20" />
+			<property class="RepairItems">
+				<property name="resourceClayLump" value="14" />
+			</property>
+			<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest" />
+			<drop event="Destroy" count="0" />
+			<drop event="Fall" name="terrDirt" count="1" prob="0.25" stick_chance="1" />
+			<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0" />
+			<property name="SortOrder1" value="0000" />
+			<property name="SortOrder2" value="0300" />
+			<property name="Tags" value="treasureHunter" />
+			<property name="FilterTags" value="MC_outdoor,SC_terrain" />
+		</block>
 
+	</append>
 
 	<append xpath="/blocks">
 
@@ -3009,13 +3049,181 @@
             <property name="SoundPlace" value="campfire_place"/>
         </block>
 
+	<!-- rusty vehicle -->
 
+		<block name="cntrustyminibike">
+			<property name="CreativeMode" value="Player" />
+			<property name="Class" value="CompositeTileEntity" />
+			<property class="CompositeFeatures">
+				<property class="TEFeatureExplodable">
+					<property class="Explosion">
+						<property name="ParticleIndex" value="31" /> <!-- which prefab/particle is used -->
+						<property name="RadiusBlocks" value="3.5" /> <!-- damage radius for blocks -->
+						<property name="BlockDamage" value="500" /> <!-- damage for blocks in the center of the explosion -->
+						<property name="RadiusEntities" value="5" /> <!-- damage radius for entities -->
+						<property name="EntityDamage" value="250" /> <!-- damage for entities in the center of the explosion -->	
+					</property>
+				</property>
+				<property class="TEFeatureStorage">
+					<property name="LootList" value="cars" />
+				</property>
+			</property>
+			<property name="IndexName" value="challenge_cars" />
+			<property name="TerrainAlignment" value="Vehicle" />
+			<property name="CustomIcon" value="cntCar03SedanDamage1Master" />
+			<property name="ItemTypeIcon" value="explosion" />
+			<property name="TintColor" value="B0B0B0" />
+			<property name="DisplayType" value="blockMulti" />
+			<property name="Material" value="Mmetal_medium" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Rusty.unity3d?SM_asset_00" />
+			<property name="ModelOffset" value="-0.5,0,-0.5" />
+			<property name="OversizedBounds" value="(-0.5,0.5,-0.5),(2,2,6)" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="WaterFlow" value="permitted" />
+			<property name="ParticleOnDeath" value="car_destruction_dmg2" /> <!-- VFX putback in play, added *dmg2-->
+			<property name="Place" value="TowardsPlacer" />
+			<property name="PlacementDistance" value="6" />
+			<property name="BigDecorationRadius" value="5" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="CanDecorateOnSlopes" value="false" />
+			<property name="CanPlayersSpawnOn" value="false" />
+			<property name="PassThroughDamage" value="true" />
+			<property name="ShowModelOnFall" value="false" />
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble" />
+			<drop event="Harvest" name="smallEngine" count="1" prob="0.25" tag="salvageHarvest" />
+			<drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceRadiator" count="1" prob="0.5" tag="salvageHarvest" />
+			<drop event="Harvest" name="ammoGasCan" count="50,200" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceAcid" prob=".08" count="1" tag="WasteTreasuresAcidHarvest" />
+			<drop event="Harvest" name="resourceScrapIron" count="17,35" tag="allHarvest,perkJunkMiner" />
+			<drop event="Harvest" name="resourceForgedSteel" count="3,6" tag="PercMasterySteelHarvest" tool_category="Disassemble" />
+			<drop event="Destroy" name="casinoCoin" count="5,15" tag="PercMasteryDukeHarvest" tool_category="Disassemble" />
+			<drop event="Destroy" name="oldCash" count="5,15" tag="PercMasteryDukeHarvest" tool_category="Disassemble" />
+			<drop event="Destroy" count="0" />
+			<property name="SortOrder1" value="B852" />
+			<property name="SortOrder2" value="0000" />
+			<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts,challenge_steel,perkBookworm" />
+			<property name="FilterTags" value="MC_building,SC_automotive" />
+		</block>
 
+		<block name="cntrustycar">
+			<property name="CreativeMode" value="Player" />
+			<property name="Class" value="CompositeTileEntity" />
+			<property class="CompositeFeatures">
+				<property class="TEFeatureExplodable">
+					<property class="Explosion">
+						<property name="ParticleIndex" value="31" /> <!-- which prefab/particle is used -->
+						<property name="RadiusBlocks" value="3.5" /> <!-- damage radius for blocks -->
+						<property name="BlockDamage" value="500" /> <!-- damage for blocks in the center of the explosion -->
+						<property name="RadiusEntities" value="5" /> <!-- damage radius for entities -->
+						<property name="EntityDamage" value="250" /> <!-- damage for entities in the center of the explosion -->	
+					</property>
+				</property>
+				<property class="TEFeatureStorage">
+					<property name="LootList" value="cars" />
+				</property>
+			</property>
+			<property name="IndexName" value="challenge_cars" />
+			<property name="TerrainAlignment" value="Vehicle" />
+			<property name="CustomIcon" value="cntCar03SedanDamage1Master" />
+			<property name="ItemTypeIcon" value="explosion" />
+			<property name="TintColor" value="B0B0B0" />
+			<property name="DisplayType" value="blockMulti" />
+			<property name="Material" value="Mmetal_medium" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Rusty.unity3d?SM_asset_03" />
+			<property name="ModelOffset" value="-0.5,0,-0.5" />
+			<property name="OversizedBounds" value="(-0.5,0.5,-0.5),(2,2,6)" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="WaterFlow" value="permitted" />
+			<property name="ParticleOnDeath" value="car_destruction_dmg2" /> <!-- VFX putback in play, added *dmg2-->
+			<property name="Place" value="TowardsPlacer" />
+			<property name="PlacementDistance" value="6" />
+			<property name="BigDecorationRadius" value="5" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="CanDecorateOnSlopes" value="false" />
+			<property name="CanPlayersSpawnOn" value="false" />
+			<property name="PassThroughDamage" value="true" />
+			<property name="ShowModelOnFall" value="false" />
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble" />
+			<drop event="Harvest" name="smallEngine" count="1" prob="0.25" tag="salvageHarvest" />
+			<drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceRadiator" count="1" prob="0.5" tag="salvageHarvest" />
+			<drop event="Harvest" name="ammoGasCan" count="50,200" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceAcid" prob=".08" count="1" tag="WasteTreasuresAcidHarvest" />
+			<drop event="Harvest" name="resourceScrapIron" count="17,35" tag="allHarvest,perkJunkMiner" />
+			<drop event="Harvest" name="resourceForgedSteel" count="3,6" tag="PercMasterySteelHarvest" tool_category="Disassemble" />
+			<drop event="Destroy" name="casinoCoin" count="5,15" tag="PercMasteryDukeHarvest" tool_category="Disassemble" />
+			<drop event="Destroy" name="oldCash" count="5,15" tag="PercMasteryDukeHarvest" tool_category="Disassemble" />
+			<drop event="Destroy" count="0" />
+			<property name="SortOrder1" value="B852" />
+			<property name="SortOrder2" value="0000" />
+			<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts,challenge_steel,perkBookworm" />
+			<property name="FilterTags" value="MC_building,SC_automotive" />
+		</block>
 
-
-
-
-
+		<block name="cntrustyvan">
+			<property name="CreativeMode" value="Player" />
+			<property name="Class" value="CompositeTileEntity" />
+			<property class="CompositeFeatures">
+				<property class="TEFeatureExplodable">
+					<property class="Explosion">
+						<property name="ParticleIndex" value="31" /> <!-- which prefab/particle is used -->
+						<property name="RadiusBlocks" value="3.5" /> <!-- damage radius for blocks -->
+						<property name="BlockDamage" value="500" /> <!-- damage for blocks in the center of the explosion -->
+						<property name="RadiusEntities" value="5" /> <!-- damage radius for entities -->
+						<property name="EntityDamage" value="250" /> <!-- damage for entities in the center of the explosion -->	
+					</property>
+				</property>
+				<property class="TEFeatureStorage">
+					<property name="LootList" value="cars" />
+				</property>
+			</property>
+			<property name="IndexName" value="challenge_cars" />
+			<property name="TerrainAlignment" value="Vehicle" />
+			<property name="CustomIcon" value="cntCar03SedanDamage1Master" />
+			<property name="ItemTypeIcon" value="explosion" />
+			<property name="TintColor" value="B0B0B0" />
+			<property name="DisplayType" value="blockMulti" />
+			<property name="Material" value="Mmetal_medium" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Rusty.unity3d?SM_asset_04" />
+			<property name="ModelOffset" value="-0.5,0,-0.5" />
+			<property name="OversizedBounds" value="(-0.5,0.5,-0.5),(2,2,6)" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="WaterFlow" value="permitted" />
+			<property name="ParticleOnDeath" value="car_destruction_dmg2" /> <!-- VFX putback in play, added *dmg2-->
+			<property name="Place" value="TowardsPlacer" />
+			<property name="PlacementDistance" value="6" />
+			<property name="BigDecorationRadius" value="5" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="CanDecorateOnSlopes" value="false" />
+			<property name="CanPlayersSpawnOn" value="false" />
+			<property name="PassThroughDamage" value="true" />
+			<property name="ShowModelOnFall" value="false" />
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble" />
+			<drop event="Harvest" name="smallEngine" count="1" prob="0.25" tag="salvageHarvest" />
+			<drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceRadiator" count="1" prob="0.5" tag="salvageHarvest" />
+			<drop event="Harvest" name="ammoGasCan" count="50,200" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceAcid" prob=".08" count="1" tag="WasteTreasuresAcidHarvest" />
+			<drop event="Harvest" name="resourceScrapIron" count="17,35" tag="allHarvest,perkJunkMiner" />
+			<drop event="Harvest" name="resourceForgedSteel" count="3,6" tag="PercMasterySteelHarvest" tool_category="Disassemble" />
+			<drop event="Destroy" name="casinoCoin" count="5,15" tag="PercMasteryDukeHarvest" tool_category="Disassemble" />
+			<drop event="Destroy" name="oldCash" count="5,15" tag="PercMasteryDukeHarvest" tool_category="Disassemble" />
+			<drop event="Destroy" count="0" />
+			<property name="SortOrder1" value="B852" />
+			<property name="SortOrder2" value="0000" />
+			<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts,challenge_steel,perkBookworm" />
+			<property name="FilterTags" value="MC_building,SC_automotive" />
+		</block>
 
 
 

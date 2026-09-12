@@ -262,10 +262,34 @@
             </collider>
         </body>
 
-		<body name="bigfoot"> <!-- The values might need adjusting but the paths are correct  -->
+		<body name="devildog"> <!-- The values might need adjusting but the paths are correct  -->
 			<collider>
 				<property name="tag" value="E_BP_Body"/>
-				<property name="path" value="Hips"/>
+				<property name="path" value="CATRigHub003/CATRigHub003Bone002"/>
+				<property name="collisionLayer" value="0"/>
+				<property name="ragdollLayer" value="21" />
+				<property name="collisionScale" value="1 1 1"/>
+				<property name="ragdollScale" value="0.75 0.39 1"/>
+				<property name="collisionOffset" value="0 0 0"/>
+				<property name="ragdollOffset" value="0 0 -0.08"/>
+				<property name="type" value="Detail"/>
+				<property name="flags" value="collision;ragdoll"/>
+			</collider>
+			<collider>
+				<property name="tag" value="E_BP_Body"/>
+				<property name="path" value="CATRigHub003/CATRigHub003Bone002/CATRigSpine1/CATRigSpine2"/>
+				<property name="collisionLayer" value="0"/>
+				<property name="ragdollLayer" value="21" />
+				<property name="collisionScale" value="1 1 1"/>
+				<property name="ragdollScale" value="0.75 0.39 1"/>
+				<property name="collisionOffset" value="0 0 0"/>
+				<property name="ragdollOffset" value="0 0 -0.08"/>
+				<property name="type" value="Detail"/>
+				<property name="flags" value="collision;ragdoll"/>
+			</collider>
+			<collider>
+				<property name="tag" value="E_BP_Body"/>
+				<property name="path" value="CATRigHub003/CATRigHub003Bone002/CATRigSpine1/CATRigSpine2/CATRigHub004"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -277,7 +301,7 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_LLeg"/>
-				<property name="path" value="Hips/LeftUpLeg"/>
+				<property name="path" value="CATRigHub003/CATRigLLeg1"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -289,7 +313,19 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_LLowerLeg"/>
-				<property name="path" value="Hips/LeftUpLeg/LeftLeg"/>
+				<property name="path" value="CATRigHub003/CATRigLLeg1/CATRigLLeg2"/>
+				<property name="collisionLayer" value="0"/>
+				<property name="ragdollLayer" value="21" />
+				<property name="collisionScale" value="1 1 1"/>
+				<property name="ragdollScale" value="1 1 1"/>
+				<property name="collisionOffset" value="0 0 0"/>
+				<property name="ragdollOffset" value="0 0 0"/>
+				<property name="type" value="Detail"/>
+				<property name="flags" value="collision;ragdoll"/>
+			</collider>
+			<collider>
+				<property name="tag" value="E_BP_LLowerLeg"/>
+				<property name="path" value="CATRigHub003/CATRigLLeg1/CATRigLLeg2/CATRigLLegAnkle"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -301,7 +337,7 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_RLeg"/>
-				<property name="path" value="Hips/RightUpLeg"/>
+				<property name="path" value="CATRigHub003/CATRigRLeg1"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -313,7 +349,19 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_RLowerLeg"/>
-				<property name="path" value="Hips/RightUpLeg/RightLeg"/>
+				<property name="path" value="CATRigHub003/CATRigRLeg1/CATRigRLeg2"/>
+				<property name="collisionLayer" value="0"/>
+				<property name="ragdollLayer" value="21" />
+				<property name="collisionScale" value="1 1 1"/>
+				<property name="ragdollScale" value="1 1 1"/>
+				<property name="collisionOffset" value="0 0 0"/>
+				<property name="ragdollOffset" value="0 0 0"/>
+				<property name="type" value="Detail"/>
+				<property name="flags" value="collision;ragdoll"/>
+			</collider>
+			<collider>
+				<property name="tag" value="E_BP_RLowerLeg"/>
+				<property name="path" value="CATRigHub003/CATRigRLeg1/CATRigRLeg2/CATRigRLegAnkle"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -325,7 +373,7 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_Body"/>
-				<property name="path" value="Hips/Spine/Spine1/"/>
+				<property name="path" value="CATRigHub003/CATRigHub003Bone002/CATRigSpine1/CATRigSpine2/CATRigHub004/CATRigSpine1 1"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -337,7 +385,7 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_LArm"/>
-				<property name="path" value="Hips/Spine/Spine1/Spine2/LeftShoulder/LeftArm"/>
+				<property name="path" value="CATRigHub003/CATRigHub003Bone002/CATRigSpine1/CATRigSpine2/CATRigHub004/CATRigLArmCollarbone/CATRigLArm1"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -349,7 +397,7 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_LLowerArm"/>
-				<property name="path" value="Hips/Spine/Spine1/Spine2/LeftShoulder/LeftArm/LeftForeArm"/>
+				<property name="path" value="CATRigHub003/CATRigHub003Bone002/CATRigSpine1/CATRigSpine2/CATRigHub004/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -361,7 +409,7 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_RArm"/>
-				<property name="path" value="Hips/Spine/Spine1/Spine2/RightShoulder/RightArm"/>
+				<property name="path" value="CATRigHub003/CATRigHub003Bone002/CATRigSpine1/CATRigSpine2/CATRigHub004/CATRigRArmCollarbone/CATRigRArm1"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -373,7 +421,7 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_RLowerArm"/>
-				<property name="path" value="Hips/Spine/Spine1/Spine2/RightShoulder/RightArm/RightForeArm"/>
+				<property name="path" value="CATRigHub003/CATRigHub003Bone002/CATRigSpine1/CATRigSpine2/CATRigHub004/CATRigRArmCollarbone/CATRigRArm1/CATRigRArm2/CATRigRArmPalm"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>
@@ -385,7 +433,7 @@
 			</collider>
 			<collider>
 				<property name="tag" value="E_BP_Head"/>
-				<property name="path" value="Hips/Spine/Spine1/Spine2/Neck/Head"/>
+				<property name="path" value="CATRigHub003/CATRigHub003Bone002/CATRigSpine1/CATRigSpine2/CATRigHub004/CATRigSpine1 1/CATRigSpine2 1/CATRigHub005/CATRigHub005Bone001"/>
 				<property name="collisionLayer" value="0"/>
 				<property name="ragdollLayer" value="21" />
 				<property name="collisionScale" value="1 1 1"/>

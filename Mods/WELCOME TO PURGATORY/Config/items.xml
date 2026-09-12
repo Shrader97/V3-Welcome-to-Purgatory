@@ -294,57 +294,56 @@
         </effect_group>
     </append>
 
-    <remove xpath="items/item[@name='drugSteroids']"/>
+    <append xpath="/items">
 
-    <insertAfter xpath="items/item[@name='drugAntibiotics']">
-
-        <item name="resourceSyringe">
-            <property name="HoldType" value="45"/>
-            <property name="CustomIcon" value="drugSteroids" />
-            <property name="Meshfile" value="@:Other/Items/Health/syringeMedical_01Prefab.prefab"/>
-            <property name="DropMeshfile" value="@:Other/Items/Health/syringeMedical_01Prefab.prefab"/>
-            <property name="Material" value="MresourceCoal"/>
-            <property name="Stacknumber" value="15000"/> <!-- STK resource -->
-            <property name="FuelValue" value="100"/>
-            <property name="EconomicValue" value="10"/>
-            <property name="EconomicBundleSize" value="10"/>
-            <property name="Group" value="Resources"/>
-            <property name="CraftingIngredientTime" value="0.5"/>
-            <property name="SoundPickup" value="coal_grab"/>
-            <property name="SoundPlace" value="coal_place"/>
+        <item name="resourceEmptyHoneycomb">
+            <property name="Extends" value="resourceWood"/>
+            <property name="Stacknumber" value="25"/>
+            <property name="HoldType" value="3"/>
+            <property name="Meshfile" value="#@modfolder:Resources/empty_honeycomb.unity3d?empty_honeycomb"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/empty_honeycomb.unity3d?empty_honeycomb"/>
         </item>
 
+		<item name="foodHoneycomb">
+			<property name="CustomIcon" value="foodHoneycomb"/>
+			<property name="Tags" value="food,medical,medicalSkill"/>
+			<property name="HoldType" value="21"/>
+			<property name="DisplayType" value="foodCureInfection"/>
+			<property name="Meshfile" value="#@modfolder:Resources/honeycomb.unity3d?honeycomb"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/honeycomb.unity3d?honeycomb"/>
+			<property name="Material" value="Morganic"/>
+			<property name="EconomicValue" value="16"/>
+			<property name="Stacknumber" value="20"/> <!-- STK food -->
+			<property name="Group" value="Science,CFChemicals,Medical,TCMedical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<effect_group tiered="false" name="Food Tier 0">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
 
-        <item name="drugSteroids">
-            <property name="Extends" value="drugPainkillers"/>
-            <property name="DisplayType" value="drugSteroids"/>
-            <property name="HoldType" value="86"/>
-            <property name="Meshfile" value="@:Other/Items/Health/syringeMedical_01Prefab.prefab"/>
-            <property name="EconomicValue" value="250"/>
-            <property name="UnlockedBy" value="craftingMedical"/><!-- perkPhysician, -->
-            <property name="Group" value="Science,Medical,TCMedical"/>
-            <property name="SoundPickup" value="steroids_grab"/>
-            <property name="SoundPlace" value="steroids_place"/>
+        <item name="resourceFullHoneycomb">
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="HoldType" value="3"/>
+            <property name="Meshfile" value="#@modfolder:Resources/full_honeycomb.unity3d?full_honeycomb"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/full_honeycomb.unity3d?full_honeycomb"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="resourceFullHoneycomb"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="DescriptionKey" value="resourceFullHoneycombDesc"/>
             <property class="Action0">
-                <property name="Class" value="Eat"/>
-                <property name="Delay" value="3"/>
-                <property name="Sound_start" value="player_syringe"/>
-                <property name="Create_item" value="resourceSyringe"/>
-				<property name="Create_item_count" value="1"/>
+                <property name="Create_item" value="foodHoneycomb,resourceEmptyHoneycomb"/>
+                <property name="Create_item_count" value="1,1"/>
             </property>
-            <effect_group tiered="false" name="Drug Tier 3">
-                <display_value name="dCarryCapacity" value="50"/>
-                <display_value name="dRunSpeed" value=".1"/>
-                <display_value name="$waterAmountAdd" value="-30"/>
-                <display_value name="dDuration" value="720"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSteroidsDuration" operation="add" value="723"/>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSteroidsDuration" operation="set" value="2163">
-                    <requirement name="CVarCompare" cvar="$buffDrugSteroidsDuration" operation="GT" value="2163"/></triggered_effect>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSteroids"/>
-            </effect_group>
         </item>
-
-    </insertAfter>
+        
+    </append>
 
     <append xpath="/items">
 
@@ -812,6 +811,26 @@
 			<property name="EconomicBundleSize" value="1000"/>
 			<property name="Group" value="Resources"/>
 		</item>
+
+        <item name="meleeHandAnimalShark">
+            <property name="Extends" value="meleeHandMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="HoldType" value="35"/>
+            <property class="Action0">
+                <property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
+                <property name="Range" value="5"/>
+                <property name="DamageEntity" value="10"/>
+                <property name="DamageBlock" value="6"/>
+            </property>
+            <effect_group name="meleeHandAnimalShark" tiered="false">
+                <passive_effect name="ModSlots" operation="base_set" value="0"/>
+                <!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/> A16 .7 -->
+                <passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+                    buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+                    weights=".11,.07,.07,.05,.29,.36,.11"/>
+            </effect_group>
+        </item>
 
 		<item name="meleeHandZombieMiniBehemoth">
 			<property name="Extends" value="meleeHandZombiePartyGirl"/>
@@ -13126,7 +13145,7 @@
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="65"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="35"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables,buffBeer"/>
 			</effect_group>
 		</item>
 
@@ -16412,12 +16431,12 @@
 		<property name="TintColor" value="255,175,175"/>			
 	</append>	
 
-	<append xpath="items/item[@name='foodHoney']">		
+	<!--append xpath="items/item[@name='foodHoney']">		
 		<property name="Meshfile" value="#@modfolder:Resources/FoodModel.unity3d?foodHoney.Prefab"/>
 		<property name="DropMeshfile" value="#@modfolder:Resources/FoodModel.unity3d?foodHoney.Prefab"/>
 		<property name="DropScale" value="1.25"/>	
 		<property name="TintColor" value="255,189,75"/>		
-	</append>
+	</append-->
 	<append xpath="items/item[@name='foodCanBeef']">		
 		<property name="DropMeshfile" value="@:Other/Items/Food/cannedFood_BeefPrefab.prefab"/>
 		<property name="DropScale" value="1.5"/>		

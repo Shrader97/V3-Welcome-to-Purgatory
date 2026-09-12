@@ -450,6 +450,71 @@
 
         </entity_class>
 
+				<!-- *** ZOMBIE_DOG -->
+		<entity_class name="animalInfernalDog" extends="animalWolf">
+			<property name="PreviousTier" value="animalCoyote"/>
+			<property name="Class" value="EntityZombieDog"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="EntityFlags" value="animal,zombie"/>
+			<property name="Tags" value="entity,animal,zombie,zombieAnimal,hostile,dog,perkAT03,perkAT04,perkAT05,special"/>
+			<property name="Prefab" value="#@modfolder:Resources/Devildog.unity3d?Infernal_Dog.prefab"/>
+			<property name="PrefabCombined" value="true"/>
+			<property name="AvatarController" value="AvatarAnimalController" />
+            <property name="ModelType" value="Standard" />
+            <property name="HasRagdoll" value="false" />
+            <property name="HasDeathAnim" value="true" />
+            <property name="RootMotion" value="false" />
+			<property name="PhysicsBody" value="devildog"/>
+			<property name="SoundRandomTime" value="20"/>
+			<property name="SoundRandom" value="zombiedogroam"/>
+			<property name="SoundAlertTime" value="10"/>
+			<property name="SoundAlert" value="zombiedogalert"/>
+			<property name="SoundHurt" value="zombiedogpain"/>
+			<property name="SoundDeath" value="zombiedogdeath"/>
+			<property name="SoundAttack" value="zombiedogattack"/>
+			<property name="SoundSense" value="zombiedogsense"/>
+			<property name="SoundGiveUp" value="zombiedoggiveup"/>
+			<property name="SoundStepType" value="dogstep"/>
+
+			<property name="AIFeralSense" value="1.6"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="Territorial"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityBandit,20"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,EntityBandit"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="flags=edible"/>
+			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,22,20,EntityBandit,0,-8"/>
+			<property name="AITarget-5" value=""/>
+
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value=".45"/>
+			<property name="MoveSpeedNight" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.3"/>
+			<property name="MoveSpeedPanic" value="1.5"/>
+
+			<property name="HandItem" value="meleeHandAnimalZombieDog"/>
+
+			<property name="Immunity" value="sickness;disease;wellness"/> <!-- bleeding; -->
+			<property name="PainResistPerHit" value=".9"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="10"/> <!-- animalZombieDog -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+
+			<!-- <drop event="Destroy" name="resourceAnimalFat" tag="butcherHarvest" count="2"/> -->
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffRadiationPool"/>
+			</effect_group>
+		</entity_class>
+
         <entity_class name="animalHornet" extends="animalTemplateHostile">
             <property name="UserSpawnType" value="Menu" />
             <property name="Tags" value="entity,animal,zombie,hostile,hornet" />
@@ -5728,7 +5793,7 @@
 			<property name="SoundHurt" value="zombiefemale2pain"/>
 			<property name="SoundDeath" value="zombiefemale2death"/>
 			<property name="SoundAttack" value="GoodBoy"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV2.unity3d?CheerLeader0001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?CheerLeader0001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -5786,7 +5851,7 @@
 			<property name="SoundHurt" value="zombiefemale2pain"/>
 			<property name="SoundDeath" value="zombiefemale2death"/>
 			<property name="SoundAttack" value="GoodBoy"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV2.unity3d?CheerLeaderFeral001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?CheerLeaderFeral001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -5838,7 +5903,7 @@
 			<property name="PreviousTier" value="zombieCheerLeaderFeral"/>
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV2.unity3d?CheerLeaderRadiated001"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?CheerLeaderRadiated001"/> 
 			<!-- Gameplay zombieKarenRadiated -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -5861,7 +5926,7 @@
 			<property name="SoundHurt" value="zombiemale2pain"/>
 			<property name="SoundDeath" value="zombiemale2death"/>
 			<property name="SoundSense" value="yeehaw"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV2.unity3d?Cowboy0001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?Cowboy0001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -5919,7 +5984,7 @@
 			<property name="SoundHurt" value="zombiemale2pain"/>
 			<property name="SoundDeath" value="zombiemale2death"/>
 			<property name="SoundSense" value="yeehaw"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV2.unity3d?CowboyFeral0001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?CowboyFeral0001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -5971,7 +6036,7 @@
 			<property name="PreviousTier" value="zombieCowboyFeral"/>
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV2.unity3d?CowboyRadiated0001"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?CowboyRadiated0001"/> 
 			<!-- Gameplay zombieKarenRadiated -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -5994,7 +6059,7 @@
 			<property name="SoundAttack" value="zombiemale2attack"/>
 			<property name="SoundHurt" value="zombiemale2pain"/>
 			<property name="SoundDeath" value="zombiemale2death"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV2.unity3d?Farmer001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?Farmer001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -6052,7 +6117,7 @@
 			<property name="SoundAttack" value="zombiemale2attack"/>
 			<property name="SoundHurt" value="zombiemale2pain"/>
 			<property name="SoundDeath" value="zombiemale2death"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV2.unity3d?FarmerFeral001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?FarmerFeral001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -6104,7 +6169,7 @@
 			<property name="PreviousTier" value="zombieFarmerFeral"/>
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV2.unity3d?CowboyRadiated0001"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?CowboyRadiated0001"/> 
 			<!-- Gameplay zombieKarenRadiated -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -6128,7 +6193,7 @@
 			<property name="SoundHurt" value="zombiefemale2pain"/>
 			<property name="SoundDeath" value="zombiefemale2death"/>
 			<property name="SoundAttack" value="GoodBoy"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV3.unity3d?Stripper001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?Stripper001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -6186,7 +6251,7 @@
 			<property name="SoundHurt" value="zombiefemale2pain"/>
 			<property name="SoundDeath" value="zombiefemale2death"/>
 			<property name="SoundAttack" value="GoodBoy"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV3.unity3d?StripperFeral001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?StripperFeral001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -6238,7 +6303,7 @@
 			<property name="PreviousTier" value="zombieStripperFeral"/>
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV3.unity3d?StripperRadiated001"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?StripperRadiated001"/> 
 			<!-- Gameplay zombieKarenRadiated -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -6319,7 +6384,7 @@
 			<property name="SoundHurt" value="crawler_pain"/>
 			<property name="SoundDeath" value="crawler_death"/>
 			<property name="SoundAttack" value="crawler_attack"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?FeralSpaceman0001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?FeralSpaceman0001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -6371,7 +6436,7 @@
 			<property name="PreviousTier" value="zombieFeralSpaceman"/>
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?RadiatedSpaceman0001"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?RadiatedSpaceman0001"/> 
 			<!-- Gameplay zombieKarenRadiated -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -6394,7 +6459,7 @@
 			<property name="SoundHurt" value="zombiemale2pain"/>
 			<property name="SoundDeath" value="zombiemale2death"/>
 			<property name="SoundSense" value="yeehaw"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?Jason0001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?Jason0001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -6452,7 +6517,7 @@
 			<property name="SoundHurt" value="zombiemale2pain"/>
 			<property name="SoundDeath" value="zombiemale2death"/>
 			<property name="SoundSense" value="yeehaw"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?JasonFeral0001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?JasonFeral0001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -6504,7 +6569,7 @@
 			<property name="PreviousTier" value="zombieJasonFeral"/>
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?RadiatedJason0001"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?RadiatedJason0001"/> 
 			<!-- Gameplay zombieKarenRadiated -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -6527,7 +6592,7 @@
 			<property name="SoundHurt" value="zombiemale2pain"/>
 			<property name="SoundDeath" value="zombiemale2death"/>
 			<property name="SoundSense" value="yeehaw"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?MrScream0001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MrScream0001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -6585,7 +6650,7 @@
 			<property name="SoundHurt" value="zombiemale2pain"/>
 			<property name="SoundDeath" value="zombiemale2death"/>
 			<property name="SoundSense" value="yeehaw"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?MrFeralScream001" />
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MrFeralScream001" />
 			<property name="SoundStepType" value="barehvystep"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="2"/>
@@ -6637,7 +6702,7 @@
 			<property name="PreviousTier" value="zombieMrFeralScream"/>
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?MrRadiatedScream001"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MrRadiatedScream001"/> 
 			<!-- Gameplay zombieKarenRadiated -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -6654,7 +6719,7 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="SizeScale" value="0.9"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?MrRadiatedScream001"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?MrRadiatedScream001"/>
 
 			<property name="SoundRandom" value="zombiefemaleroam"/>
 			<property name="SoundAlert" value="zombiefemalealert"/>
@@ -6695,7 +6760,7 @@
 			<property name="PreviousTier" value="zombieKaren"/>
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?FeralKaren001"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?FeralKaren001"/>
 
 			<!-- Gameplay zombieKarenFeral -->
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
@@ -6716,7 +6781,7 @@
 			<property name="PreviousTier" value="zombieKarenFeral"/>
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieV4.unity3d?RadiatedKaren001"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Zombie.unity3d?RadiatedKaren001"/> 
 			<!-- Gameplay zombieKarenRadiated -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->

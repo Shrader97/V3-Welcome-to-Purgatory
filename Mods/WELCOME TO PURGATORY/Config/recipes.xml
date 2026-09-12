@@ -3778,23 +3778,14 @@
         </recipe>
 
 
+        <recipe name="resourceEmptyHoneycomb" count="1" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="resourceWood" count="20"/>
+            <ingredient name="resourceNail" count="4"/>
+        </recipe>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <recipe	name="foodHoney" count="1">
+		    <ingredient	name="foodHoneycomb" count="2"/>
+	    </recipe>
 
     <!-- coin stuff -->
 

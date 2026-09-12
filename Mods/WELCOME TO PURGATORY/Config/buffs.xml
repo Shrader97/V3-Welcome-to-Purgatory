@@ -1694,6 +1694,21 @@
 			</effect_group>
 		</buff>
 
+		<buff name="buffSulferPitWarning" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="1"/>
+
+			<!-- without the 2nd buff the buff display will flicker -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSulferPitWarningEffect"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulferPitWarningEffect" name_key="buffSulferPitWarningEffectName" description_key="buffSulferPitWarningEffectDesc" icon="ui_game_symbol_fire">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+		</buff>
+
 		<buff name="buffSulfurBurnCatch" name_key="buff Infection Catch" hidden="true">
 			<damage_type value="Bashing"/>
 			<stack_type value="ignore"/>
@@ -1703,14 +1718,14 @@
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="infectionCounter" operation="set" value="25">
 					<requirement name="!HasBuff" buff="buffSulfurBurnMain"/>
 				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="infectionCounter" operation="add" value="250">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="infectionCounter" operation="add" value="2">
 					<requirement name="HasBuff" buff="buffSulfurBurnMain"/>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSulfurBurnMain"/>
 			</effect_group>
 		</buff>
 
-		<buff name="buffSulfurBurnMain" name_key="buff Infection Main" hidden="true" icon="ui_game_symbol_infection">
+		<buff name="buffSulfurBurnMain" name_key="buff Infection Main" hidden="true" icon="ui_game_symbol_fire">
 			<damage_type value="Infection"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1901,7 +1916,7 @@
 			</effect_group>
 		</buff>
 
-		<buff name="buffSulfurBurn01Untreated" name_key="buffSulfurBurn01UntreatedName" description_key="buffSulfurBurn01UntreatedDesc" tooltip_key="buffSulfurBurn01UntreatedTooltip" icon="ui_game_symbol_infection" icon_color="255,128,0">
+		<buff name="buffSulfurBurn01Untreated" name_key="buffSulfurBurn01UntreatedName" description_key="buffSulfurBurn01UntreatedDesc" tooltip_key="buffSulfurBurn01UntreatedTooltip" icon="ui_game_symbol_fire" icon_color="255,0,0">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1920,7 +1935,7 @@
 			</effect_group>
 		</buff>
 
-		<buff name="buffSulfurBurn01GetBetter" name_key="buffSulfurBurn01GetBetterName" description_key="buffSulfurBurn01GetBetterDesc" icon="ui_game_symbol_infection_better">
+		<buff name="buffSulfurBurn01GetBetter" name_key="buffSulfurBurn01GetBetterName" description_key="buffSulfurBurn01GetBetterDesc" icon="ui_game_symbol_fire" icon_color="0,128,0">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1937,7 +1952,7 @@
 			</effect_group>
 		</buff>
 
-		<buff name="buffSulfurBurn02Untreated" name_key="buffSulfurBurn02UntreatedName" description_key="buffSulfurBurn02UntreatedDesc" icon="ui_game_symbol_infection" icon_color="255,0,0">
+		<buff name="buffSulfurBurn02Untreated" name_key="buffSulfurBurn02UntreatedName" description_key="buffSulfurBurn02UntreatedDesc" icon="ui_game_symbol_fire" icon_color="255,0,0">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1960,7 +1975,7 @@
 			</effect_group>
 		</buff>
 
-		<buff name="buffSulfurBurn02GetBetter" name_key="buffSulfurBurn02GetBetterName" description_key="buffSulfurBurn02GetBetterDesc" icon="ui_game_symbol_infection_better">
+		<buff name="buffSulfurBurn02GetBetter" name_key="buffSulfurBurn02GetBetterName" description_key="buffSulfurBurn02GetBetterDesc" icon="ui_game_symbol_fire" icon_color="0,128,0">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1981,7 +1996,7 @@
 			</effect_group>
 		</buff>
 
-		<buff name="buffSulfurBurn03Untreated" name_key="buffSulfurBurn03UntreatedName" description_key="buffSulfurBurn03UntreatedDesc" icon="ui_game_symbol_infection" icon_color="255,0,0" icon_blink="true">
+		<buff name="buffSulfurBurn03Untreated" name_key="buffSulfurBurn03UntreatedName" description_key="buffSulfurBurn03UntreatedDesc" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -2007,7 +2022,7 @@
 			</effect_group>
 		</buff>
 
-		<buff name="buffSulfurBurn03GetBetter" name_key="buffSulfurBurn03GetBetterName" description_key="buffSulfurBurn03GetBetterDesc" icon="ui_game_symbol_infection_better">
+		<buff name="buffSulfurBurn03GetBetter" name_key="buffSulfurBurn03GetBetterName" description_key="buffSulfurBurn03GetBetterDesc" icon="ui_game_symbol_fire" icon_color="0,128,0">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -2031,13 +2046,13 @@
 			</effect_group>
 		</buff>
 
-		<buff name="buffSulfurBurn04" tooltip_key="buffSulfurBurn04Tooltip" icon="ui_game_symbol_infection" icon_color="255,0,0">
+		<buff name="buffSulfurBurn04" tooltip_key="buffSulfurBurn04Tooltip" icon="ui_game_symbol_fire" icon_color="255,0,0">
 			<damage_type value="Infection"/>
 			<stack_type value="ignore"/>
 			<duration value=".1"/>
 
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="99999999"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="5"/>
 				<!-- Clear out counters -->
 				<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="infectionCounter" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfDied" action="RemoveCVar" cvar="infectionCounterRespawn"/>
@@ -2071,6 +2086,24 @@
 			<stack_type value="replace"/>
 			<duration value="2"/>
 			<display_value_key value="Resisted Fire"/>
+		</buff>
+
+		<buff name="buffSulfuricRetardantArmorLiner" name_key="modArmorSulfuricRetardantLiner" description_key="modArmorSulfuricRetardantLinerDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value=".25" tags="buffSulfurBurnCatch"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfuricRetardantResistedDisplay" name_key="buffSulfuricRetardantResistedDisplayName" description_key="buffSulfuricRetardantResistedDisplayDesc" tooltip_key="buffSulfuricRetardantResistedDisplayTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Sulfuric"/>
 		</buff>
 
     </append>

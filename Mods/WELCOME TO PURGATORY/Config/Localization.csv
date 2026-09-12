@@ -350,6 +350,11 @@ modFacialPiercingsDesc,"The risk of infection is not enough of a challenge? Try 
 
 
 
+resourceEmptyHoneycomb,"Empty honey frame"
+resourceEmptyHoneycombDesc,"Used in beekeeping. Place it in the beehive, and the bees will fill the frame with honey."
+resourceFullHoneycomb,"Full honey frame"
+resourceFullHoneycombDesc,"To eat the honey, simply remove it from the frame"
+foodHoney,"Honey"
 
 
 
