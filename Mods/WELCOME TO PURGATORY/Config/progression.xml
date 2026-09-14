@@ -552,7 +552,7 @@
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,120" value="1" tags="thrownGrenade"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,120" value="1" tags="mineCookingPot"/>
 
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,120" value="1" tags="gunT0GrenadeLauncher"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,120" value="1" tags="gunT0GrenadeLauncher"/>
                 
                 <passive_effect name="CraftingTier" operation="base_add" level="4,6,8,10,12" value="1,2,3,4,5" tags="gunT0GrenadeLauncher"/>
 
@@ -560,7 +560,7 @@
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,120" value="1" tags="thrownGrenadeContact"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,120" value="1" tags="mineHubcap"/>
 
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,120" value="1" tags="gunT1GrenadeLauncher"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,120" value="1" tags="gunT1GrenadeLauncher"/>
                 
                 <passive_effect name="CraftingTier" operation="base_add" level="18,22,26,30,34" value="1,2,3,4,5" tags="gunT1GrenadeLauncher"/>
 
@@ -571,14 +571,13 @@
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,120" value="1" tags="thrownPumpkinGrenade"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,120" value="1" tags="thrownStickyPumpkinGrenade"/>
 
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,120" value="1" tags="gunT3GrenadeLauncher"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="42,120" value="1" tags="gunT3GrenadeLauncher"/>
                 
                 <passive_effect name="CraftingTier" operation="base_add" level="42,48,54,60,66" value="1,2,3,4,5" tags="gunT3GrenadeLauncher"/>
 
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,120" value="1" tags="resourceRocketTip,resourceRocketCasing,ammoRocketFrag,ammoRocketHE"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,120" value="1" tags="thrownAdvGrenadeContact,thrownAdvGrenade"/>
 
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,120" value="1" tags="gunExplosivesT3RocketLauncher"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,120" value="1" tags="gunExplosivesT3RocketLauncher"/>
                 
                 <passive_effect name="CraftingTier" operation="base_add" level="60,70,80,90,120" value="1,2,3,4,5" tags="gunExplosivesT3RocketLauncher"/>
