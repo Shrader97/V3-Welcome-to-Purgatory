@@ -302,6 +302,7 @@
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="76,100" value="1" tags="meleeWpnBladeT4Chevalier"/>
 
                 <passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,100" value="1,2,3,4,5,5" tags="meleeWpnBladeT0BoneKnife"/>
+                <passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,100" value="1,2,3,4,5,5" tags="meleeWpnBladeT0BoneDagger"/>
                 <passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,100" value="1,2,3,4,5,5" tags="meleeWpnBladeT1HuntingKnife"/>
                 <passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,100" value="1,2,3,4,5,5" tags="meleeWpnBladeT1RustyKatana"/>
                 <passive_effect name="CraftingTier" operation="base_add" level="30,35,36,43,51,100" value="1,2,3,4,5,5" tags="meleeWpnBladeT2Wakizashi"/>
