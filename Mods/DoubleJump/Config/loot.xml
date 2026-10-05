@@ -1,0 +1,174 @@
+<configs>
+	
+	         <!-- Loot Skills Magazine -->
+
+<append xpath="/lootcontainers/lootgroup[@name='skillMagazines']">
+<item name="Jumping_Master"/>
+	</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestRewardSkillMagazinesAll01']">
+        <item name="Jumping_Master"/>
+	</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestRewardSkillMagazinesAll']">
+       <item name="Jumping_Master"/>
+
+	</append>
+<append xpath="/lootcontainers/lootgroup[@name='weaponSkillMagazinesOnly']">
+        <item name="Jumping_Master"/>
+        
+</append>
+        <append xpath="/lootcontainers/lootgroup[@name='groupMilitaryFootlocker01']">
+        <item name="Jumping_Master"/>
+        
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupGunSafeSecure']">
+        <item name="Jumping_Master"/>
+        
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupSafeBooksAndMagazines']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupLargeWeaponBag']">
+        <item name="Jumping_Master"/>
+
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupSmallWeaponBag']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestSchematics']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupHiddenStash01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupLocker02']">
+        <item name="Jumping_Master"/>
+
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupDesks01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupLuggage']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupLuggage02']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupLuggage01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT5_05']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT5_04']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT4_07']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupReinforcedChestT3_05']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupReinforcedChestT3_05']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss02']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupZpackPlague02']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong02']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg02']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupCampingTents01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupBackpacks01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupBackpacksBooks']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupCrackabookCrate03']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupCrackabookCrate02']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupCrackabookCrate01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupCrackabookShelves01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupSingleBooks01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupBookPile01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupMailbox02']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupMailbox01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupBookcase02']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupBookcase01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupBookcase02']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupBookcase01']">
+        <item name="Jumping_Master"/>
+
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupFileCabinet01']">
+        <item name="Jumping_Master"/>
+
+</append>
+
+
+
+</configs>

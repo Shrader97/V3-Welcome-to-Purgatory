@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+  <append xpath="/buffs">
+    <!-- Permanent buff: stays after death (remove_on_death="false").
+         It is hidden. To show it on the HUD, remove hidden="true" and add
+         icon="<an icon copied from a vanilla buff>" icon_color="0,255,0" -->
+    <buff name="buffKangaroo"
+          name_key="buffKangarooName"
+          description_key="buffKangarooDesc"
+          tooltip_key="buffKangarooTooltip"
+          hidden="true"
+          remove_on_death="false">
+      <stack_type value="ignore"/>
+      <duration value="0"/>
+    </buff>
+  </append>
+</configs>

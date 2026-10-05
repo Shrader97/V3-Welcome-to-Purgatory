@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+  <!-- Jump settings -->
+  <Property name="ExtraJumps" value="1"/>
+  <Property name="NoFallDamage" value="true"/>
+  <Property name="StaminaCost" value="5"/>
+  <Property name="Cooldown" value="0.2"/>
+  <Property name="ForwardBoost" value="1"/>
+  <Property name="ControllerForce" value="0.2"/>
+
+  <!-- Keys -->
+  <Property name="ToggleKey" value="None"/>
+  <Property name="ReloadKey" value="F8"/>
+  <Property name="JumpKey" value="Space"/>
+  <Property name="Debug" value="true"/>
+
+  <!-- Unlock methods: any enabled one unlocks the double jump -->
+  <Property name="UseBuff" value="true"/>
+  <Property name="BuffName" value="buffKangaroo"/>
+
+  <Property name="UsePerk" value="true"/>
+  <Property name="PerkName" value="perkCanguro"/>
+  <Property name="PerkLevelRequired" value="2"/>
+
+  <Property name="UseBooks" value="true"/>
+  <Property name="BookCvar" value="kangarooReads"/>
+  <Property name="BooksRequired" value="60"/>
+
+  <!-- Messages: text and color (hex RGB, FF0000 = red, 00FF00 = green, FFFFFF = white) -->
+  <!-- In ProgressText you can use {current} and {required} -->
+  <Property name="ProgressText" value="Jumping Master read: {current}/{required}"/>
+  <Property name="ProgressColor" value="00FF00"/>
+  <Property name="UnlockText" value="You unlocked Double Jump! Press jump again in mid-air."/>
+  <Property name="UnlockColor" value="FF0000"/>
+</Config>

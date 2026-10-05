@@ -1,0 +1,32 @@
+ <config>
+        <append xpath="/items">
+
+
+
+<item name="Jumping_Master">
+	<property name="Extends" value="masterSkillMagazine"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="Tags" value="EACSM"/>
+	<property name="CustomIcon" value="Jumping_Master"/>
+	<property name="DescriptionKey" value="Jumping_MasterDesc"/>
+        <property name="ItemTypeIcon" value="bookK"/>
+        <property name="AltItemTypeIcon" value="book_readK"/>
+	<effect_group tiered="false">
+		<requirement name="NotHasBuff" buff="buffKangaroo"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="kangarooReads" operation="add" value="1"/>
+
+<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffKangaroo">
+	<requirement name="CVarCompare" cvar="kangarooReads" operation="GTE" value="60"/>
+</triggered_effect>
+
+<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+	<requirement name="CVarCompare" cvar="kangarooReads" operation="GTE" value="60"/>
+</triggered_effect>
+	</effect_group>
+</item>
+
+
+</append>
+
+</config>
+

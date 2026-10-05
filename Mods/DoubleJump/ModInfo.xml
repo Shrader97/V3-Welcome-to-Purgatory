@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="DoubleJump"/>
+	<DisplayName value="DoubleJump"/>
+    <Description value="Added DoubleJump"/>
+    <Author value="igor"/>
+    <Version value="1.0.0.0"/>
+	<Website value="https://ko-fi.com/s/b84b545a13"/>
+	<SkipWithAntiCheat value="false" />
+</xml>
