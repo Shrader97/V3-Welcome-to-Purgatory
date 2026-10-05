@@ -744,6 +744,32 @@
             <property name="FilterTags" value="MC_outdoor,SC_decor"/>
         </block>
 
+        <block name="BuffetTable001"> <!-- biome decoration -->
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DisplayType" value="blockHardenedMulti"/>
+            <property name="Material" value="Mplastics"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/CampBlocks.unity3d?Kitchen.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="MultiBlockDim" value="2,3,2"/>
+            <property name="ImposterDontBlock" value="true"/>
+			<property name="MaxDamage" value="5000"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="BigDecorationRadius" value="3"/>
+			<property class="RepairItems">
+				<property name="resourceScrapPolymers" value="2"/>
+			</property>
+            <property name="StabilitySupport" value="true"/>
+			<drop event="Harvest" name="resourceWood" count="2,5" tag="allHarvest,lumberjackHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="25,50" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="drinkJarBoiledWater" count="2,5"/>
+			<drop event="Destroy" name="resourceWood" count="2,5"/>
+            <drop event="Destroy" count="0"/>
+            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
+        </block>
+
         <block name="resourceSulfurRock01"> <!-- biome decoration -->
             <property name="CreativeMode" value="Dev"/>
             <property name="DisplayType" value="blockHardenedMulti"/>

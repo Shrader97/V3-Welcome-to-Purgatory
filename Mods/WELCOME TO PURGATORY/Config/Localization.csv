@@ -1347,18 +1347,21 @@ challengeBurntUseReducerDesc,A shot of [DECEA3]Fragile Gas Mask[-] will help inc
 challengeBurntUseReducerShort,Use a Fragile Gas Mask.
 
 
+craftingItemmodArrowReloadTier,Arrow Reload
+craftingItemmodCrossbowMagazineExtenderTier,Crossbow Magazine Extender
+craftingItemmodGunDrumTurretMagazineExtenderTier,Gun Drum Turret Magazine Extender
+craftingItemmodLightWeightTier,Light Weight
+craftingItemmodFacialPiercingsTier,Facial Piercings
 
+itemModsSkillMagazine,Modders Delight
+itemModsSkillMagazineDesc,"Read this magazine to improve your item-mod crafting skill, unlock new mod recipes, and eventually craft higher-quality mods.\n\nImproves mod crafting skill."
+craftingItemModsName,Mod Crafting
+craftingItemModsDesc,"Read [DECEA3]Modders Delight[-] to unlock three tiers of quality-based item mods and improve their crafted quality up to quality 6.\nBoost loot odds with [DECEA3]Treasure Hunter[-]."
+craftingItemModsTier1,Tier 1 Item Mods
+craftingItemModsTier2,Tier 2 Item Mods
+craftingItemModsTier3,Tier 3 Item Mods
 
-
-
-
-
-
-
-
-
-
-
+meleeWpnBatonT1JunkBaton,Junk Baton
 
 
 

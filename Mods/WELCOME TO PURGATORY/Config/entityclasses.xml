@@ -1037,7 +1037,7 @@
             <property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_mountainlion,clear_sleeper"/>
 
             <effect_group name="Base Effects">
-                <passive_effect name="HealthMax" operation="base_set" value="750"/>
+                <passive_effect name="HealthMax" operation="base_set" value="500"/>
             </effect_group>
         </entity_class>
 
@@ -1407,7 +1407,7 @@
             <property name="AITarget-5" value=""/>
 
             <property name="MoveSpeed" value=".4"/>
-            <property name="MoveSpeedAggro" value="1.65, 1.82"/>
+            <property name="MoveSpeedAggro" value="0.8, 1"/>
             
             <property name="MaxViewAngle" value="360"/>
             <property name="SightRange" value="100"/>
@@ -1558,7 +1558,7 @@
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="300"/>
-                <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBullDeco,radhands"/>
+                <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBullDeco"/>
             </effect_group>
 
             <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
