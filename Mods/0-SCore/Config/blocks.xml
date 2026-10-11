@@ -203,7 +203,7 @@
                 <!-- Each item that does not have a ItemWeight property will be weighed at this value. -->
                 <property name="MinimumWeight" value="0.1"/>
 
-                <property name="AutoRedeemChallenges" value="true"/>
+                <property name="AutoRedeemChallenges" value="false"/>
                 
                 <!-- Allows all players within a party to share their reading of books -->
                 <property name="SharedReading" value="true" />
