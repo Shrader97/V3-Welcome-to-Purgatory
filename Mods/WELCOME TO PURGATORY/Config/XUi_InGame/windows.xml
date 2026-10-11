@@ -1,30 +1,4 @@
 <configs>
-    <set xpath="/windows/window[@name='windowBackpack'][@width='606']/@width">1075</set>
-    <set xpath="/windows/window[@name='windowBackpack'][@height='349']/@height">416</set>
-
-	<set xpath="//grid[@controller='ItemPartStackGrid']/@rows">3</set>
-	<set xpath="//grid[@controller='ItemPartStackGrid']/@cols">3</set>
-	<set xpath="//grid[@controller='ItemPartStackGrid']/@cell_width">124</set>
-
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/rect[@controller='ContainerStandardControls'][@pos='320,0']/@pos">789,0</set>
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/label[@name='windowName'][@width='180']/@width">600</set>
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/label[@text='{currencyamount}'][@pos='492,-8']/@pos">961,-8</set>
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/sprite[@name='costIcon'][@pos='577,-10']/@pos">1046,-10</set>
-
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='content'][@height='303']/@height">370</set>
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='content']/sprite[@name='backgroundMain'][@width='606']/@width">1075</set>
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='content']/sprite[@name='backgroundMain'][@height='336']/@height">403</set>
-
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='content']/grid[@name='inventory'][@rows='5']/@rows">6</set>
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='content']/grid[@name='inventory'][@cols='9']/@cols">16</set>
-
-    <setattribute xpath="/windows/window[@name='windowBackpack']/rect[@name='header']" name="pos">0,9</setattribute>
-    <set xpath="/windows/window[@name='windowBackpack']/rect[@name='content'][@pos='0,-46']/@pos">0,-37</set>
-
-    <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue'][@rows='10']/@rows">12</set>
-    <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue'][@cols='9']/@cols">10</set>
-    <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue'][@cell_width='75']/@cell_width">62</set>
-    <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue'][@cell_height='75']/@cell_height">62</set>
 
 	<remove xpath="windows/window[@name='windowForgeInput']" />
 

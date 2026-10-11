@@ -1,7 +1,6 @@
 <configs>
     <set xpath="/progression/level/@max_level">500</set>
     <set xpath="/progression/attributes/@max_level">10</set>
-    <set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@operation='base_add'][@level='1,2,3,4,5'][@value='3,6,10,14,18']/@value">7,14,21,28,35</set>
 
     <remove xpath="/progression/perks/book[@name='perkShotgunMessiahBreachingSlugs']"/>
     <insertAfter xpath="/progression/perks/book[@name='perkShotgunMessiahDamage']">
