@@ -1,5 +1,5 @@
 <configs>
-  	<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack'][@size='7,10']/@size">10,12</set>
+  
     <insertAfter xpath="lootcontainers/lootgroup[@name='groupShamwayShelves02']">
         <lootgroup name="groupShradersShamwayShelves" count="0,5">
             <item name="Aged Prairie"  count="1" loot_prob_template="high"/>

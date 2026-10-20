@@ -1,7 +1,4 @@
 <configs>
-    <set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate'][@action='ModifyCVar'][@cvar='$encumbranceEffect'][@operation='multiply'][@value='0.026']/@value">0.013</set>
-
-    <set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity'][@operation='base_set'][@value='50']/@operation">base_add</set>
 
 	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
 		<effect_group name="buffFishTrapWater">
