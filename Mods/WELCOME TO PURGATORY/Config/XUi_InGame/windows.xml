@@ -1,5 +1,8 @@
 <configs>
-
+	<set xpath="//grid[@controller='ItemPartStackGrid']/@rows">3</set>
+	<set xpath="//grid[@controller='ItemPartStackGrid']/@cols">3</set>
+	<set xpath="//grid[@controller='ItemPartStackGrid']/@cell_width">124</set>
+	
 	<remove xpath="windows/window[@name='windowForgeInput']" />
 
 	<append xpath="/windows/window[@name='windowCompass']">	

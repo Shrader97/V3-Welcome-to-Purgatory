@@ -2630,7 +2630,13 @@
             <ingredient name="resourceAcid" count="1"/>
         </recipe>
 
-
+        <recipe name="toolBeaker" count="1" material_based="true" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
+            <ingredient name="resourceCrushedSand" count="50"/>
+            <ingredient name="resourceRockSmall" count="20"/>
+            <ingredient name="resourceScrapLead" count="40"/>
+            <ingredient name="resourceScrapIron" count="40"/>
+            <ingredient name="resourceClayLump" count="40"/>
+        </recipe>
 
 
 
