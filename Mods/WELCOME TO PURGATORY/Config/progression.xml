@@ -213,36 +213,6 @@
             
             </effect_group>
         </crafting_skill>
-
-            <!-- *** ammo_SKILLS -->
-        <crafting_skill name="CraftingJewelry" min_level="1" max_level="240" parent="attCrafting" name_key="CraftingJewelryName" desc_key="CraftingJewelryDesc" long_desc_key="CraftingJewelryLongDesc" icon="ui_game_symbol_jewelry">
-
-            <display_entry icon="modCopperBand" name_key="jewelryT1-1,jewelryT1-2" has_quality="false" unlock_level="40,80" >
-                <unlock_entry item="modCopperBand,modCopperNeckless,modCopperTonguePiercing" unlock_tier="1"/>
-                <unlock_entry item="modIronBand,modIronNeckless,modIronTonguePiercing" unlock_tier="2"/>
-            </display_entry>
-            <display_entry icon="modSilverBand" name_key="jewelryT2-1,jewelryT2-2" has_quality="false" unlock_level="120,160" >
-                <unlock_entry item="modSilverBand,modSilverNeckless,modSilverTonguePiercing" unlock_tier="1"/>
-                <unlock_entry item="modGoldBand,modGoldNeckless,modGoldTonguePiercing" unlock_tier="2"/>
-            </display_entry>
-            <display_entry icon="modPlatinumBand" name_key="jewelryT3-1,jewelryT3-2" has_quality="false" unlock_level="200,240" >
-                <unlock_entry item="modPlatinumBand,modPlatinumNeckless,modPlatinumTonguePiercing" unlock_tier="1"/>
-                <unlock_entry item="modTungstenBand,modTungstenNeckless,modTungstenTonguePiercing" unlock_tier="2"/>
-            </display_entry>
-            
-
-            <effect_group>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,240" value="1" tags="modCopperBand,modCopperNeckless,modCopperTonguePiercing"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,240" value="1" tags="modIronBand,modIronNeckless,modIronTonguePiercing"/>
-            
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="120,240" value="1" tags="modSilverBand,modSilverNeckless,modSilverTonguePiercing"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="160,240" value="1" tags="modGoldBand,modGoldNeckless,modGoldTonguePiercing"/>
-
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="200,240" value="1" tags="modPlatinumBand,modPlatinumNeckless,modPlatinumTonguePiercing"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="240,240" value="1" tags="modTungstenBand,modTungstenNeckless,modTungstenTonguePiercing"/>
-            </effect_group>
-        </crafting_skill>
-
     </append>
 
 	<append xpath="//crafting_skill[@name='craftingSledgehammers']">

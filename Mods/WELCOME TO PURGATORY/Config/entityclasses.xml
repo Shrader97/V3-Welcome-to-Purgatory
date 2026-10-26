@@ -380,7 +380,7 @@
 
         <entity_class name="animalPhoenix" extends="animalTemplateHostile">
             <property name="Class" value="EntityVulture"/>
-            <property name="SizeScale" value="0.1"/>
+            <property name="SizeScale" value="1"/>
             <property name="PhysicsBody" value="Phoenix"/>
             <property name="Tags" value="entity,animal,hostile,Shark,perkAT03"/> <!-- Credit for icon https://www.flaticon.com/authors/bzzrincantation -->
             <property name="AvatarController" value="AvatarAnimalController"/>	

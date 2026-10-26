@@ -43,10 +43,6 @@
 			<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />	
 		</crafting_category_list>
 
-		<crafting_category_list display_type="PreciousMetalForge">
-			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
-		</crafting_category_list>
-
 		<crafting_category_list display_type="writingDesk">
 			<crafting_category name="TCReading" icon="ui_game_symbol_book" display_name="lblCategoryReading" />
 			<crafting_category name="Map" icon="ui_game_symbol_map" display_name="Treasure Map" />
