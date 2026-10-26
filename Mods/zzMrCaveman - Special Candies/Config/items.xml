@@ -1,0 +1,161 @@
+<configs>
+
+    <append xpath="/items">
+
+        <item name="drugRockCrushers">
+            <property name="Extends" value="drugAtomJunkies"/>
+            <property name="Meshfile" value="@:Other/Items/Health/pillBottlePrefab.prefab"/>   
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>   
+            <property name="CustomIcon" value="drugRockBusters"/>
+            <property name="CustomIconTint" value="128,128,128"/>
+            <property name="HoldType" value="16"/>
+            <property name="DisplayType" value="drugRockCrushers"/>
+            <property name="EconomicValue" value="300"/>
+            <effect_group tiered="false" name="Candy Tier 1">
+                <display_value name="dBoostMelee" value=".2"/>
+                <display_value name="dDuration" value="60"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRockCrushersDuration" operation="add" value="260"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugRockCrushersDuration" operation="set" value="1083">
+                    <requirement name="CVarCompare" cvar="$buffDrugRockCrushersDuration" operation="GT" value="1083"/></triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugRockCrushers"/>
+
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+         </item>
+
+        <item name="drugBoostRange">
+            <property name="Extends" value="drugAtomJunkies"/>  
+            <property name="Meshfile" value="@:Other/Items/Health/pillBottlePrefab.prefab"/>   
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="CustomIcon" value="drugAtomJunkies"/>
+            <property name="CustomIconTint" value="128,128,128"/>
+            <property name="HoldType" value="16"/>
+             <property name="EconomicValue" value="300"/>
+            <property name="DisplayType" value="drugRockCrushers"/>
+            <effect_group tiered="false" name="Candy Tier 1">
+                <display_value name="dBoostMelee" value=".2"/>
+                <display_value name="dDuration" value="120"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugBoostRangeDuration" operation="add" value="220"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugBoostRangeDuration" operation="set" value="1083">
+                    <requirement name="CVarCompare" cvar="$buffDrugBoostRangeDuration" operation="GT" value="1083"/></triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugBoostRange"/>
+
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+         </item>
+
+        <item name="drugLeeching">
+            <property name="Extends" value="drugAtomJunkies"/>
+            <property name="Meshfile" value="@:Other/Items/Health/pillBottlePrefab.prefab"/>   
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="CustomIcon" value="drugHealthBar"/>
+            <property name="CustomIconTint" value="128,128,128"/>
+            <property name="HoldType" value="16"/>
+             <property name="EconomicValue" value="300"/>
+            <property name="DisplayType" value="drugRockCrushers"/>
+            <effect_group tiered="false" name="Candy Tier 1">
+                <display_value name="dLeeching" value=".2"/>
+                <display_value name="dDuration" value="60"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugLeechingDuration" operation="add" value="260"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugLeechingDuration" operation="set" value="1083">
+                    <requirement name="CVarCompare" cvar="$buffDrugLeechingDuration" operation="GT" value="1083"/></triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugLeeching"/>
+
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+         </item>
+
+        <item name="drugFasty">
+            <property name="Extends" value="drugAtomJunkies"/>
+            <property name="Meshfile" value="@:Other/Items/Health/pillBottlePrefab.prefab"/>   
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="CustomIcon" value="drugOhShitzDrops"/>
+            <property name="CustomIconTint" value="128,128,128"/>
+            <property name="HoldType" value="16"/>
+            <property name="EconomicValue" value="300"/>
+            <property name="DisplayType" value="drugRockCrushers"/>
+            <effect_group tiered="false" name="Candy Tier 1">
+                <display_value name="dFurny" value=".2"/>
+                <display_value name="dDuration" value="120"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugFastDuration" operation="add" value="220"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugFastDuration" operation="set" value="2083">
+                    <requirement name="CVarCompare" cvar="$buffDrugFastDuration" operation="GT" value="2083"/></triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugFast"/>
+
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+         </item>
+
+        <item name="drugManofSteel">
+            <property name="Extends" value="drugAtomJunkies"/>
+            <property name="Meshfile" value="@:Other/Items/Health/pillBottlePrefab.prefab"/>   
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="CustomIcon" value="drugNerdTats"/>
+            <property name="CustomIconTint" value="128,128,128"/>
+            <property name="HoldType" value="16"/>
+             <property name="EconomicValue" value="300"/>
+            <property name="DisplayType" value="drugRockCrushers"/>
+            <effect_group tiered="false" name="Candy Tier 1">
+                <display_value name="dManofSteel" value=".2"/>
+                <display_value name="dDuration" value="30"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugManofSteelDuration" operation="add" value="30"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugManofSteelDuration" operation="set" value="1083">
+                    <requirement name="CVarCompare" cvar="$buffDrugManofSteelDuration" operation="GT" value="1083"/></triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugManofSteel"/>
+
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+         </item>
+
+        <item name="drugHeadShotxp-bonus">
+            <property name="Extends" value="drugAtomJunkies"/>
+            <property name="Meshfile" value="@:Other/Items/Health/pillBottlePrefab.prefab"/>   
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="CustomIcon" value="drugSkullCrushers"/>
+            <property name="CustomIconTint" value="128,128,128"/>
+            <property name="HoldType" value="16"/>
+             <property name="EconomicValue" value="300"/>
+            <property name="DisplayType" value="drugRockCrushers"/>
+            <effect_group tiered="false" name="Candy Tier 1">
+                <display_value name="dHeadShotxp-bonus" value=".2"/>
+                <display_value name="dDuration" value="0"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugHeadShotxp-bonusDuration" operation="add" value="560"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugHeadShotxp-bonusDuration" operation="set" value="1083">
+                    <requirement name="CVarCompare" cvar="$buffDrugHeadShotxp-bonusDuration" operation="GT" value="1083"/></triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugHeadShotxp-bonus"/>
+
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+         </item>
+
+        <item name="DrugResourceful">
+            <property name="Extends" value="drugAtomJunkies"/>
+            <property name="Meshfile" value="@:Other/Items/Health/pillBottlePrefab.prefab"/>   
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="CustomIcon" value="drugSugarButts"/>
+             <property name="EconomicValue" value="300"/>
+            <property name="CustomIconTint" value="128,128,128"/>
+            <property name="HoldType" value="16"/>
+            <property name="DisplayType" value="drugRockCrushers"/>
+            <effect_group tiered="false" name="Candy Tier 1">
+                <display_value name="dbuffDrugResourceful" value=".2"/>
+                <display_value name="dDuration" value="0"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugbuffDrugResourcefulDuration" operation="add" value="160"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugbuffDrugResourcefulDuration" operation="set" value="1083">
+                    <requirement name="CVarCompare" cvar="$buffDrugResourcefulDuration" operation="GT" value="1083"/></triggered_effect>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugResourceful"/>
+
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+         </item>
+
+    </append>
+
+</configs>

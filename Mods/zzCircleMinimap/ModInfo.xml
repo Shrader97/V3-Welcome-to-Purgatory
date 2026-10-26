@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="CircleMinimap" />
+	<DisplayName value="Circle Minimap" />
+	<Description value="Round minimap in the top-left corner, drawn from your own explored map. Turns with your view, shows the same icons as the M map (traders, bedroll, land claim, quests, waypoints, vehicles...), and zooms out with speed in vehicles. F2 / F3 zoom, Delete toggles, F5 to move it and rebind its keys in game. Client-side only. Requires EAC off (DLL mod)." />
+	<Author value="Tasdln" />
+	<Version value="1.2.0" />
+	<Website value="" />
+	<SkipWithAntiCheat value="true" />
+</xml>

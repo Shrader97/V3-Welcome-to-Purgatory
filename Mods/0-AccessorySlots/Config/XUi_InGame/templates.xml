@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	One accessory slot cell. Vanilla's "equipment_stack_sdcs" (Data/Config/XUi_InGame/templates.xml, same on
+	V3.0.0 and V3.2.0) with our controller: same size and the same child names (background, itemIcon,
+	lockTypeIcon, durability*, stackValue) that XUiC_EquipmentStack looks up by id. No "slot" parameter -
+	accessory slots are not part of the 12-slot Equipment array. empty_sprite/empty_tooltip are set per cell
+	from code (XUiC_AccessorySlot.Bind), because which slot a cell shows is only known once a world is loaded.
+-->
+<config>
+	<append xpath="/templates">
+		<accessory_slot>
+			<rect depth="1" controller="AccessorySlots.XUiC_AccessorySlot, AccessorySlots" style="itemStack, hover" tooltip="" width="83" height="83">
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" />
+				<sprite depth="3" name="background" sprite="menu_empty3px" pos="3,-3" width="77" height="77" color="[mediumGrey]" type="sliced" fillcenter="false"/>
+				<sprite depth="1" name="highlightOverlay" color="[mediumGrey]" type="sliced"/>
+
+				<sprite depth="7" name="itemIcon" width="74" height="74" atlas="ItemIconAtlas" sprite="" pos="41,-41" pivot="center" foregroundlayer="true"/>
+				<sprite depth="8" name="lockTypeIcon" width="34" height="34" sprite="" pos="2,-12" foregroundlayer="true"/>
+
+				<sprite depth="3" name="durabilityBackground" width="77" height="10" color="185,0,0,255" type="sliced" pos="3, -66" globalopacitymod="0" />
+				<filledsprite depth="4" name="durabilityRemoveBackground" width="77" height="10" color="[darkGrey]" type="filled" pos="3, -66" globalopacitymod="0" />
+				<filledsprite depth="5" name="durability" width="77" height="10" color="[transparent]" type="filled" pos="3, -66" globalopacitymod="0" />
+
+				<label depth="8" name="stackValue" pos="0,-50" width="78" height="28" text="" font_size="26" justify="center"/>
+				<!-- The slot's name, only while it is empty and the game has no picture for it (XUiC_AccessorySlot.ShowLabel),
+				     so such a slot is not a blank box. Centred: it is the only thing in the cell then. -->
+				<label depth="9" name="slotLabel" pos="3,-30" width="77" height="22" text="" font_size="18" color="[white]" justify="center" overflow="shrinkcontent" effect="outline" effect_distance="1,1" effect_color="0,0,0,200"/>
+			</rect>
+		</accessory_slot>
+	</append>
+</config>

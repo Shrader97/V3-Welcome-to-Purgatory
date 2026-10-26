@@ -1,0 +1,43 @@
+<configs>
+
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolAnvil')]/@item" op="add">PreciousMetalForge</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolAnvil')]/@tags" op="add">PreciousMetalForge</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolAnvil')]/@item" op="add">JewelryBench</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolAnvil')]/@tags" op="add">JewelryBench</csv>
+
+
+
+    <append xpath="/progression/perks">
+            <!-- *** ammo_SKILLS -->
+        <crafting_skill name="CraftingJewelry" min_level="1" max_level="240" parent="attCrafting" name_key="CraftingJewelryName" desc_key="CraftingJewelryDesc" long_desc_key="CraftingJewelryLongDesc" icon="ui_game_symbol_jewelry">
+
+            <display_entry icon="itemCopperBand" name_key="jewelryT1-1,jewelryT1-2" has_quality="false" unlock_level="40,80" >
+                <unlock_entry item="itemCopperBand,itemCopperNeckless,itemCopperPiercing,itemCopperBelt,itemCopperBracelet" unlock_tier="1"/>
+                <unlock_entry item="itemIronBand,itemIronNeckless,itemIronPiercing,itemIronBelt,itemIronBracelet" unlock_tier="2"/>
+            </display_entry>
+            <display_entry icon="itemSilverBand" name_key="jewelryT2-1,jewelryT2-2" has_quality="false" unlock_level="120,160" >
+                <unlock_entry item="itemSilverBand,itemSilverNeckless,itemSilverPiercing,itemSilverBelt,itemSilverBracelet" unlock_tier="1"/>
+                <unlock_entry item="itemGoldBand,itemGoldNeckless,itemGoldPiercing,itemGoldBelt,itemGoldBracelet" unlock_tier="2"/>
+            </display_entry>
+            <display_entry icon="itemPlatinumBand" name_key="jewelryT3-1,jewelryT3-2" has_quality="false" unlock_level="200,240" >
+                <unlock_entry item="itemPlatinumBand,itemPlatinumNeckless,itemPlatinumPiercing,itemPlatinumBelt,itemPlatinumBracelet" unlock_tier="1"/>
+                <unlock_entry item="itemTungstenBand,itemTungstenNeckless,itemTungstenPiercing,itemTungstenBelt,itemTungstenBracelet" unlock_tier="2"/>
+            </display_entry>
+            
+
+            <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,240" value="1" tags="itemCopperBand,itemCopperNeckless,itemCopperPiercing,itemCopperBelt,itemCopperBracelet"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,240" value="1" tags="itemIronBand,itemIronNeckless,itemIronPiercing,itemIronBelt,itemIronBracelet"/>
+            
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="120,240" value="1" tags="itemSilverBand,itemSilverNeckless,itemSilverPiercing,itemSilverBelt,itemSilverBracelet"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="160,240" value="1" tags="itemGoldBand,itemGoldNeckless,itemGoldPiercing,itemGoldBelt,itemGoldBracelet"/>
+
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="200,240" value="1" tags="itemPlatinumBand,itemPlatinumNeckless,itemPlatinumPiercing,itemPlatinumBelt,itemPlatinumBracelet"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="240,240" value="1" tags="itemTungstenBand,itemTungstenNeckless,itemTungstenPiercing,itemTungstenBelt,itemTungstenBracelet"/>
+            </effect_group>
+        </crafting_skill>
+
+    </append>
+
+</configs>

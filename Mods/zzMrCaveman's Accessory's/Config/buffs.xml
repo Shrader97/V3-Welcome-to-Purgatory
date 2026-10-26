@@ -1,0 +1,153 @@
+<configs>
+
+    <append xpath="/buffs">
+
+    	<buff name="buffFireRetardant002" name_key="modFireRetardant" description_key="modFireRetardantDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value=".25" tags="buffBurningMolotov,buffBurningFlamingArrow,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffHazardBurningElement"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFireRetardantResistedDisplay002" name_key="buffFireRetardantResistedDisplayName" description_key="buffFireRetardantResistedDisplayDesc" tooltip_key="buffFireRetardantResistedDisplayTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Fire"/>
+		</buff>
+
+    	<buff name="buffFireRetardant003" name_key="modFireRetardant" description_key="modFireRetardantDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value=".50" tags="buffBurningMolotov,buffBurningFlamingArrow,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffHazardBurningElement"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="2" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFireRetardantResistedDisplay003" name_key="buffFireRetardantResistedDisplayName" description_key="buffFireRetardantResistedDisplayDesc" tooltip_key="buffFireRetardantResistedDisplayTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Fire"/>
+		</buff>
+
+    	<buff name="buffFireRetardant004" name_key="modFireRetardant" description_key="modFireRetardantDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value=".75" tags="buffBurningMolotov,buffBurningFlamingArrow,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffHazardBurningElement"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="3" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFireRetardantResistedDisplay004" name_key="buffFireRetardantResistedDisplayName" description_key="buffFireRetardantResistedDisplayDesc" tooltip_key="buffFireRetardantResistedDisplayTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Fire"/>
+		</buff>
+
+    	<buff name="buffFireRetardant005" name_key="modFireRetardant" description_key="modFireRetardantDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value="1.0" tags="buffBurningMolotov,buffBurningFlamingArrow,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffHazardBurningElement"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="4" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="4"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFireRetardantResistedDisplay005" name_key="buffFireRetardantResistedDisplayName" description_key="buffFireRetardantResistedDisplayDesc" tooltip_key="buffFireRetardantResistedDisplayTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Fire"/>
+		</buff>
+
+
+
+    	<buff name="buffLightningRetardant002" name_key="modLightningRetardant" description_key="modLightningRetardantDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value=".25" tags="buffShocked"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffLightningRetardant002" name_key="buffLightningRetardantName" description_key="buffLightningRetardantDesc" tooltip_key="buffLightningRetardantTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Lightning"/>
+		</buff>
+
+    	<buff name="buffLightningRetardant003" name_key="modLightningRetardant" description_key="modLightningRetardantDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value=".50" tags="buffShocked"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="2" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffLightningRetardant003" name_key="buffLightningRetardantName" description_key="buffLightningRetardantDesc" tooltip_key="buffLightningRetardantTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Lightning"/>
+		</buff>
+
+    	<buff name="buffLightningRetardant004" name_key="modLightningRetardant" description_key="modLightningRetardantDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value=".75" tags="buffShocked"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="3" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffLightningRetardant004" name_key="buffLightningRetardantName" description_key="buffLightningRetardantDesc" tooltip_key="buffLightningRetardantTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Lightning"/>
+		</buff>
+
+    	<buff name="buffLightningRetardant005" name_key="modLightningRetardant" description_key="modLightningRetardantDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value="1.0" tags="buffShocked"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="4" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="4"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffLightningRetardant005" name_key="buffLightningRetardantName" description_key="buffLightningRetardantDesc" tooltip_key="buffLightningRetardantTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Lightning"/>
+		</buff>
+
+    </append>
+
+</configs>

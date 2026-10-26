@@ -1,0 +1,13 @@
+<configs>
+
+    <append xpath="/traders/trader_item_groups/trader_item_group[@name='foodCandy']">
+        <item name="drugRockCrushers" count="0,3" prob="0.5"/>
+        <item name="drugBoostRange" count="0,3" prob="0.5"/>
+        <item name="drugLeeching" count="0,3" prob="0.5"/>
+        <item name="drugFasty" count="0,3" prob="0.5"/>
+        <item name="drugManofSteel" count="0,3" prob="0.5"/>
+        <item name="DrugResourceful" count="0,3" prob="0.5"/>
+        <item name="drugHeadShotxp-bonus" count="0,3" prob="0.5"/>
+    </append>
+
+</configs>

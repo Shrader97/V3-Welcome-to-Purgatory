@@ -1,0 +1,98 @@
+<configs>
+
+	<append xpath="/ui_display_info/crafting_category_display">
+
+		<crafting_category_list display_type="PreciousMetalForge">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<!--<crafting_category name="GemSynthesizing" icon="ui_game_symbol_gem_mining2" display_name="lblCategoryGemSynthesizing" />-->
+		</crafting_category_list>
+
+		<crafting_category_list display_type="PreciousGemForge">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<!--<crafting_category name="GemSynthesizing" icon="ui_game_symbol_gem_mining2" display_name="lblCategoryGemSynthesizing" />-->
+		</crafting_category_list>
+
+		<crafting_category_list display_type="JewelryBench">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<!--<crafting_category name="GemCutting" icon="ui_game_symbol_gem_mining2" display_name="lblCategoryGemCutting" />-->
+		</crafting_category_list>
+
+    </append>
+
+	<append xpath="/ui_display_info/item_display">
+
+		<item_display_info display_type="modRuby" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attPerception" title_key="statShowPerception" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modDiamond" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attStrength" title_key="statShowStrength" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modGarnet" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attFortitude" title_key="statShowFortitude" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modJade" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attAgility" title_key="statShowAgility" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modSapphire" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attIntellect" title_key="statShowIntellect" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modAquamarine" display_group="modAttire">
+			<display_entry name="dHealthAmount" title_key="statHealthChangeOT" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modAmethyst" display_group="modAttire">
+			<display_entry name="PhysicalDamageResist" display_type="Decimal1" title_key="statPhysicalDamageResist" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modBlueTopaz" display_group="modAttire">
+			<display_entry name="dPlayerExpGain" title_key="statPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modOpal" display_group="modAttire">
+			<display_entry name="dHealthAmount" title_key="statHealthChangeOT" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modPearl" display_group="modAttire">
+			<display_entry name="dLootStage" title_key="statLootStage" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modMalachite" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statEntityMeleeWeaponDamage" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="modCarnelian" display_group="modAttire">
+			<display_entry name="dFireResistance" title_key="statFireResistance" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="ElementalDamageResist" display_type="Decimal1" title_key="statExplosionResistance" display_leading_plus="true" tags="heat,electrical"/>
+		</item_display_info>
+
+		<item_display_info display_type="modJasper" display_group="modAttire">
+			<display_entry name="dLightningResistance" title_key="statLightningResistance" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="ElementalDamageResist" display_type="Decimal1" title_key="statExplosionResistance" display_leading_plus="true" tags="heat,electrical"/>
+		</item_display_info>
+
+
+
+
+
+
+
+
+
+
+
+
+	</append>
+
+
+
+
+
+
+
+
+</configs>

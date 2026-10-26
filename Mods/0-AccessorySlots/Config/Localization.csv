@@ -1,0 +1,10 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,russian
+lblAccessoriesTab,UI,XUI,,,Accessories,Аксессуары
+lblAccessorySlotNecklace,UI,XUI,,,Necklace,Ожерелье
+lblAccessorySlotBracelet,UI,XUI,,,Bracelet,Браслет
+lblAccessorySlotRing,UI,XUI,,,Ring,Кольцо
+ttAccessorySlotWrongItem,UI,Tooltip,,,That does not go in this slot.,Этот предмет не подходит для этого слота.
+ttAccessorySlotUnique,UI,Tooltip,,,You are already wearing one of those.,На вас уже надет такой предмет.
+lblAccessorySectionBuiltin,UI,XUI,,,Jewelry,Украшения
+lblAccessorySectionOther,UI,XUI,,,From other mods,Из других модов
+lblAccessorySlotUnusable,UI,XUI,,,{0}: no installed mod adds one yet,{0}: пока ни один установленный мод не добавляет такой предмет

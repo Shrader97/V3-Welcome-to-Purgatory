@@ -1,0 +1,220 @@
+<configs>
+
+    <append xpath="/buffs">
+
+        <buff name="buffDrugRockCrushers" name_key="buffDrugRockCrushers" description_key="buffDrugRockCrushersDesc" tooltip_key="buffDrugRockCrushersTooltip" icon="ui_game_symbol_twitch_strength_melee" icon_color="175,175,255">
+            <stack_type value="replace"/>
+            <duration value="250"/>
+            <display_value value=".buffDrugRockCrushersDisplay"/>
+            <display_value_format value="time"/>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRockCrushersDuration" operation="subtract" value="@$MetabolismDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRockCrushersDisplay" operation="set" value="@$buffDrugRockCrushersDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRockCrushersDisplay" operation="divide" value="@$MetabolismDuration"/>
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugRockCrushers">
+                    <requirement name="CVarCompare" cvar="$buffDrugRockCrushersDuration" operation="LTE" value="0"/>
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugRockCrushersDisplay" operation="set" value="0"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugRockCrushersDuration" operation="set" value="0"/>
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="EntityDamage" operation="perc_add" value="10">
+                    <requirement name="HoldingItemHasTags" tags="melee"/>
+                </passive_effect>
+                <passive_effect name="BlockDamage" operation="perc_add" value="100">
+                    <requirement name="HoldingItemHasTags" tags="melee"/>
+                </passive_effect>
+                <passive_effect name="StaminaLoss" operation="perc_add" value="-0.9">
+                    <requirement name="HoldingItemHasTags" tags="melee"/>
+                </passive_effect>
+            </effect_group>
+         </buff>
+
+        <buff name="buffDrugBoostRange" name_key="buffDrugBoostRange" description_key="buffDrugBoostRange" tooltip_key="buffDrugBoostRangeTooltip" icon="ui_game_symbol_twitch_strength_melee" icon_color="175,175,255">
+            <stack_type value="replace"/>
+            <duration value="250"/>
+            <display_value value=".buffDrugBoostRangeDisplay"/>
+            <display_value_format value="time"/>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugBoostRangeDuration" operation="subtract" value="@$MetabolismDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugBoostRangeDisplay" operation="set" value="@$buffDrugBoostRangeDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugBoostRangeDisplay" operation="divide" value="@$MetabolismDuration"/>
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugBoostRange">
+                    <requirement name="CVarCompare" cvar="$buffDrugBoostRangeDuration" operation="LTE" value="0"/>
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugBoostRangeDisplay" operation="set" value="0"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugBoostRangeDuration" operation="set" value="0"/>
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="EntityDamage" operation="perc_add" value="10">
+                    <requirement name="HoldingItemHasTags" tags="ranged"/>
+                </passive_effect>
+                <passive_effect name="BlockDamage" operation="perc_add" value="100">
+                    <requirement name="HoldingItemHasTags" tags="ranged"/>
+                </passive_effect>
+                <passive_effect name="StaminaLoss" operation="perc_add" value="-0.9">
+                    <requirement name="HoldingItemHasTags" tags="ranged"/>
+                </passive_effect>
+            </effect_group>
+         </buff>
+
+        <buff name="buffDrugLeeching" name_key="buffDrugLeeching" description_key="buffDrugLeeching" tooltip_key="buffDrugLeechingTooltip" icon="ui_game_symbol_twitch_strength_melee" icon_color="175,175,255">
+            <stack_type value="replace"/>
+            <duration value="250"/>
+            <display_value value=".buffDrugLeechingDisplay"/>
+            <display_value_format value="time"/>
+
+            <effect_group>
+                <!-- Blinks the display -->
+                <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_buffLeech"/>
+                <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_buffLeech"/>
+
+                <triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="twitch_good_buff_ended" play_in_head="true" />
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="twitch_buffLeechHeal"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="twitch_buffLeechSound"/>
+            </effect_group>
+        </buff>
+
+        <!-- *** twitch_buffLeechHeal -->
+        <!-- Healing handler for twitch_buffLeech -->
+        <buff name="twitch_buffLeechHeal" hidden="true">
+            <stack_type value="replace"/>
+            <duration value="1"/>
+
+            <effect_group>
+                <!-- Blinks the display -->
+                <passive_effect name="BuffBlink" operation="base_set" value="2" tags="twitch_buffLeech"/>
+                <triggered_effect trigger="onSelfBuffStart" action="AddHealth" health="5" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="AddHealth" health="5" />
+                <passive_effect name="FoodLossPerHealthPointGained" operation="base_set" value="0" />
+            </effect_group>
+        </buff>
+
+        <buff name="buffDrugFast" name_key="buffDrugFast" description_key="buffDrugFastDesc" tooltip_key="buffDrugFastTooltip" icon="ui_game_symbol_twitch_fast" icon_color="175,175,255">
+            <stack_type value="replace"/>
+            <duration value="200"/>
+            <display_value value="duration"/>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugFastDuration" operation="subtract" value="@$MetabolismDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugFastDisplay" operation="set" value="@$buffDrugFastDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDruFastgFastDisplay" operation="divide" value="@$MetabolismDuration"/>
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugFast">
+                    <requirement name="CVarCompare" cvar="$buffDrugFastDuration" operation="LTE" value="0"/>
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugFastDisplay" operation="set" value="0"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugFastDuration" operation="set" value="0"/>
+            </effect_group>
+
+            <effect_group>
+                <!-- Blinks the display -->
+                <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,12" tags="buffDrugFast"/>
+                <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffDrugFast"/>
+
+                <triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="twitch_good_buff_ended" play_in_head="true" />
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="WalkSpeed" operation="base_set" value="2.3"/>
+                <passive_effect name="RunSpeed" operation="base_set" value="3"/>
+
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="1" tags="running"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="1" tags="walking"/>
+            </effect_group>
+         </buff>
+
+        <buff name="buffDrugManofSteel" name_key="buffDrugManofSteel" description_key="buffDrugbuffManofSteelDesc" tooltip_key="buffDrugManofSteelTooltip" icon="ui_game_symbol_twitch_fast" icon_color="175,175,255">
+            <stack_type value="replace"/>
+            <duration value="30"/>
+            <display_value value="duration"/>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugManofSteelDuration" operation="subtract" value="@$MetabolismDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugManofSteelDisplay" operation="set" value="@$buffDrugManofSteelDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugManofSteelDisplay" operation="divide" value="@$MetabolismDuration"/>
+            </effect_group>
+
+            <effect_group>
+                <!-- Blinks the display -->
+                <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffDrugManofSteel"/>
+                <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffDrugManofSteel"/>
+
+                <triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="twitch_good_buff_ended" play_in_head="true" />
+            </effect_group>
+
+            <effect_group>
+            <passive_effect name="GeneralDamageResist" operation="base_add" value="1"/>
+ 			<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="200" tags="coredamageresist"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat,electrical"/>
+            
+            </effect_group>
+         </buff>
+
+        <buff name="buffDrugHeadShotxp-bonus" name_key="buffDrugHeadShotxp-bonus" description_key="buffDrugbuffHeadShotxp-bonusDesc" tooltip_key="buffDrugHeadShotxp-bonusTooltip" icon="ui_game_symbol_skills" icon_color="175,175,255">
+            <stack_type value="replace"/>
+            <duration value="200"/>
+            <display_value value="duration"/>
+
+            <effect_group>
+                <!-- Blinks the display -->
+                <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,6" tags="twitch_buffHeadshotOnly"/>
+                <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_buffHeadshotOnly"/>
+                <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,6" tags="twitch_buffLearner"/>
+                <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_buffLearner"/>
+
+                <triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="twitch_bad_buff_ended" play_in_head="true" />
+                <triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="twitch_good_buff_ended" play_in_head="true" />
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="HeadShotOnly" operation="base_set" value="1"/>
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="DamageModifier" operation="perc_add" value="5" tags="head"/>
+                <passive_effect name="PlayerExpGain" operation="perc_add" value="2"/>
+            </effect_group>
+         </buff>
+
+        <buff name="buffDrugResourceful" name_key="buffDrugResourceful" description_key="buffDrugResourcefulDesc" tooltip_key="buffDrugResourcefulTooltip" icon="ui_game_symbol_resource" icon_color="175,175,255">
+            <stack_type value="replace"/>
+            <duration value="200"/>
+            <display_value value="duration"/>
+
+            <effect_group>
+                <!-- Blinks the display -->
+                <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffDrugResourceful"/>
+                <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffDrugResourceful"/>
+
+                <triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="twitch_good_buff_ended" play_in_head="true" />
+
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="HarvestCount" operation="perc_add" value="1" />
+                <passive_effect name="CraftingTime" operation="perc_add" value="-1"/>
+                <passive_effect name="ScrappingTime" operation="perc_add" value="-1"/>
+            </effect_group>
+         </buff>
+
+    </append>
+
+</configs>

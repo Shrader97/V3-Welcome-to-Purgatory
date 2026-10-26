@@ -1,0 +1,90 @@
+<configs>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupInfestedT1']">
+        <item name="modCutFlawedRuby" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedDiamond" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedGarnet" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedJade" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedSapphire" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedAquamarine" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedAmethyst" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedBlueTopaz" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedOpal" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedPearl" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedMalachite" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedCarnelian" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutFlawedJasper" count="1" loot_prob_template="low" force_prob="true"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupInfestedT2']">
+        <item name="modCutRuby" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutDiamond" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutGarnet" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutJade" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutSapphire" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutAquamarine" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutAmethyst" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBlueTopaz" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutOpal" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPearl" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutMalachite" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutCarnelian" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutJasper" count="1" loot_prob_template="low" force_prob="true"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupInfestedT3']">
+        <item name="modCutBrilliantRuby" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantDiamond" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantGarnet" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantJade" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantSapphire" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantAquamarine" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantAmethyst" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantBlueTopaz" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantOpal" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantPearl" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantMalachite" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantCarnelian" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutBrilliantJasper" count="1" loot_prob_template="low" force_prob="true"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupInfestedT4']">
+        <item name="modCutPristineRuby" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineDiamond" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineGarnet" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineJade" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineSapphire" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineAquamarine" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineAmethyst" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineBlueTopaz" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineOpal" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristinePearl" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineMalachite" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineCarnelian" count="1" loot_prob_template="low" force_prob="true"/>
+        <item name="modCutPristineJasper" count="1" loot_prob_template="low" force_prob="true"/>
+    </append>
+
+    <!--append xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']">
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+        <item name="itemModsSkillMagazine"/>
+    </append-->
+
+
+
+
+
+
+
+
+</configs>

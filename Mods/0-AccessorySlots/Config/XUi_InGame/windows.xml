@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	The Accessories tab of the character screen.
+
+	Two appends, plus moving three header buttons:
+	  1. a TabSelectorTab at the end of tabsContents;
+	  2. a TabSelectorButton at the end of the header.
+	XUiC_TabSelector pairs tab N with button N by document order, so appending one of each keeps every
+	pairing intact, including other mods doing the same. The button is DRAWN at x=142, right after Gear,
+	whatever its order. (3.3 puts its own Backpack tab at 142; TabRow.cs then re-spaces the row.)
+	  3. Up to 3.2, vanilla spaces the tab icons 40 apart (22, 62, 102) and leaves a gap before the stats tabs (162, 202),
+	     so a diamond at 142 sat 20 from the stats icon (Kenny, in game). The stats tabs move to 182 and 222
+	     and the movement toggle from 242 to 262 (the cosmetics box starts at 284): every icon 40 apart. Each
+	     set matches the vanilla position, so if another mod already moved a button, it is left where it is.
+
+	The tab icon, accessorySlotsTab, is this mod's own sprite (UIAtlases/UIAtlas, drawn by tools/make_tab_icon.py):
+	an outlined breastplate with a plus - "more things to wear" - which covers whatever slots mods add.
+
+	Deliberately not on the Gear or Clothing tab: those hide with world settings (biome progression;
+	temperature survival and storms). No character preview on this tab: showing it means editing vanilla's
+	previewFrameSDCS visible expression, the kind of edit two mods fight over.
+
+	Two sections, each a heading over a grid: Accessory Slots' own slots (always shown, so players see the
+	jewelry slots are there for mods to fill), then other mods' slots (shown once an item uses them). Each grid
+	is a fixed pool of cells (XUi is built once at startup, before the world's slots are known).
+	XUiC_AccessoryPanel binds the shown ones on open, hides the rest and stacks the sections - the positions
+	below are overwritten at runtime; hide_inactive closes the gaps. The two share 6 rows (the tab is 561 high).
+	A grid id must not be "badgeSlots" or "clothingSlots": XUiC_EquipmentStackGrid claims cells under
+	those ids and indexes them into the 12-wide Equipment arrays.
+-->
+<config>
+	<append xpath="/windows/window[@name='CharacterFrameWindow']//rect[@name='tabsContents']">
+		<rect controller="TabSelectorTab" tab_key="accessories" tab_caption_key="lblAccessoriesTab" tab_sprite="accessorySlotsTab">
+			<rect name="accessoryPanel" controller="AccessorySlots.XUiC_AccessoryPanel, AccessorySlots">
+				<label name="builtinHeading" depth="2" pos="6,-8" width="312" height="22" font_size="20" color="[white]" justify="left" effect="outline" effect_distance="1,1" effect_color="0,0,0,200" text_key="lblAccessorySectionBuiltin"/>
+				<grid name="accessorySlots" pos="0,-28" rows="3" cols="4" cell_width="81" cell_height="83" repeat_content="true" hide_inactive="true" arrangement="horizontal">
+					<accessory_slot />
+				</grid>
+				<label name="otherHeading" depth="2" pos="6,-121" width="312" height="22" font_size="20" color="[white]" justify="left" effect="outline" effect_distance="1,1" effect_color="0,0,0,200" text_key="lblAccessorySectionOther"/>
+				<grid name="otherAccessorySlots" pos="0,-141" rows="5" cols="4" cell_width="81" cell_height="83" repeat_content="true" hide_inactive="true" arrangement="horizontal">
+					<accessory_slot />
+				</grid>
+			</rect>
+		</rect>
+	</append>
+	<!-- Up to 3.2 only. 3.3 anchors Stats and the toggle to the window's right edge and fills 142 with its own
+	     Backpack tab, so these three find nothing there (three WRN lines in a player's log); UI/TabRow.cs spaces
+	     that row at runtime instead. game_version() is (release type, major, minor, build) with V = 1 and the patch
+	     digit packed into minor: 3.2.0 b10 is 1.3.20.10, 3.3.0 b14 is 1.3.30.14. -->
+	<conditional>
+		<if cond="game_version() &lt; version(1, 3, 30)">
+			<set xpath="/windows/window[@name='CharacterFrameWindow']//rect[@name='tabsHeader']/rect/rect[@controller='TabSelectorButton'][@pos='162,0']/@pos">182,0</set>
+			<set xpath="/windows/window[@name='CharacterFrameWindow']//rect[@name='tabsHeader']/rect/rect[@controller='TabSelectorButton'][@pos='202,0']/@pos">222,0</set>
+			<set xpath="/windows/window[@name='CharacterFrameWindow']//rect[@name='tabsHeader']/rect/button[@name='coreStatsMovementModeToggle'][@pos='242,0']/@pos">262,0</set>
+		</if>
+	</conditional>
+	<append xpath="/windows/window[@name='CharacterFrameWindow']//rect[@name='tabsHeader']/rect">
+		<rect controller="TabSelectorButton" pos="142,0">
+			<button depth="2" pos="0,0" style="icon30px, press" sprite="{tab_sprite}" pivot="center" tooltip="{tab_name_localized}" sound="[paging_click]" selected="{tab_selected}" snap="false" gamepad_selectable="false" />
+		</rect>
+	</append>
+</config>

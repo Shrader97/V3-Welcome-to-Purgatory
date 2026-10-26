@@ -1,0 +1,938 @@
+<configs>
+
+    <append xpath="/item_modifiers">
+
+        <item_modifier name="modCutFlawedRuby" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modRuby"/>
+            <property name="CustomIcon" value="CutRuby"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modRubyDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="" operation="base_add" value="1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutRuby" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modRuby"/>
+            <property name="CustomIcon" value="CutRuby"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modRubyDesc"/>
+            <property name="MaxModsAllowed" value="3"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="2"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantRuby" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modRuby"/>
+            <property name="CustomIcon" value="CutRuby"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modRubyDesc"/>
+            <property name="MaxModsAllowed" value="2"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="3"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineRuby" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modRuby"/>
+            <property name="CustomIcon" value="CutRuby"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modRubyDesc"/>
+            <property name="MaxModsAllowed" value="1"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="4"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedDiamond" installable_tags="jewelryAttachments" modifier_tags="boostStrength" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modDiamond"/>
+            <property name="CustomIcon" value="CutDiamond"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modDiamondDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutDiamond" installable_tags="jewelryAttachments" modifier_tags="boostStrength" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modDiamond"/>
+            <property name="CustomIcon" value="CutDiamond"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modDiamondDesc"/>
+            <property name="MaxModsAllowed" value="3"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="2"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantDiamond" installable_tags="jewelryAttachments" modifier_tags="boostStrength" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modDiamond"/>
+            <property name="CustomIcon" value="CutDiamond"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modDiamondDesc"/>
+            <property name="MaxModsAllowed" value="2"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="3"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineDiamond" installable_tags="jewelryAttachments" modifier_tags="boostStrength" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modDiamond"/>
+            <property name="CustomIcon" value="CutDiamond"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modDiamondDesc"/>
+            <property name="MaxModsAllowed" value="1"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="4"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedGarnet" installable_tags="jewelryAttachments" modifier_tags="boostFortitude" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modGarnet"/>
+            <property name="CustomIcon" value="CutGarnet"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modGarnetDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutGarnet" installable_tags="jewelryAttachments" modifier_tags="boostFortitude" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modGarnet"/>
+            <property name="CustomIcon" value="CutGarnet"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modGarnetDesc"/>
+            <property name="MaxModsAllowed" value="3"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="2"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantGarnet" installable_tags="jewelryAttachments" modifier_tags="boostFortitude" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modGarnet"/>
+            <property name="CustomIcon" value="CutGarnet"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modGarnetDesc"/>
+            <property name="MaxModsAllowed" value="2"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="3"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineGarnet" installable_tags="jewelryAttachments" modifier_tags="boostFortitude" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modGarnet"/>
+            <property name="CustomIcon" value="CutGarnet"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modGarnetDesc"/>
+            <property name="MaxModsAllowed" value="1"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="4"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedJade" installable_tags="jewelryAttachments" modifier_tags="boostAgility" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modJade"/>
+            <property name="CustomIcon" value="CutJade"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modJadeDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutJade" installable_tags="jewelryAttachments" modifier_tags="boostAgility" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modJade"/>
+            <property name="CustomIcon" value="CutJade"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modJadeDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="2"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantJade" installable_tags="jewelryAttachments" modifier_tags="boostAgility" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modJade"/>
+            <property name="CustomIcon" value="CutJade"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modJadeDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="3"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineJade" installable_tags="jewelryAttachments" modifier_tags="boostAgility" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modJade"/>
+            <property name="CustomIcon" value="CutJade"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modJadeDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="4"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedSapphire" installable_tags="jewelryAttachments" modifier_tags="boostIntellect" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modSapphire"/>
+            <property name="CustomIcon" value="CutSapphire"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modSapphireDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutSapphire" installable_tags="jewelryAttachments" modifier_tags="boostIntellect" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modSapphire"/>
+            <property name="CustomIcon" value="CutSapphire"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modSapphireDesc"/>
+            <property name="MaxModsAllowed" value="3"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="2"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantSapphire" installable_tags="jewelryAttachments" modifier_tags="boostIntellect" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modSapphire"/>
+            <property name="CustomIcon" value="CutSapphire"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modSapphireDesc"/>
+            <property name="MaxModsAllowed" value="2"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="3"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineSapphire" installable_tags="jewelryAttachments" modifier_tags="boostIntellect" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modSapphire"/>
+            <property name="CustomIcon" value="CutSapphire"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modSapphireDesc"/>
+            <property name="MaxModsAllowed" value="1"/>
+            <effect_group tiered="false">
+                <passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="4"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedAquamarine" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modAquamarine"/>
+            <property name="CustomIcon" value="CutAquamarine"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modAquamarineDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthChangeOT" operation="base_add" value="1"/>
+                <passive_effect name="FoodChangeOT" operation="base_add" value="1"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dHealthAmount" value="1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutAquamarine" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modAquamarine"/>
+            <property name="CustomIcon" value="CutAquamarine"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modAquamarineDesc"/>
+            <property name="MaxModsAllowed" value="3"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthChangeOT" operation="base_add" value="2"/>
+                <passive_effect name="FoodChangeOT" operation="base_add" value="2"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dHealthAmount" value="2"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantAquamarine" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modAquamarine"/>
+            <property name="CustomIcon" value="CutAquamarine"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modAquamarineDesc"/>
+            <property name="MaxModsAllowed" value="2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthChangeOT" operation="base_add" value="3"/>
+                <passive_effect name="FoodChangeOT" operation="base_add" value="3"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dHealthAmount" value="3"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineAquamarine" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modAquamarine"/>
+            <property name="CustomIcon" value="CutAquamarine"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modAquamarineDesc"/>
+            <property name="MaxModsAllowed" value="1"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthChangeOT" operation="base_add" value="4"/>
+                <passive_effect name="FoodChangeOT" operation="base_add" value="4"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dHealthAmount" value="4"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedAmethyst" installable_tags="jewelryAttachments" modifier_tags="BuffResistance" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modAmethyst"/>
+            <property name="CustomIcon" value="CutAmethyst"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modAmethystDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutAmethyst" installable_tags="jewelryAttachments" modifier_tags="BuffResistance" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modAmethyst"/>
+            <property name="CustomIcon" value="CutAmethyst"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modAmethystDesc"/>
+            <property name="MaxModsAllowed" value="3"/>
+            <effect_group tiered="false">
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+           </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantAmethyst" installable_tags="jewelryAttachments" modifier_tags="BuffResistance" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modAmethyst"/>
+            <property name="CustomIcon" value="CutAmethyst"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modAmethystDesc"/>
+            <property name="MaxModsAllowed" value="2"/>
+            <effect_group tiered="false">
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="3"/>
+           </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineAmethyst" installable_tags="jewelryAttachments" modifier_tags="BuffResistance" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modAmethyst"/>
+            <property name="CustomIcon" value="CutAmethyst"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modAmethystDesc"/>
+            <property name="MaxModsAllowed" value="1"/>
+            <effect_group tiered="false">
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="4"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedBlueTopaz" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modBlueTopaz"/>
+            <property name="CustomIcon" value="CutBlueTopaz"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modBlueTopazDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="PlayerExpGain" operation="perc_add" value=".5"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dPlayerExpGain" value=".5"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBlueTopaz" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modBlueTopaz"/>
+            <property name="CustomIcon" value="CutBlueTopaz"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modBlueTopazDesc"/>
+            <property name="MaxModsAllowed" value="3"/>
+            <effect_group tiered="false">
+                <passive_effect name="PlayerExpGain" operation="perc_add" value="1.0"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dPlayerExpGain" value="1.0"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantBlueTopaz" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modBlueTopaz"/>
+            <property name="CustomIcon" value="CutBlueTopaz"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modBlueTopazDesc"/>
+            <property name="MaxModsAllowed" value="2"/>
+            <effect_group tiered="false">
+                <passive_effect name="PlayerExpGain" operation="perc_add" value="1.5"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dPlayerExpGain" value="1.5"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineBlueTopaz" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modBlueTopaz"/>
+            <property name="CustomIcon" value="CutBlueTopaz"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modBlueTopazDesc"/>
+            <property name="MaxModsAllowed" value="1"/>
+            <effect_group tiered="false">
+                <passive_effect name="PlayerExpGain" operation="perc_add" value="20"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dPlayerExpGain" value="2.0"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedOpal" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modOpal"/>
+            <property name="CustomIcon" value="CutOpal"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modOpalDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthChangeOT" operation="base_add" value="1" tag="selfOtherPlayers" />
+                <passive_effect name="FoodChangeOT" operation="base_add" value="1" tag="selfOtherPlayers" />
+            </effect_group>
+            <effect_group>
+                <display_value name="dHealthAmount" value="1"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutOpal" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modOpal"/>
+            <property name="CustomIcon" value="CutOpal"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modOpalDesc"/>
+            <property name="MaxModsAllowed" value="3"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthChangeOT" operation="base_add" value="2" tag="selfOtherPlayers" />
+                <passive_effect name="FoodChangeOT" operation="base_add" value="2" tag="selfOtherPlayers" />
+            </effect_group>
+            <effect_group>
+                <display_value name="dHealthAmount" value="2"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantOpal" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modOpal"/>
+            <property name="CustomIcon" value="CutOpal"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modOpalDesc"/>
+            <property name="MaxModsAllowed" value="2"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthChangeOT" operation="base_add" value="3" tag="selfOtherPlayers" />
+                <passive_effect name="FoodChangeOT" operation="base_add" value="3" tag="selfOtherPlayers" />
+            </effect_group>
+            <effect_group>
+                <display_value name="dHealthAmount" value="3"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineOpal" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modOpal"/>
+            <property name="CustomIcon" value="CutOpal"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modOpalDesc"/>
+            <property name="MaxModsAllowed" value="1"/>
+            <effect_group tiered="false">
+                <passive_effect name="HealthChangeOT" operation="base_add" value="4" tag="selfOtherPlayers" />
+                <passive_effect name="FoodChangeOT" operation="base_add" value="4" tag="selfOtherPlayers" />
+            </effect_group>
+            <effect_group>
+                <display_value name="dHealthAmount" value="4"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedPearl" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modPearl"/>
+            <property name="CustomIcon" value="CutPeral"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modPearlDesc"/>
+            <property name="MaxModsAllowed" value="4"/>
+            <effect_group tiered="false">
+                <requirement name="IsNight"/>
+                <passive_effect name="LootStage" operation="perc_add" value="10"/>
+            </effect_group>
+            <effect_group tiered="false">
+                <passive_effect name="LootStage" operation="perc_add" value="5"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dLootStage" value="10"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPearl" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modPearl"/>
+            <property name="CustomIcon" value="CutPeral"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modPearlDesc"/>
+            <property name="MaxModsAllowed" value="3"/>
+            <effect_group tiered="false">
+                <requirement name="IsNight"/>
+                <passive_effect name="LootStage" operation="perc_add" value="20"/>
+            </effect_group>
+            <effect_group tiered="false">
+                <passive_effect name="LootStage" operation="perc_add" value="10"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dLootStage" value="20"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantPearl" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modPearl"/>
+            <property name="CustomIcon" value="CutPeral"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modPearlDesc"/>
+            <property name="MaxModsAllowed" value="2"/>
+            <effect_group tiered="false">
+                <requirement name="IsNight"/>
+                <passive_effect name="LootStage" operation="perc_add" value="30"/>
+            </effect_group>
+            <effect_group tiered="false">
+                <passive_effect name="LootStage" operation="perc_add" value="15"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dLootStage" value="30"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristinePearl" installable_tags="jewelryAttachments" modifier_tags="boostPerception" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modPearl"/>
+            <property name="CustomIcon" value="CutPeral"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <property name="Material" value="Msteel"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="DescriptionKey" value="modPearlDesc"/>
+            <property name="MaxModsAllowed" value="1"/>
+            <effect_group tiered="false">
+                <requirement name="IsNight"/>
+                <passive_effect name="LootStage" operation="perc_add" value="40"/>
+            </effect_group>
+            <effect_group tiered="false">
+                <passive_effect name="LootStage" operation="perc_add" value="20"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dLootStage" value="40"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+        <item_modifier name="modCutFlawedMalachite" installable_tags="jewelryAttachments" modifier_tags="DoubleDamage" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modMalachite"/>
+            <property name="CustomIcon" value="CutMalachite"/>
+            <property name="DescriptionKey" value="ModMalachiteDesc"/>
+            <!--Do double damage to evil / undead-->
+            <effect_group tiered="false">
+                <passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+            </effect_group>
+            <effect_group tiered="false">
+                <requirement name="EntityTagCompare" target="other" tags="Bosszombie"/>
+                <passive_effect name="EntityDamage" operation="perc_add" value="1.0"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dEntityDamage" value="0.5"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutMalachite" installable_tags="jewelryAttachments" modifier_tags="DoubleDamage" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modMalachite"/>
+            <property name="CustomIcon" value="CutMalachite"/>
+            <property name="DescriptionKey" value="ModMalachiteDesc"/>
+            <!--Do double damage to evil / undead-->
+            <effect_group tiered="false">
+                <passive_effect name="EntityDamage" operation="perc_add" value="1.0"/>
+            </effect_group>
+            <effect_group tiered="false">
+                <requirement name="EntityTagCompare" target="other" tags="Bosszombie"/>
+                <passive_effect name="EntityDamage" operation="perc_add" value="2.0"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dEntityDamage" value="1.0"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutBrilliantMalachite" installable_tags="jewelryAttachments" modifier_tags="DoubleDamage" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modMalachite"/>
+            <property name="CustomIcon" value="CutMalachite"/>
+            <property name="DescriptionKey" value="ModMalachiteDesc"/>
+            <!--Do double damage to evil / undead-->
+            <effect_group tiered="false">
+                <passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+            </effect_group>
+            <effect_group tiered="false">
+                <requirement name="EntityTagCompare" target="other" tags="Bosszombie"/>
+                <passive_effect name="EntityDamage" operation="perc_add" value="3.0"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dEntityDamage" value="1.5"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modCutPristineMalachite" installable_tags="jewelryAttachments" modifier_tags="DoubleDamage" blocked_tags="noMods" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DisplayType" value="modMalachite"/>
+            <property name="CustomIcon" value="CutMalachite"/>
+            <property name="DescriptionKey" value="ModMalachiteDesc"/>
+            <!--Do double damage to evil / undead-->
+            <effect_group tiered="false">
+                <passive_effect name="EntityDamage" operation="perc_add" value="2.0"/>
+            </effect_group>
+            <effect_group tiered="false">
+                <requirement name="EntityTagCompare" target="other" tags="Bosszombie"/>
+                <passive_effect name="EntityDamage" operation="perc_add" value="4.0"/>
+            </effect_group>
+            <effect_group>
+                <display_value name="dEntityDamage" value="2.0"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+		<item_modifier name="modCutFlawedCarnelian" installable_tags="jewelryAttachments" modifier_tags="fireRetardant" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="CutCarnelian"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="DisplayType" value="modCarnelian"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="EconomicValue" value="700"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1" tags="heat"/>
+				<display_value name="dElementalDamageResist" value="1"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffFireRetardant002"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFireRetardant002"/>
+			</effect_group>
+            <effect_group>
+                <display_value name="dFireResistance" value="0.25"/>
+            </effect_group>
+		</item_modifier>
+
+		<item_modifier name="modCutCarnelian" installable_tags="jewelryAttachments" modifier_tags="fireRetardant" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="CutCarnelian"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="DisplayType" value="modCarnelian"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="EconomicValue" value="700"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="2" tags="heat"/>
+				<display_value name="dElementalDamageResist" value="2"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffFireRetardant003"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFireRetardant003"/>
+			</effect_group>
+            <effect_group>
+                <display_value name="dFireResistance" value="0.50"/>
+            </effect_group>
+		</item_modifier>
+
+		<item_modifier name="modCutBrilliantCarnelian" installable_tags="jewelryAttachments" modifier_tags="fireRetardant" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="CutCarnelian"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="DisplayType" value="modCarnelian"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="EconomicValue" value="700"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="3" tags="heat"/>
+				<display_value name="dElementalDamageResist" value="3"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffFireRetardant004"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFireRetardant004"/>
+			</effect_group>
+
+            <effect_group>
+                <display_value name="dFireResistance" value="0.75"/>
+            </effect_group>
+		</item_modifier>
+
+		<item_modifier name="modCutPristineCarnelian" installable_tags="jewelryAttachments" modifier_tags="fireRetardant" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="CutCarnelian"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="DisplayType" value="modCarnelian"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="EconomicValue" value="700"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="4" tags="heat"/>
+				<display_value name="dElementalDamageResist" value="4"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffFireRetardant005"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFireRetardant005"/>
+			</effect_group>
+
+            <effect_group>
+                <display_value name="dFireResistance" value="1"/>
+            </effect_group>
+		</item_modifier>
+
+
+
+		<item_modifier name="modCutFlawedJasper" installable_tags="jewelryAttachments" modifier_tags="LightningRetardant" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="CutJasper"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="DisplayType" value="modJasper"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="EconomicValue" value="700"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1" tags="heat"/>
+				<display_value name="dElementalDamageResist" value="1"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLightningRetardant002"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLightningRetardant002"/>
+			</effect_group>
+
+            <effect_group>
+                <display_value name="dLightningResistance" value="0.25"/>
+            </effect_group>
+		</item_modifier>
+
+		<item_modifier name="modCutJasper" installable_tags="jewelryAttachments" modifier_tags="LightningRetardant" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="CutJasper"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="DisplayType" value="modJasper"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="EconomicValue" value="700"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="2" tags="heat"/>
+				<display_value name="dElementalDamageResist" value="2"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLightningRetardant003"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLightningRetardant003"/>
+			</effect_group>
+
+            <effect_group>
+                <display_value name="dLightningResistance" value="0.5"/>
+            </effect_group>
+		</item_modifier>
+
+		<item_modifier name="modCutBrilliantJasper" installable_tags="jewelryAttachments" modifier_tags="LightningRetardant" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="CutJasper"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="DisplayType" value="modJasper"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="EconomicValue" value="700"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="3" tags="heat"/>
+				<display_value name="dElementalDamageResist" value="3"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLightningRetardant004"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLightningRetardant004"/>
+			</effect_group>
+
+            <effect_group>
+                <display_value name="dLightningResistance" value="0.75"/>
+            </effect_group>
+		</item_modifier>
+
+		<item_modifier name="modCutPristineJasper" installable_tags="jewelryAttachments" modifier_tags="LightningRetardant" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="CutJasper"/>
+			<property name="TraderStageTemplate" value="modsTier2"/>
+			<property name="DisplayType" value="modJasper"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="EconomicValue" value="700"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="4" tags="heat"/>
+				<display_value name="dElementalDamageResist" value="4"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLightningRetardant005"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLightningRetardant005"/>
+			</effect_group>
+
+            <effect_group>
+                <display_value name="dLightningResistance" value="1"/>
+            </effect_group>
+		</item_modifier>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </append>
+
+</configs>

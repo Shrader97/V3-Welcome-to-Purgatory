@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+<!--
+	Accessory Slots - the slot vocabulary. THIS is the base file; do not edit it to change your game.
+
+	A slot only appears once an installed item uses it:  <property name="AccessorySlot" value="ring"/>
+	so these defaults cost nothing until some mod adds a necklace, bracelet or ring.
+	An item that fits more than one slot lists them, first = where shift-click tries first:
+		<property name="AccessorySlot" value="ring,necklace"/>
+
+	The names are the ones Minecraft's Curios uses (necklace, bracelet, ring), so a modder who knows it guesses
+	right. The body part works too - neck, wrist, finger are aliases of the same slots.
+
+	Other mods (and your own tweaks) patch this from their own Config/accessoryslots.xml, like items.xml:
+		<configs>
+			<append xpath="/accessoryslots"><slot name="glider" group="gear" order="100" icon="..." label="..."/></append>
+			<set xpath="/accessoryslots/slot[@name='ring']/@count">4</set>
+		</configs>
+
+	<slot> attributes
+		name           required; letters/digits, no '#' or ','. Items claim it by this name.
+		aliases        other names for this slot, comma-separated. An item claiming an alias goes in this slot,
+		               and anything saved under one moves here. A name some <slot> declares is never an alias.
+		count          how many of this slot (keys name#1..name#count). Default 1, max 8.
+		group, order   layout. The slots in this file come first; then slots other mods add; then slots no file
+		               declares. Within each: by group (name order), then order. Defaults "other", 1000.
+		icon           ItemIconAtlas sprite drawn in the empty slot.
+		label          localization key for the empty slot's tooltip (falls back to the name).
+		unique         true = no two of the same item across this slot's copies (no stacking two identical rings).
+		keep_on_death  true = never dropped, lost, deleted or degraded on death or quit, whatever the world says.
+-->
+
+
+	<remove xpath="/accessoryslots/slot[@name='bracelet']"/>
+	<append xpath="/accessoryslots">
+		<slot name="bracelet" aliases="wrist" group="jewelry" order="20" count="2" icon="accessorySlotBracelet" label="lblAccessorySlotBracelet" unique="true"/>
+		<slot name="belt" aliases="waist" group="jewelry" order="40"  icon="accessorySlotBelt" label="lblAccessorySlotBelt" unique="true"/>
+		<slot name="piercing" aliases="earring,ear" group="jewelry" order="50" count="2" icon="accessorySlotPiercing" label="lblAccessorySlotPiercing" unique="true" />
+	</append>
+
+</configs>

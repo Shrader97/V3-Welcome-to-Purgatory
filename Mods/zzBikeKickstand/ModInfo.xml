@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="BikeKickstand" />
+	<DisplayName value="Bike Kickstand" />
+	<Description value="Parked bicycles, minibikes and motorcycles no longer fall over: with nobody on them they rest leaning a few degrees onto a side stand that folds away when you ride. Requires EAC off (DLL mod)." />
+	<Author value="Tasdln" />
+	<Version value="1.0.0" />
+	<Website value="" />
+	<SkipWithAntiCheat value="true" />
+</xml>

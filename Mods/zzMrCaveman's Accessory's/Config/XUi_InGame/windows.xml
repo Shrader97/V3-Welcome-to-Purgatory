@@ -1,0 +1,45 @@
+<configs>
+
+    <append xpath="/windows">
+
+		<!--#$-IGS BEGIN: Adding cursor area. -$#-->
+		<window name="windowOutputtwelve001" width="228" height="198" anchor="CenterTop" panel="Right" cursor_area="true" controller="WorkstationOutputWindow" >
+		<!--#$-IGS END.-$#-->
+			<panel style="header.panel">
+				<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+				<label style="header.name" text="OUTPUT" text_key="xuiOutput" />
+				
+				<rect pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="{buttons_visible}">
+					<button   depth="3" name="btnMoveAll"          sprite="ui_game_symbol_store_all_up"     tooltip="{take_all_tooltip}"          pos="203, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
+				</rect>
+			</panel>
+
+
+			<rect name="content" depth="0" pos="0,-46" height="150" disablefallthrough="true">
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="150" color="[black]" type="sliced" fillcenter="false" />
+					<grid depth="10" name="inventory" rows="4" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationOutputGrid" repeat_content="true">
+						<item_stack name="0"/>
+					</grid>
+			</rect>
+		</window>
+
+        <window name="windowToolsPreciousMetalForge" width="228" height="121" panel="Right" cursor_area="true" >
+        <!--#$-IGS END.-$#-->
+            <panel style="header.panel">
+                <sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+                <label style="header.name" text="TOOLS" text_key="xuiTools" />
+            </panel>
+
+            <rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+                <grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true"
+                required_tools="toolBellows,toolAnvil,toolForgeCrucible" required_tools_only="true">
+                    <item_stack controller="RequiredItemStack" name="0"/>
+                </grid>
+            </rect>
+
+        </window>
+
+    </append>
+
+</configs>

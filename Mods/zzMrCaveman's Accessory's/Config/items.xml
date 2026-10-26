@@ -1,0 +1,1142 @@
+<configs>
+
+    <append xpath="/items">
+        
+        <item name="resourcePlatinumNugget">
+            <property name="Extends" value="resourceSilverNugget"/>
+            <property name="CustomIcon" value="resourceSilverNugget"/>
+            <property name="Material" value="MresourcePlatinumNugget"/>
+            <property name="CustomIconTint" value="#E5E4E2"/>
+            <property name="Tags" value="gems"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="CraftingIngredientTime" value="15"/>
+            <property name="DescriptionKey" value="rareOresGroupDesc"/>
+            <property name="SoundPickup" value="nuggets_grab"/>
+            <property name="SoundPlace" value="nuggets_place"/>
+        </item>
+
+    <!-- Artifact -->
+
+        <item name="GoldenPoop">
+            <property name="Tags" value="gems"/>
+            <property name="HoldType" value="3"/>
+            <property name="Group" value="Resources"/>
+            <property name="Meshfile" value="#@modfolder:Resources/poop.unity3d?GoldenPoop.Prefab"/>		
+		    <property name="DropMeshfile" value="#@modfolder:Resources/poop.unity3d?GoldenPoop.Prefab"/>
+            <property name="Material" value="MresourceSilverNugget"/>
+            <property name="Stacknumber" value="1"/> <!-- STK food -->
+            <!-- <property name="EconomicBundleSize" value="5"/> -->
+            <property name="EconomicValue" value="10000"/>
+            <property name="DescriptionKey" value="rareOresGroupDesc"/>
+            <property name="CraftingIngredientTime" value="3"/>
+            <property name="SoundPickup" value="nuggets_grab"/>
+	        <property name="SoundPlace" value="nuggets_place"/>
+        </item>
+
+    <!-- Raw Gemstone -->
+
+        <item name="RawAmber">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="RawAmethyst">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>        
+        
+        <item name="RawAquamarine">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="RawBlueTopaz">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="RawDiamond">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="RawEmerald">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="RawGade">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>        
+        
+        <item name="RawGarnet">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="RawOpal">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="RawPearl">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="RawRuby">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="RawSapphire">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="RawGems,GemSynthesizing"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+    <!-- belt buckle -->
+
+        <item name="resourceCopperBeltBuckle">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourceIronBeltBuckle">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourceSilverBeltBuckle">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourceGoldBeltBuckle">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourcePlatinumBeltBuckle">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourceTungstenBeltBuckle">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourceLeatherBeltBlank">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+    <!-- bars -->
+
+        <item name="resourceCopperBar">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourceIronBar">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="100"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourceSilverBar">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="750"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourceGoldBar">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="1000"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourcePlatinumBar">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="1200"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+        <item name="resourceTungstenBar">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mstone"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="1200"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+        </item>
+
+    <!-- jewelry -->
+
+        <item name="itemCopperBand">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="CopperBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="ring" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="1,1,1,2,2,2"  tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemIronBand">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="IronBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="ring" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="2,2,2,3,3,3" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemSilverBand">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="SilverBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="ring" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemGoldBand">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="GoldBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="ring" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="4,4,4,5,5,5" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemPlatinumBand">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="PlatinumBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="ring" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="5,5,5,6,6,6" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemTungstenBand">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="TungstenBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="ring" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="ModSlots" operation="base_set" value="6,6,6,7,7,7" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" /> 
+            </effect_group>
+        </item>
+
+        <item name="itemEnchantedRing">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="upperbody,hands,armor,armorHands,canHaveCosmetic,lightArmor,lightArmorDeg,armorLightSkill,biomeChallenge,SonjaArmor,jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="PlatinumBand"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="ring" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+
+			<property class="SDCS">
+				<property name="Prefab" value="#@modfolder:Resources/Sonja_TWD_Armors.unity3d?gear{sex}DarylTWD"/>
+				<property name="TransformName" value="hands"/>
+				<property name="Excludes" value="hands"/>
+			</property>
+
+			<effect_group tiered="true">
+				<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/Rings.unity3d?EnchantedRing.prefab" parent_transform="Hand" local_offset="0,0,0" local_rotation="0,0,0">
+					<requirement name="!IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStart" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/Rings.unity3d?EnchantedRing.prefab">
+					<requirement name="IsFPV"/>
+				</triggered_effect>
+				<!--triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="Entities/OutdoorDecor/cowSkullPrefab"/-->
+			</effect_group>
+
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="5,5,5,6,6,6" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+
+
+
+        <item name="itemCopperNeckless">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="CopperNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="necklace" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="1,1,1,2,2,2"  tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemIronNeckless">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="IronNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="necklace" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="2,2,2,3,3,3" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemSilverNeckless">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="SilverNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="necklace" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemGoldNeckless">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="GoldNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="necklace" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="4,4,4,5,5,5" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemPlatinumNeckless">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="PlatinumNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="necklace" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="5,5,5,6,6,6" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemTungstenNeckless">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="TungstenNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="necklace" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="ModSlots" operation="base_set" value="6,6,6,7,7,7" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" /> 
+            </effect_group>
+        </item>
+
+
+
+        <item name="itemCopperPiercing">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="CopperPiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="piercing" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="1,1,1,2,2,2"  tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemIronPiercing">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="IronPiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="piercing" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="2,2,2,3,3,3" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemSilverPiercing">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="SilverPiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="piercing" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemGoldPiercing">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="GoldPiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="piercing" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="4,4,4,5,5,5" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemPlatinumPiercing">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="PlatinumPiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="piercing" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="5,5,5,6,6,6" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemTungstenPiercing">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="TungstenPiercing"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="piercing" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="ModSlots" operation="base_set" value="6,6,6,7,7,7" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" /> 
+            </effect_group>
+        </item>
+
+
+
+        <item name="itemCopperBelt">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="copperbelt"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="belt" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="1,1,1,2,2,2"  tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemIronBelt">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="IronBelt"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="belt" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="2,2,2,3,3,3" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemSilverBelt">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="SilverBelt"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="belt" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemGoldBelt">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="GoldBelt"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="belt" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="4,4,4,5,5,5" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemPlatinumBelt">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="PlatinumBelt"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="belt" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="75,80,85,90,95,100" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="75,80,85,90,95,100" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="5,5,5,6,6,6" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemTungstenBelt">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="TungstenBelt"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="belt" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="ModSlots" operation="base_set" value="6,6,6,7,7,7" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" /> 
+            </effect_group>
+        </item>
+
+        <item name="itemThorsLegendaryBelt">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="ThorsLegendaryBelt"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="belt" />
+            <property name="EconomicValue" value="1000" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="5"/>
+                <passive_effect name="ModSlots" operation="base_set" value="6,6,6,7,7,7" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" /> 
+            </effect_group>
+        </item>
+
+
+
+        <item name="itemCopperBracelet">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="CopperBracelet"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="bracelet" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="2,4,6,8,10,12" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="1,1,1,2,2,2"  tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemIronBracelet">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="IronBracelet"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="bracelet" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="14,16,18,20,22,24" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="2,2,2,3,3,3" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemSilverBracelet">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="SilverBracelet"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="bracelet" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="28,32,36,40,42,46" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemGoldBracelet">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="GoldBracelet"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="bracelet" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="50,54,58,62,66,70"  tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="4,4,4,5,5,5" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemPlatinumBracelet">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="PlatinumBracelet"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="bracelet" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="75,80,85,90,95,100" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="75,80,85,90,95,100" tier="1,2,3,4,5,6"/> 
+                <passive_effect name="ModSlots" operation="base_set" value="5,5,5,6,6,6" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
+            </effect_group>
+        </item>
+
+        <item name="itemTungstenBracelet">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="CustomIcon" value="TungstenBracelet"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="bracelet" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="HealthMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="StaminaMax" operation="base_add" value="120,140,160,180,200,220" tier="1,2,3,4,5,6"/>
+                <passive_effect name="ModSlots" operation="base_set" value="6,6,6,7,7,7" tier="1,2,3,4,5,6" />
+		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" /> 
+            </effect_group>
+        </item>
+
+
+
+
+
+    </append>
+
+</configs>

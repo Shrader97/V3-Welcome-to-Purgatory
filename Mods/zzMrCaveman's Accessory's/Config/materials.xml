@@ -1,0 +1,20 @@
+<configs>
+
+   <append xpath="/materials">
+   
+        <material id="MresourceScrapAluminum">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="forge_category" value="Aluminum"/>
+            <property name="Experience" value="1.6"/>
+        </material>
+
+        <material id="MresourcePlatinumNugget">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="Experience" value="160"/>
+        </material>
+
+    </append>
+
+</configs>

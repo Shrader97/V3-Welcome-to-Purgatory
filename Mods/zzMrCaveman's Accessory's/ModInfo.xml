@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <Name value="ModletTemplate" />
+	<DisplayName value="Modlet Template" />
+    <Description value="A Template Modlet" />
+    <Author value="MrCavemanTTV" />
+    <Version value="0.0.0.1" />
+</xml>

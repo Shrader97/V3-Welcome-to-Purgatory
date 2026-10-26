@@ -1,0 +1,35 @@
+Accessory Slots — Copyright (c) 2026 tehAon. All rights reserved.
+
+This mod — its code, configuration files and icons — is free to download and use on the terms below.
+Anything not granted here needs written permission from the author
+(tehAon on Nexus Mods: https://next.nexusmods.com/profile/tehAon).
+
+YOU MAY
+  - play it, and run it on any server, public or private (including servers that accept donations);
+  - include it UNMODIFIED in a modpack or server pack, if you credit "Accessory Slots by tehAon" and
+    link to its official page;
+  - make videos, streams and screenshots with it, monetized or not;
+  - change it for your own game or your own server (for example, tuning XML values), as long as you
+    do not share the changed files.
+
+BUILDING ON IT (this is what it is for)
+  You may publish your own mods - free or paid-for-nothing, under any license you like for YOUR files -
+  that USE Accessory Slots:
+  - add, change or remove slots from your own Config/accessoryslots.xml;
+  - make items that go in its slots (the AccessorySlot item property);
+  - reference AccessorySlots.dll from your own code and call its public API.
+  Tell your users to install Accessory Slots from its official page. Do not bundle a copy of it inside
+  your mod's download.
+
+YOU MAY NOT, without permission
+  - re-upload or mirror it, in whole or in part, on any site;
+  - sell it or any part of it, or put it behind a paywall;
+  - reuse its code or icons in other mods or projects (other than building on it as above);
+  - distribute modified versions.
+
+NO WARRANTY
+  It is provided "as is", without warranty of any kind. The author is not liable for any damage,
+  lost saves or other problems arising from its use.
+
+CREDITS
+  Original work. No third-party game assets are used.

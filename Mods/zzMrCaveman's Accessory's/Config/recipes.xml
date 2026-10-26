@@ -1,0 +1,202 @@
+<configs>
+
+    <append xpath="/recipes">
+
+        <recipe name="PreciousMetalForge" count="1" tags="learnable,packMuleCrafting">
+            <ingredient name="resourceCobblestones" count="50"/>
+            <ingredient name="woodLogPillar100" count="1"/>
+            <ingredient name="resourceLeather" count="10"/>
+            <ingredient name="resourceDuctTape" count="3"/>
+            <ingredient name="resourceMetalPipe" count="3"/>
+        </recipe>
+
+        <recipe name="resourceCopperBar" count="1" craft_time="50" craft_area="PreciousMetalForge" is_trackable="false" craft_tool="toolForgeCrucible">
+            <ingredient name="resourceCopper" count="20"/>
+            <ingredient name="resourceClayLump" count="10"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceClayLump,resourceCopper"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="resourceIronBar" count="1" craft_time="50" craft_area="PreciousMetalForge" is_trackable="false" craft_tool="toolForgeCrucible">
+            <ingredient name="resourceScrapIron" count="20"/>
+            <ingredient name="resourceClayLump" count="10"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceClayLump,resourceGoldNugget"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="resourceSilverBar" count="1" craft_time="50" craft_area="PreciousMetalForge" is_trackable="false" craft_tool="toolForgeCrucible">
+            <ingredient name="resourceSilverNugget" count="20"/>
+            <ingredient name="resourceClayLump" count="10"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceClayLump,resourceSilverNugget"/>
+            </effect_group>
+        </recipe> 
+
+        <recipe name="resourceGoldBar" count="1" craft_time="50" craft_area="PreciousMetalForge" is_trackable="false" craft_tool="toolForgeCrucible">
+            <ingredient name="resourceGoldNugget" count="20"/>
+            <ingredient name="resourceClayLump" count="10"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceClayLump,resourceGoldNugget"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="resourcePlatinumBar" count="1" craft_time="50" craft_area="PreciousMetalForge" is_trackable="false" craft_tool="toolForgeCrucible">
+            <ingredient name="resourcePlatinumNugget" count="20"/>
+            <ingredient name="resourceClayLump" count="10"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceClayLump,resourcePlatinumNugget"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="resourceTungstenBar" count="1" craft_time="50" craft_area="PreciousMetalForge" is_trackable="false" craft_tool="toolForgeCrucible">
+            <ingredient name="resourceTungsten" count="20"/>
+            <ingredient name="resourceClayLump" count="10"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceClayLump,resourcePlatinumNugget"/>
+            </effect_group>
+        </recipe>
+
+
+        <recipe name="JewelryBench" count="1" tags="learnable,workbenchCrafting,packMuleCrafting">
+            <ingredient name="resourceForgedIron" count="25"/>
+            <ingredient name="resourceMechanicalParts" count="20"/>
+            <ingredient name="resourceDuctTape" count="5"/>
+            <ingredient name="resourceNail" count="100"/>
+            <ingredient name="resourceWood" count="100"/>
+        </recipe>
+
+        <recipe name="itemCopperBand" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+        
+        <recipe name="itemIronBand" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceIronBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemSilverBand" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceSilverBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemGoldBand" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceGoldBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemPlatinumBand" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourcePlatinumBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemTungstenBand" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+
+
+
+        <recipe name="itemCopperNeckless" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemIronNeckless" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceIronBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemSilverNeckless" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceSilverBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemGoldNeckless" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceGoldBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemPlatinumNeckless" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourcePlatinumBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemTungstenNeckless" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+
+
+
+        <recipe name="itemCopperPiercing" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemIronPiercing" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceIronBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemSilverPiercing" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceSilverBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemGoldPiercing" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceGoldBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemPlatinumPiercing" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourcePlatinumBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemTungstenPiercing" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+
+
+
+        <recipe name="itemCopperBracelet" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemIronBracelet" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceIronBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemSilverBracelet" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceSilverBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemGoldBracelet" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceGoldBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemPlatinumBracelet" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourcePlatinumBar" count="1"/>
+        </recipe>
+
+        <recipe name="itemTungstenBracelet" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+
+
+
+        <recipe name="resourceCopperBeltBuckle" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+
+        <recipe name="resourceIronBeltBuckle" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceIronBar" count="1"/>
+        </recipe>
+
+        <recipe name="resourceSilverBeltBuckle" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceSilverBar" count="1"/>
+        </recipe>
+
+        <recipe name="resourceGoldBeltBuckle" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceGoldBar" count="1"/>
+        </recipe>
+
+        <recipe name="resourcePlatinumBeltBuckle" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourcePlatinumBar" count="1"/>
+        </recipe>
+
+        <recipe name="resourceTungstenBeltBuckle" count="1" craft_area="JewelryBench" is_trackable="false" craft_tool="toolForgeCrucible" tags="learnable">
+            <ingredient name="resourceCopperBar" count="1"/>
+        </recipe>
+
+    <!--  -->
+
+    </append>
+
+</configs>
