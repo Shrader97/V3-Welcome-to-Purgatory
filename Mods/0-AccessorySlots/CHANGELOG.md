@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.6.0 — 2026-10-26
+
+- **Models on the character.** An item can now show on the player while it is worn - a ring on a finger, a
+  pendant at the neck - for you in third person and for everyone who can see you. A mod gives its item a model
+  made in Unity (`AccessoryModel`) and, if it wants, an offset, rotation, scale and bone; each slot names the bone
+  its models hang on (necklace at the neck, bracelet on the left wrist, the two rings on the left and right ring
+  fingers). Asked for in a Nexus comment ("make a mesh in unity and then show up on the character").
+- For modders placing one: `acs model bones` lists the skeleton, `acs model bone <name>` says which way a bone
+  points, `acs model set ring#1 offset 0,0.02,0` moves the worn model at once, and `acs model xml` prints the
+  lines to paste. README "A model on the character" has the Unity side (version, colour space, build target).
+- The second ring, on the right hand, shows the mirror image of the first, so a mod places its ring once and it
+  fits both hands.
+- Your own models hide in first person, and come back when you switch to third person, respawn or change armor.
+- From code, a mod can hide its item's model for a while (`Accessories.HideModel`) - Glider hides its packed glider
+  while the glider is open.
+- **Fix for mods that hang things on the body themselves** (the game's `AddPart` on `onSelfEquipStart`): those
+  parts now come back after switching between first and third person, as they do for armor. The game gives worn
+  armor a fresh "put on" whenever it rebuilds the body; accessories missed it.
+- On its own the framework still adds no items and no models. Nothing changes for an item without a model.
+- **Claims game 3.4.0.** Checked on a 3.4.0 dedicated server (every self-check) and in a 3.4.0 game: models on the
+  character, first person, view switches, armor changes and Glider's packed glider all behave as on 3.3.
+
 ## 0.5.0 — 2026-10-16
 
 - **An item decides whether two of it can be worn.** New item property `AccessoryUnique`: `false` lets two

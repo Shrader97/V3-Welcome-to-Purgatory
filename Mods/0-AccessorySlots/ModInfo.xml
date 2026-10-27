@@ -2,8 +2,8 @@
 <xml>
 	<Name value="0-AccessorySlots"/>
 	<DisplayName value="Accessory Slots"/>
-	<Version value="0.5.0"/>
-	<Description value="Extra equipment slots on a new Accessories tab of the character screen: necklace, bracelet and two rings by default, and other mods can add their own. An item can fit more than one slot. The jewelry slots are always shown so players know they are there; slots other mods add show once an installed item uses them. Worn items give their bonuses like armor does and follow the world's armor rules on death. A framework: on its own it adds no items. Install as Mods/0-AccessorySlots on the server and every client. Requires launching with EAC off (DLL mod)."/>
+	<Version value="0.6.0"/>
+	<Description value="Extra equipment slots on a new Accessories tab of the character screen: necklace, bracelet and two rings by default, and other mods can add their own. An item can fit more than one slot. The jewelry slots are always shown so players know they are there; slots other mods add show once an installed item uses them. Worn items give their bonuses like armor does, follow the world's armor rules on death, and can show on the character when their mod gives them a model. A framework: on its own it adds no items. Install as Mods/0-AccessorySlots on the server and every client. Requires launching with EAC off (DLL mod)."/>
 	<Author value="tehAon"/>
 	<Website value="https://next.nexusmods.com/profile/tehAon"/>
 </xml>

@@ -11,7 +11,9 @@ Worn accessories work like armor:
   XML on the item);
 - they follow your world's armor rules on death and on quit - **Drop On Death**, **Drop On Quit**, **Lose Items
   On Death**, **Degrade Items On Death**: if armor drops, so do they; if armor stays on you, so do they;
-- other players see what you wear (it is synced like armor), and the server counts it too (loot stage, for example).
+- other players see what you wear (it is synced like armor), and the server counts it too (loot stage, for example);
+- an item can show on your character while worn - a ring on your finger, a pendant on your chest - if the mod that
+  adds it gives it a model (see "A model on the character").
 
 **This is a framework.** On its own it adds no items. Install it for a mod that uses it.
 
@@ -109,11 +111,70 @@ add their bonuses together. An item that gives its bonus by adding a buff on `on
 | `label` | localization key for the empty slot's tooltip |
 | `unique` | `true`: no two of the same item across the slot's copies - for items without their own `AccessoryUnique` |
 | `keep_on_death` | `true`: exempt from the death and quit rules |
+| `bone` | where a model worn here hangs (see below), one bone per copy: `bone="LeftHandRing1,RightHandRing1"`; a copy past the list uses the last; a copy on the first one's Left/Right twin shows the mirror image |
 
 Use the default names (`necklace`, `bracelet`, `ring`) for jewelry so different mods' rings share the same two
 ring slots. They are the names Minecraft's Curios uses, so a modder who knows it guesses right; the body part
 works too - `neck`, `wrist` and `finger` are aliases of the same three slots. An item that claims a slot nobody
 declared still works: the slot is created from the item itself.
+
+### A model on the character
+
+An item can show on the player while it is worn - a ring on a finger, a pendant on the chest - for you in third
+person and for everyone who can see you. Make the model in Unity, put it in an asset bundle in your mod, and
+name it on the item:
+
+```xml
+<property name="AccessoryModel" value="#@modfolder:Resources/myjewelry.unity3d?SilverRing"/>
+<property name="AccessoryModelOffset" value="0,0.02,0"/>     <!-- metres, in the bone's own axes; default 0,0,0 -->
+<property name="AccessoryModelRotation" value="0,0,90"/>     <!-- degrees; default 0,0,0 -->
+<property name="AccessoryModelScale" value="1"/>             <!-- one number or x,y,z; default 1 -->
+<property name="AccessoryModelBone" value="Head"/>           <!-- optional: otherwise the slot's own bone -->
+```
+
+The model hangs on a bone of the player's skeleton and moves with it. Each slot names its bone: `necklace` on
+`Neck`, `bracelet` on the left wrist (`LeftHand`), the first `ring` on the left ring finger (`LeftHandRing1`) and
+the second on the right (`RightHandRing1`). A slot your mod adds names its own with `bone="..."`; an item names
+one for itself with `AccessoryModelBone`, which wins.
+
+**Left and right:** the body's left and right bones are mirror images, so one set of numbers cannot fit both hands.
+Place your model on the slot's **first** copy (the left ring finger); a later copy whose bone is the first one's
+Left/Right twin (`RightHandRing1` for `LeftHandRing1`) shows the exact mirror image by itself. An item that names
+its own `AccessoryModelBone` is never mirrored - its numbers are for that bone.
+
+**A complete example to copy:** Glider (0.3.0+) shows each glider packed on your back while it is worn - a slot
+`bone`, five items with `AccessoryModel`, one Linear-built bundle, and a few lines that hide the pack while the
+glider is open (`HideModel`, below). Glider's README walks through it.
+
+Placing it, in game (`acs` is the console command):
+
+- `acs model bones` lists the bone names (`acs model bones hand` only those with "hand" in them).
+- `acs model bone LeftHandRing1` says which way that bone's local x, y and z point on the body - which axis runs
+  along the finger.
+- `acs model set ring#1 offset 0,0.02,0` (or `rotation`, `scale`) moves your worn model at once, and every copy of
+  that item on anyone else, for the rest of the session. Wear the item in the first ring slot while you place it.
+- `acs model xml` prints the property lines with the numbers you settled on, to paste into your `items.xml`.
+- `acs model` lists every model on every loaded player and why one is not showing.
+
+Making the model:
+
+- **Unity 2022.3.62f2**, the game's own version. **Linear colour space** - a bundle built in Gamma looks pale
+  and hazy in game. Build for Windows with Direct3D 11, Vulkan and OpenGL so it renders for Windows and Linux
+  players (macOS players will not see it).
+- The prefab's origin is the point that sits on the bone; 1 unit = 1 metre. A ring around a 2 cm finger is about
+  that size. Bones run through the middle of the body: at offset 0 a model sits inside the skin. The `Neck` bone is
+  inside the base of the neck - a necklace needs to come up and forward from it (the test necklace: up 2 cm,
+  forward 5 cm).
+- A rigid model: it follows the bone but does not bend. Clothing that bends with the body is the game's own gear
+  system, not this.
+- Colliders and rigidbodies in the prefab are removed - it is a picture, so bullets and walls ignore it.
+- On your own player it is hidden in first person (the third-person body stands still there, so the model would
+  hang beside the camera). The character-screen preview does not show it.
+- A model that will not load, or a bone that does not exist, writes one warning to the log; the item still works.
+
+Every client needs your bundle, so a mod with models is installed on clients like any mod with assets. Mods that
+already hang things on the body with the game's own `AddPart` triggered effect on `onSelfEquipStart` keep working,
+and since 0.6.0 those parts come back after switching between first and third person too.
 
 **From code** - reference `AccessorySlots.dll` (your mod's folder must sort after `0-AccessorySlots`):
 
@@ -123,7 +184,13 @@ AccessorySlots.Accessories.Changed += (player, key, before, after) => { /* key l
 AccessorySlots.Accessories.Set(localPlayer, "glider#1", itemValue);     // checks slot and unique rules
 IReadOnlyList<string> slots = AccessorySlots.Accessories.SlotsFor(itemValue);   // e.g. ring, necklace
 bool fits = AccessorySlots.Accessories.Fits(itemValue, "necklace");
+GameObject model = AccessorySlots.Accessories.Model(player, "ring", 2);   // the worn model, null if none
+AccessorySlots.Accessories.HideModel(player, "glider", 1, true);          // hide it for now (e.g. while in use)
 ```
+
+`HideModel` is for an item that is sometimes drawn some other way: Glider shows a packed glider on your back
+while it is worn, and hides it while the glider is open and drawn by Glider itself. The hide holds when the body is
+rebuilt; each client draws every player itself, so call it on every client that should hide it.
 
 A slot's alias works anywhere its name does (`Get(player, "finger")` reads `ring#1`).
 
@@ -138,7 +205,8 @@ AccessorySlots.Accessories.AddToSaveData(__instance, "glider#1", itemValue);
 
 `acs` (or `accessoryslots`): used slots and what you wear. `acs defs`: every slot definition. `acs check`: patch
 status. `acs icons`: each slot's empty-slot picture and whether your game has it (add it to a bug report about a
-blank slot). `acs selftest`: a save/network/effects self-check, results in the log.
+blank slot). `acs selftest`: a save/network/effects self-check, results in the log. `acs model ...`: placing a
+model on the character (see above).
 
 ## Compatibility
 

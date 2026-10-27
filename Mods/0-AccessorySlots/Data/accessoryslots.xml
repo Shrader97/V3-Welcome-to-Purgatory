@@ -31,9 +31,21 @@
 		unique         true = no two of the same item across this slot's copies (no stacking two identical rings),
 		               for items without an AccessoryUnique property of their own.
 		keep_on_death  true = never dropped, lost, deleted or degraded on death or quit, whatever the world says.
+		bone           where a model worn here hangs on the player's body, one bone per copy, comma-separated
+		               (ring: first ring on the left ring finger, second on the right). A copy past the list uses the
+		               last. Only for items with an AccessoryModel; an item's own AccessoryModelBone wins.
+		               A copy whose bone is the first copy's Left/Right twin shows the mirror image, so an item is
+		               placed once, on the first copy. In game, "acs model bones" lists the names.
+
+	A model on the character - an item that shows while worn (README "A model on the character"):
+		<property name="AccessoryModel" value="#@modfolder:Resources/rings.unity3d?SilverRing"/>
+		<property name="AccessoryModelBone" value="LeftHandRing1"/>      optional, the slot's bone otherwise
+		<property name="AccessoryModelOffset" value="0,0.02,0"/>          metres, in the bone's own axes
+		<property name="AccessoryModelRotation" value="0,0,90"/>          degrees
+		<property name="AccessoryModelScale" value="1"/>                  one number or x,y,z
 -->
 <accessoryslots>
-	<slot name="necklace" aliases="neck" group="jewelry" order="10" icon="accessorySlotNecklace" label="lblAccessorySlotNecklace" unique="true"/>
-	<slot name="bracelet" aliases="wrist" group="jewelry" order="20" icon="accessorySlotBracelet" label="lblAccessorySlotBracelet" unique="true"/>
-	<slot name="ring" aliases="finger" group="jewelry" order="30" count="2" icon="accessorySlotRing" label="lblAccessorySlotRing" unique="true"/>
+	<slot name="necklace" aliases="neck" group="jewelry" order="10" icon="accessorySlotNecklace" label="lblAccessorySlotNecklace" unique="true" bone="Neck"/>
+	<slot name="bracelet" aliases="wrist" group="jewelry" order="20" icon="accessorySlotBracelet" label="lblAccessorySlotBracelet" unique="true" bone="LeftHand"/>
+	<slot name="ring" aliases="finger" group="jewelry" order="30" count="2" icon="accessorySlotRing" label="lblAccessorySlotRing" unique="true" bone="LeftHandRing1,RightHandRing1"/>
 </accessoryslots>
