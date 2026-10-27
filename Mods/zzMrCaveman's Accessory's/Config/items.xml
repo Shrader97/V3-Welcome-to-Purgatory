@@ -15,7 +15,7 @@
             <property name="SoundPlace" value="nuggets_place"/>
         </item>
 
-    <!-- Artifact -->
+    <!-- Artifact
 
         <item name="GoldenPoop">
             <property name="Tags" value="gems"/>
@@ -24,14 +24,13 @@
             <property name="Meshfile" value="#@modfolder:Resources/poop.unity3d?GoldenPoop.Prefab"/>		
 		    <property name="DropMeshfile" value="#@modfolder:Resources/poop.unity3d?GoldenPoop.Prefab"/>
             <property name="Material" value="MresourceSilverNugget"/>
-            <property name="Stacknumber" value="1"/> <!-- STK food -->
-            <!-- <property name="EconomicBundleSize" value="5"/> -->
+            <property name="Stacknumber" value="1"/> 
             <property name="EconomicValue" value="10000"/>
             <property name="DescriptionKey" value="rareOresGroupDesc"/>
             <property name="CraftingIngredientTime" value="3"/>
             <property name="SoundPickup" value="nuggets_grab"/>
 	        <property name="SoundPlace" value="nuggets_place"/>
-        </item>
+        </item> -->
 
     <!-- Raw Gemstone -->
 
@@ -471,6 +470,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Rings.unity3d?CopperRing001"/>
+            <property name="AccessoryModelOffset" value="0,0,0"/>     <!-- metres, in the bone's own axes; default 0,0,0 -->
+            <property name="AccessoryModelRotation" value="0,0,0"/>     <!-- degrees; default 0,0,0 -->
+            <property name="AccessoryModelScale" value="1"/>             <!-- one number or x,y,z; default 1 -->
+            <property name="AccessoryModelBone" value="LeftHandIndex1"/>           <!-- optional: otherwise the slot's own bone -->
             <property name="CustomIcon" value="CopperBand"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -585,46 +589,6 @@
                 <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" /> 
             </effect_group>
         </item>
-
-        <item name="itemEnchantedRing">
-            <property name="Extends" value="resourceScrapIron"/>
-            <property name="Tags" value="upperbody,hands,armor,armorHands,canHaveCosmetic,lightArmor,lightArmorDeg,armorLightSkill,biomeChallenge,SonjaArmor,jewelryAttachments"/>
-            <property name="AccessoryUnique" value="false"/>
-            <property name="ShowQuality" value="true" />
-            <property name="CustomIcon" value="PlatinumBand"/>
-            <property name="UnlockedBy" value="CraftingJewelry"/>
-            <property name="Group" value="Resources,Armor" />
-            <property name="AccessorySlot" value="ring" />
-            <property name="EconomicValue" value="180" />
-            <property name="TraderStageTemplate" value="baseTier1"/>
-
-			<property class="SDCS">
-				<property name="Prefab" value="#@modfolder:Resources/Sonja_TWD_Armors.unity3d?gear{sex}DarylTWD"/>
-				<property name="TransformName" value="hands"/>
-				<property name="Excludes" value="hands"/>
-			</property>
-
-			<effect_group tiered="true">
-				<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/Rings.unity3d?EnchantedRing.prefab" parent_transform="Hand" local_offset="0,0,0" local_rotation="0,0,0">
-					<requirement name="!IsFPV"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfEquipStart" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/Rings.unity3d?EnchantedRing.prefab">
-					<requirement name="IsFPV"/>
-				</triggered_effect>
-				<!--triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="Entities/OutdoorDecor/cowSkullPrefab"/-->
-			</effect_group>
-
-            <effect_group tiered="true">
-                <passive_effect name="HealthMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/>
-                <passive_effect name="StaminaMax" operation="base_add" value="75,80,85,90,95,100"  tier="1,2,3,4,5,6"/> 
-                <passive_effect name="ModSlots" operation="base_set" value="5,5,5,6,6,6" tier="1,2,3,4,5,6" />
-		        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10,.15,.20,.25,.30,.35" tier="1,2,3,4,5,6" tags="EntityDamage,BlockDamage"/>
-                <passive_effect name="ModPowerBonus" operation="base_add" value="20,40,70,110,160,220" tier="1,2,3,4,5,6" tags="EconomicValue" />
-            </effect_group>
-        </item>
-
-
-
 
         <item name="itemCopperNeckless">
             <property name="Extends" value="resourceScrapIron"/>
