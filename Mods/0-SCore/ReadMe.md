@@ -85,38 +85,370 @@ This release of 0-SCore introduces significant enhancements across several core 
 		  base they no longer stamp a phantom duplicate one cell above, so a
 		  cube declared "1,1,1" now genuinely occupies one cell.
 
+Version: 3.4.1.1453
+	Game Version: v3.4.0 (b6)
 
-Version: 3.3.7.933
-	Game Version: v3.3.0 (b17) (latest_experimental)
+	[ Game 3.4 Update ]
+		- SCore now builds against 7 Days To Die V3.4 (b6). Version numbers
+		  restart at 3.4.1 (Properties/AssemblyInfo.tt).
+		- No code changes were needed to compile. Every Harmony patch target
+		  was checked against the 3.4 game DLL and still matches.
 
-	Hotfix for 3.3.7.636. Two crashes that survived the v3.3 port, both from
-	the same cause: a TileEntityComposite built with the bare (Chunk)
-	constructor never gets its feature table, so the first GetFeature call on
-	it throws.
+	[ Demolisher Sleepers - stuck crouch-walking after waking ]
+		- This is a vanilla bug. A Demolisher spawned from any sleeper pose
+		  other than standing idle woke up crouch-walking and stayed that way.
+		- Same cause as the NPC sleeper fix in 3.3.32.992: sleeper poses
+		  shrink physics height to 0.85, and on wake-up the game plays a
+		  "Crouch Walk 8" crossfade. Normally CrouchHeightFixedUpdate then
+		  stands the entity back up, but it returns early for any entity with
+		  CrouchType 0, and the Demolisher is the only vanilla entity with
+		  CrouchType 0. Its height stayed at 0.85 forever.
+		- Besides looking wrong, this changed its AI. EAIBreakBlock only
+		  breaks blocks at head height when a CrouchType 0 entity is at least
+		  1 tall, so a stuck Demolisher got caught under overhangs it should
+		  have smashed through.
+		- The wake-up patch on EntityAlive.ConditionalTriggerSleeperWakeUp
+		  (Harmony/EntityAlive/EntityAlivePatches.cs) now also covers any
+		  entity with CrouchType 0. It restores full height before waking, so
+		  the normal wake animation plays. Standing sleepers, crawlers and
+		  normal spawns are unaffected.
 
-	[ NPCs - Opening any NPC's inventory threw a NullReferenceException ]
-		- SCoreLootContainer (the NPC inventory / harvest window) sits on a
-		  detached composite parent that is never registered with the world.
-		  v3.3's loot window asks the container for a sign feature, the
-		  container passes the question to that parent, and the parent had no
-		  feature table to look in, so TileEntityComposite.GetFeature threw.
-		- The parent now gets an empty feature table, so every lookup answers
-		  "no such feature". It is built by hand because the only
-		  TileEntityCompositeData constructor needs a composite block and
-		  throws without one.
+	[ Hired NPCs - traps were still hurting them ]
+		- The patch that lets hired NPCs pass through traps unhurt had
+		  stopped working. BlockDamage overrides OnEntityCollidedWithBlock
+		  without calling the Block version, and the patch was on Block, so
+		  it never ran for traps.
+		- The patch is back on BlockDamage (Harmony/Blocks/
+		  OnEntityCollidedWithBlock.cs), where it was in 1.0. Barbed wire and
+		  spikes run the BlockDamage code first, so they are covered too.
+		- Behavior change: hired NPCs now walk through damage traps slowed
+		  but unhurt, and the traps no longer wear down from them.
 
-	[ Music Box - Placing one threw a NullReferenceException ]
-		- BlockMusicBox built its tile entity with the bare TileEntityComposite(Chunk)
-		  constructor, which leaves the feature table null, so the GetFeature call
-		  that follows threw. It now uses the (Chunk, BlockValue) constructor, which
-		  builds the block's CompositeFeatures, and calls OnBlockAdded so the owner
-		  is recorded and each feature's OnAdded runs, as BlockCompositeTileEntity
-		  does.
-		- The container is sized through ItemGrid.Resize, and a music box that
-		  hands out a quest passes QuestSource.QuestSystem.
+	[ Harmony Patch Cleanup ]
+		- Five more patches declared __instance as a class other than the
+		  one they patch. None changed behavior, but they could misbehave if
+		  the game changed underneath them:
+		  - XUiCCraftingInfoWindowSetRecipe: the logging line read
+		    OutputQuality off the wrong class. It now logs the window's
+		    selected crafting tier.
+		  - ItemActionEntrySellOnActivated: the postfix now declares
+		    ItemActionEntrySell, not ItemActionEntryPurchase.
+		  - InertEntity (CanDamageEntity): the patch runs on every entity, so
+		    it now takes Entity and only checks living entities.
+		  - UAITaskBaseUpdateAction: UAIBase.updateAction is static, so the
+		    unused __instance was removed.
+		  - xuic_Backpack_GetBindingValue: now declares XUiC_BackpackWindow,
+		    the class it actually patches.
 
-Version: 3.3.7.636
-	Game Version: v3.3.0 (b17) (b)
+	[ Developer Tool - Harmony patch checker ]
+		- New: Mods/Tools/HarmonyAudit (exe in Mods/Tools/bin). It checks a
+		  mod DLL's [HarmonyPatch] targets against the game DLL without
+		  loading anything: target method and overload, ___field injections
+		  and parameter names. A clean compile does not prove patches still
+		  attach, and one bad patch makes Harmony skip every patch after it.
+		- Run it from Mods/ after each game update:
+		  Tools/bin/HarmonyAudit.exe 0-SCore/SCore.dll
+		      ../7DaysToDie_Data/Managed 0_TFP_Harmony
+		- It exits with code 2 if anything is broken. SCore currently reports
+		  0 broken. It cannot check patches that pick their target in code
+		  (TargetMethod), or ones applied with harmony.Patch(...) calls.
+
+Version: 3.3.32.992
+	Game Version: v3.3.0 (b18)
+
+	[ NPC Sleepers - stuck in place after waking ]
+		- Bandit-class NPCs (EntityNPCBandit) spawned from any sleeper block
+		  other than the standing Sleeper Idle could not move after waking.
+		- Since game 3.x, every sleeper pose except standing idle shrinks the
+		  entity's physics height to 0.85. On wake-up the game sees a height
+		  under 1 and plays a "Crouch Walk 8" crossfade instead of the normal
+		  sleeper trigger.
+		- EntityNPCBandit also re-sent the wake-up every tick (plus a network
+		  packet each time), which kept restarting that crossfade and pinned
+		  the NPC in place.
+		- Only Bandit-class NPCs were affected. EntityAliveSDX and
+		  EntityAliveSDXV4 declare their own IsSleeping property, which hides
+		  the game's IsSleeping field, so their copy of the every-tick wake-up
+		  never reaches the game's wake-up code. Their loop is left as it is:
+		  making it work would change them to wake instantly in POIs.
+		- New patch on EntityAlive.ConditionalTriggerSleeperWakeUp
+		  (Harmony/EntityAlive/EntityAlivePatches.cs): for SCore NPCs
+		  (EntityAliveSDX, EntityAliveSDXV4, EntityNPCBandit) it restores full
+		  height before any wake-up (volume trigger, noise, damage), so the
+		  normal wake animation plays. Crawlers are left alone.
+		- EntityNPCBandit (Scripts/Entities/EntityNPCBandit.cs) now sends its
+		  always-awake wake-up once, and again only if the NPC goes back to
+		  sleep.
+		- Thanks to arramus for the report.
+
+	[ Fire Management - extinguishing did not work on dedicated servers ]
+		- A water bucket (RemoveFire, target="positionAOE") could leave fires
+		  burning on a dedicated server.
+		- RemoveFire runs on the player's client. The client only put out a
+		  block, and only told the server, if its own copy of the fire map
+		  said that block was burning. That copy can miss fires: a client
+		  only records a fire if it can see a flammable block there when the
+		  server's message arrives, so fires in chunks it had not loaded yet
+		  were dropped until the next fire update. Fires restored from the
+		  save at server start were sent before anyone was connected.
+		- When the server did hear about an extinguished fire from a client,
+		  it put it out without telling the other clients, so they kept the
+		  flames.
+		- Now the server decides:
+		  - RemoveFire sends one "extinguish area" message (centre, range,
+		    player) to the server (new NetPackageExtinguishArea). The server
+		    checks its own fire map, puts out everything in range and tells
+		    every client which blocks went out. The client still clears what
+		    it knows about straight away, so the bucket feels instant.
+		  - This replaces one check per block in the area (17 x 17 x 17 =
+		    4,913 at range 8) with a single message.
+		  - Single and batch extinguish messages from a client are now
+		    passed on to every client by the server.
+		  - Explosions with negative BlockDamage send their changed blocks
+		    to the server the same way.
+		  - Batch extinguish messages are split into packets of 1,000
+		    positions, since the packet stores its count as a 16-bit number.
+		- With Logging set to true under FireManagement, each area
+		  extinguish logs a line: [FireManager] ExtinguishArea <centre>
+		  range <n>: extinguished <count> fires (server: True/False).
+		- Files: Features/FireV2/Scripts/FireManager.cs (ExtinguishArea,
+		  ExtinguishFires), FireNetworkManager.cs,
+		  Interfaces/IFireNetworkManager.cs,
+		  MinEvent/MinEventActionRemoveFire.cs, Harmony/Explosion.cs,
+		  NetPackage/NetPackageAddExtinguishPosition.cs,
+		  NetPackage/NetPackageAddExtinguishPositions.cs and the new
+		  NetPackage/NetPackageExtinguishArea.cs.
+		- Server and clients must run the same SCore build, because a new
+		  network package was added.
+		- To test on a dedicated server: start a fire, walk to it from far
+		  enough away that its chunks were not loaded when it started, then
+		  use the bucket. The fires should go out for every connected
+		  player, and the server log should show "ExtinguishArea ... (server:
+		  True)" with a count above 0.
+		- Thanks to arramus for the report.
+
+	[ Auto-Sort Drop Box - P2P host received other players' items ]
+		- In P2P games, items a client put in their drop box ended up in the
+		  host's containers, even when the two players were not allied and
+		  were thousands of blocks apart.
+		- The drop box's timed sort (BlockDropBoxContainer.UpdateTick) runs
+		  on the server and searched for containers around
+		  GetPrimaryPlayer(). On a P2P host that is always the host's own
+		  player, so every box in loaded chunks emptied into containers near
+		  the host. On a dedicated server there is no primary player, so the
+		  scan failed and the timed sort never moved anything. That is why
+		  the bug only showed in P2P.
+		- The timed sort now searches around the drop box itself, for the
+		  box's owner (the player who placed it):
+		  - Locked containers must allow the owner.
+		  - Containers inside someone else's land claim are skipped.
+		  - LandClaimContainersOnly and LandClaimPlayerOnly apply to the
+		    owner.
+		  - A box with no owner (not placed by a player) does not sort.
+		- Drop boxes are never used as targets, whether they are marked by
+		  the BlockDropBoxContainer class or the DropBox property. Before,
+		  only the property was checked.
+		- The timed sort works the same in single player, P2P and on
+		  dedicated servers. The sort when you close a box is unchanged.
+		- Emptied slots are now cleared with a copy of ItemStack.Empty
+		  instead of the shared instance.
+		- Behaviour changes:
+		  - Dedicated servers: drop boxes now empty on their own timer,
+		    which they never did before.
+		  - P2P hosts: the host's own box now sorts only into containers
+		    near the box, not near wherever the host is standing.
+		  - The timed sort ignores BlockOnNearbyEnemies and the
+		    bindtoWorkstation / nottoWorkstation options. Those apply to a
+		    player at a workstation, not to a box on the server.
+		- With Debug set to true under AdvancedRecipes, every item the timed
+		  sort moves logs a line: [DropBox] Timed sort: moved <item> from
+		  <box> to <container>.
+		- Files: Features/RemoteCrafting/Scripts/BlockDropBoxContainer.cs,
+		  Features/RemoteCrafting/Scripts/RemoteCraftingUtils.cs
+		  (AddToContainersNearBox, GetTileEntitiesNearBox, IsDropBox).
+		- Thanks to arramus for the report.
+
+	[ QuickContinue (-autostart) - Play Test closed the game ]
+		- With -autostart, starting a Play Test from the Prefab Editor quit
+		  the game instead of loading the test world.
+		- QuickContinue remembered that it had already auto-continued by
+		  setting the game's AutopilotMode pref to 1. That pref is the game's
+		  test-automation switch: while it is above 0, every server stop or
+		  disconnect calls Application.Quit. Play Test starts by
+		  disconnecting from the editor world, so the game quit.
+		- The log showed a clean quit, not a crash: the game's
+		  ConnectionManager.StopServers called Application.Quit because
+		  AutopilotMode was 1.
+		- QuickContinue (Harmony/QuickContinue/QuickContinue.cs) now keeps its
+		  own flag and leaves AutopilotMode alone. Auto-continue on the first
+		  main menu, and quitting when you return to the main menu later, work
+		  as before. Play Test does not open the main menu, so it is not
+		  affected.
+		- Tested: with -autostart, Play Test now loads the test world, and
+		  AutopilotMode stays at 0.
+
+	[ NPC Looting - target smoke marker ]
+		- The smoke marker on the container a looting NPC is heading for is
+		  a debug aid, like the wander task's path smoke, but its test was
+		  inverted: if (!DebugMenuEnabled). It showed in normal play and
+		  turned off when debug mode was enabled. Both loot tasks (LootV4 and
+		  the legacy Loot) now show it only in debug mode. The inverted test
+		  dates from the first version of the legacy task, and LootV4 copied
+		  it.
+		- Thanks to Xyth for the report.
+
+	[ Crash on exit with a hired NPC ]
+		- Note: this fix is already in the 3.3.28.1111 release download (its
+		  SCore.dll reports 3.3.28.1131); it was left out of that entry's notes.
+		- Exiting a game with a hired NPC could crash the game. While the
+		  world unloads, the NPC's OnEntityUnload removes it from the player's
+		  companion list. That refreshes the companion HUD
+		  (XUiC_CompanionEntryList.RefreshPartyList), and vanilla writes to the
+		  HUD's transform with no check. On exit the HUD is already destroyed,
+		  so the write threw, the exception escaped into World.UnloadWorld and
+		  the rest of the world unload was skipped ("Disconnecting failed" in
+		  the log). After that, the half-unloaded NPCs threw errors every
+		  frame, the ChunkCalc and ChunkMeshBake threads each hit their 30s
+		  shutdown timeout, and the game crashed natively when the garbage
+		  collector released sign rendering buffers after the graphics device
+		  was gone.
+		- RefreshPartyList now skips itself when its HUD is destroyed or there
+		  is no player. This guard is always on, not tied to the
+		  FixCompanionEntryListDrift setting, and covers every caller including
+		  vanilla's. The drift postfix on the same method repeats the check,
+		  since Harmony runs postfixes even when a prefix skips the original.
+		- OnEntityUnload (EntityAliveSDX and EntityAliveSDXV4) now catches a
+		  failed companion removal, logs a warning and carries on, so a UI
+		  error can never abort the world unload again.
+
+Version: 3.3.28.1111
+	Game Version: v3.3.0 (b18)
+
+	[ NPC Movement - stopped NPCs running off ]
+		- The farming fix below was one case of a wider bug. The game's
+		  StopMove does not reset an entity's walk input while it is jumping,
+		  and stepping up a block counts as a jump. A task that stopped an NPC
+		  once and then waited without issuing a new move left the last walk
+		  direction driving the body, so the NPC ran off and the task then
+		  brought it back. On NPCs that steer by world direction (the SDCS
+		  NPCs) it ran in a straight line, backwards if the task kept it
+		  facing its target.
+		- EntityUtilities.Stop now also resets the walk input
+		  (SetMoveForward(0)). It already zeroed the animation speeds but not
+		  the input. This covers every caller: looting (stops once at the
+		  container, then waits out the activity buff, the same shape as
+		  farming), explore, healing, block breaking in the attack task,
+		  patrol, idle, and the stuck and jump-cancel move helper patches.
+		- The places that call moveHelper.Stop() directly now reset it too:
+		  Guard's Start (V4 and legacy; at the guard spot Guard never moves
+		  the NPC again, so nothing else would clear it), and the StayHere,
+		  GuardHere and FarmHere orders.
+		- Patrol (V4 and legacy) walks between points. Its per tick move
+		  used the two argument SetMoveTo, which takes the aggro speed, so
+		  patrols jogged. It now passes the walk speed, and reads a new run
+		  attribute (run="true" for panic speed).
+
+	[ NPC Fall Rescue ]
+		- Hired NPCs could be lost after falling below the world, typically on
+		  game re-entry before the terrain under them had loaded. The rescue
+		  only called TeleportToPlayer, which refuses when the NPC is within
+		  20m of the player horizontally or is on Stay or Guard. An NPC 15m to
+		  the side and far below was never rescued. Worse, the code skipped
+		  base.OnUpdatePosition whether or not the teleport happened, so the
+		  NPC just kept falling.
+		- NPCs with no leader or owner on record (a farmer sent to FarmHere, a
+		  dismissed NPC) had no rescue at all. The game's own check logged
+		  "fell off the world" and unloaded them, which is a likely cause of
+		  hired NPCs going missing.
+		- New shared FallRescue, used by both EntityAliveSDX and
+		  EntityAliveSDXV4. It skips the teleport gates and puts the NPC back
+		  on the surface: a Stay or Guard NPC above its guard spot, otherwise
+		  beside its leader, owner or farm owner, otherwise above where it
+		  fell. At most one attempt a second and five in 30 seconds; after
+		  that it logs a warning and hands the NPC to the game's own check, so
+		  a spot with no ground cannot loop forever. Each rescue logs a
+		  "[SCore] FallRescue:" line with the destination and the reason.
+		- Behaviour changes: a hirable NPC with no leader that falls through
+		  the world is now rescued rather than unloaded, and Stay/Guard NPCs
+		  go back to their guard spot rather than to the player. Non-hirable
+		  NPCs are unchanged.
+		- Thanks to Xyth for the report and the root cause.
+
+	[ NPC Farming ]
+		- These apply to both farming tasks: FarmingV4 (EntityAliveSDXV4) and
+		  the legacy Farming (EntityAliveSDX).
+		- The land claim restriction is now only enforced when the owner has a
+		  land claim. A hired farmer, or one sent to FarmHere, was only allowed
+		  plots inside its owner's land claim; with no claim at all every plot
+		  was refused, so the task gave up and the NPC stood on Guard.
+		  Farmers working for a player with a claim are still kept inside it.
+		  New helper: FarmLandClaimUtils.HasLandClaim.
+		- Fixed farmers running off a plot while working. On arrival the task
+		  stops the move helper, but the game's StopMove does not reset the
+		  walk input while the entity is jumping, and stepping up onto a plot
+		  counts as a jump. The leftover walk direction kept driving the body
+		  for the whole work buff, so an SDCS NPC ran backwards about 16m off
+		  the plot while still facing it, then walked back. The task now
+		  clears the walk input on arrival.
+		- Farmers now walk between plots. The per tick move used the two
+		  argument SetMoveTo, which takes the aggro speed, so farmers ran
+		  everywhere. Both the path request and the move now pass a speed, and
+		  the task reads its run attribute (run="true" for panic speed). Every
+		  shipped config already says run="false", so farmers walk.
+		- Farming log lines could never print: they were keyed to
+		  UAITaskFarmingV4 but blocks.xml names the flag UAITaskFarming. Fixed,
+		  and the V4 task gained [FARM] lifecycle lines (plot chosen, gave up,
+		  arrived, finished, timed out, stopped or interrupted). Turn them on
+		  with UAITaskFarming in blocks.xml, or in game with
+		  setcvar AdvancedTroubleshootingFeatures_UAITaskFarming 1.
+		- The MyFarmerV4 config move to the NPCSdcsCharacters format (entity,
+		  dialog and farming package) is in the Blooms Family Farming modlet.
+
+	[ Troubleshooting - NPC movement trace ]
+		- New AdvancedTroubleshootingFeatures flag, NPCMovementTrace (off by
+		  default), for working out where an NPC is being sent and by what
+		  code. Also switchable in game:
+		  setcvar AdvancedTroubleshootingFeatures_NPCMovementTrace 1
+		- Covers every SCore NPC (IEntityOrderReceiverSDX) and logs only on
+		  change, so it can stay on for a test session. [NPC-TRACE] lines:
+		  MOVETO and PATH (each new move target or path request, with the
+		  calling code), ACTION, ORDER and GUARD changes, FAST (moving faster
+		  than 3.5m/s) and JUMP (more than 10m in one 0.5s sample).
+		- Each line carries the NPC's position, order, UAI action and task,
+		  move helper target, path end, guard and home spots, leader, owner
+		  and farm owner, and the body state: jumping, onGround, move
+		  direction and whether it is absolute, and speed modifier.
+		- Harmony/EntityMoveHelper/NpcMovementTrace.cs.
+
+	[ Food Spoilage ]
+		- Removed the ItemValue.Clone postfix (ItemValueClonePatch). With
+		  UseAlternateItemValue enabled, it rebuilt the clone's Metadata for
+		  spoilable items by calling Clone() on every value with no null check,
+		  so a metadata entry holding null threw out of ItemValue.Clone. The
+		  patch was also redundant: vanilla Clone already gives the copy its own
+		  Metadata dictionary and clones each value, null-safely, so spoilage
+		  data is still carried across exactly as before.
+		- No effect with the default settings. UseAlternateItemValue is false
+		  out of the box and the postfix returned immediately in that case.
+
+	[ Learn By Doing ]
+		- From the Shadows could never earn XP. Its awards listened on
+		  onSelfRun and onSelfWalk while also requiring _crouching 1, but the
+		  game fires onSelfCrouchRun and onSelfCrouchWalk for crouched movement
+		  and never the plain pair, so the two conditions could not both hold.
+		  The awards, its decay reset and the Agility Shadow Walker synergy
+		  (same fault) now use the crouch triggers, and the Agility move
+		  cooldown and level up check gained crouch triggers to match.
+		- Crafting Explosives: the mine path's debug lines were ordered after
+		  the item path's cooldown AddBuff. Reordered so every award and log
+		  line comes before any cooldown. XP is unchanged - a crafted mine never
+		  passes the item path's UnlockedBy gate, since the ItemClassBlock built
+		  for a block does not copy the block's properties.
+		- These are XML changes in the SphereII Learn By Doing modlet; see its
+		  ReadMe for details.
+
+Version: 3.3.7.728
+	Game Version: v3.3.0 (b18) (b)
 
 	*** GAME VERSION NOTICE - v3.3 ONLY ***
 
