@@ -1,0 +1,2085 @@
+<configs>
+	<append xpath="/items">
+
+		<!-- Standard Fishing Rod (tier 1). Placeholder mesh until the model bundle is built. -->
+		<item name="remsFishingRodStandard">
+			<property name="Tags" value="tool,remsFishingRod"/>
+			<property name="HoldType" value="59"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?remsFishingRodStandard"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mwood"/>
+			<property name="CustomIcon" value="remsFishingRodStandard"/>
+			<property name="DescriptionKey" value="remsFishingRodStandardDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="120"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property name="ShowQuality" value="true"/>
+			<!-- spec 2.7: the Standard rod is patched with a Rod Repair Wrap (wood + duct tape, backpack, known from the
+			     start). The repair UI uses only the first RepairTools item (ItemActionEntryRepair), so it is one item. -->
+			<property name="RepairTools" value="remsRodRepairWrap"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFishingRod, REMS.Fishing"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="REMSFishingRod, REMS.Fishing"/>
+			</property>
+			<!-- one use per landed catch, two for a snapped line (REMS.Fishing applies it); quality adds line and reel
+			     strength in the DLL, and wear and mod slots here like a vanilla tool -->
+			<effect_group name="remsFishingRodStandard">
+				<passive_effect name="DegradationMax" operation="base_set" value="150,350" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,3" tier="1,2,3,4,5,6"/>
+			</effect_group>
+		</item>
+		<item name="remsFishingRodPrecision">
+			<property name="Extends" value="remsFishingRodStandard"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?remsFishingRodPrecision"/>
+			<property name="CustomIcon" value="remsFishingRodPrecision"/>
+			<property name="DescriptionKey" value="remsFishingRodPrecisionDesc"/>
+			<property name="EconomicValue" value="1400"/>
+			<property name="Material" value="Mmetal"/>
+			<!-- spec 2.7: the Precision rod takes a vanilla repair kit (it would inherit the wrap otherwise) -->
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<!-- Extends copies properties only, so the Precision rod needs its own stats -->
+			<effect_group name="remsFishingRodPrecision">
+				<passive_effect name="DegradationMax" operation="base_set" value="300,700" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="ModSlots" operation="base_set" value="2,2,3,3,4,4" tier="1,2,3,4,5,6"/>
+			</effect_group>
+		</item>
+
+		<!-- Rod Repair Wrap (spec 2.7): the Standard rod's repair material. One wrap restores up to 350 uses, a full
+		     Q6 Standard rod, the way one vanilla repair kit restores a whole tool (resourceRepairKit RepairAmount 32000,
+		     RepairTime 3). Crafted, never sold: 2 wood + 1 duct tape. -->
+		<item name="remsRodRepairWrap">
+			<property name="Tags" value="remsFishingTool"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="CustomIcon" value="resourceDuctTape"/>
+			<property name="CustomIconTint" value="200,165,120"/>
+			<property name="DescriptionKey" value="remsRodRepairWrapDesc"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="RepairTime" value="3"/>
+			<property name="RepairAmount" value="350"/>
+			<property name="Group" value="Resources,Tools/Traps"/>
+			<property name="SoundPickup" value="ducttape_grab"/>
+			<property name="SoundPlace" value="ducttape_place"/>
+		</item>
+
+		<!-- Bait -->
+		<item name="remsBaitEarthworms">
+			<property name="Tags" value="remsBait"/>
+			<property name="HoldType" value="31"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="foodRottingFlesh"/>
+			<property name="CustomIconTint" value="190,140,120"/>
+			<property name="DescriptionKey" value="remsBaitEarthwormsDesc"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="EconomicValue" value="2"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+		<item name="remsBaitCut">
+			<property name="Extends" value="remsBaitEarthworms"/>
+			<property name="CustomIcon" value="foodRawMeat"/>
+			<property name="CustomIconTint" value="200,90,80"/>
+			<property name="DescriptionKey" value="remsBaitCutDesc"/>
+			<property name="EconomicValue" value="3"/>
+		</item>
+		<item name="remsBaitDough">
+			<property name="Extends" value="remsBaitEarthworms"/>
+			<property name="CustomIcon" value="foodCornMeal"/>
+			<property name="CustomIconTint" value="235,215,160"/>
+			<property name="DescriptionKey" value="remsBaitDoughDesc"/>
+			<property name="EconomicValue" value="3"/>
+		</item>
+		<item name="remsBaitGlow">
+			<property name="Extends" value="remsBaitEarthworms"/>
+			<property name="CustomIcon" value="foodRottingFlesh"/>
+			<property name="CustomIconTint" value="120,255,110"/>
+			<property name="DescriptionKey" value="remsBaitGlowDesc"/>
+			<property name="EconomicValue" value="8"/>
+		</item>
+		<!-- Dip Net (Docs/dipnet_spec.md): a held tool. Primary swings it at a frog (3.2 m, better odds than a grab) or
+		     scoops the shallows by a bank. HoldType 59 is the vanilla spear's two-handed pole hold, as on the rods; the
+		     first-person and third-person poses (NetPose) put both hands on the model's grips. -->
+		<item name="remsDipNet">
+			<property name="Tags" value="remsFishingTool"/>
+			<property name="HoldType" value="59"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?remsDipNet"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="CustomIcon" value="remsDipNet"/>
+			<property name="DescriptionKey" value="remsDipNetDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="40"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property class="Action0">
+				<property name="Class" value="REMSDipNet, REMS.Fishing"/>
+			</property>
+		</item>
+
+		<!-- Trap mods (the trap window's mod slots, FishingTraps): Funnel Entrance +25% catch chance, Bait Box 40% of
+		     catches keep their bait, Bigger Cage 10 catch units instead of 6. One of each counts in a trap. -->
+		<item name="remsTrapModFunnel">
+			<property name="Tags" value="remsTrapMod"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="CustomIcon" value="remsTrapModFunnel"/>
+			<property name="DescriptionKey" value="remsTrapModFunnelDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="UnlockedBy" value="craftingFishing"/>
+		</item>
+		<item name="remsTrapModBaitBox">
+			<property name="Tags" value="remsTrapMod"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="CustomIcon" value="remsTrapModBaitBox"/>
+			<property name="DescriptionKey" value="remsTrapModBaitBoxDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="90"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="UnlockedBy" value="craftingFishing"/>
+		</item>
+		<item name="remsTrapModBigCage">
+			<property name="Tags" value="remsTrapMod"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="CustomIcon" value="remsTrapModBigCage"/>
+			<property name="DescriptionKey" value="remsTrapModBigCageDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="140"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="UnlockedBy" value="craftingFishing"/>
+		</item>
+
+		<!-- Waterlogged Strongbox (spec 12): treasure from the water, opened in the backpack -->
+		<item name="remsStrongboxModest">
+			<property name="Tags" value="remsFishingSalvage"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="CustomIcon" value="cntWallSafe"/>
+			<property name="CustomIconTint" value="150,170,150"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="DescriptionKey" value="remsStrongboxDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="Group" value="Basics"/>
+			<property class="Action0">
+				<property name="Class" value="OpenLootBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="UseActions/open_safe"/>
+				<property name="LootList" value="remsStrongboxModest"/>
+			</property>
+		</item>
+		<item name="remsStrongboxStandard">
+			<property name="Extends" value="remsStrongboxModest"/>
+			<property name="EconomicValue" value="120"/>
+			<property class="Action0">
+				<property name="Class" value="OpenLootBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="UseActions/open_safe"/>
+				<property name="LootList" value="remsStrongboxStandard"/>
+			</property>
+		</item>
+
+		<!-- roster:begin (generated by Tools/roster.py) -->
+		<item name="remsFishBluegill">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_bluegill"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishBluegill"/>
+			<property name="DescriptionKey" value="remsFishBluegillDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="15"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps"/>
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+		<item name="remsFishPerch">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_perch"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishPerch"/>
+			<property name="DescriptionKey" value="remsFishPerchDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="15"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps"/>
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+		<item name="remsFishCarp">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_carp"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishCarp"/>
+			<property name="DescriptionKey" value="remsFishCarpDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps,resourceBone"/>
+				<property name="Create_item_count" value="2-4,1-2,1"/>
+			</property>
+		</item>
+		<item name="remsFishBass">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_bass"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishBass"/>
+			<property name="DescriptionKey" value="remsFishBassDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="40"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps,resourceBone"/>
+				<property name="Create_item_count" value="2-3,1-2,1"/>
+			</property>
+		</item>
+		<item name="remsFishTrout">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_trout"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishTrout"/>
+			<property name="DescriptionKey" value="remsFishTroutDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="40"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps"/>
+				<property name="Create_item_count" value="1-2,1"/>
+				<property name="Chance_item" value="resourceBone"/>
+				<property name="Chance_item_count" value="1"/>
+				<property name="Chance_item_odds" value="0.5"/>
+			</property>
+		</item>
+		<item name="remsFishCatfish">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_catfish"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishCatfish"/>
+			<property name="DescriptionKey" value="remsFishCatfishDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="45"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps,resourceBone"/>
+				<property name="Create_item_count" value="2-4,1-2,1"/>
+			</property>
+		</item>
+		<item name="remsFishGar">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_gar"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishGar"/>
+			<property name="DescriptionKey" value="remsFishGarDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="90"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps,resourceBone"/>
+				<property name="Create_item_count" value="2-3,1-2,1"/>
+			</property>
+		</item>
+		<item name="remsFishPike">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_pike"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishPike"/>
+			<property name="DescriptionKey" value="remsFishPikeDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="110"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps,resourceBone"/>
+				<property name="Create_item_count" value="3-5,1-2,1"/>
+			</property>
+		</item>
+		<item name="remsFishSturgeon">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_sturgeon"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishSturgeon"/>
+			<property name="DescriptionKey" value="remsFishSturgeonDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="220"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps,resourceBone,remsSturgeonRoe"/>
+				<property name="Create_item_count" value="6-12,2-3,2,1-2"/>
+			</property>
+		</item>
+		<item name="remsFishMutantCarp">
+			<property name="Tags" value="remsCatch,remsCatchFish,remsMutation"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_mutantcarp"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishMutantCarp"/>
+			<property name="DescriptionKey" value="remsFishMutantCarpDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="120"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsMutantFillet,remsFishScraps,resourceBone"/>
+				<property name="Create_item_count" value="3-6,1-2,1"/>
+				<property name="Chance_item" value="remsGlowGoo"/>
+				<property name="Chance_item_count" value="1"/>
+				<property name="Chance_item_odds" value="0.5"/>
+			</property>
+		</item>
+		<item name="remsFishEel">
+			<property name="Tags" value="remsCatch,remsCatchFish"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_eel"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsFishEel"/>
+			<property name="DescriptionKey" value="remsFishEelDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="45"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionFillet"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFishFillet,remsFishScraps"/>
+				<property name="Create_item_count" value="1-2,1"/>
+			</property>
+		</item>
+		<item name="remsCatchSnappingTurtle">
+			<property name="Tags" value="remsCatch,remsCatchTurtle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_snapturtle"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchSnappingTurtle"/>
+			<property name="DescriptionKey" value="remsCatchSnappingTurtleDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsTurtleMeat,resourceBone"/>
+				<property name="Create_item_count" value="2-4,1"/>
+			</property>
+		</item>
+		<item name="remsCatchSpinySoftshell">
+			<property name="Tags" value="remsCatch,remsCatchTurtle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_softshell"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchSpinySoftshell"/>
+			<property name="DescriptionKey" value="remsCatchSpinySoftshellDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="40"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsTurtleMeat"/>
+				<property name="Create_item_count" value="1-2"/>
+			</property>
+		</item>
+		<item name="remsCatchRedSwampCrayfish">
+			<property name="Tags" value="remsCatch,remsCatchCrustacean"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_redswamp"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchRedSwampCrayfish"/>
+			<property name="DescriptionKey" value="remsCatchRedSwampCrayfishDesc"/>
+			<property name="Stacknumber" value="60"/>
+			<property name="EconomicValue" value="4"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="6"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsShellfishMeat"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="remsCatchSignalCrayfish">
+			<property name="Tags" value="remsCatch,remsCatchCrustacean"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_signal"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchSignalCrayfish"/>
+			<property name="DescriptionKey" value="remsCatchSignalCrayfishDesc"/>
+			<property name="Stacknumber" value="60"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="4"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsShellfishMeat"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="remsCatchCrab">
+			<property name="Tags" value="remsCatch,remsCatchCrustacean"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_crab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchCrab"/>
+			<property name="DescriptionKey" value="remsCatchCrabDesc"/>
+			<property name="Stacknumber" value="60"/>
+			<property name="EconomicValue" value="8"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="3"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsShellfishMeat"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="remsCatchFreshwaterShrimp">
+			<property name="Tags" value="remsCatch,remsCatchCrustacean"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_shrimp"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchFreshwaterShrimp"/>
+			<property name="DescriptionKey" value="remsCatchFreshwaterShrimpDesc"/>
+			<property name="Stacknumber" value="60"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="10"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsShellfishMeat"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="remsCatchFreshwaterClam">
+			<property name="Tags" value="remsCatch,remsCatchMollusk"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_clam"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchFreshwaterClam"/>
+			<property name="DescriptionKey" value="remsCatchFreshwaterClamDesc"/>
+			<property name="Stacknumber" value="60"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="8"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsMolluskMeat"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="remsCatchFreshwaterMussel">
+			<property name="Tags" value="remsCatch,remsCatchMollusk"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_mussel"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchFreshwaterMussel"/>
+			<property name="DescriptionKey" value="remsCatchFreshwaterMusselDesc"/>
+			<property name="Stacknumber" value="60"/>
+			<property name="EconomicValue" value="6"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="2"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsMolluskMeat"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="remsCatchMysterySnail">
+			<property name="Tags" value="remsCatch,remsCatchMollusk"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_snail"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchMysterySnail"/>
+			<property name="DescriptionKey" value="remsCatchMysterySnailDesc"/>
+			<property name="Stacknumber" value="60"/>
+			<property name="EconomicValue" value="2"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="5"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsMolluskMeat"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="remsCatchBullfrog">
+			<property name="Tags" value="remsCatch,remsCatchAmphibian"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_bullfrog"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchBullfrog"/>
+			<property name="DescriptionKey" value="remsCatchBullfrogDesc"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="12"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="1"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFrogLegs"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="remsCatchGreenFrog">
+			<property name="Tags" value="remsCatch,remsCatchAmphibian"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/REMSFishing.unity3d?item_greenfrog"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="remsCatchGreenFrog"/>
+			<property name="DescriptionKey" value="remsCatchGreenFrogDesc"/>
+			<property name="Stacknumber" value="60"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Resources"/>
+			<property name="Weight" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="REMSProcess, REMS.Fishing"/>
+				<property name="Button" value="remsActionClean"/>
+				<property name="Batch" value="3"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="ui_loot_meat"/>
+				<property name="Create_item" value="remsFrogLegs"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		<item name="remsFishFillet">
+			<property name="Extends" value="foodRawMeat"/>
+			<property name="CustomIcon" value="foodRawMeat"/>
+			<property name="CustomIconTint" value="255,190,160"/>
+			<property name="DescriptionKey" value="remsFishFilletDesc"/>
+			<property name="EconomicValue" value="6"/>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
+				<display_value name="foodHealthAmount" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+				<display_value name="dDysenteryRisk" value="0.12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+					<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+				</triggered_effect>
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="1"/>
+			</effect_group>
+		</item>
+		<item name="remsMutantFillet">
+			<property name="Extends" value="foodRawMeat"/>
+			<property name="CustomIcon" value="foodRawMeat"/>
+			<property name="CustomIconTint" value="190,235,140"/>
+			<property name="DescriptionKey" value="remsMutantFilletDesc"/>
+			<property name="EconomicValue" value="6"/>
+			<property name="Tags" value="food,foodSkill,fitness,remsMutation"/>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
+				<display_value name="foodHealthAmount" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="24"/>
+				<display_value name="dDysenteryRisk" value="0.24"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+					<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+				</triggered_effect>
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="1"/>
+			</effect_group>
+		</item>
+		<item name="remsFishScraps">
+			<property name="Tags" value="remsFishingProduct"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="foodRottingFlesh"/>
+			<property name="CustomIconTint" value="200,190,170"/>
+			<property name="DescriptionKey" value="remsFishScrapsDesc"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		<item name="remsShellfishMeat">
+			<property name="Extends" value="foodRawMeat"/>
+			<property name="CustomIcon" value="foodRawMeat"/>
+			<property name="CustomIconTint" value="255,170,120"/>
+			<property name="DescriptionKey" value="remsShellfishMeatDesc"/>
+			<property name="EconomicValue" value="5"/>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
+				<display_value name="foodHealthAmount" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+				<display_value name="dDysenteryRisk" value="0.12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+					<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+				</triggered_effect>
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="1"/>
+			</effect_group>
+		</item>
+		<item name="remsGlowGoo">
+			<property name="Tags" value="remsFishingProduct"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="resourceAcid"/>
+			<property name="CustomIconTint" value="120,255,110"/>
+			<property name="DescriptionKey" value="remsGlowGooDesc"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="EconomicValue" value="15"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		<item name="remsSturgeonRoe">
+			<property name="Tags" value="remsFishingProduct"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CustomIcon" value="foodEgg"/>
+			<property name="CustomIconTint" value="70,70,60"/>
+			<property name="DescriptionKey" value="remsSturgeonRoeDesc"/>
+			<property name="Stacknumber" value="20"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Basics"/>
+		</item>
+		<item name="remsMolluskMeat">
+			<property name="Extends" value="foodRawMeat"/>
+			<property name="CustomIcon" value="foodRawMeat"/>
+			<property name="CustomIconTint" value="235,200,150"/>
+			<property name="DescriptionKey" value="remsMolluskMeatDesc"/>
+			<property name="EconomicValue" value="5"/>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
+				<display_value name="foodHealthAmount" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+				<display_value name="dDysenteryRisk" value="0.12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+					<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+				</triggered_effect>
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="1"/>
+			</effect_group>
+		</item>
+		<item name="remsFrogLegs">
+			<property name="Extends" value="foodRawMeat"/>
+			<property name="CustomIcon" value="foodRawMeat"/>
+			<property name="CustomIconTint" value="240,215,190"/>
+			<property name="DescriptionKey" value="remsFrogLegsDesc"/>
+			<property name="EconomicValue" value="6"/>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
+				<display_value name="foodHealthAmount" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+				<display_value name="dDysenteryRisk" value="0.12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+					<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+				</triggered_effect>
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="1"/>
+			</effect_group>
+		</item>
+		<item name="remsTurtleMeat">
+			<property name="Extends" value="foodRawMeat"/>
+			<property name="CustomIcon" value="foodRawMeat"/>
+			<property name="CustomIconTint" value="170,90,80"/>
+			<property name="DescriptionKey" value="remsTurtleMeatDesc"/>
+			<property name="EconomicValue" value="8"/>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
+				<display_value name="foodHealthAmount" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+				<display_value name="dDysenteryRisk" value="0.12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+					<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+				</triggered_effect>
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="1"/>
+			</effect_group>
+		</item>
+		<!-- roster:end -->
+	</append>
+	<!-- meals:begin (generated by Tools/meals.py) -->
+	<append xpath="/items">
+		<item name="remsFishingMealCharredFish">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="12"/>
+			<property name="CustomIcon" value="foodCharredMeat"/>
+			<property name="CustomIconTint" value="205,175,150"/>
+			<property name="DescriptionKey" value="remsFishingMealCharredFishDesc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.1"/>
+				<property name="Sound_start" value="player_eating"/>
+				<property name="SmellUse" value="25"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="8"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="4">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="8"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="8">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="25"/>
+			</effect_group>
+		</item>
+		<item name="remsFishingMealGrilledFish">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="24"/>
+			<property name="CustomIcon" value="foodGrilledMeat"/>
+			<property name="CustomIconTint" value="255,215,180"/>
+			<property name="DescriptionKey" value="remsFishingMealGrilledFishDesc"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.1"/>
+				<property name="Sound_start" value="player_eating"/>
+				<property name="SmellUse" value="25"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="6"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="6">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="10">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="25"/>
+			</effect_group>
+		</item>
+		<item name="remsFishingMealBoiledShellfish">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodWater"/>
+			<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="CustomIcon" value="foodBoiledMeat"/>
+			<property name="CustomIconTint" value="255,165,130"/>
+			<property name="DescriptionKey" value="remsFishingMealBoiledShellfishDesc"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="SmellUse" value="50"/>
+				<property name="Create_item" value="drinkJarEmpty"/>
+				<property name="Use_jar_refund" value="true"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="15">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="10">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="50"/>
+			</effect_group>
+		</item>
+		<item name="remsFishingMealSteamedClams">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodWater"/>
+			<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="CustomIcon" value="foodBoiledMeat"/>
+			<property name="CustomIconTint" value="235,215,170"/>
+			<property name="DescriptionKey" value="remsFishingMealSteamedClamsDesc"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="SmellUse" value="50"/>
+				<property name="Create_item" value="drinkJarEmpty"/>
+				<property name="Use_jar_refund" value="true"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="15">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="10">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="50"/>
+			</effect_group>
+		</item>
+		<item name="remsFishingMealFriedFrogLegs">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="45"/>
+			<property name="CustomIcon" value="foodChickenNuggets"/>
+			<property name="CustomIconTint" value="235,225,180"/>
+			<property name="DescriptionKey" value="remsFishingMealFriedFrogLegsDesc"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.1"/>
+				<property name="Sound_start" value="player_eating"/>
+				<property name="SmellUse" value="25"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="10">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="15">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="25"/>
+			</effect_group>
+		</item>
+		<item name="remsFishingMealTurtleSoup">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodWater"/>
+			<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="140"/>
+			<property name="CustomIcon" value="foodVegetableStew"/>
+			<property name="CustomIconTint" value="150,110,80"/>
+			<property name="DescriptionKey" value="remsFishingMealTurtleSoupDesc"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="SmellUse" value="50"/>
+				<property name="Create_item" value="drinkJarEmpty"/>
+				<property name="Use_jar_refund" value="true"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 2">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="25">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="20">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="50"/>
+			</effect_group>
+		</item>
+		<item name="remsFishingMealFishStew">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodWater"/>
+			<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="134"/>
+			<property name="CustomIcon" value="foodMeatStew"/>
+			<property name="CustomIconTint" value="235,200,150"/>
+			<property name="DescriptionKey" value="remsFishingMealFishStewDesc"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="SmellUse" value="50"/>
+				<property name="Create_item" value="drinkJarEmpty"/>
+				<property name="Use_jar_refund" value="true"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 2">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="25">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="20">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="50"/>
+			</effect_group>
+		</item>
+		<item name="remsFishingMealClamChowder">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodWater"/>
+			<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="130"/>
+			<property name="CustomIcon" value="foodShamChowder"/>
+			<property name="CustomIconTint" value="240,230,205"/>
+			<property name="DescriptionKey" value="remsFishingMealClamChowderDesc"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="SmellUse" value="50"/>
+				<property name="Create_item" value="drinkJarEmpty"/>
+				<property name="Use_jar_refund" value="true"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 2">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="46"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="25">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="20">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="50"/>
+			</effect_group>
+		</item>
+		<item name="remsFishingMealCrawfishBoil">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodWater"/>
+			<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="160"/>
+			<property name="CustomIcon" value="foodGumboStew"/>
+			<property name="CustomIconTint" value="255,140,100"/>
+			<property name="DescriptionKey" value="remsFishingMealCrawfishBoilDesc"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="SmellUse" value="50"/>
+				<property name="Create_item" value="drinkJarEmpty"/>
+				<property name="Use_jar_refund" value="true"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 2">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="55"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="30">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="25">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="50"/>
+			</effect_group>
+		</item>
+	</append>
+	<conditional>
+		<if cond="mod_loaded('REMS_CulinaryHearth')">
+		</if>
+		<else>
+			<append xpath="/items">
+		<item name="remsFishingMealFishAndChips">
+			<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus,remsFishingMeal"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="120"/>
+			<property name="CustomIcon" value="foodSteakAndPotato"/>
+			<property name="CustomIconTint" value="245,215,150"/>
+			<property name="DescriptionKey" value="remsFishingMealFishAndChipsDesc"/>
+			<property name="UnlockedBy" value="craftingFood"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.1"/>
+				<property name="Sound_start" value="player_eating"/>
+				<property name="SmellUse" value="25"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="Food Tier 2">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="40"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="20">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodStaminaFarmer" operation="set" value="25">
+					<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<display_value name="dSmellUse" value="25"/>
+			</effect_group>
+		</item>
+			</append>
+		</else>
+	</conditional>
+	<!-- meals:end -->
+	<!-- wip-lures:begin (generated by Tools/merge_wip.py (lures)) -->
+	<append xpath="/items">
+		<!-- Trophies (spec 3, 8.1): a rod catch in the top 5% of its weight band. One per species, never stacks,
+		     carries its exact size in item metadata (REMS.Fishing FishingTrophies), sells for twice the catch, and
+		     cleans like it with the top of each yield range. Generated by tools/lures_gen.py from Tools/roster.py. -->
+		<item name="remsTrophyBluegill">
+			<property name="Extends" value="remsFishBluegill"/>
+			<property name="CustomIcon" value="remsFishBluegill"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyBluegillDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+		<item name="remsTrophyPerch">
+			<property name="Extends" value="remsFishPerch"/>
+			<property name="CustomIcon" value="remsFishPerch"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyPerchDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+		<item name="remsTrophyCarp">
+			<property name="Extends" value="remsFishCarp"/>
+			<property name="CustomIcon" value="remsFishCarp"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyCarpDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="4,2,1"/>
+			</property>
+		</item>
+		<item name="remsTrophyBass">
+			<property name="Extends" value="remsFishBass"/>
+			<property name="CustomIcon" value="remsFishBass"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyBassDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="3,2,1"/>
+			</property>
+		</item>
+		<item name="remsTrophyTrout">
+			<property name="Extends" value="remsFishTrout"/>
+			<property name="CustomIcon" value="remsFishTrout"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyTroutDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="2,1"/>
+			</property>
+		</item>
+		<item name="remsTrophyCatfish">
+			<property name="Extends" value="remsFishCatfish"/>
+			<property name="CustomIcon" value="remsFishCatfish"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyCatfishDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="90"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="4,2,1"/>
+			</property>
+		</item>
+		<item name="remsTrophyGar">
+			<property name="Extends" value="remsFishGar"/>
+			<property name="CustomIcon" value="remsFishGar"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyGarDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="180"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="3,2,1"/>
+			</property>
+		</item>
+		<item name="remsTrophyPike">
+			<property name="Extends" value="remsFishPike"/>
+			<property name="CustomIcon" value="remsFishPike"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyPikeDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="220"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="5,2,1"/>
+			</property>
+		</item>
+		<item name="remsTrophySturgeon">
+			<property name="Extends" value="remsFishSturgeon"/>
+			<property name="CustomIcon" value="remsFishSturgeon"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophySturgeonDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="440"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="12,3,2,2"/>
+			</property>
+		</item>
+		<item name="remsTrophyMutantCarp">
+			<property name="Extends" value="remsFishMutantCarp"/>
+			<property name="CustomIcon" value="remsFishMutantCarp"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsMutation,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyMutantCarpDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="240"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="6,2,1"/>
+			</property>
+		</item>
+		<item name="remsTrophyEel">
+			<property name="Extends" value="remsFishEel"/>
+			<property name="CustomIcon" value="remsFishEel"/>
+			<property name="Tags" value="remsCatch,remsCatchFish,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophyEelDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="90"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="2,1"/>
+			</property>
+		</item>
+		<item name="remsTrophySnappingTurtle">
+			<property name="Extends" value="remsCatchSnappingTurtle"/>
+			<property name="CustomIcon" value="remsCatchSnappingTurtle"/>
+			<property name="Tags" value="remsCatch,remsCatchTurtle,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophySnappingTurtleDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="160"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="4,1"/>
+			</property>
+		</item>
+		<item name="remsTrophySpinySoftshell">
+			<property name="Extends" value="remsCatchSpinySoftshell"/>
+			<property name="CustomIcon" value="remsCatchSpinySoftshell"/>
+			<property name="Tags" value="remsCatch,remsCatchTurtle,remsTrophy"/>
+			<property name="DescriptionKey" value="remsTrophySpinySoftshellDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="ItemTypeIcon" value="trophy"/>
+			<property class="Action0">
+				<property name="Create_item_count" value="2"/>
+			</property>
+		</item>
+	</append>
+	<!-- wip-lures:end -->
+	<!-- wip-ponds:begin (generated by Tools/merge_wip.py (ponds)) -->
+	<!-- Stocked ponds (spec 7.2): a jar of live fingerlings per roster fish. Primary use while looking at a Pond
+	     Marker or its water releases them (REMS.Fishing checks the pond on the server; the jar goes only when it
+	     says yes). Common and uncommon jars are sold by traders (traders module); rare and mutant ones from Angler
+	     standing 3 and 4 (jobs module). The empty jar comes back at the server's Jar Refund rate. -->
+	<append xpath="/items">
+		<item name="remsFingerlingBluegill">
+			<property name="Tags" value="remsFingerling,remsFingerlingCommon"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingBluegill"/>
+			<property name="DescriptionKey" value="remsFingerlingBluegillDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="120"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingPerch">
+			<property name="Tags" value="remsFingerling,remsFingerlingCommon"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingPerch"/>
+			<property name="DescriptionKey" value="remsFingerlingPerchDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="120"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingCarp">
+			<property name="Tags" value="remsFingerling,remsFingerlingCommon"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingCarp"/>
+			<property name="DescriptionKey" value="remsFingerlingCarpDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="200"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingBass">
+			<property name="Tags" value="remsFingerling,remsFingerlingUncommon"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingBass"/>
+			<property name="DescriptionKey" value="remsFingerlingBassDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="300"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingTrout">
+			<property name="Tags" value="remsFingerling,remsFingerlingUncommon"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingTrout"/>
+			<property name="DescriptionKey" value="remsFingerlingTroutDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="300"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingCatfish">
+			<property name="Tags" value="remsFingerling,remsFingerlingUncommon"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingCatfish"/>
+			<property name="DescriptionKey" value="remsFingerlingCatfishDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="300"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingEel">
+			<property name="Tags" value="remsFingerling,remsFingerlingUncommon"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingEel"/>
+			<property name="DescriptionKey" value="remsFingerlingEelDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="320"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingGar">
+			<property name="Tags" value="remsFingerling,remsFingerlingRare"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingGar"/>
+			<property name="DescriptionKey" value="remsFingerlingGarDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="700"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingPike">
+			<property name="Tags" value="remsFingerling,remsFingerlingRare"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingPike"/>
+			<property name="DescriptionKey" value="remsFingerlingPikeDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="800"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingSturgeon">
+			<property name="Tags" value="remsFingerling,remsFingerlingRare"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingSturgeon"/>
+			<property name="DescriptionKey" value="remsFingerlingSturgeonDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+		<item name="remsFingerlingMutantCarp">
+			<property name="Tags" value="remsFingerling,remsFingerlingMutant"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/masonJarMurkeyWaterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="CustomIcon" value="remsFingerlingMutantCarp"/>
+			<property name="DescriptionKey" value="remsFingerlingMutantCarpDesc"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="1200"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="jars_grab"/>
+			<property name="SoundPlace" value="jars_place"/>
+			<property class="Action0">
+				<property name="Class" value="REMSFingerling, REMS.Fishing"/>
+			</property>
+		</item>
+	</append>
+	<!-- wip-ponds:end -->
+	<!-- wip-skill:begin (generated by Tools/merge_wip.py (skill)) -->
+	<append xpath="/items">
+
+		<!-- ================================================================================================= -->
+		<!-- Angler's Monthly (spec 9.1): a vanilla crafting-skill magazine. Same structure as                -->
+		<!-- harvestingToolsSkillMagazine: +1 Fishing per read (the sandbox "points per magazine" option      -->
+		<!-- applies, MinEventActionAddProgressionLevel), 50 XP, the Nerd outfit / Intellect mastery bonus     -->
+		<!-- point, and the "csm" tag so vanilla's "read a magazine" challenge (UseItem item_tags="csm")       -->
+		<!-- counts it. Loot and trader stock belong to the traders module.                                    -->
+		<!-- ================================================================================================= -->
+		<item name="remsAnglersMonthly">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Tags" value="remsFishingCSM,csm"/>
+			<property name="CustomIcon" value="bookSouthernFarming"/>
+			<property name="CustomIconTint" value="140,200,235"/>
+			<property name="DescriptionKey" value="remsAnglersMonthlyDesc"/>
+			<property name="Unlocks" value="craftingFishing"/>
+			<property name="EconomicValue" value="30"/>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFishing" level="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement_group op="or">
+					<requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="GTE" value="3"/>
+					<requirement name="HasBuff" buff="buffNerdOutfit"/>
+				</requirement_group>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="nerdPointChance" operation="set" value="1"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="CVarCompare" cvar="nerdPointChance" operation="EQ" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFishing" level="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk" play_in_head="true"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveCVar" cvar="nerdPointChance"/>
+			</effect_group>
+		</item>
+
+		<!-- ================================================================================================= -->
+		<!-- The Patient Angler, volumes 1-7 (spec 9.3): vanilla book items (same structure as Lucky Looter).  -->
+		<!-- Reading an unread volume sets its book perk to max; the 7th distinct volume also sets the        -->
+		<!-- Master Angler perk and plays the series-complete sound. Every read gives 50 XP like vanilla.      -->
+		<!-- Extends copies properties only, so every volume carries its own effect groups.                   -->
+		<!-- ================================================================================================= -->
+		<item name="remsBookPatientAngler1">
+			<property name="Extends" value="bookFiremansAlmanacHeat"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bookHuntingJournalBears"/>
+			<property name="CustomIconTint" value="150,200,240"/>
+			<property name="DescriptionKey" value="perkRemsPatientAngler1ReadingTheWaterLongDesc"/>
+			<property name="Unlocks" value="perkRemsPatientAngler1ReadingTheWater"/>
+			<property name="Tags" value="books,remsPatientAngler"/>
+			<property name="Group" value="Books,BooksOnly,TCReading"/>
+			<property name="EconomicValue" value="300"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkRemsPatientAngler1ReadingTheWater" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler1ReadingTheWater" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler8Complete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="remsBookPatientAngler2">
+			<property name="Extends" value="remsBookPatientAngler1"/>
+			<property name="DescriptionKey" value="perkRemsPatientAngler2QuickHandsLongDesc"/>
+			<property name="Unlocks" value="perkRemsPatientAngler2QuickHands"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkRemsPatientAngler2QuickHands" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler2QuickHands" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler8Complete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="remsBookPatientAngler3">
+			<property name="Extends" value="remsBookPatientAngler1"/>
+			<property name="DescriptionKey" value="perkRemsPatientAngler3StrongWristsLongDesc"/>
+			<property name="Unlocks" value="perkRemsPatientAngler3StrongWrists"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkRemsPatientAngler3StrongWrists" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler3StrongWrists" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler8Complete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="remsBookPatientAngler4">
+			<property name="Extends" value="remsBookPatientAngler1"/>
+			<property name="DescriptionKey" value="perkRemsPatientAngler4FeelingTheLineLongDesc"/>
+			<property name="Unlocks" value="perkRemsPatientAngler4FeelingTheLine"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkRemsPatientAngler4FeelingTheLine" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler4FeelingTheLine" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler8Complete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="remsBookPatientAngler5">
+			<property name="Extends" value="remsBookPatientAngler1"/>
+			<property name="DescriptionKey" value="perkRemsPatientAngler5BaitAndSwitchLongDesc"/>
+			<property name="Unlocks" value="perkRemsPatientAngler5BaitAndSwitch"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkRemsPatientAngler5BaitAndSwitch" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler5BaitAndSwitch" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler8Complete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="remsBookPatientAngler6">
+			<property name="Extends" value="remsBookPatientAngler1"/>
+			<property name="DescriptionKey" value="perkRemsPatientAngler6CleanCutsLongDesc"/>
+			<property name="Unlocks" value="perkRemsPatientAngler6CleanCuts"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkRemsPatientAngler6CleanCuts" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler6CleanCuts" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler8Complete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="remsBookPatientAngler7">
+			<property name="Extends" value="remsBookPatientAngler1"/>
+			<property name="DescriptionKey" value="perkRemsPatientAngler7AfterDarkLongDesc"/>
+			<property name="Unlocks" value="perkRemsPatientAngler7AfterDark"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkRemsPatientAngler7AfterDark" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler7AfterDark" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler8Complete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillRemsPatientAngler" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<!-- ================================================================================================= -->
+		<!-- Lures (spec 4.1): reusable tackle, picked with Reload like bait, lost only to a snapped line.     -->
+		<!-- Placeholder icons: vanilla sprites with a tint until the real icons are made (REPORT.md).        -->
+		<!-- ================================================================================================= -->
+		<item name="remsLureSpinner">
+			<property name="Tags" value="remsLure,remsTackle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="CustomIcon" value="resourceBulletTip"/>
+			<property name="CustomIconTint" value="235,205,90"/>
+			<property name="DescriptionKey" value="remsLureSpinnerDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="UnlockedBy" value="craftingFishing"/>
+			<property name="SoundPickup" value="mod_grab"/>
+			<property name="SoundPlace" value="mod_place"/>
+		</item>
+		<item name="remsLureJig">
+			<property name="Extends" value="remsLureSpinner"/>
+			<property name="CustomIcon" value="resourceFishingWeight"/>
+			<property name="CustomIconTint" value="255,150,60"/>
+			<property name="DescriptionKey" value="remsLureJigDesc"/>
+			<property name="EconomicValue" value="90"/>
+		</item>
+		<item name="remsLureCrankbait">
+			<property name="Extends" value="remsLureSpinner"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="CustomIcon" value="resourceArrowHeadIron"/>
+			<property name="CustomIconTint" value="120,210,120"/>
+			<property name="DescriptionKey" value="remsLureCrankbaitDesc"/>
+			<property name="EconomicValue" value="120"/>
+		</item>
+		<item name="remsLureTroutFly">
+			<property name="Extends" value="remsLureSpinner"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="CustomIcon" value="resourceFeather"/>
+			<property name="CustomIconTint" value="210,150,90"/>
+			<property name="DescriptionKey" value="remsLureTroutFlyDesc"/>
+			<property name="EconomicValue" value="150"/>
+		</item>
+	</append>
+
+	<!-- ===================================================================================================== -->
+	<!-- Core items the Fishing skill gates: "Unlocked by" in the crafting window (ItemClass.UnlockedBy ->     -->
+	<!-- RecipeUnlockData, which reads the skill's display rows for the level). The Precision rod inherits it  -->
+	<!-- through Extends.                                                                                      -->
+	<!-- ===================================================================================================== -->
+	<append xpath="/items/item[@name='remsFishingRodStandard']">
+		<property name="UnlockedBy" value="craftingFishing"/>
+	</append>
+	<append xpath="/items/item[@name='remsBaitCut']">
+		<property name="UnlockedBy" value="craftingFishing"/>
+	</append>
+	<append xpath="/items/item[@name='remsBaitDough']">
+		<property name="UnlockedBy" value="craftingFishing"/>
+	</append>
+	<append xpath="/items/item[@name='remsBaitGlow']">
+		<property name="UnlockedBy" value="craftingFishing"/>
+	</append>
+	<append xpath="/items/item[@name='remsDipNet']">
+		<property name="UnlockedBy" value="craftingFishing"/>
+	</append>
+
+	<!-- Spec 4.3 "the dye slot works": ItemValue only creates the cosmetic slot for items tagged canHaveCosmetic
+	     (ItemValue.cs, cosmeticMods = HasAnyTags(ItemClassModifier.CosmeticItemTags)). Appended to the attribute so
+	     tags other modules add survive. The Precision rod inherits Tags through Extends. -->
+	<append xpath="/items/item[@name='remsFishingRodStandard']/property[@name='Tags']/@value">,canHaveCosmetic</append>
+
+	<!-- Developer items: the admin magazine maxes Fishing, the admin perk book reads the whole series -->
+	<append xpath="/items/item[@name='adminSkillMagazine']/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingFishing" level="50" show_message="false"/>
+	</append>
+	<append xpath="/items/item[@name='adminPerkBook']/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler1ReadingTheWater" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler2QuickHands" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler3StrongWrists" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler4FeelingTheLine" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler5BaitAndSwitch" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler6CleanCuts" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler7AfterDark" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRemsPatientAngler8Complete" level="-1"/>
+	</append>
+	<!-- wip-skill:end -->
+	<!-- wip-traders:begin (generated by Tools/merge_wip.py (traders)) -->
+	<!-- REMS Fishing economy (spec 8.3 and the economy audit; the numbers behind every change are in the comments
+	     below, and Tools/traders_audit.py with the gear, meals, economy and rates options reprints the tables).
+	     Engine rules used (decompiled V3.4 XUiM_Trader.GetBuyPrice / GetSellPrice):
+	       buy  = EconomicValue / EconomicBundleSize x 3 (traders.xml buy_markup), x1.0-2.0 by quality (quality_mod)
+	       sell = EconomicValue x EconomicSellScale / EconomicBundleSize x 0.2 (sell_markdown), x1.0-2.0 by quality
+	       SellableToTrader false hides the Sell button (ItemActionEntrySell).
+	     The audit's rule for crafted fishing gear: selling it may pay at most about 1.5 times what its materials sell
+	     for (vanilla steel tools: 1.41). EconomicSellScale trims only the sale, so trader prices keep the spec values.
+	     Values on items the core defines are changed with set. Items other modules define (skill: magazine, books,
+	     lures; ponds: fingerlings) get an appended property: DynamicProperties keeps the last property of a name, so
+	     this block must merge after theirs (Tools/merge_wip.py "all" sorts traders last). -->
+
+	<!-- ===== Rods ===== -->
+	<!-- Standard rod: a T0 backpack tool (8 wood, 12 yucca fibre, 2 scrap iron = 7.2 EV, 15 s). Every vanilla T0 tool
+	     (stone axe, stone shovel, bone knife, primitive bow: EV 200) is SellableToTrader false; at EV 120 a sellable
+	     rod would pay 24-48 dukes for 1.4 dukes of materials (x16.7). EV 120 stays as the trader price (360 at Q1). -->
+	<append xpath="/items/item[@name='remsFishingRodStandard']">
+		<property name="SellableToTrader" value="false"/>
+		<property name="TraderStageTemplate" value="remsFishingRodStandard"/>
+	</append>
+	<!-- Precision rod: Extends the Standard rod and so inherits its sale flag and template; it sets its own. EV 1,400
+	     (spec) on 618 EV of workbench materials is x2.27 at Q1 and x4.5 at Q6; vanilla steel tools are x1.41 / x2.82.
+	     A 0.6 sale scale gives x1.36 / x2.72 (sells for 168-336 dukes). The trader price stays 4,200-8,400. -->
+	<append xpath="/items/item[@name='remsFishingRodPrecision']">
+		<property name="SellableToTrader" value="true"/>
+		<property name="EconomicSellScale" value="0.6"/>
+		<property name="TraderStageTemplate" value="remsFishingRodPrecision"/>
+	</append>
+
+	<!-- ===== Bait: bought, dug or crafted, never sold back =====
+	     2 fish scraps (2 EV) make 5 cut bait (15 EV), x7.5, so sellable bait turns every catch's scraps into dukes.
+	     Vanilla treats trash inputs the same way (rotting flesh, yucca fibre, bone: SellableToTrader false). The values
+	     (2/3/3/8, spec "bait 2-8") stay as trader prices: 6/9/9/24 dukes each. -->
+	<append xpath="/items/item[@name='remsBaitEarthworms' or @name='remsBaitCut' or @name='remsBaitDough' or @name='remsBaitGlow']">
+		<property name="SellableToTrader" value="false"/>
+	</append>
+	<!-- glow bait unlocks at Fishing 25: traders show it from trader stage 20 -->
+	<append xpath="/items/item[@name='remsBaitGlow']">
+		<property name="TraderStageTemplate" value="remsFishingStage20"/>
+	</append>
+
+	<!-- ===== Dip Net: 2 wood + 4 cloth in the backpack (5 EV) for EV 40 (x8); a T0 tool like the Standard rod ===== -->
+	<append xpath="/items/item[@name='remsDipNet']">
+		<property name="SellableToTrader" value="false"/>
+	</append>
+
+	<!-- ===== Sturgeon roe (spec 8.1: "the economy audit decides whether it stays") =====
+	     At 250 a filleted sturgeon (6-12 fillets, 2-3 scraps, 1-2 roe) was worth 431 EV against 220 for the whole fish,
+	     so processing doubled the price of the one rare fish a stocked pond can farm (6 a day). At 100 the products
+	     (206 EV) match the whole fish and roe is still the richest single product (20 dukes). It stays as a trade good. -->
+	<set xpath="/items/item[@name='remsSturgeonRoe']/property[@name='EconomicValue']/@value">100</set>
+
+	<!-- ===== Meals: at most 1.25x the value of their ingredients =====
+	     Vanilla's cooked meat dishes sell for 0.2-1.25x their inputs (grilled meat 0.24, boiled meat 0.37, meat stew
+	     1.08, steak and potato 1.19, fish tacos 1.25), so cooking is never the money route. REMS meats are cheap (fillet
+	     6, shellfish and clam meat 5, frog legs 6, turtle 8), which made these dishes 1.4-2.1x their inputs. Capped at
+	     1.25x, rounded down to 5. Grilled Fish (24, = vanilla grilled meat) and the dishes already under the cap stay. -->
+	<!-- Turtle Soup: 2 turtle meat 16 + potato 10 + corn 10 + boiled water 40 = 76 -> 95 (was 140, x1.84) -->
+	<set xpath="/items/item[@name='remsFishingMealTurtleSoup']/property[@name='EconomicValue']/@value">95</set>
+	<!-- Clam Chowder: 3 clam meat 15 + 2 potatoes 20 + animal fat 20 + boiled water 40 = 95 -> 115 (was 130, x1.37) -->
+	<set xpath="/items/item[@name='remsFishingMealClamChowder']/property[@name='EconomicValue']/@value">115</set>
+	<!-- Crawfish Boil: 3 shellfish meat 15 + 2 corn 20 + 2 potatoes 20 + boiled water 40 = 95 -> 115 (was 160, x1.68) -->
+	<set xpath="/items/item[@name='remsFishingMealCrawfishBoil']/property[@name='EconomicValue']/@value">115</set>
+	<!-- Fish Stew: 4 fillets 24 + 2 potatoes 20 + corn 10 + boiled water 40 = 94 -> 115 (was 134, x1.43). It exists with
+	     and without Culinary Hearth (that mod's fish stew is a different dish, Fisherman's Stew). -->
+	<set xpath="/items/item[@name='remsFishingMealFishStew']/property[@name='EconomicValue']/@value">115</set>
+	<conditional>
+		<if cond="mod_loaded('REMS_CulinaryHearth')">
+		</if>
+		<else>
+			<!-- Fish and Chips exists only without Culinary Hearth (Tools/meals.py gates it the same way) -->
+			<!-- Fish and Chips: 3 fillets 18 + 2 potatoes 20 + animal fat 20 = 58 -> 70 (was 120, x2.07) -->
+			<set xpath="/items/item[@name='remsFishingMealFishAndChips']/property[@name='EconomicValue']/@value">70</set>
+		</else>
+	</conditional>
+
+	<!-- ===== Reading (skill module items): vanilla parity =====
+	     Angler's Monthly Extends masterSkillMagazine (vanilla EV 100) and every Patient Angler volume Extends a vanilla
+	     perk book (EV 500). They are found and stocked exactly as often as one vanilla magazine title / one perk-book
+	     volume (this module's loot.xml and traders.xml), so they are priced like them: 300 and 1,500 dukes to buy,
+	     20 and 100 to sell. At 30 / 300 they were the cheapest reading in the game, and one Angler's Monthly is worth
+	     more than a vanilla magazine (a level of 50 against a level of 100). -->
+	<append xpath="/items/item[@name='remsAnglersMonthly']">
+		<property name="EconomicValue" value="100"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'remsBookPatientAngler')]">
+		<property name="EconomicValue" value="500"/>
+	</append>
+
+	<!-- ===== Lures (skill module items). Their values (60/90/120/150, spec 60-180) stay as trader prices.
+	     Sale trimmed to about 1.5x the materials where crafting paid more: spinner 31 EV of materials (x1.94),
+	     jig 34 (x2.65), trout fly 15.4 (x9.74: 3 feathers, 4 yucca fibre, 1 forged iron). The crankbait (120 EV of
+	     materials, x1.0) sells in full. Each lure sets its own scale and template: they Extend the spinner.
+	     Trader visibility follows the Fishing level that unlocks them (11/18/24/34). -->
+	<append xpath="/items/item[@name='remsLureSpinner']">
+		<property name="EconomicSellScale" value="0.75"/>
+		<property name="TraderStageTemplate" value="remsFishingStage10"/>
+	</append>
+	<append xpath="/items/item[@name='remsLureJig']">
+		<property name="EconomicSellScale" value="0.55"/>
+		<property name="TraderStageTemplate" value="remsFishingStage10"/>
+	</append>
+	<append xpath="/items/item[@name='remsLureCrankbait']">
+		<property name="EconomicSellScale" value="1"/>
+		<property name="TraderStageTemplate" value="remsFishingStage20"/>
+	</append>
+	<append xpath="/items/item[@name='remsLureTroutFly']">
+		<property name="EconomicSellScale" value="0.15"/>
+		<property name="TraderStageTemplate" value="remsFishingStage30"/>
+	</append>
+
+	<!-- ===== Fingerlings (ponds module items) =====
+	     Live stock, bought only: like vanilla's chickens (wildChicken, domesticatedChicken: SellableToTrader false).
+	     Not sellable also keeps jars bought from the jobs board's Angler's stock (priced at each jar's EconomicValue)
+	     from being resold. Their values (common 120-200,
+	     uncommon 300-320) stay as trader prices. Traders show them from trader stage 20: a pond needs the Pond Marker
+	     (Fishing 31), so the jars are not offered to day-one players who cannot use them. -->
+	<append xpath="/items/item[starts-with(@name, 'remsFingerling')]">
+		<property name="SellableToTrader" value="false"/>
+		<property name="TraderStageTemplate" value="remsFishingStage20"/>
+	</append>
+	<!-- wip-traders:end -->
+	<!-- icons:begin (generated by Tools/import_icons.py) -->
+	<set xpath="/items/item[@name='remsBaitEarthworms']/property[@name='CustomIcon']/@value">remsBaitEarthworms</set>
+	<remove xpath="/items/item[@name='remsBaitEarthworms']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsBaitCut']/property[@name='CustomIcon']/@value">remsBaitCut</set>
+	<remove xpath="/items/item[@name='remsBaitCut']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsBaitDough']/property[@name='CustomIcon']/@value">remsBaitDough</set>
+	<remove xpath="/items/item[@name='remsBaitDough']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsBaitGlow']/property[@name='CustomIcon']/@value">remsBaitGlow</set>
+	<remove xpath="/items/item[@name='remsBaitGlow']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsDipNet']/property[@name='CustomIcon']/@value">remsDipNet</set>
+	<set xpath="/items/item[@name='remsStrongboxModest']/property[@name='CustomIcon']/@value">remsStrongboxModest</set>
+	<remove xpath="/items/item[@name='remsStrongboxModest']/property[@name='CustomIconTint']" />
+	<append xpath="/items/item[@name='remsStrongboxStandard']"><property name="CustomIcon" value="remsStrongboxStandard" /></append>
+	<set xpath="/items/item[@name='remsFishFillet']/property[@name='CustomIcon']/@value">remsFishFillet</set>
+	<remove xpath="/items/item[@name='remsFishFillet']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishScraps']/property[@name='CustomIcon']/@value">remsFishScraps</set>
+	<remove xpath="/items/item[@name='remsFishScraps']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsShellfishMeat']/property[@name='CustomIcon']/@value">remsShellfishMeat</set>
+	<remove xpath="/items/item[@name='remsShellfishMeat']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsGlowGoo']/property[@name='CustomIcon']/@value">remsGlowGoo</set>
+	<remove xpath="/items/item[@name='remsGlowGoo']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsSturgeonRoe']/property[@name='CustomIcon']/@value">remsSturgeonRoe</set>
+	<remove xpath="/items/item[@name='remsSturgeonRoe']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsMolluskMeat']/property[@name='CustomIcon']/@value">remsMolluskMeat</set>
+	<remove xpath="/items/item[@name='remsMolluskMeat']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFrogLegs']/property[@name='CustomIcon']/@value">remsFrogLegs</set>
+	<remove xpath="/items/item[@name='remsFrogLegs']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsTurtleMeat']/property[@name='CustomIcon']/@value">remsTurtleMeat</set>
+	<remove xpath="/items/item[@name='remsTurtleMeat']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishingMealCharredFish']/property[@name='CustomIcon']/@value">remsFishingMealCharredFish</set>
+	<remove xpath="/items/item[@name='remsFishingMealCharredFish']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishingMealGrilledFish']/property[@name='CustomIcon']/@value">remsFishingMealGrilledFish</set>
+	<remove xpath="/items/item[@name='remsFishingMealGrilledFish']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishingMealBoiledShellfish']/property[@name='CustomIcon']/@value">remsFishingMealBoiledShellfish</set>
+	<remove xpath="/items/item[@name='remsFishingMealBoiledShellfish']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishingMealSteamedClams']/property[@name='CustomIcon']/@value">remsFishingMealSteamedClams</set>
+	<remove xpath="/items/item[@name='remsFishingMealSteamedClams']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishingMealFriedFrogLegs']/property[@name='CustomIcon']/@value">remsFishingMealFriedFrogLegs</set>
+	<remove xpath="/items/item[@name='remsFishingMealFriedFrogLegs']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishingMealTurtleSoup']/property[@name='CustomIcon']/@value">remsFishingMealTurtleSoup</set>
+	<remove xpath="/items/item[@name='remsFishingMealTurtleSoup']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishingMealFishStew']/property[@name='CustomIcon']/@value">remsFishingMealFishStew</set>
+	<remove xpath="/items/item[@name='remsFishingMealFishStew']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishingMealClamChowder']/property[@name='CustomIcon']/@value">remsFishingMealClamChowder</set>
+	<remove xpath="/items/item[@name='remsFishingMealClamChowder']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsFishingMealCrawfishBoil']/property[@name='CustomIcon']/@value">remsFishingMealCrawfishBoil</set>
+	<remove xpath="/items/item[@name='remsFishingMealCrawfishBoil']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsAnglersMonthly']/property[@name='CustomIcon']/@value">remsAnglersMonthly</set>
+	<remove xpath="/items/item[@name='remsAnglersMonthly']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsBookPatientAngler1']/property[@name='CustomIcon']/@value">remsBookPatientAngler1</set>
+	<remove xpath="/items/item[@name='remsBookPatientAngler1']/property[@name='CustomIconTint']" />
+	<append xpath="/items/item[@name='remsBookPatientAngler2']"><property name="CustomIcon" value="remsBookPatientAngler2" /></append>
+	<append xpath="/items/item[@name='remsBookPatientAngler3']"><property name="CustomIcon" value="remsBookPatientAngler3" /></append>
+	<append xpath="/items/item[@name='remsBookPatientAngler4']"><property name="CustomIcon" value="remsBookPatientAngler4" /></append>
+	<append xpath="/items/item[@name='remsBookPatientAngler5']"><property name="CustomIcon" value="remsBookPatientAngler5" /></append>
+	<append xpath="/items/item[@name='remsBookPatientAngler6']"><property name="CustomIcon" value="remsBookPatientAngler6" /></append>
+	<append xpath="/items/item[@name='remsBookPatientAngler7']"><property name="CustomIcon" value="remsBookPatientAngler7" /></append>
+	<set xpath="/items/item[@name='remsLureSpinner']/property[@name='CustomIcon']/@value">remsLureSpinner</set>
+	<remove xpath="/items/item[@name='remsLureSpinner']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsLureJig']/property[@name='CustomIcon']/@value">remsLureJig</set>
+	<remove xpath="/items/item[@name='remsLureJig']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsLureCrankbait']/property[@name='CustomIcon']/@value">remsLureCrankbait</set>
+	<remove xpath="/items/item[@name='remsLureCrankbait']/property[@name='CustomIconTint']" />
+	<set xpath="/items/item[@name='remsLureTroutFly']/property[@name='CustomIcon']/@value">remsLureTroutFly</set>
+	<remove xpath="/items/item[@name='remsLureTroutFly']/property[@name='CustomIconTint']" />
+	<conditional>
+		<if cond="mod_loaded('REMS_CulinaryHearth')">
+		</if>
+		<else>
+			<set xpath="/items/item[@name='remsFishingMealFishAndChips']/property[@name='CustomIcon']/@value">remsFishingMealFishAndChips</set>
+			<remove xpath="/items/item[@name='remsFishingMealFishAndChips']/property[@name='CustomIconTint']" />
+		</else>
+	</conditional>
+	<!-- icons:end -->
+</configs>

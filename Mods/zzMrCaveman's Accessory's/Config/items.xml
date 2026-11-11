@@ -15,7 +15,7 @@
             <property name="SoundPlace" value="nuggets_place"/>
         </item>
 
-    <!-- Artifact
+    <!-- Artifact -->
 
         <item name="GoldenPoop">
             <property name="Tags" value="gems"/>
@@ -30,7 +30,7 @@
             <property name="CraftingIngredientTime" value="3"/>
             <property name="SoundPickup" value="nuggets_grab"/>
 	        <property name="SoundPlace" value="nuggets_place"/>
-        </item> -->
+        </item>
 
     <!-- Raw Gemstone -->
 
@@ -471,10 +471,10 @@
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
             <property name="AccessoryModel" value="#@modfolder:Resources/Rings.unity3d?CopperRing001"/>
-            <property name="AccessoryModelOffset" value="0,0,0"/>     <!-- metres, in the bone's own axes; default 0,0,0 -->
-            <property name="AccessoryModelRotation" value="0,0,0"/>     <!-- degrees; default 0,0,0 -->
-            <property name="AccessoryModelScale" value="1"/>             <!-- one number or x,y,z; default 1 -->
-            <property name="AccessoryModelBone" value="LeftHandIndex1"/>           <!-- optional: otherwise the slot's own bone -->
+            <property name="AccessoryModelBone" value="LeftHandRing1"/>  
+            <property name="AccessoryModelOffset" value="-0.02,0,0.001"/>      
+            <property name="AccessoryModelRotation" value="-80,-10,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="CopperBand"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -495,6 +495,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Rings.unity3d?IronRing001"/>
+            <property name="AccessoryModelBone" value="LeftHandRing1"/>  
+            <property name="AccessoryModelOffset" value="-0.02,0,0.001"/>      
+            <property name="AccessoryModelRotation" value="-80,-10,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="IronBand"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -515,6 +520,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Rings.unity3d?SilverRing001"/>
+            <property name="AccessoryModelBone" value="LeftHandRing1"/>  
+            <property name="AccessoryModelOffset" value="-0.02,0,0.001"/>      
+            <property name="AccessoryModelRotation" value="-80,-10,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="SilverBand"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -535,6 +545,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Rings.unity3d?GoldenRing001"/>
+            <property name="AccessoryModelBone" value="LeftHandRing1"/>  
+            <property name="AccessoryModelOffset" value="-0.02,0,0.001"/>      
+            <property name="AccessoryModelRotation" value="-80,-10,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="GoldBand"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -555,6 +570,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Rings.unity3d?PlatinumRing001"/>
+            <property name="AccessoryModelBone" value="LeftHandRing1"/>  
+            <property name="AccessoryModelOffset" value="-0.02,0,0.001"/>      
+            <property name="AccessoryModelRotation" value="-80,-10,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="PlatinumBand"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -575,6 +595,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Rings.unity3d?TungstenRing001"/>
+            <property name="AccessoryModelBone" value="LeftHandRing1"/>  
+            <property name="AccessoryModelOffset" value="-0.02,0,0.001"/>      
+            <property name="AccessoryModelRotation" value="-80,-10,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="TungstenBand"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -590,11 +615,18 @@
             </effect_group>
         </item>
 
+
+
         <item name="itemCopperNeckless">
             <property name="Extends" value="resourceScrapIron"/>
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Necklace.unity3d?CopperNecklace"/>
+            <property name="AccessoryModelBone" value="Neck"/>  
+            <property name="AccessoryModelOffset" value="0,0.03,0"/>      
+            <property name="AccessoryModelRotation" value="0,0,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="CopperNeckless"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -615,6 +647,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Necklace.unity3d?IronNecklace"/>
+            <property name="AccessoryModelBone" value="Neck"/>  
+            <property name="AccessoryModelOffset" value="0,0.03,0"/>      
+            <property name="AccessoryModelRotation" value="0,0,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="IronNeckless"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -635,6 +672,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Necklace.unity3d?SilverNecklace"/>
+            <property name="AccessoryModelBone" value="Neck"/>  
+            <property name="AccessoryModelOffset" value="0,0.03,0"/>      
+            <property name="AccessoryModelRotation" value="0,0,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="SilverNeckless"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -655,6 +697,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Necklace.unity3d?GoldNecklace"/>
+            <property name="AccessoryModelBone" value="Neck"/>  
+            <property name="AccessoryModelOffset" value="0,0.03,0"/>      
+            <property name="AccessoryModelRotation" value="0,0,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="GoldNeckless"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -675,6 +722,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Necklace.unity3d?PlatinumNecklace"/>
+            <property name="AccessoryModelBone" value="Neck"/>  
+            <property name="AccessoryModelOffset" value="0,0.03,0"/>      
+            <property name="AccessoryModelRotation" value="0,0,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="PlatinumNeckless"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -695,6 +747,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Necklace.unity3d?TungstenNecklace"/>
+            <property name="AccessoryModelBone" value="Neck"/>  
+            <property name="AccessoryModelOffset" value="0,0.03,0"/>      
+            <property name="AccessoryModelRotation" value="0,0,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
             <property name="CustomIcon" value="TungstenNeckless"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -710,6 +767,28 @@
             </effect_group>
         </item>
 
+        <item name="itemRadGoldNeckless">
+            <property name="Extends" value="resourceScrapIron"/>
+            <property name="Tags" value="jewelryAttachments"/>
+            <property name="AccessoryUnique" value="false"/>
+            <property name="ShowQuality" value="true" />
+            <property name="AccessoryModel" value="#@modfolder:Resources/Necklace.unity3d?RadGoldNecklace"/>
+            <property name="AccessoryModelBone" value="Neck"/>  
+            <property name="AccessoryModelOffset" value="0,0.03,0"/>      
+            <property name="AccessoryModelRotation" value="0,0,0"/>    
+            <property name="AccessoryModelScale" value="1"/> 
+            <property name="CustomIcon" value="GoldNeckless"/>
+            <property name="UnlockedBy" value="CraftingJewelry"/>
+            <property name="Group" value="Resources,Armor" />
+            <property name="AccessorySlot" value="necklace" />
+            <property name="EconomicValue" value="180" />
+            <property name="TraderStageTemplate" value="baseTier1"/>
+            <effect_group tiered="true">
+                <passive_effect name="RunSpeed" operation="perc_add" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+			    <passive_effect name="WalkSpeed" operation="perc_add" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+            </effect_group>
+        </item>
+
 
 
         <item name="itemCopperPiercing">
@@ -717,6 +796,11 @@
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <!--<property name="AccessoryModel" value="#@modfolder:Resources/Earring.unity3d?CopperCuffEarring"/>
+            <property name="AccessoryModelBone" value="Head"/>  
+            <property name="AccessoryModelOffset" value="0.1,0.025,-0.05"/>      
+            <property name="AccessoryModelRotation" value="0,0,0"/>    
+            <property name="AccessoryModelScale" value="1"/> -->
             <property name="CustomIcon" value="CopperPiercing"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />
@@ -834,11 +918,18 @@
 
 
 
+
+
         <item name="itemCopperBelt">
             <property name="Extends" value="resourceScrapIron"/>
             <property name="Tags" value="jewelryAttachments"/>
             <property name="AccessoryUnique" value="false"/>
             <property name="ShowQuality" value="true" />
+            <!--property name="AccessoryModel" value="#@modfolder:Resources/Belt.unity3d?CopperBelt"/>
+            <property name="AccessoryModelBone" value="Spine"/>  
+            <property name="AccessoryModelOffset" value="0,0,0"/>      
+            <property name="AccessoryModelRotation" value="0,0,0"/>    
+            <property name="AccessoryModelScale" value="1"/--> 
             <property name="CustomIcon" value="copperbelt"/>
             <property name="UnlockedBy" value="CraftingJewelry"/>
             <property name="Group" value="Resources,Armor" />

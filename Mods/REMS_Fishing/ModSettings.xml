@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- REMS Fishing options for Gears 8 (Mod Settings). Gears is optional.
+
+     World settings (junk, treasure, trap salvage, showing the chances) belong to the world: the host picks them on the
+     New Game or Continue screen, a dedicated server keeps them in Saves/<World>/<Save>/WorldModSettings.xml (Gears
+     writes that file on the first start; edit it while the server is stopped). The server rolls every catch with its
+     own values and sends them to each player, so a player's local settings never change anyone's odds.
+
+     Player settings (reel input, fish stamina bar, bite prompt size) are each player's own and apply at once.
+
+     Salvage: an item can come up as junk or treasure only while its group switch and its own switch are both on
+     (Scrap metal: scrap iron, brass; Trash: empty jars, polymers; Supplies: cloth, duct tape, a lost spinner). The
+     strongbox the Treasure rewards setting names is used, or the other one when that box is switched off.
+
+     Without Gears, REMS Fishing reads the defaultValue of each setting in this file, so a server without Gears can
+     change its rules here (restart the server after an edit). Percentages are written with a % sign. -->
+<ModSettings version="2">
+  <Global>
+    <Tab name="Fishing" displayKey="remsFishGearsTab" tooltipKey="remsFishGearsTabTip">
+      <Category name="Reeling" displayKey="remsFishGearsReeling">
+        <Description key="remsFishGearsReelingTip" />
+        <Switch name="ReelInput" displayKey="remsFishGearsReelInput" type="string" defaultValue="Hold">
+          <Buttons left="Hold" right="Toggle" />
+          <LocalizationPrefix prefix="remsFishGearsOpt" />
+          <Description key="remsFishGearsReelInputTip" />
+          <RestartScope scope="None" />
+        </Switch>
+      </Category>
+      <Category name="Display" displayKey="remsFishGearsDisplay">
+        <Description key="remsFishGearsDisplayTip" />
+        <Switch name="FishStamina" displayKey="remsFishGearsFishStamina" type="string" defaultValue="On">
+          <Buttons left="Off" right="On" />
+          <LocalizationPrefix prefix="remsFishGearsOpt" />
+          <Description key="remsFishGearsFishStaminaTip" />
+          <RestartScope scope="None" />
+        </Switch>
+        <Selector name="BitePrompt" displayKey="remsFishGearsBitePrompt" type="string" defaultValue="100%">
+          <List allowedValues="75%,80%,90%,100%,110%,120%,130%,140%,150%" />
+          <Description key="remsFishGearsBitePromptTip" />
+          <RestartScope scope="None" />
+        </Selector>
+        <Switch name="CatchCard" displayKey="remsFishGearsCatchCard" type="string" defaultValue="On">
+          <Buttons left="Off" right="On" />
+          <LocalizationPrefix prefix="remsFishGearsOpt" />
+          <Description key="remsFishGearsCatchCardTip" />
+          <RestartScope scope="None" />
+        </Switch>
+        <Switch name="KeyHints" displayKey="remsFishGearsKeyHints" type="string" defaultValue="On">
+          <Buttons left="Off" right="On" />
+          <LocalizationPrefix prefix="remsFishGearsOpt" />
+          <Description key="remsFishGearsKeyHintsTip" />
+          <RestartScope scope="None" />
+        </Switch>
+        <Switch name="FirstTips" displayKey="remsFishGearsFirstTips" type="string" defaultValue="On">
+          <Buttons left="Off" right="On" />
+          <LocalizationPrefix prefix="remsFishGearsOpt" />
+          <Description key="remsFishGearsFirstTipsTip" />
+          <RestartScope scope="None" />
+        </Switch>
+        <Switch name="FightPanel" displayKey="remsFishGearsFightPanel" type="string" defaultValue="Bottom">
+          <Buttons left="Bottom" right="LowerLeft" />
+          <LocalizationPrefix prefix="remsFishGearsOpt" />
+          <Description key="remsFishGearsFightPanelTip" />
+          <RestartScope scope="None" />
+        </Switch>
+      </Category>
+    </Tab>
+  </Global>
+  <World>
+    <Category name="Junk" displayKey="remsFishGearsJunk">
+      <Description key="remsFishGearsJunkTip" />
+      <Switch name="JunkCatches" displayKey="remsFishGearsJunkCatches" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsJunkCatchesTip" />
+      </Switch>
+      <Selector name="JunkChance" displayKey="remsFishGearsJunkChance" type="string" defaultValue="8%">
+        <List allowedValues="0%,1%,2%,3%,4%,5%,6%,7%,8%,9%,10%,11%,12%,13%,14%,15%,16%,17%,18%,19%,20%,21%,22%,23%,24%,25%" />
+        <Description key="remsFishGearsJunkChanceTip" />
+      </Selector>
+    </Category>
+    <Category name="Treasure" displayKey="remsFishGearsTreasure">
+      <Description key="remsFishGearsTreasureTip" />
+      <Switch name="TreasureCatches" displayKey="remsFishGearsTreasureCatches" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsTreasureCatchesTip" />
+      </Switch>
+      <Selector name="TreasureChance" displayKey="remsFishGearsTreasureChance" type="string" defaultValue="1%">
+        <List allowedValues="0%,0.25%,0.5%,0.75%,1%,1.5%,2%,2.5%,3%,3.5%,4%,4.5%,5%" />
+        <Description key="remsFishGearsTreasureChanceTip" />
+      </Selector>
+      <Switch name="TreasureRewards" displayKey="remsFishGearsTreasureRewards" type="string" defaultValue="Modest">
+        <Buttons left="Modest" right="Standard" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsTreasureRewardsTip" />
+      </Switch>
+    </Category>
+    <Category name="Traps" displayKey="remsFishGearsTraps">
+      <Description key="remsFishGearsTrapsTip" />
+      <Selector name="TrapSalvage" displayKey="remsFishGearsTrapSalvage" type="string" defaultValue="Off">
+        <List allowedValues="Off,JunkOnly,JunkAndTreasure" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsTrapSalvageTip" />
+      </Selector>
+      <Selector name="TrapJunkChance" displayKey="remsFishGearsTrapJunkChance" type="string" defaultValue="2%">
+        <List allowedValues="0%,0.5%,1%,1.5%,2%,2.5%,3%,4%,5%,7.5%,10%" />
+        <Description key="remsFishGearsTrapJunkChanceTip" />
+      </Selector>
+      <Selector name="TrapTreasureChance" displayKey="remsFishGearsTrapTreasureChance" type="string" defaultValue="0.1%">
+        <List allowedValues="0%,0.05%,0.1%,0.15%,0.2%,0.25%,0.5%,0.75%,1%" />
+        <Description key="remsFishGearsTrapTreasureChanceTip" />
+      </Selector>
+      <Selector name="TrapInterval" displayKey="remsFishGearsTrapInterval" type="string" defaultValue="4h">
+        <List allowedValues="2h,4h,6h,8h" />
+        <Description key="remsFishGearsTrapIntervalTip" />
+      </Selector>
+      <Selector name="TrapCatchUp" displayKey="remsFishGearsTrapCatchUp" type="string" defaultValue="48h">
+        <List allowedValues="24h,48h,72h,Unlimited" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsTrapCatchUpTip" />
+      </Selector>
+      <Switch name="TrapMods" displayKey="remsFishGearsTrapMods" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsTrapModsTip" />
+      </Switch>
+    </Category>
+    <Category name="Shore" displayKey="remsFishGearsShore">
+      <Description key="remsFishGearsShoreTip" />
+      <Switch name="DipNetScoop" displayKey="remsFishGearsDipNetScoop" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsDipNetScoopTip" />
+      </Switch>
+      <Selector name="CatchAmount" displayKey="remsFishGearsCatchAmount" type="string" defaultValue="1x">
+        <List allowedValues="0.5x,1x,1.5x,2x" />
+        <Description key="remsFishGearsCatchAmountTip" />
+      </Selector>
+      <Switch name="Frogs" displayKey="remsFishGearsFrogs" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsFrogsTip" />
+      </Switch>
+      <Switch name="GatheringBeds" displayKey="remsFishGearsGatheringBeds" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsGatheringBedsTip" />
+      </Switch>
+    </Category>
+    <Category name="Jobs" displayKey="remsFishGearsJobs">
+      <Description key="remsFishGearsJobsTip" />
+      <Switch name="FishingJobs" displayKey="remsFishGearsFishingJobs" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsFishingJobsTip" />
+      </Switch>
+    </Category>
+    <Category name="Salvage" displayKey="remsFishGearsSalvage">
+      <Description key="remsFishGearsSalvageTip" />
+      <Switch name="SalvageScrapMetal" displayKey="remsFishGearsSalvageScrapMetal" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageScrapMetalTip" />
+      </Switch>
+      <Switch name="SalvageScrapIron" displayKey="remsFishGearsSalvageScrapIron" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageScrapIronTip" />
+      </Switch>
+      <Switch name="SalvageBrass" displayKey="remsFishGearsSalvageBrass" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageBrassTip" />
+      </Switch>
+      <Switch name="SalvageTrash" displayKey="remsFishGearsSalvageTrash" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageTrashTip" />
+      </Switch>
+      <Switch name="SalvageJars" displayKey="remsFishGearsSalvageJars" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageJarsTip" />
+      </Switch>
+      <Switch name="SalvagePolymers" displayKey="remsFishGearsSalvagePolymers" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvagePolymersTip" />
+      </Switch>
+      <Switch name="SalvageSupplies" displayKey="remsFishGearsSalvageSupplies" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageSuppliesTip" />
+      </Switch>
+      <Switch name="SalvageCloth" displayKey="remsFishGearsSalvageCloth" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageClothTip" />
+      </Switch>
+      <Switch name="SalvageDuctTape" displayKey="remsFishGearsSalvageDuctTape" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageDuctTapeTip" />
+      </Switch>
+      <Switch name="SalvageSpinner" displayKey="remsFishGearsSalvageSpinner" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageSpinnerTip" />
+      </Switch>
+      <Switch name="SalvageBoxModest" displayKey="remsFishGearsSalvageBoxModest" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageBoxModestTip" />
+      </Switch>
+      <Switch name="SalvageBoxStandard" displayKey="remsFishGearsSalvageBoxStandard" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsSalvageBoxStandardTip" />
+      </Switch>
+    </Category>
+    <Category name="Help" displayKey="remsFishGearsHelp">
+      <Description key="remsFishGearsHelpTip" />
+      <Switch name="ShowChances" displayKey="remsFishGearsShowChances" type="string" defaultValue="On">
+        <Buttons left="Off" right="On" />
+        <LocalizationPrefix prefix="remsFishGearsOpt" />
+        <Description key="remsFishGearsShowChancesTip" />
+      </Switch>
+    </Category>
+  </World>
+</ModSettings>

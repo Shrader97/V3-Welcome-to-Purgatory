@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="REMS_Fishing" />
+	<DisplayName value="REMS Fishing" />
+	<Version value="1.0.0" />
+	<Description value="Fishing for 7 Days to Die V3.4: cast and fight fish with your own stamina, bait Fishing Traps and leave them, gather clams and catch frogs, stock your own pond, cook your catch, and work the Fishing Jobs board. Rods, bait, lures, rod mods, a crafting skill, seven books, challenges and a journal. The server decides every catch, so it plays the same in single player, co-op and on dedicated servers. Install on the server and every player's game, with EAC off." />
+	<Author value="REMS" />
+	<Website value="" />
+</xml>

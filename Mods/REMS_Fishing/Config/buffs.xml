@@ -1,0 +1,12 @@
+<configs>
+	<append xpath="/buffs">
+		<!-- While the reel is held, stamina does not regenerate. Added and removed by REMS.Fishing. -->
+		<buff name="buffREMSFishingReeling" hidden="true" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-1"/>
+			</effect_group>
+		</buff>
+	</append>
+</configs>

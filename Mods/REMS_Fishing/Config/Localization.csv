@@ -1,0 +1,1202 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+remsFishingRodStandard,items,Item,,,Standard Fishing Rod
+remsFishingRodStandardDesc,items,Item,,,"A rod you built yourself, with a sturdy pole, wrapped guides and a crude reel. Tap primary for a short cast, or hold it to cast farther. Bait and lures go in the Tackle panel under Modify; hold Reload to swap. When the float goes under, press primary, then hold to reel and ease off when the fish runs. Secondary reels the line back in."
+remsBaitEarthworms,items,Item,,,Earthworms
+remsBaitEarthwormsDesc,items,Item,,,"Live bait. Bluegill, perch, bass and trout love them. One is used each time a fish takes the bait."
+remsFishingRodPrecision,items,Item,,,Precision Fishing Rod
+remsFishingRodPrecisionDesc,items,Item,,,A 2.1 m carbon spinning rod with a smooth 5.2:1 reel. Casts further and keeps a bigger fish under control.
+remsBaitCut,items,Item,,,Cut Bait
+remsBaitCutDesc,items,Item,,,"Chopped meat or fish scraps. Draws catfish, pike, sturgeon, turtles and anything that eats meat."
+remsBaitDough,items,Item,,,Dough Bait
+remsBaitDoughDesc,items,Item,,,"Cornmeal kneaded with river water. Carp love it, shrimp and beavers too."
+remsBaitGlow,items,Item,,,Glow Bait
+remsBaitGlowDesc,items,Item,,,Rotten meat laced with something that glows. Bites come faster at night and the wasteland's mutations go for it.
+remsFishingTrap,blocks,Block,,,Fishing Trap
+remsFishingTrapDesc,blocks,Block,,,"A wire cage for catching small water creatures. Place it in water at least one block deep and add bait to its bait slot. It catches nothing without bait. Every 4 hours, it has about a 60% chance of a catch, slightly higher with bait the animal prefers. Each catch uses one bait. It holds up to 6 catches (10 with a Bigger Cage) and keeps working for up to 48 hours while you are away. Depending on the water, it can catch crayfish, crabs, shrimp, eels, turtles and small panfish such as bluegill and perch. Traps in the same water share the available catches, and zombies can break them. Open the trap to see its next check, what lives in the water and which bait works best. It also has three slots for trap mods."
+remsActionFillet,UI,Text,,,Fillet
+remsActionClean,UI,Text,,,Clean
+remsFishingMealCharredFish,items,Item,,,Charred Fish
+remsFishingMealCharredFishDesc,items,Item,,,Fish fillets charred over an open fire. It'll keep you going.
+remsFishingMealGrilledFish,items,Item,,,Grilled Fish
+remsFishingMealGrilledFishDesc,items,Item,,,Fish fillets grilled over the fire. Simple and good.
+remsFishingMealBoiledShellfish,items,Item,,,Boiled Shellfish
+remsFishingMealBoiledShellfishDesc,items,Item,,,"Crayfish tails, crab and shrimp boiled in clean water."
+remsFishingMealSteamedClams,items,Item,,,Steamed Clams
+remsFishingMealSteamedClamsDesc,items,Item,,,"Clams, mussels and snails steamed open in a pot."
+remsFishingMealFriedFrogLegs,items,Item,,,Fried Frog Legs
+remsFishingMealFriedFrogLegsDesc,items,Item,,,Frog legs fried crisp in animal fat.
+remsFishingMealTurtleSoup,items,Item,,,Turtle Soup
+remsFishingMealTurtleSoupDesc,items,Item,,,"A dark, rich soup of turtle meat, potato and corn."
+remsFishingMealFishStew,items,Item,,,Fish Stew
+remsFishingMealFishStewDesc,items,Item,,,"Fish, potato and corn simmered in a pot."
+remsFishingMealClamChowder,items,Item,,,Clam Chowder
+remsFishingMealClamChowderDesc,items,Item,,,Clams and mussels in a thick potato broth.
+remsFishingMealCrawfishBoil,items,Item,,,Crawfish Boil
+remsFishingMealCrawfishBoilDesc,items,Item,,,"A pot of crawfish, corn and potatoes. Messy, filling, worth it."
+remsFishingMealFishAndChips,items,Item,,,Fish and Chips
+remsFishingMealFishAndChipsDesc,items,Item,,,"Fried fish and potatoes, cooked in animal fat."
+remsFishBluegill,items,Item,,,Bluegill
+remsFishBluegillDesc,items,Item,,,"A small, round sunfish with an orange belly. Bites readily on worms near weeds and logs."
+remsFishPerch,items,Item,,,Perch
+remsFishPerchDesc,items,Item,,,"A striped yellow perch from open lake water. Two or three bobs, then a steady dip."
+remsFishCarp,items,Item,,,Carp
+remsFishCarpDesc,items,Item,,,"A heavy bronze carp from shallow, murky water. Slow to bite, slower to tire."
+remsFishBass,items,Item,,,Bass
+remsFishBassDesc,items,Item,,,A largemouth bass. Hits hard near cover and jumps when hooked.
+remsFishTrout,items,Item,,,Trout
+remsFishTroutDesc,items,Item,,,"A rainbow trout from cold, clear water. Fast runs and the odd leap."
+remsFishCatfish,items,Item,,,Catfish
+remsFishCatfishDesc,items,Item,,,A channel catfish from deep holes. Feeds at night and pulls like a mule.
+remsFishGar,items,Item,,,Gar
+remsFishGarDesc,items,Item,,,"A longnose gar, armoured and toothy. Thrashes at the surface and can bite through a plain line."
+remsFishPike,items,Item,,,Pike
+remsFishPikeDesc,items,Item,,,"A northern pike from big lakes. Short, explosive runs and a mouth full of teeth."
+remsFishSturgeon,items,Item,,,Sturgeon
+remsFishSturgeonDesc,items,Item,,,"A lake sturgeon, an armoured giant from the deepest water. Its roe sells for a fortune."
+remsFishMutantCarp,items,Item,,,Mutant Carp
+remsFishMutantCarpDesc,items,Item,,,"A carp gone wrong in wasteland water: lumpy, glowing and angry. Cook it before you eat it."
+remsFishEel,items,Item,,,Eel
+remsFishEelDesc,items,Item,,,"An American eel, long and slick. Eels run up rivers into lakes and feed at night on the bottom."
+remsCatchSnappingTurtle,items,Item,,,Snapping Turtle
+remsCatchSnappingTurtleDesc,items,Item,,,"A snapping turtle from a big lake: a slow, heavy pull and a beak that takes fingers."
+remsCatchSpinySoftshell,items,Item,,,Spiny Softshell
+remsCatchSpinySoftshellDesc,items,Item,,,"A spiny softshell turtle: a flat leathery shell and a snout like a snorkel. It buries itself in soft, warm mud."
+remsCatchRedSwampCrayfish,items,Item,,,Red Swamp Crayfish
+remsCatchRedSwampCrayfishDesc,items,Item,,,"A red swamp crayfish (crawfish, crawdad): warm, muddy water. Six of them clean down to a portion of tail meat."
+remsCatchSignalCrayfish,items,Item,,,Signal Crayfish
+remsCatchSignalCrayfishDesc,items,Item,,,"A signal crayfish (crawfish, crawdad) from cool, rocky water, with a pale patch at each claw joint. Four make a portion."
+remsCatchCrab,items,Item,,,Crab
+remsCatchCrabDesc,items,Item,,,"A freshwater crab that lives under rocks along warm, shaded banks. Three make a portion of crab meat."
+remsCatchFreshwaterShrimp,items,Item,,,Freshwater Shrimp
+remsCatchFreshwaterShrimpDesc,items,Item,,,"Freshwater shrimp from weedy water. Ten make a portion, or put one on a hook: pike and bass love them."
+remsCatchFreshwaterClam,items,Item,,,Freshwater Clam
+remsCatchFreshwaterClamDesc,items,Item,,,A small ridged clam gathered from sandy beds in the shallows. Eight make a portion.
+remsCatchFreshwaterMussel,items,Item,,,Freshwater Mussel
+remsCatchFreshwaterMusselDesc,items,Item,,,"A big, thin-shelled lake mussel gathered from stable bottoms. Two make a portion."
+remsCatchMysterySnail,items,Item,,,Mystery Snail
+remsCatchMysterySnailDesc,items,Item,,,"A large pond snail from weedy shallows. Five make a portion, or use them as bait in a trap or on a hook."
+remsCatchBullfrog,items,Item,,,Bullfrog
+remsCatchBullfrogDesc,items,Item,,,A big bullfrog caught at the water's edge after dark. Its legs are good eating.
+remsCatchGreenFrog,items,Item,,,Green Frog
+remsCatchGreenFrogDesc,items,Item,,,"A green frog from cool pond edges, with a bright green upper lip. Three make a portion of frog legs."
+remsFishFillet,items,Item,,,Raw Fish Fillet
+remsFishFilletDesc,items,Item,,,"A raw fish fillet. Cook it, or risk eating it raw."
+remsMutantFillet,items,Item,,,Raw Mutant Fish Fillet
+remsMutantFilletDesc,items,Item,,,"A raw fillet from a mutant carp, faintly glowing. Eaten raw, it carries twice the usual risk of food poisoning. Cooking makes it safe: Charred Fish, Grilled Fish, Fish Stew and Fish Tacos can all be cooked from it."
+remsFishScraps,items,Item,,,Fish Scraps
+remsFishScrapsDesc,items,Item,,,"Heads, tails and guts. Makes good cut bait."
+remsShellfishMeat,items,Item,,,Raw Shellfish
+remsShellfishMeatDesc,items,Item,,,"Raw crayfish tails, crab and snail meat. Boil it before you eat it."
+remsGlowGoo,items,Item,,,Glow Goo
+remsGlowGooDesc,items,Item,,,Glowing slime from the wasteland's water. Mixed into glow bait.
+remsSturgeonRoe,items,Item,,,Sturgeon Roe
+remsSturgeonRoeDesc,items,Item,,,Sturgeon eggs. Traders pay a fortune for them.
+remsMolluskMeat,items,Item,,,Raw Clam and Mussel Meat
+remsMolluskMeatDesc,items,Item,,,"Raw clam, mussel and snail meat. Steam or boil it before you eat it."
+remsFrogLegs,items,Item,,,Raw Frog Legs
+remsFrogLegsDesc,items,Item,,,Raw frog legs. Fry them; they taste like you'd expect.
+remsTurtleMeat,items,Item,,,Raw Turtle Meat
+remsTurtleMeatDesc,items,Item,,,"Raw turtle meat, dark and rich. Best in a soup."
+remsChalCategory,Challenges,Challenge,,,REMS Fishing
+remsChalNotOnMap,Challenges,Challenge,,,Not in this world
+remsChalReward1500xp,Challenges,Challenge,,,1500 XP
+remsChalReward3000xp,Challenges,Challenge,,,3000 XP
+remsChalWindow_dawn,Challenges,Challenge,,,dawn
+remsChalWindow_day,Challenges,Challenge,,,day
+remsChalWindow_dusk,Challenges,Challenge,,,dusk
+remsChalWindow_night,Challenges,Challenge,,,night
+remsChalWindow_rain,Challenges,Challenge,,,rain
+remsChalObjCatch,Challenges,Challenge,,,Catch
+remsChalObjRelease,Challenges,Challenge,,,Release
+remsChalObjFillet,Challenges,Challenge,,,Fillet
+remsChalObjTrapHaul,Challenges,Challenge,,,Empty a trap
+remsChalObjGather,Challenges,Challenge,,,Gather
+remsChalObjFrog,Challenges,Challenge,,,Catch a frog
+remsChalObjJobAccept,Challenges,Challenge,,,Accept a fishing job
+remsChalObjJobFinish,Challenges,Challenge,,,Finish fishing jobs
+remsChalObjStanding,Challenges,Challenge,,,Angler standing
+remsChalObjPondStock,Challenges,Challenge,,,Release fingerlings
+remsChalObjPondCatch,Challenges,Challenge,,,Catch from a stocked pond
+remsChalObjFishingLevel,Challenges,Challenge,,,Fishing skill
+remsChalObjRodMod,Challenges,Challenge,,,Fit rod mods
+remsChalObjBooks,Challenges,Challenge,,,Read The Patient Angler
+remsChalObjChallengeSet,Challenges,Challenge,,,Finish challenges
+remsChalGroup1,Challenges,Challenge,,,Gone Fishing
+remsChalGroup1Reward,Challenges,Challenge,,,"Capstone: 10 Earthworms, 2 Angler's Monthly"
+remsChalGroup2,Challenges,Challenge,,,Know the Water
+remsChalGroup2Reward,Challenges,Challenge,,,"Capstone: 5 Glow Bait, The Patient Angler vol. 7"
+remsChalGroup3,Challenges,Challenge,,,Tackle Box
+remsChalGroup3Reward,Challenges,Challenge,,,"Capstone: Smooth Drag, Bite Bell"
+remsChalGroup4,Challenges,Challenge,,,Shoreline
+remsChalGroup4Reward,Challenges,Challenge,,,"Capstone: 10 Cut Bait, 5 Glow Bait"
+remsChalGroup5,Challenges,Challenge,,,The Big Ones
+remsChalGroup5Reward,Challenges,Challenge,,,"Capstone: Crankbait, Wire Leader, 2 Angler's Monthly"
+remsChalGroup6,Challenges,Challenge,,,Local Legend
+remsChalGroup6Reward,Challenges,Challenge,,,Capstone: every lure
+remsFishChalFirstRod,Challenges,Challenge,,,First Rod
+remsFishChalFirstRodShort,Challenges,Challenge,,,Craft a Standard Fishing Rod.
+remsFishChalFirstRodDesc,Challenges,Challenge,,,"Every fishing trip starts with a rod. The [DECEA3]Standard Fishing Rod[-] is known from the start and is crafted in your backpack.\n\nHold it near water: a small marker shows where the float will land, and the line under the crosshair gives the depth, or the reason a cast won't work."
+remsFishChalFirstRodReward,Challenges,Challenge,,,"500 XP, 3 Earthworms"
+remsFishChalFirstBite,Challenges,Challenge,,,First Bite
+remsFishChalFirstBiteShort,Challenges,Challenge,,,Catch your first fish on a rod.
+remsFishChalFirstBiteDesc,Challenges,Challenge,,,"You need bait or a lure to cast. [DECEA3]Earthworms[-] turn up when you dig soil, about one block in twenty.\n\nTap [action:local:Primary] for a short cast, or hold it to cast farther. When the float goes under, strike with [action:local:Primary]. Hold it to reel, and let go to ease off when the line is in the red. Hold [action:permanent:Reload][action:local:Reload] with the rod out to swap bait."
+remsFishChalFirstBiteObj1,Challenges,Challenge,,,Catch a fish
+remsFishChalWormHunt,Challenges,Challenge,,,Worm Hunt
+remsFishChalWormHuntShort,Challenges,Challenge,,,Dig up 5 earthworms.
+remsFishChalWormHuntDesc,Challenges,Challenge,,,"[DECEA3]Earthworms[-] turn up when you dig dirt, forest ground or grass, about one block in twenty. A shovel is quickest.\n\nEvery fish will take them as bait."
+remsFishChalCatchOfTheDay,Challenges,Challenge,,,Catch of the Day
+remsFishChalCatchOfTheDayShort,Challenges,Challenge,,,Catch 10 fish.
+remsFishChalCatchOfTheDayDesc,Challenges,Challenge,,,"Any fish caught on a rod counts, kept or released. Water thins out as you keep fish from it, so if bites slow down, move farther along a big lake or try different water."
+remsFishChalCatchOfTheDayObj1,Challenges,Challenge,,,Catch fish
+remsFishChalFreshFillets,Challenges,Challenge,,,Fresh Fillets
+remsFishChalFreshFilletsShort,Challenges,Challenge,,,Fillet 10 fish.
+remsFishChalFreshFilletsDesc,Challenges,Challenge,,,"Open a fish in your backpack and press [DECEA3]Fillet[-]. You'll get [DECEA3]Raw Fish Fillet[-], fish scraps for cut bait and, from fish over 1 kg, a bone. One press fillets the whole stack."
+remsFishChalFreshFilletsObj1,Challenges,Challenge,,,Fillet fish
+remsFishChalMixedBag,Challenges,Challenge,,,Mixed Bag
+remsFishChalMixedBagShort,Challenges,Challenge,,,"Catch a bluegill, a perch and a carp."
+remsFishChalMixedBagDesc,Challenges,Challenge,,,"Three common fish. [DECEA3]Bluegill[-] prefer pine and burnt forest water, [DECEA3]perch[-] pine and snow, and [DECEA3]carp[-] desert, burnt forest and wasteland. Each can still turn up outside its usual waters, just less often. Carp love dough bait."
+remsFishChalMixedBagObj1,Challenges,Challenge,,,Catch a bluegill
+remsFishChalMixedBagObj2,Challenges,Challenge,,,Catch a perch
+remsFishChalMixedBagObj3,Challenges,Challenge,,,Catch a carp
+remsFishChalBaitBasics,Challenges,Challenge,,,Bait Basics
+remsFishChalBaitBasicsShort,Challenges,Challenge,,,"Catch a fish on earthworms, one on cut bait and one on dough bait."
+remsFishChalBaitBasicsDesc,Challenges,Challenge,,,"[DECEA3]Cut Bait[-] unlocks at Fishing 3 (raw meat or fish scraps), and [DECEA3]Dough Bait[-] at Fishing 5 (cornmeal and murky water). Catfish and large predators prefer cut bait; carp prefer dough.\n\nHold [action:permanent:Reload][action:local:Reload] with the rod out to swap what's on the hook."
+remsFishChalBaitBasicsObj1,Challenges,Challenge,,,Catch a fish on earthworms
+remsFishChalBaitBasicsObj2,Challenges,Challenge,,,Catch a fish on cut bait
+remsFishChalBaitBasicsObj3,Challenges,Challenge,,,Catch a fish on dough bait
+remsFishChalShoreLunch,Challenges,Challenge,,,Shore Lunch
+remsFishChalShoreLunchShort,Challenges,Challenge,,,Cook Charred Fish or Grilled Fish and eat it.
+remsFishChalShoreLunchDesc,Challenges,Challenge,,,"[DECEA3]Charred Fish[-] needs only a campfire and three fillets. [DECEA3]Grilled Fish[-] needs a cooking grill and Cooking 6, and provides more food."
+remsFishChalShoreLunchObj1,Challenges,Challenge,,,Cook Charred or Grilled Fish
+remsFishChalShoreLunchObj2,Challenges,Challenge,,,Charred or Grilled Fish
+remsFishChalKeepReading,Challenges,Challenge,,,Keep Reading
+remsFishChalKeepReadingShort,Challenges,Challenge,,,Reach Fishing skill 5 by reading Angler's Monthly.
+remsFishChalKeepReadingDesc,Challenges,Challenge,,,"[DECEA3]Angler's Monthly[-] raises the Fishing crafting skill. Higher skill unlocks better rod quality, bait, tackle and the Fishing Trap."
+remsFishChalKeepReadingObj1,Challenges,Challenge,,,Reach Fishing skill
+remsFishChalFishFry,Challenges,Challenge,,,Fish Fry
+remsFishChalFishFryShort,Challenges,Challenge,,,"Catch 3 different fish, fillet 5 and cook 3 Charred or Grilled Fish."
+remsFishChalFishFryDesc,Challenges,Challenge,,,"Put what you've learned in the first chapter to use: catch a few kinds of fish, fillet them and cook them."
+remsFishChalFishFryReward,Challenges,Challenge,,,"3000 XP, 10 Earthworms, 2 Angler's Monthly"
+remsFishChalFishFryObj1,Challenges,Challenge,,,Catch different fish
+remsFishChalFishFryObj2,Challenges,Challenge,,,Fillet fish
+remsFishChalFishFryObj3,Challenges,Challenge,,,Cook Charred or Grilled Fish
+remsFishChalEarlyRiser,Challenges,Challenge,,,Early Riser
+remsFishChalEarlyRiserShort,Challenges,Challenge,,,"Catch a fish at dawn, between 05:00 and 08:00."
+remsFishChalEarlyRiserDesc,Challenges,Challenge,,,"Bites come faster at dawn and dusk, when bass are hungriest. Dawn is 05:00-08:00, day 08:00-17:00, dusk 17:00-20:00 and night 22:00-04:00 on the game clock."
+remsFishChalEarlyRiserObj1,Challenges,Challenge,,,Catch a fish at dawn (05:00-08:00)
+remsFishChalNightBite,Challenges,Challenge,,,Night Bite
+remsFishChalNightBiteShort,Challenges,Challenge,,,"Catch a fish at night, between 22:00 and 04:00."
+remsFishChalNightBiteDesc,Challenges,Challenge,,,"Catfish and eels feed at night, and sturgeon feed more at night than during the day. [DECEA3]Glow Bait[-] brings bites much faster in the dark. Dawn is 05:00-08:00, day 08:00-17:00, dusk 17:00-20:00 and night 22:00-04:00 on the game clock."
+remsFishChalNightBiteObj1,Challenges,Challenge,,,Catch a fish at night (22:00-04:00)
+remsFishChalRainOnTheWater,Challenges,Challenge,,,Rain on the Water
+remsFishChalRainOnTheWaterShort,Challenges,Challenge,,,Catch 5 fish while it rains.
+remsFishChalRainOnTheWaterDesc,Challenges,Challenge,,,"Bites come faster in the rain. If rain can never fall in this world's waters (some weather mods disable it), fish caught at dawn or dusk count instead. The tracker will show the change."
+remsFishChalRainOnTheWaterObj1,Challenges,Challenge,,,Catch fish in the rain
+remsFishChalRainOnTheWaterObj1Alt,Challenges,Challenge,,,Catch fish at dawn or dusk (no rain in this world)
+remsFishChalGoldenHour,Challenges,Challenge,,,Golden Hour
+remsFishChalGoldenHourShort,Challenges,Challenge,,,Catch 10 fish at dawn or dusk.
+remsFishChalGoldenHourDesc,Challenges,Challenge,,,Bites come fastest at dawn (05:00-08:00) and dusk (17:00-20:00).
+remsFishChalGoldenHourObj1,Challenges,Challenge,,,Catch fish at dawn or dusk
+remsFishChalNightOwl,Challenges,Challenge,,,Night Owl
+remsFishChalNightOwlShort,Challenges,Challenge,,,Catch 25 fish at night.
+remsFishChalNightOwlDesc,Challenges,Challenge,,,Night is 22:00-04:00. Bring a light for the walk home and stay alert. The world doesn't stop while you fish.
+remsFishChalNightOwlObj1,Challenges,Challenge,,,Catch fish at night (22:00-04:00)
+remsFishChalPondLife,Challenges,Challenge,,,Pond Life
+remsFishChalPondLifeShort,Challenges,Challenge,,,Catch a fish in small water and another in a big lake.
+remsFishChalPondLifeDesc,Challenges,Challenge,,,"A big lake is a connected stretch of water with about 500 square metres of surface or more. Pike and sturgeon only live in big lakes. If your world has no big lake, any natural water counts for the second catch."
+remsFishChalPondLifeObj1,Challenges,Challenge,,,Catch a fish in small water
+remsFishChalPondLifeObj2,Challenges,Challenge,,,Catch a fish in a big lake
+remsFishChalPondLifeObj2Alt,Challenges,Challenge,,,Catch a fish in natural water (no big lake in this world)
+remsFishChalLocals,Challenges,Challenge,,,Locals
+remsFishChalLocalsShort,Challenges,Challenge,,,"Catch a bass, a trout and a catfish."
+remsFishChalLocalsDesc,Challenges,Challenge,,,"[DECEA3]Bass[-] bite best at dawn and dusk, [DECEA3]trout[-] live in cool pine and snow water, and [DECEA3]catfish[-] feed at night on cut bait."
+remsFishChalLocalsObj1,Challenges,Challenge,,,Catch a bass
+remsFishChalLocalsObj2,Challenges,Challenge,,,Catch a trout
+remsFishChalLocalsObj3,Challenges,Challenge,,,Catch a catfish
+remsFishChalBuiltToFish,Challenges,Challenge,,,Built to Fish
+remsFishChalBuiltToFishShort,Challenges,Challenge,,,Catch a fish in water you built.
+remsFishChalBuiltToFishDesc,Challenges,Challenge,,,"Dig a pond and fill it, or fish from a pier you built. A cast needs 2 blocks of water beneath the float, and larger waters hold more kinds of fish. A pond gets its fish from the biome it's in."
+remsFishChalBuiltToFishObj1,Challenges,Challenge,,,Catch a fish in water you built
+remsFishChalEveryShore,Challenges,Challenge,,,Every Shore
+remsFishChalEveryShoreShort,Challenges,Challenge,,,Catch a fish in every biome of your world that has fishable water.
+remsFishChalEveryShoreDesc,Challenges,Challenge,,,"Only biomes with natural water 2 or more blocks deep count. The list is read when your world loads, so it matches your map. The tracker shows which biomes remain. A fish caught in water you built counts for the biome it's in. If your world has no natural water or no readable water map, any 3 biomes count."
+remsFishChalEveryShoreObj1,Challenges,Challenge,,,Catch a fish in each biome with water ({0})
+remsFishChalEveryShoreObj1Alt,Challenges,Challenge,,,Catch a fish in 3 different biomes
+remsFishChalRoundTheClock,Challenges,Challenge,,,Round the Clock
+remsFishChalRoundTheClockShort,Challenges,Challenge,,,"Catch a fish at dawn, by day, at dusk, at night and in the rain."
+remsFishChalRoundTheClockDesc,Challenges,Challenge,,,"Dawn is 05:00-08:00, day 08:00-17:00, dusk 17:00-20:00 and night 22:00-04:00. A catch in the rain counts for both rain and its time of day. If rain can never fall in this world's waters, any 4 of the 5 are enough."
+remsFishChalRoundTheClockReward,Challenges,Challenge,,,"5000 XP, 5 Glow Bait, The Patient Angler vol. 7"
+remsFishChalRoundTheClockObj1,Challenges,Challenge,,,Catch a fish at each time ({0})
+remsFishChalLureMaker,Challenges,Challenge,,,Lure Maker
+remsFishChalLureMakerShort,Challenges,Challenge,,,Craft a spinner.
+remsFishChalLureMakerDesc,Challenges,Challenge,,,"A [DECEA3]Spinner[-] unlocks at Fishing 11. Lures are never used up. Cast, then reel back steadily. You only lose one when the line snaps."
+remsFishChalTinkerer,Challenges,Challenge,,,Tinkerer
+remsFishChalTinkererShort,Challenges,Challenge,,,Fit a rod mod to a fishing rod.
+remsFishChalTinkererDesc,Challenges,Challenge,,,"Rod mods fit into the rod's mod slots like weapon mods. The [DECEA3]Cork Grip Wrap[-] (Fishing 8) is the first. A Standard rod has one slot at quality 1 and 2, and two from quality 3."
+remsFishChalTinkererObj1,Challenges,Challenge,,,Fit a rod mod
+remsFishChalCarpCandy,Challenges,Challenge,,,Carp Candy
+remsFishChalCarpCandyShort,Challenges,Challenge,,,Catch 5 carp on dough bait.
+remsFishChalCarpCandyDesc,Challenges,Challenge,,,"Carp take [DECEA3]Dough Bait[-] three times as eagerly as anything else. Their home is warm, slow water in the desert, burnt forest or wasteland."
+remsFishChalCarpCandyObj1,Challenges,Challenge,,,Catch carp on dough bait
+remsFishChalSpinToWin,Challenges,Challenge,,,Spin to Win
+remsFishChalSpinToWinShort,Challenges,Challenge,,,Catch 10 fish on a spinner.
+remsFishChalSpinToWinDesc,Challenges,Challenge,,,"A steady, medium retrieve works best with a spinner. Bass, perch and trout chase it."
+remsFishChalSpinToWinObj1,Challenges,Challenge,,,Catch fish on a spinner
+remsFishChalGlowInTheDark,Challenges,Challenge,,,Glow in the Dark
+remsFishChalGlowInTheDarkShort,Challenges,Challenge,,,Catch 10 fish on glow bait at night.
+remsFishChalGlowInTheDarkDesc,Challenges,Challenge,,,"[DECEA3]Glow Bait[-] unlocks at Fishing 25. At night, it brings bites much faster, and mutant carp take it twice as often."
+remsFishChalGlowInTheDarkObj1,Challenges,Challenge,,,Catch fish on glow bait at night
+remsFishChalWorkTheLure,Challenges,Challenge,,,Work the Lure
+remsFishChalWorkTheLureShort,Challenges,Challenge,,,"Catch a fish on each lure: spinner, jig, crankbait and trout fly."
+remsFishChalWorkTheLureDesc,Challenges,Challenge,,,"Spinner (Fishing 11): reel steadily. Jig (18): lift, pause, let it sink. Crankbait (24): reel faster to dive deeper. Trout fly (34): short twitches at the surface. The right retrieve triggers a cue and raises the chance of a strike."
+remsFishChalWorkTheLureObj1,Challenges,Challenge,,,Catch a fish on a spinner
+remsFishChalWorkTheLureObj2,Challenges,Challenge,,,Catch a fish on a jig
+remsFishChalWorkTheLureObj3,Challenges,Challenge,,,Catch a fish on a crankbait
+remsFishChalWorkTheLureObj4,Challenges,Challenge,,,Catch a fish on a trout fly
+remsFishChalFullyRigged,Challenges,Challenge,,,Fully Rigged
+remsFishChalFullyRiggedShort,Challenges,Challenge,,,Fit a line mod and a rig mod to the same rod.
+remsFishChalFullyRiggedDesc,Challenges,Challenge,,,"Line mods: Braided Line, Fluorocarbon Line, Wire Leader. Rig mods: Slip Float, Bottom Sinker. You can't fit two mods of the same type, and you need a rod with two mod slots."
+remsFishChalFullyRiggedObj1,Challenges,Challenge,,,Fit a line mod and a rig mod to one rod
+remsFishChalTeethOnTheLine,Challenges,Challenge,,,Teeth on the Line
+remsFishChalTeethOnTheLineShort,Challenges,Challenge,,,"Land a pike, a gar or a mutant carp with a Wire Leader fitted."
+remsFishChalTeethOnTheLineDesc,Challenges,Challenge,,,"Toothy fish shake their heads during runs, causing tension spikes on a plain line. A [DECEA3]Wire Leader[-] (Fishing 28) prevents those spikes."
+remsFishChalTeethOnTheLineObj1,Challenges,Challenge,,,Land a toothy fish with a Wire Leader
+remsFishChalSeasonedAngler,Challenges,Challenge,,,Seasoned Angler
+remsFishChalSeasonedAnglerShort,Challenges,Challenge,,,Reach Fishing skill 30.
+remsFishChalSeasonedAnglerDesc,Challenges,Challenge,,,"Fishing 30 unlocks the [DECEA3]Precision Fishing Rod[-]: longer casts, a stronger line and a faster reel."
+remsFishChalSeasonedAnglerObj1,Challenges,Challenge,,,Reach Fishing skill
+remsFishChalPrecision,Challenges,Challenge,,,Precision
+remsFishChalPrecisionShort,Challenges,Challenge,,,"Craft a Precision Fishing Rod, fit 2 mods to it and land a fish with it."
+remsFishChalPrecisionDesc,Challenges,Challenge,,,The Precision rod is crafted at a workbench. It has two mod slots from quality 1.
+remsFishChalPrecisionReward,Challenges,Challenge,,,"5000 XP, Smooth Drag, Bite Bell"
+remsFishChalPrecisionObj2,Challenges,Challenge,,,Fit 2 mods to a Precision Fishing Rod
+remsFishChalPrecisionObj3,Challenges,Challenge,,,Land a fish with the Precision rod
+remsFishChalWireAndMesh,Challenges,Challenge,,,Wire and Mesh
+remsFishChalWireAndMeshShort,Challenges,Challenge,,,Craft a Fishing Trap.
+remsFishChalWireAndMeshDesc,Challenges,Challenge,,,The [DECEA3]Fishing Trap[-] is crafted at a workbench from Fishing 6. Place it in water at least one block deep.
+remsFishChalNightCroak,Challenges,Challenge,,,Night Croak
+remsFishChalNightCroakShort,Challenges,Challenge,,,"Catch a frog at night, between 22:00 and 04:00."
+remsFishChalNightCroakDesc,Challenges,Challenge,,,"Frogs stay near the edges of ponds and lakes from dusk until dawn, with more out in the rain. When one notices you (5 metres standing, 2.5 metres crouched), it freezes briefly before jumping in. Press [action:local:Activate] while it's frozen and within reach. Crouching improves your chance; running or a light sends it off at once."
+remsFishChalNightCroakObj1,Challenges,Challenge,,,Catch a frog at night (22:00-04:00)
+remsFishChalFirstHauls,Challenges,Challenge,,,First Hauls
+remsFishChalFirstHaulsShort,Challenges,Challenge,,,Empty a Fishing Trap with a catch in it 5 times.
+remsFishChalFirstHaulsDesc,Challenges,Challenge,,,"Put bait in the trap's [DECEA3]bait slot[-]. Every 4 in-game hours, the trap has a chance to catch something. Each catch uses one bait. Take everything the trap caught to count a haul."
+remsFishChalFirstHaulsObj1,Challenges,Challenge,,,Empty a trap with a catch in it
+remsFishChalMudbugs,Challenges,Challenge,,,Mudbugs
+remsFishChalMudbugsShort,Challenges,Challenge,,,Trap 20 crayfish.
+remsFishChalMudbugsDesc,Challenges,Challenge,,,"[DECEA3]Red swamp crayfish[-] live in warm, murky shallows, while [DECEA3]signal crayfish[-] prefer cool, rocky water. Earthworms attract both. Each trap catch contains several."
+remsFishChalMudbugsObj1,Challenges,Challenge,,,Trap crayfish
+remsFishChalRakingTheShallows,Challenges,Challenge,,,Raking the Shallows
+remsFishChalRakingTheShallowsShort,Challenges,Challenge,,,"Gather from clam beds, mussel beds or snail patches 10 times."
+remsFishChalRakingTheShallowsDesc,Challenges,Challenge,,,"Beds sit on the bottom in shallow water, one or two blocks deep, near shore. Wade in and press [action:local:Activate]. Each bed gives three gathers, then regrows over 3 in-game days."
+remsFishChalRakingTheShallowsObj1,Challenges,Challenge,,,Gather from a bed
+remsFishChalShellGame,Challenges,Challenge,,,Shell Game
+remsFishChalShellGameShort,Challenges,Challenge,,,Trap a spiny softshell and land a snapping turtle on a rod.
+remsFishChalShellGameDesc,Challenges,Challenge,,,"Softshells live in warm water with soft bottoms and like cut bait. Snapping turtles take cut bait on a rod, with a slow, heavy pull. Only juvenile snapping turtles fit in a trap."
+remsFishChalShellGameObj1,Challenges,Challenge,,,Trap a spiny softshell
+remsFishChalShellGameObj2,Challenges,Challenge,,,Land a snapping turtle on a rod
+remsFishChalHeavyPullers,Challenges,Challenge,,,Heavy Pullers
+remsFishChalHeavyPullersShort,Challenges,Challenge,,,Land a snapping turtle over 8 kg and an eel on a rod.
+remsFishChalHeavyPullersDesc,Challenges,Challenge,,,Anything weighing 8 kg or more is pulled onto the bank instead of swung in. Eels feed on cut bait at night and twist as they fight.
+remsFishChalHeavyPullersObj1,Challenges,Challenge,,,Land a snapping turtle over 8 kg
+remsFishChalHeavyPullersObj2,Challenges,Challenge,,,Land an eel on a rod
+remsFishChalFullPot,Challenges,Challenge,,,Full Pot
+remsFishChalFullPotShort,Challenges,Challenge,,,Empty a trap holding all 6 catches.
+remsFishChalFullPotDesc,Challenges,Challenge,,,"A trap holds six catches, then stops until you empty it. It only catches with bait in the bait slot and water around it. Traps in the same small pond share its fish. Look at a trap to check its state."
+remsFishChalFullPotObj1,Challenges,Challenge,,,Empty a full trap
+remsFishChalLakeLife,Challenges,Challenge,,,Lake Life
+remsFishChalLakeLifeShort,Challenges,Challenge,,,"Catch, trap or gather every lake animal that isn't a fish."
+remsFishChalLakeLifeDesc,Challenges,Challenge,,,"Snapping turtle, spiny softshell, red swamp crayfish, signal crayfish, crab, freshwater shrimp, clam, mussel, mystery snail, bullfrog and green frog. Each can appear in any biome with water, but is most common in its own. Previous catches count."
+remsFishChalLakeLifeObj1,Challenges,Challenge,,,Find every lake animal ({0})
+remsFishChalRunTheLine,Challenges,Challenge,,,Run the Line
+remsFishChalRunTheLineShort,Challenges,Challenge,,,"Empty 3 different traps with a catch in one in-game day, gather from each kind of bed, and catch a frog with a Dip Net swing."
+remsFishChalRunTheLineDesc,Challenges,Challenge,,,"A [DECEA3]Dip Net[-] (Fishing 4, crafted in your backpack) reaches about 3 m and catches more frogs than your hands. Hold it, aim at a frog, and press [action:local:Primary] to swing. Grabbing one with [action:local:Activate][action:permanent:Activate] doesn't count."
+remsFishChalRunTheLineReward,Challenges,Challenge,,,"5000 XP, 10 Cut Bait, 5 Glow Bait"
+remsFishChalRunTheLineObj1,Challenges,Challenge,,,Empty different traps in one day
+remsFishChalRunTheLineObj2,Challenges,Challenge,,,Gather from a clam bed
+remsFishChalRunTheLineObj3,Challenges,Challenge,,,Gather from a mussel bed
+remsFishChalRunTheLineObj4,Challenges,Challenge,,,Gather from a snail patch
+remsFishChalRunTheLineObj5,Challenges,Challenge,,,Catch a frog with a Dip Net swing
+remsFishChalToothy,Challenges,Challenge,,,Toothy
+remsFishChalToothyShort,Challenges,Challenge,,,Catch a pike.
+remsFishChalToothyDesc,Challenges,Challenge,,,"Pike live in big lakes at least 4 blocks deep, especially in snow and pine forest water. They take jigs, crankbaits and cut bait. If your world has no big lake, a gar counts instead."
+remsFishChalToothyObj1,Challenges,Challenge,,,Catch a pike
+remsFishChalToothyObj1Alt,Challenges,Challenge,,,Catch a gar (no big lake in this world)
+remsFishChalDinosaurFish,Challenges,Challenge,,,Dinosaur Fish
+remsFishChalDinosaurFishShort,Challenges,Challenge,,,Catch a gar.
+remsFishChalDinosaurFishDesc,Challenges,Challenge,,,"Gar swim near the surface of water 4 or more blocks deep, mostly by day in the desert and burnt forest. Crankbait and cut bait work."
+remsFishChalDinosaurFishObj1,Challenges,Challenge,,,Catch a gar
+remsFishChalLetItGo,Challenges,Challenge,,,Let It Go
+remsFishChalLetItGoShort,Challenges,Challenge,,,Release 10 fish.
+remsFishChalLetItGoDesc,Challenges,Challenge,,,"Press [action:local:Secondary] while the catch card is visible to release the fish. You get a quarter of the XP, the spot doesn't thin out, and the fish still counts for your records and challenges."
+remsFishChalLetItGoObj1,Challenges,Challenge,,,Release fish
+remsFishChalRareFinds,Challenges,Challenge,,,Rare Finds
+remsFishChalRareFindsShort,Challenges,Challenge,,,Catch 10 wild rare fish.
+remsFishChalRareFindsDesc,Challenges,Challenge,,,"Gar, pike, sturgeon and mutant carp are the rare fish. Fish from stocked ponds don't count."
+remsFishChalRareFindsObj1,Challenges,Challenge,,,Catch wild rare fish
+remsFishChalFullCreel,Challenges,Challenge,,,Full Creel
+remsFishChalFullCreelShort,Challenges,Challenge,,,Catch 250 fish.
+remsFishChalFullCreelDesc,Challenges,Challenge,,,"A long haul. Every fish caught on a rod counts, kept or released."
+remsFishChalFullCreelObj1,Challenges,Challenge,,,Catch fish
+remsFishChalDeepAndStrange,Challenges,Challenge,,,Deep and Strange
+remsFishChalDeepAndStrangeShort,Challenges,Challenge,,,Catch a wild sturgeon and a wild mutant carp.
+remsFishChalDeepAndStrangeDesc,Challenges,Challenge,,,"Sturgeon need a big lake at least 6 blocks deep and bite best at night on cut bait or a bottom rig. Mutant carp need water at least 4 blocks deep in the wasteland or within 500 metres of it. Without a deep big lake in your world, any wild trophy fish counts for the sturgeon; without deep wasteland water, the mutant carp requirement is dropped."
+remsFishChalDeepAndStrangeObj1,Challenges,Challenge,,,Catch a wild sturgeon
+remsFishChalDeepAndStrangeObj1Alt,Challenges,Challenge,,,Catch a wild trophy fish (no deep lake in this world)
+remsFishChalDeepAndStrangeObj2,Challenges,Challenge,,,Catch a wild mutant carp
+remsFishChalTrophyWall,Challenges,Challenge,,,Trophy Wall
+remsFishChalTrophyWallShort,Challenges,Challenge,,,Catch wild trophy-size fish of 3 different species.
+remsFishChalTrophyWallDesc,Challenges,Challenge,,,A trophy is a catch in the top 5% of its species' weight range; the catch card shows the badge. Fish from a stocked pond are never trophies.
+remsFishChalTrophyWallObj1,Challenges,Challenge,,,Catch trophies of different species
+remsFishChalHeavyweight,Challenges,Challenge,,,Heavyweight
+remsFishChalHeavyweightShort,Challenges,Challenge,,,Land a wild fish weighing more than 20 kg.
+remsFishChalHeavyweightDesc,Challenges,Challenge,,,"Only a sturgeon grows past 20 kg. If your world has no big lake at least 6 blocks deep, a wild fish over 6.5 kg counts instead."
+remsFishChalHeavyweightObj1,Challenges,Challenge,,,Land a wild fish over 20 kg
+remsFishChalHeavyweightObj1Alt,Challenges,Challenge,,,Land a wild fish over 6.5 kg (no deep lake in this world)
+remsFishChalTheCollection,Challenges,Challenge,,,The Collection
+remsFishChalTheCollectionShort,Challenges,Challenge,,,Catch every fish species at least once.
+remsFishChalTheCollectionDesc,Challenges,Challenge,,,"Bluegill, perch, carp, bass, trout, catfish, gar, pike, sturgeon, mutant carp and eel. Any method and any water count, a pond fish included, and fish you caught before count too."
+remsFishChalTheCollectionObj1,Challenges,Challenge,,,Catch every fish species ({0})
+remsFishChalGrandSlam,Challenges,Challenge,,,Grand Slam
+remsFishChalGrandSlamShort,Challenges,Challenge,,,"Catch a wild pike, gar, sturgeon and mutant carp within 7 in-game days."
+remsFishChalGrandSlamDesc,Challenges,Challenge,,,"They live in different waters, so plan the trip. Only the rare fish your world can hold are asked for: pike need a big lake 4 blocks deep, sturgeon a big lake 6 deep, gar water 4 deep, mutant carp wasteland water 4 deep. The tracker lists the ones still to catch."
+remsFishChalGrandSlamReward,Challenges,Challenge,,,"5000 XP, Crankbait, Wire Leader, 2 Angler's Monthly"
+remsFishChalGrandSlamObj1,Challenges,Challenge,,,Catch each rare fish within 7 days ({0})
+remsFishChalHelpWanted,Challenges,Challenge,,,Help Wanted
+remsFishChalHelpWantedShort,Challenges,Challenge,,,Accept a fishing job from a trader.
+remsFishChalHelpWantedDesc,Challenges,Challenge,,,Ask any trader [DECEA3]Got any fishing work?[-] to open the Fishing Jobs board. Each trader offers three jobs a day; you can hold two.
+remsFishChalHelpWantedObj1,Challenges,Challenge,,,Accept a fishing job
+remsFishChalFreshOrder,Challenges,Challenge,,,Fresh Order
+remsFishChalFreshOrderShort,Challenges,Challenge,,,Finish a Fresh order job.
+remsFishChalFreshOrderDesc,Challenges,Challenge,,,A fresh order asks for a few fish of one kind. Commodity jobs accept fish from a stocked pond.
+remsFishChalFreshOrderObj1,Challenges,Challenge,,,Finish a Fresh order
+remsFishChalHiredLine,Challenges,Challenge,,,Hired Line
+remsFishChalHiredLineShort,Challenges,Challenge,,,Finish 5 fishing jobs.
+remsFishChalHiredLineDesc,Challenges,Challenge,,,Turn finished jobs in at any trader's board. Every job adds to your Angler standing.
+remsFishChalHiredLineObj1,Challenges,Challenge,,,Finish fishing jobs
+remsFishChalStockThePonds,Challenges,Challenge,,,Stock the Ponds
+remsFishChalStockThePondsShort,Challenges,Challenge,,,Release 10 fingerlings into a stocked pond.
+remsFishChalStockThePondsDesc,Challenges,Challenge,,,"Build water at least 7 by 7 and 3 deep, register it with a [DECEA3]Pond Marker[-] (Fishing 31) and release fingerlings bought from traders. A new pond takes 3 in-game days to settle."
+remsFishChalStockThePondsObj1,Challenges,Challenge,,,Release fingerlings
+remsFishChalRegularSupplier,Challenges,Challenge,,,Regular Supplier
+remsFishChalRegularSupplierShort,Challenges,Challenge,,,Finish 15 fishing jobs.
+remsFishChalRegularSupplierDesc,Challenges,Challenge,,,Higher standing unlocks harder jobs and better pay.
+remsFishChalRegularSupplierObj1,Challenges,Challenge,,,Finish fishing jobs
+remsFishChalEveryJob,Challenges,Challenge,,,Every Job
+remsFishChalEveryJobShort,Challenges,Challenge,,,"Finish a Fresh order, a Biome run and a Night shift."
+remsFishChalEveryJobDesc,Challenges,Challenge,,,Biome runs open at standing 2 and night shifts at standing 3. Wild jobs need wild fish.
+remsFishChalEveryJobObj1,Challenges,Challenge,,,Finish a Fresh order
+remsFishChalEveryJobObj2,Challenges,Challenge,,,Finish a Biome run
+remsFishChalEveryJobObj3,Challenges,Challenge,,,Finish a Night shift
+remsFishChalBookshelf,Challenges,Challenge,,,Bookshelf
+remsFishChalBookshelfShort,Challenges,Challenge,,,Read 3 different volumes of The Patient Angler.
+remsFishChalBookshelfDesc,Challenges,Challenge,,,"The seven volumes of [DECEA3]The Patient Angler[-] each teach one technique. They turn up as loot and, rarely, at traders."
+remsFishChalBookshelfObj1,Challenges,Challenge,,,Read different volumes
+remsFishChalHomeWaters,Challenges,Challenge,,,Home Waters
+remsFishChalHomeWatersShort,Challenges,Challenge,,,Catch a fish from a stocked pond.
+remsFishChalHomeWatersDesc,Challenges,Challenge,,,"A stocked pond refills slowly, about one fish an hour up to what it can hold. Pond fish are marked farmed."
+remsFishChalHomeWatersObj1,Challenges,Challenge,,,Catch a fish from a stocked pond
+remsFishChalKnownOnTheDocks,Challenges,Challenge,,,Known on the Docks
+remsFishChalKnownOnTheDocksShort,Challenges,Challenge,,,Reach Angler standing 5.
+remsFishChalKnownOnTheDocksDesc,Challenges,Challenge,,,Standing grows with every finished job. The top rank brings legend hunts and the best pay.
+remsFishChalKnownOnTheDocksObj1,Challenges,Challenge,,,Reach Angler standing
+remsFishChalMasterAngler,Challenges,Challenge,,,Master Angler
+remsFishChalMasterAnglerShort,Challenges,Challenge,,,Read all 7 volumes of The Patient Angler and finish the capstones of chapters 1 to 5.
+remsFishChalMasterAnglerDesc,Challenges,Challenge,,,Reading the whole series also earns the Master Angler bonus: rare fish bite twice as often and every catch rolls heavier.
+remsFishChalMasterAnglerReward,Challenges,Challenge,,,"10000 XP, Spinner, Jig, Crankbait, Trout Fly"
+remsFishChalMasterAnglerObj1,Challenges,Challenge,,,Read every volume
+remsFishChalMasterAnglerObj2,Challenges,Challenge,,,Finish the earlier capstones
+remsChalGroup7,Challenges,Challenge,,,From Hook to Plate
+remsChalGroup7Reward,Challenges,Challenge,,,"Capstone: 3 Lemons, 2 Rice, Trout Fly"
+remsFishChalPanFried,Challenges,Challenge,,,Pan-Fried
+remsFishChalPanFriedShort,Challenges,Challenge,,,Cook Pan-Fried Fish.
+remsFishChalPanFriedDesc,Challenges,Challenge,,,[DECEA3]Pan-Fried Fish[-] is the first fish dish Culinary Hearth teaches: fillets fried in fat with herbs and lemon.
+remsFishChalPanFriedObj1,Challenges,Challenge,,,Cook Pan-Fried Fish
+remsFishChalPickTheFish,Challenges,Challenge,,,Pick the Fish
+remsFishChalPickTheFishShort,Challenges,Challenge,,,"Pick fish on the meat row of any meal, like Tacos or Ramen."
+remsFishChalPickTheFishDesc,Challenges,Challenge,,,Twelve of Culinary Hearth's any-meat meals take fish. Pick it on the meat row of the recipe and cook it.
+remsFishChalPickTheFishObj1,Challenges,Challenge,,,Cook a meal with fish
+remsFishChalFishNight,Challenges,Challenge,,,Fish Night
+remsFishChalFishNightShort,Challenges,Challenge,,,Cook 20 fish dishes.
+remsFishChalFishNightDesc,Challenges,Challenge,,,"Any dish made with fish counts, from Charred Fish to a Sashimi Plate."
+remsFishChalFishNightObj1,Challenges,Challenge,,,Cook fish dishes
+remsFishChalSmokeShack,Challenges,Challenge,,,Smoke Shack
+remsFishChalSmokeShackShort,Challenges,Challenge,,,Make 20 Smoked Fish.
+remsFishChalSmokeShackDesc,Challenges,Challenge,,,"[DECEA3]Smoked Fish[-] is salted and smoked, and keeps for a long trip."
+remsFishChalSmokeShackObj1,Challenges,Challenge,,,Make Smoked Fish
+remsFishChalFishmonger,Challenges,Challenge,,,Fishmonger
+remsFishChalFishmongerShort,Challenges,Challenge,,,Fillet 100 fish.
+remsFishChalFishmongerDesc,Challenges,Challenge,,,Every fish filleted in the backpack counts.
+remsFishChalFishmongerObj1,Challenges,Challenge,,,Fillet fish
+remsFishChalPubGrub,Challenges,Challenge,,,Pub Grub
+remsFishChalPubGrubShort,Challenges,Challenge,,,Cook Fish and Chips and Beer-Battered Fish.
+remsFishChalPubGrubDesc,Challenges,Challenge,,,Two fried classics from Culinary Hearth.
+remsFishChalPubGrubObj1,Challenges,Challenge,,,Cook Fish and Chips
+remsFishChalPubGrubObj2,Challenges,Challenge,,,Cook Beer-Battered Fish
+remsFishChalSushiBar,Challenges,Challenge,,,Sushi Bar
+remsFishChalSushiBarShort,Challenges,Challenge,,,"Make Nigiri, a Fish and Rice Bowl and a Poke Bowl."
+remsFishChalSushiBarDesc,Challenges,Challenge,,,Raw and seared fish over rice.
+remsFishChalSushiBarObj1,Challenges,Challenge,,,Make Nigiri
+remsFishChalSushiBarObj2,Challenges,Challenge,,,Make a Fish and Rice Bowl
+remsFishChalSushiBarObj3,Challenges,Challenge,,,Make a Poke Bowl
+remsFishChalStrongSwimmer,Challenges,Challenge,,,Strong Swimmer
+remsFishChalStrongSwimmerShort,Challenges,Challenge,,,Eat Fisherman's Stew.
+remsFishChalStrongSwimmerDesc,Challenges,Challenge,,,Fish meals help you swim faster and hold your breath longer.
+remsFishChalStrongSwimmerObj1,Challenges,Challenge,,,Fisherman's Stew
+remsFishChalFishEveryWay,Challenges,Challenge,,,Fish Every Way
+remsFishChalFishEveryWayShort,Challenges,Challenge,,,Cook fish in all 12 any-meat meals.
+remsFishChalFishEveryWayDesc,Challenges,Challenge,,,"Grilled Plate, Meat Sandwich, Skewers, Noodle Soup, Burger, Tacos, Corn Chowder, Meat Pie, Fried Rice, Fried Cutlet, Ramen and Breakfast Burrito, each made with fish."
+remsFishChalFishEveryWayObj1,Challenges,Challenge,,,Cook each meal with fish
+remsFishChalHookToPlate,Challenges,Challenge,,,Hook to Plate
+remsFishChalHookToPlateShort,Challenges,Challenge,,,"Catch a trout, a bass and a catfish, then make a Sashimi Plate at Exquisite or better."
+remsFishChalHookToPlateDesc,Challenges,Challenge,,,A Sashimi Plate is only as good as the fish and the cook: Exquisite and Gourmet count.
+remsFishChalHookToPlateReward,Challenges,Challenge,,,"5000 XP, 3 Lemons, 2 Rice, Trout Fly"
+remsFishChalHookToPlateObj1,Challenges,Challenge,,,Catch a trout
+remsFishChalHookToPlateObj2,Challenges,Challenge,,,Catch a bass
+remsFishChalHookToPlateObj3,Challenges,Challenge,,,Catch a catfish
+remsFishChalHookToPlateObj4,Challenges,Challenge,,,Make an Exquisite or Gourmet Sashimi Plate
+remsFishMsgNeedBatch,UI,Text,,,You need at least {0} to clean a batch of {1}.
+remsBedClam,blocks,Block,,,Clam Bed
+remsBedClamEmpty,blocks,Block,,,Picked-Over Clam Bed
+remsBedMussel,blocks,Block,,,Mussel Bed
+remsBedMusselEmpty,blocks,Block,,,Picked-Over Mussel Bed
+remsBedSnail,blocks,Block,,,Snail Patch
+remsBedSnailEmpty,blocks,Block,,,Picked-Over Snail Patch
+remsShoreBedDesc,blocks,Block,,,Shellfish on the bottom of shallow water. Gather them by hand. A bed you pick clean grows back in about three days.
+remsShoreBedEmpty,UI,Text,,,Picked clean. It grows back in about three days.
+remsShoreGatherPrompt,UI,Text,,,{1}\nPress {0} to gather
+remsShoreGathering,UI,Text,,,Gathering...
+remsShoreCatchPrompt,UI,Text,,,{1}\nPress {0} to grab it. Crouch to get closer.
+remsShoreCatchTooFar,UI,Text,,,{1}\nToo far to grab. Move closer.
+remsShoreMsgFrogMissed,UI,Text,,,Missed. It jumped into the water.
+remsShoreCatchPromptNet,UI,Text,,,"{1}\nPress {0} to grab it, or [action:local:Primary] to swing the net."
+remsShoreCatchNetOnly,UI,Text,,,{1}\nToo far to grab. Press [action:local:Primary] to swing the net.
+remsNetMsgTooFar,UI,Text,,,Too far to reach with the net.
+remsNetMsgTooDeep,UI,Text,,,Too deep for the net. Scoop in shallow water.
+remsNetMsgNoBank,UI,Text,,,Too far from the bank. Scoop in the shallows near the shore.
+remsNetMsgTired,UI,Text,,,Too tired to scoop.
+remsNetMsgNothing,UI,Text,,,Nothing in the net.
+remsFishingNetTipTitle,UI,Text,,,Dip Net
+remsFishingNetTip,UI,Text,,,"Aim at a frog and press [action:local:Primary] to swing the net. It reaches about 3 m, and crouching gives you the best chance of catching it.\n\nAim at shallow water near the bank and press [action:local:Primary] to scoop for shrimp, crayfish and small panfish. Each scoop costs a little stamina. Repeatedly scooping the same spot reduces catches for a couple of hours.\n\nYou can still grab frogs by hand with [action:local:Activate][action:permanent:Activate], but the net reaches farther and catches more."
+blockcommand_remsGather,UI,Text,,,Gather
+blockcommand_remsCatchFrog,UI,Text,,,Grab
+remsFrogBull,blocks,Block,,,Bullfrog
+remsFrogGreen,blocks,Block,,,Green Frog
+remsStrongboxModest,items,Item,,,Waterlogged Strongbox
+remsStrongboxStandard,items,Item,,,Heavy Waterlogged Strongbox
+remsStrongboxDesc,items,Item,,,A rusted strongbox pulled up from the water. Open it in your backpack for dukes and a valuable or two.
+remsTrapStateNeedsWater,UI,Text,,,Needs water: place it in water at least 1 block deep.
+remsTrapStateNeedsBait,UI,Text,,,Needs bait. Put bait in the bait slot.
+remsTrapStateFishing,UI,Text,,,Fishing. Check back in a few hours.
+remsTrapStateCatchReady,UI,Text,,,Something is inside.
+remsTrapStateFull,UI,Text,,,Full. Remove the catch so it can keep fishing.
+remsTrapStateCrowded,UI,Text,,,Too many traps in this water. They share what's available here.
+remsFishMsgAutoLoaded,UI,Text,,,Loaded {0} onto the rod.
+remsTackleHeader,UI,Text,,,Tackle
+remsTackleOnLine,UI,Text,,,On the line: {0}
+remsTackleNothing,UI,Text,,,Nothing on the line. A cast loads the first bait you carry.
+remsTackleBaitEmpty,UI,Text,,,No bait. Put bait here or hold Reload.
+remsTackleLureEmpty,UI,Text,,,No lure. Put a lure here or hold Reload.
+remsTackleBaitRule,UI,Text,,,One per bite. Refills from your pack: {0} left.
+remsTackleBaitRuleNone,UI,Text,,,One per bite. None left in your pack to refill it.
+remsTackleBaitWaiting,UI,Text,,,Bait waits while a lure is loaded. The lure is cast.
+remsTackleLureRule,UI,Text,,,On the line while loaded. Never used up; lost if the line snaps.
+remsTackleBaitOnly,UI,Text,,,Only bait goes in this slot.
+remsTackleLureOnly,UI,Text,,,Only a lure goes in this slot.
+remsRodRepairWrap,items,Item,,,Rod Repair Wrap
+remsRodRepairWrapDesc,items,Item,,,A wooden splint and a few turns of duct tape. Repairs a Standard Fishing Rod: one wrap restores up to 350 uses. The Precision Fishing Rod needs a repair kit.
+remsFishMsgCatchDropped,UI,Text,,,"Your pack is full, so the catch is on the ground at your feet."
+remsFishMsgReleaseGone,UI,Text,,,"That catch is no longer in your pack, so it can't be released."
+remsFishMsgReleaseLate,UI,Text,,,"Too late to release that one, so it's back in your pack."
+remsTrapUiBaitTag,UI,Text,,,Bait slot
+remsTrapUiBait,UI,Text,,,Bait: {0} ({1})
+remsTrapUiBaitNone,UI,Text,,,Bait: none. Put bait in the bait slot.
+remsTrapUiBaitWrong,UI,Text,,,"The bait slot contains {0}, which isn't bait."
+remsTrapUiCatches,UI,Text,,,Catches: {0} of {1}
+remsTrapUiRule,UI,Text,,,One catch chance every 4 hours. Each catch uses one bait; a miss uses none.
+remsPondMsgNotYourPond,UI,Text,,,Another survivor stocked this pond. Only they and their allies can add fish to it.
+remsPondStateOthers,UI,Text,,,Another survivor stocked this pond. Its fish belong to them and their allies; you can only catch wild fish here.
+remsPondMsgReverted,UI,Text,,,"The jar was no longer in your inventory, so nothing was released."
+remsFishGearsTab,UI,XUI,x,,REMS Fishing
+remsFishGearsTabTip,UI,XUI,x,,"Your own reeling and display options. Each player sets their own, and these never affect catch odds."
+remsFishGearsReeling,UI,XUI,x,,Reeling
+remsFishGearsReelingTip,UI,XUI,x,,How the reel responds to primary input during a fight.
+remsFishGearsReelInput,UI,XUI,x,,Reel input
+remsFishGearsReelInputTip,UI,XUI,x,,Hold: hold primary to reel and let go to ease off. Toggle: tap primary to start reeling and tap again to ease off. Applies immediately.
+remsFishGearsDisplay,UI,XUI,x,,Display
+remsFishGearsDisplayTip,UI,XUI,x,,What the fishing HUD shows.
+remsFishGearsFishStamina,UI,XUI,x,,Fish stamina bar
+remsFishGearsFishStaminaTip,UI,XUI,x,,Shows how much fight the hooked fish has left alongside the tension bar during a fight. Off hides it; the tension bar is enough to land a fish.
+remsFishGearsBitePrompt,UI,XUI,x,,Bite prompt size
+remsFishGearsBitePromptTip,UI,XUI,x,,Size of the bite ring around the crosshair when a fish bites. 100% is the standard size.
+remsFishGearsJunk,UI,XUI,x,,Junk
+remsFishGearsJunkTip,UI,XUI,x,,"Junk is old scrap that snags the hook instead of a fish: scrap metal, cloth, plastic, an empty can or occasionally a lost lure. It comes in with a short drag, not a fight, and uses no bait. The host or server sets this for everyone."
+remsFishGearsJunkCatches,UI,XUI,x,,Junk catches
+remsFishGearsJunkCatchesTip,UI,XUI,x,,Off: no junk on the line or in Fishing Traps.
+remsFishGearsJunkChance,UI,XUI,x,,Junk chance (rod)
+remsFishGearsJunkChanceTip,UI,XUI,x,,The chance that a bite on a rod brings up junk instead of an animal. The server rolls it once per bite.
+remsFishGearsTreasure,UI,XUI,x,,Treasure
+remsFishGearsTreasureTip,UI,XUI,x,,"Treasure is a Waterlogged Strongbox. Open it from your backpack for dukes and salvage such as precious metals, a repair kit or tackle. The host or server sets this for everyone."
+remsFishGearsTreasureCatches,UI,XUI,x,,Treasure catches
+remsFishGearsTreasureCatchesTip,UI,XUI,x,,Off: no strongboxes on the line or in Fishing Traps.
+remsFishGearsTreasureChance,UI,XUI,x,,Treasure chance (rod)
+remsFishGearsTreasureChanceTip,UI,XUI,x,,"The chance that a bite on a rod is a strongbox. With the defaults, a bite is 91% wildlife, 8% junk and 1% treasure."
+remsFishGearsTreasureRewards,UI,XUI,x,,Treasure rewards
+remsFishGearsTreasureRewardsTip,UI,XUI,x,,What a Waterlogged Strongbox contains. Modest: fewer dukes and one find. Standard: more dukes and two finds.
+remsFishGearsTraps,UI,XUI,x,,Fishing Traps
+remsFishGearsTrapsTip,UI,XUI,x,,"How often a Fishing Trap checks for a catch, whether trap mods work, and whether it can bring up junk or treasure instead. Trap salvage is off by default: traps keep working while you're away, so even small chances add up over a long game. The host or server sets these for everyone."
+remsFishGearsTrapSalvage,UI,XUI,x,,Salvage in traps
+remsFishGearsTrapSalvageTip,UI,XUI,x,,Off: traps catch only animals. Junk only: a trap catch can be junk. Junk and treasure: it can also be a strongbox.
+remsFishGearsTrapJunkChance,UI,XUI,x,,Trap junk chance
+remsFishGearsTrapJunkChanceTip,UI,XUI,x,,The chance that a trap catch is junk. Used only when Salvage in traps allows junk and Junk catches is on.
+remsFishGearsTrapTreasureChance,UI,XUI,x,,Trap treasure chance
+remsFishGearsTrapTreasureChanceTip,UI,XUI,x,,The chance that a trap catch is a strongbox. Used only when Salvage in traps is set to Junk and treasure and Treasure catches is on.
+remsFishGearsHelp,UI,XUI,x,,Help
+remsFishGearsHelpTip,UI,XUI,x,,What players are told about these chances.
+remsFishGearsShowChances,UI,XUI,x,,Show category chances
+remsFishGearsShowChancesTip,UI,XUI,x,,"On: the fishing help lists the chances of wildlife, junk and treasure, and the trap window shows its odds as percentages. Off: the chances stay hidden and the trap window says Likely, Sometimes or Rare instead."
+remsFishGearsOptOn,UI,XUI,x,,On
+remsFishGearsOptOff,UI,XUI,x,,Off
+remsFishGearsOptHold,UI,XUI,x,,Hold
+remsFishGearsOptToggle,UI,XUI,x,,Toggle
+remsFishGearsOptModest,UI,XUI,x,,Modest
+remsFishGearsOptStandard,UI,XUI,x,,Standard
+remsFishGearsOptJunkOnly,UI,XUI,x,,Junk only
+remsFishGearsOptJunkAndTreasure,UI,XUI,x,,Junk and treasure
+remsFishChancesTitle,UI,XUI,,,What comes up on a bite
+remsFishChancesRod,UI,XUI,,,"On a rod: {0} wildlife, {1} junk, {2} treasure."
+remsFishChancesRodWild,UI,XUI,,,On a rod: every bite is wildlife. Junk and treasure are off.
+remsFishChancesBoxModest,UI,XUI,,,Treasure is a Waterlogged Strongbox with modest rewards.
+remsFishChancesBoxStandard,UI,XUI,,,Treasure is a Waterlogged Strongbox with standard rewards.
+remsFishChancesTrapOff,UI,XUI,,,Fishing Traps: wildlife only.
+remsFishChancesTrapJunk,UI,XUI,,,Fishing Traps: each catch has a {0} chance to be junk.
+remsFishChancesTrapTreasure,UI,XUI,,,Fishing Traps: each catch has a {0} chance to be treasure.
+remsFishChancesTrapBoth,UI,XUI,,,Fishing Traps: each catch has a {0} chance to be junk and a {1} chance to be treasure.
+remsFishChancesNote,UI,XUI,,,"Junk and treasure never count as fish for discoveries, trophies or wildlife challenges."
+remsFishChancesHost,UI,XUI,,,The host or server sets these chances.
+remsFishChancesLine,UI,XUI,,,"Bite: {0} wildlife, {1} junk, {2} treasure"
+remsFishReelHintHold,UI,XUI,,,Hold primary to reel; let go to ease off.
+remsFishReelHintToggle,UI,XUI,,,Tap primary to start reeling; tap it again to ease off.
+remsFishCmdDesc,UI,XUI,,,Shows the REMS Fishing settings in use here.
+remsFishCmdHelp,UI,XUI,,,"Lists the junk, treasure and trap salvage settings this game uses and their sources (Gears, ModSettings.xml defaults or the server), plus your reel and display options. On a client, junk and treasure values come from the server."
+remsFishCmdTitle,UI,XUI,,,REMS Fishing settings
+remsFishCmdWorld,UI,XUI,,,World rules (from {0}):
+remsFishCmdWaiting,UI,XUI,,,World rules: waiting for the server to send them.
+remsFishCmdPlayer,UI,XUI,,,Your options (from {0}):
+remsFishCmdChances,UI,XUI,,,In effect:
+remsFishSrcBuiltIn,UI,XUI,,,the built-in defaults
+remsFishSrcModFile,UI,XUI,,,the ModSettings.xml defaults
+remsFishSrcGears,UI,XUI,,,Gears
+remsFishSrcServer,UI,XUI,,,the server
+remsFishGearsTrapInterval,UI,XUI,x,,Trap check interval
+remsFishGearsTrapIntervalTip,UI,XUI,x,,Hours of in-game time between trap catch checks. 4 hours by default. A trap still catches up for at most 48 hours while nobody is near it.
+remsFishGearsTrapMods,UI,XUI,x,,Trap mods
+remsFishGearsTrapModsTip,UI,XUI,x,,"On: Funnel Entrance, Bait Box and Bigger Cage can be crafted and fitted to a trap. Off: their recipes are hidden, the trap window has no mod slots, and mods already fitted do nothing."
+remsFishGearsShore,UI,XUI,x,,Dip Net and Catches
+remsFishGearsShoreTip,UI,XUI,x,,Controls what the Dip Net can do and how much traps and scoops bring up. The host or server sets these for everyone.
+remsFishGearsDipNetScoop,UI,XUI,x,,Dip Net scooping
+remsFishGearsDipNetScoopTip,UI,XUI,x,,"On: the Dip Net scoops shallow water near the bank for shrimp, crayfish and small panfish. Off: it only swings at frogs."
+remsFishGearsCatchAmount,UI,XUI,x,,Catch amount
+remsFishGearsCatchAmountTip,UI,XUI,x,,"Scales how many crayfish, shrimp, crabs and similar animals are brought up by each trap catch or scoop. A fish is always one fish. 1x by default."
+remsFishGearsSalvage,UI,XUI,x,,Salvage Items
+remsFishGearsSalvageTip,UI,XUI,x,,"Controls which junk and treasure can be caught. An item only comes up when its group and individual switches are both on. If nothing in a group is on, the catch is an animal instead."
+remsFishGearsSalvageScrapMetal,UI,XUI,x,,Scrap metal
+remsFishGearsSalvageScrapMetalTip,UI,XUI,x,,The group switch for scrap iron and brass.
+remsFishGearsSalvageScrapIron,UI,XUI,x,,Scrap iron
+remsFishGearsSalvageScrapIronTip,UI,XUI,x,,"2 to 6 scrap iron, the most common junk."
+remsFishGearsSalvageBrass,UI,XUI,x,,Brass
+remsFishGearsSalvageBrassTip,UI,XUI,x,,1 to 3 scrap brass.
+remsFishGearsSalvageTrash,UI,XUI,x,,Trash
+remsFishGearsSalvageTrashTip,UI,XUI,x,,The group switch for empty jars and polymers.
+remsFishGearsSalvageJars,UI,XUI,x,,Empty jars
+remsFishGearsSalvageJarsTip,UI,XUI,x,,1 or 2 empty jars.
+remsFishGearsSalvagePolymers,UI,XUI,x,,Polymers
+remsFishGearsSalvagePolymersTip,UI,XUI,x,,1 to 3 scrap polymers.
+remsFishGearsSalvageSupplies,UI,XUI,x,,Supplies
+remsFishGearsSalvageSuppliesTip,UI,XUI,x,,"The group switch for cloth, duct tape and lost spinners."
+remsFishGearsSalvageCloth,UI,XUI,x,,Cloth
+remsFishGearsSalvageClothTip,UI,XUI,x,,1 to 3 cloth.
+remsFishGearsSalvageDuctTape,UI,XUI,x,,Duct tape
+remsFishGearsSalvageDuctTapeTip,UI,XUI,x,,"1 duct tape, a rare find."
+remsFishGearsSalvageSpinner,UI,XUI,x,,Lost spinner
+remsFishGearsSalvageSpinnerTip,UI,XUI,x,,"A lost spinner lure, the rarest junk."
+remsFishGearsSalvageBoxModest,UI,XUI,x,,Modest strongbox
+remsFishGearsSalvageBoxModestTip,UI,XUI,x,,"The treasure used when Treasure rewards is set to Modest. Off: Standard boxes are used instead, or no treasure if both are off."
+remsFishGearsSalvageBoxStandard,UI,XUI,x,,Standard strongbox
+remsFishGearsSalvageBoxStandardTip,UI,XUI,x,,"The treasure used when Treasure rewards is set to Standard. Off: Modest boxes are used instead, or no treasure if both are off."
+remsFishGearsCatchCard,UI,XUI,x,,Catch card
+remsFishGearsCatchCardTip,UI,XUI,x,,"On: a card showing the catch, its size and where you caught it appears on the right after each catch. Off: only the usual pickup line appears."
+remsFishGearsKeyHints,UI,XUI,x,,Key hints
+remsFishGearsKeyHintsTip,UI,XUI,x,,"On: the cast, reel and journal keys appear under the crosshair while a rod is out. Off: hidden."
+remsFishGearsFirstTips,UI,XUI,x,,First-time tips
+remsFishGearsFirstTipsTip,UI,XUI,x,,"On: a short tip appears the first time you hold a rod, the Dip Net or a lure. Off: no tips. Turning it back on shows any tips you haven't seen."
+remsFishGearsFightPanel,UI,XUI,x,,Fight panel position
+remsFishGearsFightPanelTip,UI,XUI,x,,"Where the fight panel appears while reeling in a fish: bottom centre above the toolbelt, or lower left."
+remsFishGearsOptBottom,UI,XUI,x,,Bottom
+remsFishGearsOptLowerLeft,UI,XUI,x,,Lower left
+remsFishGearsOptUnlimited,UI,XUI,x,,Unlimited
+remsFishGearsOpt24h,UI,XUI,x,,24 h
+remsFishGearsOpt48h,UI,XUI,x,,48 h
+remsFishGearsOpt72h,UI,XUI,x,,72 h
+remsFishGearsTrapCatchUp,UI,XUI,x,,Trap catch-up limit
+remsFishGearsTrapCatchUpTip,UI,XUI,x,,"How long a trap keeps fishing while nobody is nearby to load its area. Default: 48 hours. Unlimited: catches up for however long you were away, but never beyond its catch limit."
+remsFishGearsFrogs,UI,XUI,x,,Frogs
+remsFishGearsFrogsTip,UI,XUI,x,,"On: frogs come out along the banks from dusk to dawn, more of them in the rain. Off: no frogs appear, and any already out leave."
+remsFishGearsGatheringBeds,UI,XUI,x,,Gathering beds
+remsFishGearsGatheringBedsTip,UI,XUI,x,,"On: clam, mussel and snail beds grow in the shallows. Off: no new beds appear, and existing beds can't be gathered. Turning it back on brings them back."
+remsFishGearsJobs,UI,XUI,x,,Fishing Jobs
+remsFishGearsJobsTip,UI,XUI,x,,Fishing work offered by traders. The host or server sets this for everyone.
+remsFishGearsFishingJobs,UI,XUI,x,,Fishing jobs
+remsFishGearsFishingJobsTip,UI,XUI,x,,On: traders offer fishing jobs on their board. Off: no new jobs can be taken. Jobs already taken can still be turned in or abandoned.
+remsHudAimDepth,UI,Text,,,"{0} m deep, {1} m away"
+remsHudAimDepthBig,UI,Text,,,"{0} m deep, {1} m away, big water"
+remsHudAimFailAim,UI,Text,,,Aim at the water
+remsHudAimFailNoWater,UI,Text,,,No water there
+remsHudAimFailShallow,UI,Text,,,Too shallow
+remsHudAimFailSmall,UI,Text,,,Too small
+remsHudAimFailBlocked,UI,Text,,,Something's in the way
+remsHudAimOutOfRange,UI,Text,,,Out of range ({0} m)
+remsHudAimHoldFarther,UI,Text,,,Hold to cast farther
+remsHudAimTwoParts,UI,Text,,,{0}. {1}
+remsHudAimNoBait,UI,Text,,,No bait or lure
+remsHudAimRodWorn,UI,Text,,,This rod is worn out. Repair it to cast.
+remsHudAimSpooked,UI,Text,,,Spooked: bites are slow here for a minute
+remsHudAimFishedOut,UI,Text,,,This water is fished out. Try farther along the bank.
+remsHudAimFishedOutPond,UI,Text,,,This water is fished out. Give it a few hours or try other water.
+remsHudAimBigFish,UI,Text,,,Big fish here: this rod may not hold one
+remsHudAimSpecies,UI,Text,,,Lives here: {0}
+remsHudAimStocked,UI,Text,,,Stocked here: {0}
+remsHudAimSmallHole,UI,Text,,,Too small for big fish. Small fish bite here: {0}
+remsHudAimSpeciesStrays,UI,Text,,,Nothing calls this water home. Only strays bite here.
+remsHudStrike,UI,Text,,,Bite [action:local:Primary]
+remsHudCueNibble,UI,Text,,,Nibble
+remsHudCueBite,UI,Text,,,Bite
+remsHudCueRodTip,UI,Text,,,Rod tip pulls
+remsHudCueBell,UI,Text,,,Bite bell rings
+remsHudCueJump,UI,Text,,,Fish jumps
+remsHudCueRun,UI,Text,,,Line runs out
+remsHudCueDrag,UI,Text,,,Line drags
+remsHudDistance,UI,Text,,,{0} m
+remsHudFightReel,UI,Text,,,Hold [action:local:Primary] to reel
+remsHudFightReelToggle,UI,Text,,,Tap [action:local:Primary] to reel
+remsHudFightReeling,UI,Text,,,Reeling
+remsHudFightEase,UI,Text,,,Ease off: let go
+remsHudFightEaseToggle,UI,Text,,,Ease off: tap [action:local:Primary]
+remsHudFightRunning,UI,Text,,,Fish running
+remsHudFightSnag,UI,Text,,,Snagged: drag it in
+remsHudTeeth,UI,Text,,,Teeth on the line
+remsHudTeethLeader,UI,Text,,,Teeth on the line: the leader holds
+remsHudFightTitle,UI,Text,,,On the line
+remsHudStamina,UI,Text,,,Stamina
+remsHudResistance,UI,Text,,,Resistance
+remsHudLureMatched,UI,Text,,,Matched
+remsHudLureNotMatched,UI,Text,,,Match it
+remsHudLurePresentation,UI,Text,,,Presentation
+remsHudLureRestSpinner,UI,Text,,,Sinking
+remsHudLureRestJig,UI,Text,,,Drop
+remsHudLureRestCrankbait,UI,Text,,,Floating
+remsHudLureRestFly,UI,Text,,,Drifting
+remsHudLureChipSteady,UI,Text,,,Steady
+remsHudLureChipFast,UI,Text,,,Fast
+remsHudLureDepthShort,UI,Text,,,{0} m
+remsHudLureDistance,UI,Text,,,{0} m out
+remsHudCardRelease,UI,Text,,,Press [action:local:Secondary] to release
+remsHudCardFarmed,UI,Text,,,Farmed
+remsHudCardFirst,UI,Text,,,New species for your journal
+remsHudCardFirstKey,UI,Text,,,New species: check your journal ({0})
+remsHudCardNewBest,UI,Text,,,New personal best
+remsHudCardBest,UI,Text,,,Your best: {0}
+remsHudCardTrophy,UI,Text,,,Trophy
+remsHudCardJunk,UI,Text,,,Junk from the bottom
+remsHudCardTreasure,UI,Text,,,Treasure
+remsHudCardReleasedNote,UI,Text,,,Still counts in your journal
+remsHudCardTagCaught,UI,Text,,,Caught
+remsHudCardTagTrophy,UI,Text,,,Trophy
+remsHudCardTagReleased,UI,Text,,,Released
+remsHudCardTagJunk,UI,Text,,,Junk
+remsHudCardTagTreasure,UI,Text,,,Treasure
+remsHudCardKg,UI,Text,,,{0:0.0} kg
+remsHudCardCm,UI,Text,,,{0:0} cm
+remsHudCardOn,UI,Text,,,On
+remsHudCardWhere,UI,Text,,,Where
+remsHudCardWhen,UI,Text,,,When
+remsHudCardNoBait,UI,Text,,,Bare hook
+remsHudCardWaterWild,UI,Text,,,Open water
+remsHudCardWaterBig,UI,Text,,,Big lake
+remsHudCardWaterBuilt,UI,Text,,,Built pond
+remsHudCardWaterStocked,UI,Text,,,Stocked pond
+remsHudCardWhere2,UI,Text,,,"{0}, {1}"
+remsHudCardTime,UI,Text,,,"Day {0}, {1}:{2}"
+remsHudCardTimeRain,UI,Text,,,"Day {0}, {1}:{2}, rain"
+remsHudKeysIdle,UI,Text,,,"[action:local:Primary] Cast, hold to cast farther   [action:permanent:Reload][action:local:Reload] Hold for bait and lures   ( [e61a16]{0}[-] ) Journal"
+remsHudTwoParts,UI,Text,,,"{0}, {1}"
+remsHudGrams,UI,Text,,,{0} g
+remsHudKg,UI,Text,,,{0} kg
+remsJournalTitle,UI,Text,,,Fishing Journal
+remsJournalTabSpecies,UI,Text,,,Species
+remsJournalTabRecords,UI,Text,,,Records
+remsJournalTabHelp,UI,Text,,,Help
+remsJournalOpenHint,UI,Text,,,Open with {0}
+remsJournalOpenHintNoKey,UI,Text,,,Open with the journal key (J by default)
+remsJournalStanding,UI,Text,,,Angler standing: rank {0} of 5 ({1} points)
+remsJournalStandingNone,UI,Text,,,Angler standing: not ranked yet. Ask a trader for fishing work.
+remsJournalPage,UI,Text,,,{0} / {1}
+remsJournalDiscovered,UI,Text,,,Discovered: {0} of {1}
+remsJournalUnknown,UI,Text,,,Undiscovered
+remsJournalUnknownShort,UI,Text,,,Unknown
+remsJournalUnknownDesc,UI,Text,,,Catch one to learn more. The hints above show where to look.
+remsJournalGroupRarity,UI,Text,,,"{0}, {1}"
+remsJournalGroupFish,UI,Text,,,Fish
+remsJournalGroupTurtle,UI,Text,,,Turtle
+remsJournalGroupCrustacean,UI,Text,,,Crustacean
+remsJournalGroupMollusk,UI,Text,,,Mollusk
+remsJournalGroupAmphibian,UI,Text,,,Amphibian
+remsJournalRarityCommon,UI,Text,,,common
+remsJournalRarityUncommon,UI,Text,,,uncommon
+remsJournalRarityRare,UI,Text,,,rare
+remsJournalCaught,UI,Text,,,Caught: {0}
+remsJournalNotCaught,UI,Text,,,Not caught yet
+remsJournalBestWild,UI,Text,,,Best: {0}
+remsJournalBestFarmed,UI,Text,,,Best (farmed): {0}
+remsJournalBestBoth,UI,Text,,,"Best: {0} wild, {1} farmed"
+remsJournalBestNone,UI,Text,,,Best: no weight recorded yet
+remsJournalNone,UI,Text,,,None yet
+remsJournalHintsTitle,UI,Text,,,Where and how
+remsJournalHintHow,UI,Text,,,How: {0}
+remsJournalHintWhere,UI,Text,,,Where: {0}
+remsJournalHintWater,UI,Text,,,Water: {0}
+remsJournalHintWhen,UI,Text,,,When: {0}
+remsJournalHintBait,UI,Text,,,Bait: {0}
+remsJournalHintSize,UI,Text,,,Size: {0} to {1}
+remsJournalHintSizeEach,UI,Text,,,Size: {0} to {1} each
+remsJournalHintToothy,UI,Text,,,Toothy: head shakes cause sudden spikes in line tension. A Wire Leader prevents them.
+remsJournalHintTrapCap,UI,Text,,,"A trap can only hold the smaller ones, up to {0}."
+remsJournalHintBatch,UI,Text,,,Clean them in batches of {0}.
+remsJournalHintMutant,UI,Text,,,Raw fillets carry twice the usual risk of food poisoning. Cooking removes it.
+remsJournalMethodRod,UI,Text,,,rod
+remsJournalMethodTrap,UI,Text,,,Fishing Trap
+remsJournalMethodBeds,UI,Text,,,gathering beds
+remsJournalMethodShore,UI,Text,,,by hand or with a Dip Net at the water's edge
+remsJournalWhereHomes,UI,Text,,,{0} (fewer elsewhere)
+remsJournalWhereWasteOnly,UI,Text,,,wasteland water and water within 500 m of the wasteland
+remsJournalWaterDepth,UI,Text,,,at least {0} m deep
+remsJournalWaterBig,UI,Text,,,"a big lake, at least {0} m deep"
+remsJournalWaterTrap,UI,Text,,,a baited trap set in water
+remsJournalWaterTrapToo,UI,Text,,,or a baited trap
+remsJournalWaterBeds,UI,Text,,,beds in shallow water near the shore
+remsJournalWaterShore,UI,Text,,,pond and lake edges
+remsJournalWhenAny,UI,Text,,,any time
+remsJournalWhenBest,UI,Text,,,best {0}
+remsJournalWhenNight,UI,Text,,,at night
+remsJournalWhenDawnDusk,UI,Text,,,at dawn and dusk
+remsJournalWhenDay,UI,Text,,,during the day
+remsJournalWhenFrogs,UI,Text,,,"dusk and night, more often in the rain"
+remsJournalNote_remsFishEel,UI,Text,,,"Real eels are born at sea and swim upriver to grow. The game doesn't model that journey. Here, they live in lakes and big ponds."
+remsJournalNote_remsFishMutantCarp,UI,Text,,,No wasteland water 4 blocks deep on your map? Mutant fingerlings from a trader (Angler standing 4) can stock a pond that deep. Farmed fish never count as wild.
+remsJournalNote_remsFishSturgeon,UI,Text,,,"It can bite on the Standard Fishing Rod, but that rod will almost never land one."
+remsJournalRecSpecies,UI,Text,,,Species discovered
+remsJournalRecLanded,UI,Text,,,Rod catches landed
+remsJournalRecReleased,UI,Text,,,Released
+remsJournalRecTrophies,UI,Text,,,Wild trophies
+remsJournalRecHeaviest,UI,Text,,,Heaviest wild rod catch
+remsJournalRecTrap,UI,Text,,,Taken from traps
+remsJournalRecBeds,UI,Text,,,Bed gathers
+remsJournalRecFrogs,UI,Text,,,Frogs caught
+remsJournalRecCleaned,UI,Text,,,Catches cleaned
+remsJournalRecSalvage,UI,Text,,,Junk and treasure hauled up
+remsJournalRecRank,UI,Text,,,Angler standing
+remsJournalRecPoints,UI,Text,,,Standing points
+remsJournalRecJobs,UI,Text,,,Fishing jobs finished
+remsJournalOf,UI,Text,,,{0} of {1}
+remsJournalHeaviestValue,UI,Text,,,"{0}, {1}"
+remsJournalSalvageValue,UI,Text,,,{0} ({1} treasure)
+remsJournalRankNone,UI,Text,,,Not ranked
+remsJournalRankValue,UI,Text,,,Rank {0} of 5
+remsJournalRecJobsNote,UI,Text,,,"Angler standing comes from fishing jobs. Ask any trader ""Got any fishing work?"" to open the Fishing Jobs board."
+remsJournalHelpAnglingTitle,UI,Text,,,Angling
+remsJournalHelpAngling,UI,Text,,,"Hold a rod near water. The line under the crosshair shows depth and distance, or why a cast won't work. Tap [action:local:Primary] for a short cast or hold it to cast farther. Rare fish want deep water and big lakes, not just a long cast."
+remsJournalHelpBaitTitle,UI,Text,,,Bait and lures
+remsJournalHelpBait,UI,Text,,,"Bait and lures go on the rod, like ammo in a gun. The rod's Tackle panel under Modify has a Bait slot and a Lure slot. A loaded lure is cast instead of bait. Hold [action:permanent:Reload][action:local:Reload] to swap, or tap to top up the bait. Bait refills automatically with the same kind from your backpack, and casting with an empty rod loads the first bait you carry. Dig dirt for worms, and craft cut, dough and glow bait. Each bite uses one bait, even if you miss. Reel in before a bite and you keep it. Lures aren't used up and are only lost if the line snaps."
+remsJournalHelpFightTitle,UI,Text,,,The bite and the fight
+remsJournalHelpFight,UI,Text,,,"When the float goes under, a ring begins draining around the crosshair. Press [action:local:Primary] before it empties. Striking at a nibble costs nothing. Hold [action:local:Primary] to reel and let go to ease off (with Reel input set to Toggle in the REMS Fishing options, tap it to start and stop). When a fish pulls to one side, hold the opposite strafe key ([action:local:Left] or [action:local:Right]) to lean against it. Staying in the red for about two and a half seconds snaps the line. Easing off lets your stamina recover."
+remsJournalHelpReleaseTitle,UI,Text,,,Keep or release
+remsJournalHelpRelease,UI,Text,,,"A landed catch appears on the card at the right. Press [action:local:Secondary] while it's showing to release it. You get a quarter of the XP, the water doesn't thin, and it still counts in your journal. Do anything else and it goes into your pack."
+remsJournalHelpTrapsTitle,UI,Text,,,Fishing Traps
+remsJournalHelpTraps,UI,Text,,,"Place a trap in water and put bait in its bait slot. Every 4 in-game hours, it gets one chance to catch something. Each catch uses one bait. A trap holds six catches. Traps in the same stretch of water share what's available."
+remsJournalHelpBedsTitle,UI,Text,,,Gathering beds
+remsJournalHelpBeds,UI,Text,,,"Clam beds, mussel beds and snail patches grow on the bottom of shallow water near the shore. Stand in or beside the water and press [action:local:Activate][action:permanent:Activate] to gather. Each bed gives 3 gathers, then replenishes after 3 days."
+remsJournalHelpFrogsTitle,UI,Text,,,Frogs and the Dip Net
+remsJournalHelpFrogs,UI,Text,,,"Frogs appear along the banks at dusk and at night, with more appearing in the rain. When a frog notices you, it freezes briefly before jumping into the water. Move closer while it freezes and press [action:local:Activate][action:permanent:Activate] to grab it, or hold a Dip Net and press [action:local:Primary] to swing from farther away. Running or using a light scares it off immediately. Crouching improves your chance of catching it, and the net improves it further. The net can also scoop shallow water near the bank for shrimp, crayfish and small panfish. Repeatedly scooping the same spot reduces catches for a couple of hours."
+remsJournalHelpWaterTitle,UI,Text,,,Reading the water
+remsJournalHelpWater,UI,Text,,,"Keeping fish from the same water thins the population, slowing bites until it recovers over a few hours. Ponds and small lakes thin out as a whole; big lakes thin one stretch at a time. Nearby gunshots, explosions and swimming spook fish for a minute. Released fish don't thin the water."
+remsJobsDialogAsk,Quest,Dialogs,,,Got any fishing work?
+remsJobsTitle,UI,XUI,,,Fishing Jobs
+remsJobsTraderLine,UI,XUI,,,{0}: new jobs every morning at 06:00
+remsJobsStanding,UI,XUI,,,"Angler standing: rank {0}, {1}"
+remsJobsStandingNone,UI,XUI,,,Angler standing: none yet. Finish a job to reach rank 1.
+remsJobsPointsNext,UI,XUI,,,{0} of {1} points for rank {2}
+remsJobsPointsMax,UI,XUI,,,{0} points: the top rank
+remsJobsRankName0,UI,XUI,,,None
+remsJobsRankName1,UI,XUI,,,Bank Hand
+remsJobsRankName2,UI,XUI,,,Regular
+remsJobsRankName3,UI,XUI,,,Trusted Angler
+remsJobsRankName4,UI,XUI,,,Expert Angler
+remsJobsRankName5,UI,XUI,,,Lake Legend
+remsJobsTodayHeader,UI,XUI,,,Today's jobs
+remsJobsHeldHeader,UI,XUI,,,Your jobs ({0}/{1})
+remsJobsStockHeader,UI,XUI,,,Angler's stock
+remsJobsLoading,UI,XUI,,,Asking about work...
+remsJobsNoBoard,UI,XUI,,,The trader can't hear you from there. Move closer and ask again.
+remsJobsRankLabel,UI,XUI,,,Rank {0}
+remsJobsBtnAccept,UI,XUI,,,Accept
+remsJobsBtnHeld,UI,XUI,,,Accepted
+remsJobsBtnTaken,UI,XUI,,,Taken today
+remsJobsBtnRank,UI,XUI,,,Needs rank {0}
+remsJobsBtnFull,UI,XUI,,,Holding two
+remsJobsBtnTurnIn,UI,XUI,,,Turn in
+remsJobsBtnAbandon,UI,XUI,,,Abandon
+remsJobsBtnAbandonConfirm,UI,XUI,,,Abandon?
+remsJobsBtnBuy,UI,XUI,,,Buy
+remsJobsNoHeld,UI,XUI,,,"You have no fishing jobs. Accept up to two, then turn them in at any trader."
+remsJobsStockLocked,UI,XUI,,,From rank {0}
+remsJobsStockSoldOut,UI,XUI,,,Sold out today
+remsJobsStockLeft,UI,XUI,,,{0} left today
+remsJobsStockPrice,UI,XUI,,,{0} dukes
+remsJobsStockNone,UI,XUI,,,No fingerlings for sale here.
+remsJobsSomeTrader,UI,XUI,,,the trader
+remsJobsFrom,UI,XUI,,,"From {0}, a rank {1} job"
+remsJobsTrackerTitle,UI,XUI,,,Fishing jobs
+remsJobsMarker,UI,XUI,,,Marked Water
+remsJobTypeFreshOrder,UI,XUI,,,Fresh Order
+remsJobTypeShellfishBatch,UI,XUI,,,Shellfish Batch
+remsJobTypeBiomeRun,UI,XUI,,,Biome Run
+remsJobTypeMarkedWater,UI,XUI,,,Marked Water
+remsJobTypeNightShift,UI,XUI,,,Night Shift
+remsJobTypeKitchenSupply,UI,XUI,,,Kitchen Supply
+remsJobTypeTrophy,UI,XUI,,,Trophy
+remsJobTypeLegendHunt,UI,XUI,,,Legend Hunt
+remsJobsDescBring1,UI,XUI,,,Bring {0}.
+remsJobsDescBring2,UI,XUI,,,"Bring {0}, or {1}."
+remsJobsDescDeliver,UI,XUI,,,Deliver {0}.
+remsJobsDescBiome,UI,XUI,,,Catch {0} wild fish with a rod in the {1} biome.
+remsJobsDescMarked,UI,XUI,,,"Catch {0} wild fish with a rod at the marked water, about {1} m {2} of {3}. It's marked on your map and compass."
+remsJobsDescNight,UI,XUI,,,Catch {0} wild fish with a rod between {1} and {2}.
+remsJobsDescTrophy,UI,XUI,,,"Catch a wild {0} weighing {1} kg or more with a rod, then bring it to any trader."
+remsJobsDescLegend,UI,XUI,,,The big one: catch a wild {0} weighing {1} kg or more with a rod and bring it to any trader.
+remsJobsOr,UI,XUI,,,or
+remsJobsAnyMix,UI,XUI,,,(any mix)
+remsJobsNoteFarmedOk,UI,XUI,,,Farmed catches from a stocked pond are fine.
+remsJobsNoteWildCount,UI,XUI,,,"Wild fish only, caught after accepting the job. Released fish still count."
+remsJobsNoteWildKeep,UI,XUI,,,"Wild fish only, caught after accepting the job. Keep it: releasing it cancels the catch."
+remsJobsNoteTrophyItem,UI,XUI,,,A {0} you already have also counts.
+remsJobsReward,UI,XUI,,,Reward: {0}
+remsJobsDukes,UI,XUI,,,{0} dukes
+remsJobsStandingPts,UI,XUI,,,+{0} standing
+remsJobsSupplies,UI,XUI,,,supplies ({0})
+remsJobsProgCatch,UI,XUI,,,Caught: {0}/{1}
+remsJobsProgTrophy,UI,XUI,,,"Wild {0}, {1} kg or more: {2}/1"
+remsJobsProgBring,UI,XUI,,,Now bring a {0} to any trader
+remsJobsProgItem,UI,XUI,,,{0}: {1}/{2}
+remsJobsReady,UI,XUI,,,Ready to turn in at any trader
+remsJobsReadyShort,UI,XUI,,,Ready to turn in
+remsJobsMsgTooFar,UI,XUI,,,Get closer to the trader.
+remsJobsMsgHoldFull,UI,XUI,,,You already hold two fishing jobs. Finish or abandon one first.
+remsJobsMsgNoJob,UI,XUI,,,That job isn't on offer any more.
+remsJobsMsgTaken,UI,XUI,,,You've already taken that job today.
+remsJobsMsgRank,UI,XUI,,,That job needs Angler standing rank {0}.
+remsJobsMsgAccepted,UI,XUI,,,Job accepted: {0}.
+remsJobsMsgNeedCatches,UI,XUI,,,Not done yet: {0} more to catch.
+remsJobsMsgNeedItems,UI,XUI,,,You still need {0} more {1}.
+remsJobsMsgNeedTrophy,UI,XUI,,,"You need a wild {0} of at least {1} kg, caught on a rod after taking the job."
+remsJobsMsgBringFish,UI,XUI,,,Bring a {0} with you to turn the job in.
+remsJobsMsgFinished,UI,XUI,,,{0} done. You were paid {1} dukes.
+remsJobsMsgRankUp,UI,XUI,,,Angler standing is now rank {0}: {1}.
+remsJobsMsgAbandoned,UI,XUI,,,Job abandoned: {0}.
+remsJobsMsgNoStock,UI,XUI,,,That isn't for sale here.
+remsJobsMsgRankStock,UI,XUI,,,Sold only from Angler standing rank {0}.
+remsJobsMsgSoldOut,UI,XUI,,,Sold out for today.
+remsJobsMsgNoDukes,UI,XUI,,,You need {0} dukes.
+remsJobsMsgBought,UI,XUI,,,Bought: {0}.
+remsJobsMsgProgress,UI,XUI,,,{0}: {1} of {2} caught.
+remsJobsMsgReady,UI,XUI,,,{0}: done. Turn it in at any trader.
+remsJobsMsgTrophyCaught,UI,XUI,,,{0}: that fish counts. Keep it and bring it to a trader.
+remsJobsMsgTrophyReleased,UI,XUI,,,"{0}: released, so it no longer counts."
+remsJobsDirN,UI,XUI,,,north
+remsJobsDirNE,UI,XUI,,,north-east
+remsJobsDirE,UI,XUI,,,east
+remsJobsDirSE,UI,XUI,,,south-east
+remsJobsDirS,UI,XUI,,,south
+remsJobsDirSW,UI,XUI,,,south-west
+remsJobsDirW,UI,XUI,,,west
+remsJobsDirNW,UI,XUI,,,north-west
+remsJobsBookUnread,UI,XUI,,,a Patient Angler volume you haven't read
+remsJobsMsgItemsGone,UI,XUI,,,"Those items are no longer in your bags, so nothing changed hands."
+remsJobsMsgReverted,UI,XUI,,,"{0}: the items weren't in your bags any more, so the job is still yours."
+remsJobsMsgBuyReverted,UI,XUI,,,"The dukes weren't in your bags any more, so the purchase was called off."
+remsFishMsgNoBait,items,Item,,,No bait or lure on the rod or in your pack.
+remsFishMsgTooEarly,items,Item,,,Not yet. Wait for the float to go under.
+remsFishMsgHint,items,Item,,,"Nothing's biting here. Try deeper water, other bait, or another time."
+remsFishMsgMissed,items,Item,,,Missed it. The fish took the bait.
+remsFishMsgSnapped,items,Item,,,The line snapped.
+remsFishMsgSnappedLure,items,Item,,,The line snapped and took your {0} with it.
+remsFishMsgThrewHook,items,Item,,,It threw the hook. Keep some pressure on next time.
+remsFishMsgEscaped,items,Item,,,It got away.
+remsFishMsgInterrupted,items,Item,,,Cast interrupted.
+remsFishMsgRodBroken,items,Item,,,This rod is worn out. Repair it before you cast.
+remsFishMsgRodWorn,items,Item,,,Your rod is worn out. Repair it to keep fishing.
+remsFishMsgTooTired,items,Item,,,Too tired to cast. Catch your breath.
+remsFishMsgReleased,items,Item,,,Released
+remsFishMsgNoneOfThat,items,Item,,,You don't have any of that.
+remsFishMsgBaitPicked,items,Item,,,On the hook: {0}
+remsFishMsgLurePicked,items,Item,,,{0} tied on. Hold primary to reel it back.
+remsFishMsgStrike,items,Item,,,"Fish on. Hold to reel, ease off when it runs."
+remsFishMsgLureSnag,items,Item,,,Something heavy took the lure.
+remsFishMsgLureIdle,items,Item,,,Hold primary to work the lure back. Hold secondary to crank it in fast.
+remsFishCatchSize,items,Item,,,"{0:0} cm, {1:0.0} kg"
+remsBaitEarthwormsPick,items,Item,,,"All-round bait: bluegill, perch, bass, trout, crayfish and small eels."
+remsBaitCutPick,items,Item,,,"For catfish, pike, sturgeon, eels, turtles and crabs."
+remsBaitDoughPick,items,Item,,,Carp love it. Shrimp too.
+remsBaitGlowPick,items,Item,,,Faster bites at night. Draws mutant carp.
+remsCatchFreshwaterShrimpPick,items,Item,,,"Live bait for pike, bass, perch and trout."
+remsCatchMysterySnailPick,items,Item,,,Live bait for catfish and carp.
+remsLureSpinnerPick,items,Item,,,"Reel it in steadily at medium speed. Bass, perch and trout."
+remsLureJigPick,items,Item,,,"Lift, pause and let it sink. Pike, perch and catfish."
+remsLureCrankbaitPick,items,Item,,,"Crank it fast and it dives deep. Bass, gar and pike, and bigger fish."
+remsLureTroutFlyPick,items,Item,,,Short twitches near the surface. Trout and bluegill. Cast on the spinning rod.
+remsFishRigFloat,items,Item,,,Rig: float
+remsFishRigBottom,items,Item,,,"Rig: bottom sinker, no float"
+remsFishRigLure,items,Item,,,"Rig: lure, worked back on the retrieve"
+remsLureSpinnerHow,items,Item,,,Steady medium reel
+remsLureJigHow,items,Item,,,"Lift, pause, let it sink"
+remsLureCrankbaitHow,items,Item,,,Crank fast to dive deep
+remsLureTroutFlyHow,items,Item,,,Short twitches at the surface
+remsFishingTipTitle,items,Item,,,Fishing
+remsFishingTip,items,Item,,,"Tap [action:local:Primary] for a short cast, or hold it to cast farther.\n\nHold [action:permanent:Reload][action:local:Reload] to swap the bait or lure on the rod, or tap to top up the bait. You can also use the rod's Bait and Lure slots under Modify. A loaded lure is cast instead of bait.\n\nWhen the float goes under, press [action:local:Primary]. Hold it to reel, and release it to ease off while the fish runs (if Reel input is set to Toggle in the REMS Fishing options, tap to start and stop). When the fish runs to one side, hold the opposite strafe key ([action:local:Left] or [action:local:Right]) to lean against it.\n\nPress [action:local:Secondary] while the catch card is showing to release the fish.\n\nPress J to open your Fishing Journal."
+remsFishingLureTipTitle,items,Item,,,Fishing with a lure
+remsFishingLureTip,items,Item,,,"Unlike bait, a lure is reeled back in rather than left under a float. It is never used up.\n\nHold [action:local:Primary] to reel it in. Release it to stop. Most lures sink when stopped, but a crankbait floats back up. Hold [action:local:Secondary] to reel faster.\n\nEach lure has its own style, shown when you pick it. Work it that way and the lure cue lights up: more fish strike. If the line snaps, you lose the lure."
+remsTrophySizeLine,items,Item,,,"Trophy: {0:0.00} kg, {1:0} cm. Landed on day {2}."
+remsTrophyBluegill,items,Item,,,Trophy Bluegill
+remsTrophyBluegillDesc,items,Item,,,"A trophy bluegill, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a bluegill gives."
+remsTrophyPerch,items,Item,,,Trophy Perch
+remsTrophyPerchDesc,items,Item,,,"A trophy perch, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a perch gives."
+remsTrophyCarp,items,Item,,,Trophy Carp
+remsTrophyCarpDesc,items,Item,,,"A trophy carp, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a carp gives."
+remsTrophyBass,items,Item,,,Trophy Bass
+remsTrophyBassDesc,items,Item,,,"A trophy bass, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a bass gives."
+remsTrophyTrout,items,Item,,,Trophy Trout
+remsTrophyTroutDesc,items,Item,,,"A trophy trout, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a trout gives."
+remsTrophyCatfish,items,Item,,,Trophy Catfish
+remsTrophyCatfishDesc,items,Item,,,"A trophy catfish, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a catfish gives."
+remsTrophyGar,items,Item,,,Trophy Gar
+remsTrophyGarDesc,items,Item,,,"A trophy gar, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a gar gives."
+remsTrophyPike,items,Item,,,Trophy Pike
+remsTrophyPikeDesc,items,Item,,,"A trophy pike, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a pike gives."
+remsTrophySturgeon,items,Item,,,Trophy Sturgeon
+remsTrophySturgeonDesc,items,Item,,,"A trophy sturgeon, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a sturgeon gives."
+remsTrophyMutantCarp,items,Item,,,Trophy Mutant Carp
+remsTrophyMutantCarpDesc,items,Item,,,"A trophy mutant carp, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat a mutant carp gives."
+remsTrophyEel,items,Item,,,Trophy Eel
+remsTrophyEelDesc,items,Item,,,"A trophy eel, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still fillet it for the most meat an eel gives."
+remsTrophySnappingTurtle,items,Item,,,Trophy Snapping Turtle
+remsTrophySnappingTurtleDesc,items,Item,,,"A trophy snapping turtle, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still clean it for the most meat a snapping turtle gives."
+remsTrophySpinySoftshell,items,Item,,,Trophy Spiny Softshell
+remsTrophySpinySoftshellDesc,items,Item,,,"A trophy spiny softshell, one of the biggest of its kind. It keeps its exact size, traders pay twice the usual price, and you can still clean it for the most meat a spiny softshell gives."
+remsPondMarker,blocks,Block,,,Pond Marker
+remsPondMarkerDesc,blocks,Block,,,"Marks a pond you've built so you can stock it with fish. Place it at the edge of water you've built, at least 7 by 7 blocks in area and 3 blocks deep. Natural lakes and rivers can't be registered. To stock the pond, look at the marker or its water and use a jar of fingerlings. A pond holds up to three species. Each takes 3 days to settle in, and more jars of a species make it bite more often. The pond refills by about one fish an hour, up to its capacity, which grows with its size. Common fish use 1 unit of capacity, uncommon fish use 2, and rare fish use 4. Pond fish only bite on a rod and count as farmed. Picking up or breaking the marker ends the pond and clears its stock."
+remsFingerlingBluegill,items,Item,,,Bluegill Fingerlings
+remsFingerlingBluegillDesc,items,Item,,,"A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Small, quick to bite and easy to keep. Each one caught uses 1 of the pond's capacity."
+remsFingerlingPerch,items,Item,,,Perch Fingerlings
+remsFingerlingPerchDesc,items,Item,,,"A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Small, quick to bite and good eating. Each one caught uses 1 of the pond's capacity."
+remsFingerlingCarp,items,Item,,,Carp Fingerlings
+remsFingerlingCarpDesc,items,Item,,,"A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Hardy, heavy fish that love dough bait. Each one caught uses 1 of the pond's capacity."
+remsFingerlingBass,items,Item,,,Bass Fingerlings
+remsFingerlingBassDesc,items,Item,,,A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Largemouth bass are uncommon fish. Each one caught uses 2 of the pond's capacity.
+remsFingerlingTrout,items,Item,,,Trout Fingerlings
+remsFingerlingTroutDesc,items,Item,,,A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Rainbow trout are uncommon fish. Each one caught uses 2 of the pond's capacity.
+remsFingerlingCatfish,items,Item,,,Catfish Fingerlings
+remsFingerlingCatfishDesc,items,Item,,,A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Channel catfish are uncommon fish that feed best at night. Each one caught uses 2 of the pond's capacity.
+remsFingerlingEel,items,Item,,,Eel Elvers
+remsFingerlingEelDesc,items,Item,,,A jar of live elvers for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Young American eels are an uncommon catch that feeds at night. Each one caught uses 2 of the pond's capacity.
+remsFingerlingGar,items,Item,,,Gar Fingerlings
+remsFingerlingGarDesc,items,Item,,,A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Longnose gar are rare fish. Each one caught uses 4 of the pond's capacity. Gar need a pond at least 4 blocks deep.
+remsFingerlingPike,items,Item,,,Pike Fingerlings
+remsFingerlingPikeDesc,items,Item,,,A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Northern pike are rare fish. Each one caught uses 4 of the pond's capacity. Pike need a pond at least 4 blocks deep with at least 144 blocks of surface.
+remsFingerlingSturgeon,items,Item,,,Sturgeon Fingerlings
+remsFingerlingSturgeonDesc,items,Item,,,A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Lake sturgeon are rare fish. Each one caught uses 4 of the pond's capacity. Sturgeon need a pond at least 6 blocks deep with at least 144 blocks of surface.
+remsFingerlingMutantCarp,items,Item,,,Mutant Carp Fingerlings
+remsFingerlingMutantCarpDesc,items,Item,,,"A jar of live fingerlings for a stocked pond. Look at a Pond Marker or its water and use the jar to release them. They take 3 days to settle in. Bred from wasteland carp, these rare fish use 4 of the pond's capacity each time one is caught. Mutant carp need a pond at least 4 blocks deep. Pond-raised fish count as farmed, never wild."
+blockcommand_remsPondStock,UI,Text,,,Release fingerlings
+blockcommand_remsPondCheck,UI,Text,,,Check pond
+blockcommand_remsPondTake,UI,Text,,,Pick up (ends the pond)
+remsPondTaking,UI,Text,,,Picking up the marker ends the pond
+remsPondPromptStock,UI,Text,,,Press {0} to release the {1}
+remsPondPromptCheck,UI,Text,,,"Press {0} to check the pond, hold {0} for more"
+remsPondStateChecking,UI,Text,,,Checking the pond...
+remsPondStateNoWater,UI,Text,,,Needs water. Place the marker at the edge of a pond you've built.
+remsPondStateTooSmall,UI,Text,,,"Too small: {0} by {1}, {2} deep. A pond needs an area of {3} by {3}, at least {4} deep."
+remsPondStateNatural,UI,Text,,,This is a natural lake or river. Only a pond you've built can be stocked.
+remsPondStateClaimed,UI,Text,,,"This water already has a Pond Marker at {0}, {1}."
+remsPondStateEmpty,UI,Text,,,"Ready to stock: {0} by {1}, {2} deep, capacity {3}."
+remsPondStateEstablishing,UI,Text,,,Establishing: first fish bite in {0}. Stock {1} of {2}.
+remsPondStateFish,UI,Text,,,Stock: {0} of {1}
+remsPondSpeciesReady,UI,Text,,,{0} ({1}): settled in
+remsPondSpeciesSettling,UI,Text,,,"{0} ({1}): settling in, {2} left"
+remsPondJar,UI,Text,,,1 jar
+remsPondJars,UI,Text,,,{0} jars
+remsPondDay,UI,Text,,,1 day
+remsPondDays,UI,Text,,,{0} days
+remsPondHour,UI,Text,,,1 hour
+remsPondHours,UI,Text,,,{0} hours
+remsPondMsgRegistered,UI,Text,,,"Pond registered: {0} by {1}, {2} deep, capacity {3}. Release fingerlings to stock it."
+remsPondMsgPlacedNoWater,UI,Text,,,"Marker placed, but there's no water beside it yet. Fill the pond to register it."
+remsPondMsgNoWater,UI,Text,,,There's no water beside the marker. Place it at the edge of a pond you've built.
+remsPondMsgTooSmall,UI,Text,,,"This water is too small for a pond. It needs an area of 7 by 7, at least 3 blocks deep."
+remsPondMsgNatural,UI,Text,,,This water is part of a natural lake or river. Only a pond you've dug and filled yourself can be stocked.
+remsPondMsgClaimed,UI,Text,,,"This water already has a Pond Marker at {0}, {1}."
+remsPondMsgNotAPond,UI,Text,,,That water isn't a registered pond. Place a Pond Marker at its edge first.
+remsPondMsgChecking,UI,Text,,,The pond is still being checked. Try again in a moment.
+remsPondMsgLookAt,UI,Text,,,Look at a Pond Marker or its water to release them.
+remsPondMsgTooFar,UI,Text,,,Get closer to the pond.
+remsPondMsgNotHolding,UI,Text,,,Hold the jar of fingerlings to release them.
+remsPondMsgBusy,UI,Text,,,The last jar is still being released. Try again in a moment.
+remsPondMsgNotYours,UI,Text,,,This pond is inside someone else's land claim.
+remsPondMsgFull,UI,Text,,,"This pond already holds three species. To start over, pick up the marker and place it again."
+remsPondMsgSpeciesFull,UI,Text,,,"This pond already has {1} jars of {0}, the maximum allowed."
+remsPondMsgTooShallowFor,UI,Text,,,{0} need water at least {1} blocks deep.
+remsPondMsgTooSmallFor,UI,Text,,,{0} need a bigger pond with at least {1} blocks of surface.
+remsPondMsgStocked,UI,Text,,,You release the {0}. Give them 3 days to settle in.
+remsPondMsgStockedMore,UI,Text,,,"You release the {0}. The pond now has {2} of {3} jars of {1}, so they bite more often."
+craftingFishingName,progression,Attribute,,,Fishing
+craftingFishingDesc,progression,Attribute,,,"Reading [DECEA3]Angler's Monthly[-] improves the fishing rods you craft and unlocks bait, traps, lures and rod mods.\nYou don't need it to start fishing."
+craftingFishingLongDesc,progression,Attribute,,,"Each issue of Angler's Monthly raises Fishing by one level, up to 50. Higher levels let you craft better Standard and Precision Fishing Rods and unlock cut, dough and glow bait, the Dip Net, the Fishing Trap, four lures, eight rod mods and the Pond Marker. This skill doesn't affect which fish you can catch."
+remsAnglersMonthly,items,Item,,,Angler's Monthly
+remsAnglersMonthlyDesc,items,Item,,,"Tackle reviews, rigging diagrams and rod-building guides from the last issues to come off the press.\n\nImproves the Fishing crafting skill."
+remsPatientAngler0Name,progression,perk book,,,The Patient Angler
+remsPatientAngler0Desc,progression,perk book,,,"Seven slim volumes by a lifelong angler on taking your time fishing and thinking ahead. Each teaches a technique, and reading all seven makes you a Master Angler."
+remsBookPatientAngler1,items,perk book,,,The Patient Angler Vol 1
+remsBookPatientAngler2,items,perk book,,,The Patient Angler Vol 2
+remsBookPatientAngler3,items,perk book,,,The Patient Angler Vol 3
+remsBookPatientAngler4,items,perk book,,,The Patient Angler Vol 4
+remsBookPatientAngler5,items,perk book,,,The Patient Angler Vol 5
+remsBookPatientAngler6,items,perk book,,,The Patient Angler Vol 6
+remsBookPatientAngler7,items,perk book,,,The Patient Angler Vol 7
+perkRemsPatientAngler1ReadingTheWaterName,progression,perk book,,,Reading the Water
+perkRemsPatientAngler1ReadingTheWaterDesc,progression,perk book,,,The aim line also lists the species that live in the water you're aiming at.
+perkRemsPatientAngler1ReadingTheWaterLongDesc,progression,perk book,,,Reading the Water: Every lake tells you what lives in it if you know how to look. The aim line also lists the species that live in the water you're aiming at.
+perkRemsPatientAngler2QuickHandsName,progression,perk book,,,Quick Hands
+perkRemsPatientAngler2QuickHandsDesc,progression,perk book,,,You get 1 extra second to strike when a fish bites.
+perkRemsPatientAngler2QuickHandsLongDesc,progression,perk book,,,Quick Hands: Don't wait for the float to go under twice. You get 1 extra second to strike when a fish bites.
+perkRemsPatientAngler3StrongWristsName,progression,perk book,,,Strong Wrists
+perkRemsPatientAngler3StrongWristsDesc,progression,perk book,,,Reeling costs 20% less stamina.
+perkRemsPatientAngler3StrongWristsLongDesc,progression,perk book,,,Strong Wrists: Let the rod do the work and save your arms. Reeling costs 20% less stamina.
+perkRemsPatientAngler4FeelingTheLineName,progression,perk book,,,Feeling the Line
+perkRemsPatientAngler4FeelingTheLineDesc,progression,perk book,,,The line can stay in the red for 1 second longer before it snaps.
+perkRemsPatientAngler4FeelingTheLineLongDesc,progression,perk book,,,Feeling the Line: You can feel when the line is about to snap. The line can stay in the red for 1 second longer before it snaps.
+perkRemsPatientAngler5BaitAndSwitchName,progression,perk book,,,Bait and Switch
+perkRemsPatientAngler5BaitAndSwitchDesc,progression,perk book,,,Each bite has a 25% chance to leave your bait on the hook.
+perkRemsPatientAngler5BaitAndSwitchLongDesc,progression,perk book,,,Bait and Switch: A well-set hook makes bait harder to steal. Each bite has a 25% chance to leave your bait on the hook.
+perkRemsPatientAngler6CleanCutsName,progression,perk book,,,Clean Cuts
+perkRemsPatientAngler6CleanCutsDesc,progression,perk book,,,A fish that yields 2 or more fillets gives 1 extra fillet. Cleaning 2 or more batches of shellfish or mollusks at once gives 1 extra meat.
+perkRemsPatientAngler6CleanCutsLongDesc,progression,perk book,,,"Clean Cuts: A sharp knife and a steady hand mean less waste. A fish that yields 2 or more fillets gives 1 extra fillet. Cleaning 2 or more batches of shellfish or mollusks at once gives 1 extra meat. Scraps, bones and roe are not affected."
+perkRemsPatientAngler7AfterDarkName,progression,perk book,,,After Dark
+perkRemsPatientAngler7AfterDarkDesc,progression,perk book,,,Bites come 25% sooner at night and in the rain.
+perkRemsPatientAngler7AfterDarkLongDesc,progression,perk book,,,After Dark: Some of the best fishing happens after dark. Bites come 25% sooner at night and in the rain.
+perkRemsPatientAngler8CompleteName,progression,perk book,,,Master Angler
+perkRemsPatientAngler8CompleteDesc,progression,perk book,,,"Rare fish bite twice as often, and every catch weighs 10% more. The weight needed for a trophy doesn't change."
+perkRemsPatientAngler8CompleteLongDesc,progression,perk book,,,"Master Angler: You've learned to read the water, the weather and the line. Rare fish bite twice as often, and every catch weighs 10% more. The weight needed for a trophy doesn't change."
+remsDipNet,items,Item,,,Dip Net
+remsDipNetDesc,items,Item,,,"A long-handled net for the water's edge. Hold it and press [action:local:Primary] to swing at a frog about 3 m away. While crouching, you catch it 9 times out of 10; while standing, 6 times out of 10.\nAim at shallow water near the bank and press the same button to scoop for shrimp, crayfish and small panfish. Each scoop costs a little stamina."
+remsLureSpinner,items,Item,,,Spinner
+remsLureSpinnerDesc,items,Item,,,"A metal blade that spins as it moves through the water. Works best with a steady retrieve at a medium pace. Draws bass, perch and trout.\n\nLures aren't used up. You only lose one if the line snaps. Put it in the Lure slot of the rod's Tackle panel under Modify, or hold Reload with the rod out to swap to it."
+remsLureJig,items,Item,,,Jig
+remsLureJigDesc,items,Item,,,"A weighted head on a single hook. A steady retrieve works, but lifting the rod tip, pausing and letting it sink again gets more strikes. Draws pike, perch and catfish.\n\nLures aren't used up. You only lose one if the line snaps. Put it in the Lure slot of the rod's Tackle panel under Modify, or hold Reload with the rod out to swap to it."
+remsLureCrankbait,items,Item,,,Crankbait
+remsLureCrankbaitDesc,items,Item,,,"A hard plastic plug with a diving lip. The faster you reel, the deeper it runs. Draws bass, gar and pike, and fish caught with it weigh 10% more.\n\nLures aren't used up. You only lose one if the line snaps. Put it in the Lure slot of the rod's Tackle panel under Modify, or hold Reload with the rod out to swap to it."
+remsLureTroutFly,items,Item,,,Trout Fly
+remsLureTroutFlyDesc,items,Item,,,"Feathers tied to a small hook, worked across the surface with short twitches on your spinning rod. This isn't fly fishing, just a simple way to present a fly. Trout bite on it three times as often, and bluegill like it too.\n\nLures aren't used up. You only lose one if the line snaps. Put it in the Lure slot of the rod's Tackle panel under Modify, or hold Reload with the rod out to swap to it."
+remsRodModSmoothDrag,items,Item,,,Smooth Drag
+remsRodModSmoothDragDesc,items,Item,,,"Reel mod. A smoother drag releases line before it breaks, so tension builds 20% slower during a fight.\n\nFits either fishing rod. One reel mod per rod."
+remsRodModBraidedLine,items,Item,,,Braided Line
+remsRodModBraidedLineDesc,items,Item,,,"Line mod. Thin, strong braided line holds 30% more tension and lets you cast 3 m farther. Fish in the clear, cold water of the snow biome can see it and bite 10% less often.\n\nFits either fishing rod. One line mod per rod: Braided Line, Fluorocarbon Line and the Wire Leader share the slot."
+remsRodModFluorocarbon,items,Item,,,Fluorocarbon Line
+remsRodModFluorocarbonDesc,items,Item,,,"Line mod. Nearly invisible underwater, so fish bite 15% faster.\n\nFits either fishing rod. One line mod per rod: Braided Line, Fluorocarbon Line and the Wire Leader share the slot."
+remsRodModWireLeader,items,Item,,,Wire Leader
+remsRodModWireLeaderDesc,items,Item,,,"Line mod. A short steel leader that teeth can't cut. Pike, gar and mutant carp no longer cause tension spikes when they shake their heads. Wary trout bite 10% less often.\n\nFits either fishing rod. One line mod per rod: Braided Line, Fluorocarbon Line and the Wire Leader share the slot."
+remsRodModCorkGrip,items,Item,,,Cork Grip Wrap
+remsRodModCorkGripDesc,items,Item,,,"Grip mod. A comfortable, secure grip reduces reeling stamina cost by 15%.\n\nFits either fishing rod. One grip mod per rod."
+remsRodModSlipFloat,items,Item,,,Slip Float
+remsRodModSlipFloatDesc,items,Item,,,"Rig mod. The float slides along the line, letting bait reach deeper water. Rare fish bite 25% more often in water at least 6 m deep.\n\nFits either fishing rod. One rig mod per rod: the Slip Float and the Bottom Sinker share the slot."
+remsRodModBottomSinker,items,Item,,,Bottom Sinker
+remsRodModBottomSinkerDesc,items,Item,,,"Rig mod. A sinker replaces the float and holds the bait on the bottom. Watch the rod tip for bites. You get 1 extra second to strike. Catfish and eels bite 1.5 times as often, and sturgeon twice as often.\n\nFits either fishing rod. One rig mod per rod: the Slip Float and the Bottom Sinker share the slot."
+remsRodModBiteBell,items,Item,,,Bite Bell
+remsRodModBiteBellDesc,items,Item,,,"Tip mod. A small bell on the rod tip rings on every bite, so you can look away while waiting.\n\nFits either fishing rod. One tip mod per rod."
+remsFishSkillCmdDesc,UI,Text,,,"REMS Fishing: shows each player's Fishing skill, The Patient Angler volumes read and active bonuses."
+remsFishSkillCmdHelp,UI,Text,,,Usage:\n  rfskill - every player in the world\n  rfskill <name> - players whose name contains <name>\nRun it on the server or host to see which fishing rules apply to each player.
+remsFishSkillCmdNoWorld,UI,Text,,,No world is loaded.
+remsFishSkillCmdNoPlayer,UI,Text,,,No matching player.
+remsFishSkillCmdLine,UI,Text,,,{0}: Fishing {1}/{2}. The Patient Angler: {3} of {4} read ({5}). Master Angler: {6}.
+remsFishSkillCmdBonus,UI,Text,,,  Species list: {0}. Bite window +{1} s. Reel stamina x{2}. Red-line time +{3} s. Bait kept {4}%. Clean Cuts extra meat +{5}. Night and rain bite delay x{6}. Rare fish x{7}. Weight x{8}.
+remsTrapWinBaitTitle,UI,Text,,,Bait
+remsTrapWinLifeTitle,UI,Text,,,Lives Here
+remsTrapWinLifeHead,UI,Text,,,What you're likely to catch here with this bait:
+remsTrapWinModsTitle,UI,Text,,,Trap Mods
+remsTrapWinAddBaitTip,UI,Text,,,Add bait from your backpack
+remsTrapWinTakeTip,UI,Text,,,Take the entire catch
+remsTrapWinCageLocked,UI,Text,,,Bigger Cage
+remsTrapWinCatches,UI,Text,,,Catch: {0} of {1}
+remsTrapWinNextPaused,UI,Text,,,Not fishing
+remsTrapWinNextEvery,UI,Text,,,Checks every {0} hours
+remsTrapWinNextNow,UI,Text,,,Checking now
+remsTrapWinNext,UI,Text,,,Next check in {0} h {1} min
+remsTrapWinWaterDry,UI,Text,,,Not in water. Place the trap in water at least 1 block deep.
+remsTrapWinWaterDeep1,UI,Text,,,Water 1 block deep
+remsTrapWinWaterDeep,UI,Text,,,Water {0} blocks deep
+remsTrapWinWaterBody,UI,Text,,,This pond
+remsTrapWinWaterRegion,UI,Text,,,This stretch of water
+remsTrapWinShareAlone,UI,Text,,,{0} supports up to {1} traps. This trap has it to itself.
+remsTrapWinShare,UI,Text,,,"{0} supports {2} traps at full catch rate. {1} share it, giving each {3}%."
+remsTrapWinStock,UI,Text,,,"Fish stock: {0}%. Heavy fishing reduces it, but it recovers over time."
+remsTrapWinBaitNone,UI,Text,,,Empty. Put bait here.
+remsTrapWinBait,UI,Text,,,{0} x{1}
+remsTrapWinBaitBestHere,UI,Text,,,The best bait for this water.
+remsTrapWinBaitTry,UI,Text,,,Try {0}: {1} of the catch here prefers it.
+remsTrapWinBaitAny,UI,Text,,,Nothing here prefers one bait over another.
+remsTrapWinRule,UI,Text,,,One bait per catch. Misses use no bait.
+remsTrapWinNothingDry,UI,Text,,,Nothing to catch. The trap isn't in water.
+remsTrapWinNothing,UI,Text,,,Nothing this trap can catch lives in this water.
+remsTrapWinChance,UI,Text,,,Chance of a catch per check: {0}
+remsTrapWinNoBaitCarried,UI,Text,,,You have no bait.
+remsTrapModFunnel,items,Item,,,Funnel Entrance
+remsTrapModFunnelDesc,items,Item,,,"Trap mod. A wire funnel fitted to the trap's entrance. Creatures can swim in, but have a harder time getting out, increasing the chance of a catch by 25% at each check.\nFits in a Fishing Trap's mod slots. Only one of each kind counts."
+remsTrapModFunnelEffect,UI,Text,,,+25% catch chance
+remsTrapModBaitBox,items,Item,,,Bait Box
+remsTrapModBaitBoxDesc,items,Item,,,"Trap mod. A perforated tin keeps the bait out of reach, allowing 40% of catches to leave the bait in place.\nFits in a Fishing Trap's mod slots. Only one of each kind counts."
+remsTrapModBaitBoxEffect,UI,Text,,,40% of catches keep the bait
+remsTrapModBigCage,items,Item,,,Bigger Cage
+remsTrapModBigCageDesc,items,Item,,,"Trap mod. An extra panel of heavy mesh expands the cage, allowing the trap to hold 10 catches instead of 6 before it stops fishing.\nFits in a Fishing Trap's mod slots. Only one of each kind counts."
+remsTrapModBigCageEffect,UI,Text,,,Holds 10 catches
+remsTrapWinLikely,UI,Text,,,Likely
+remsTrapWinSometimes,UI,Text,,,Sometimes
+remsTrapWinRare,UI,Text,,,Rare
+remsTrapWinBaitTryWord,UI,Text,,,Try {0}: more of what you can catch here prefers it.
+remsNetMsgScoopOff,UI,Text,,,Scooping with the net is switched off in this world.
+remsShoreBedsOff,UI,Text,,,Gathering beds are switched off in this world.
+remsJobsMsgOff,UI,Text,,,The trader has no new fishing work in this world.
+remsTrapWinShortNeedsWater,UI,Text,,,Needs water
+remsTrapWinShortNeedsBait,UI,Text,,,Needs bait
+remsTrapWinShortFishing,UI,Text,,,Fishing
+remsTrapWinShortCatchReady,UI,Text,,,Catch ready
+remsTrapWinShortFull,UI,Text,,,Full
+remsTrapWinShortCrowded,UI,Text,,,Crowded water
+remsTrapWinTileCatch,UI,Text,,,CATCH
+remsTrapWinTileNext,UI,Text,,,NEXT CHECK
+remsTrapWinTileWater,UI,Text,,,WATER
+remsTrapWinTileStock,UI,Text,,,FISH STOCK
+remsTrapWinTileCatchVal,UI,Text,,,{0} / {1}
+remsTrapWinTileNextVal,UI,Text,,,{0} h {1} min
+remsTrapWinTileEvery,UI,Text,,,Every {0} h
+remsTrapWinNextPausedShort,UI,Text,,,Paused
+remsTrapWinTileDry,UI,Text,,,Dry
+remsTrapWinTileShared,UI,Text,,,"Depth {0}, {1} traps"
+remsTrapWinTileAlone,UI,Text,,,"Depth {0}, alone"
+remsTrapWinStockUnknown,UI,Text,,,Fish stock appears when the server responds.
