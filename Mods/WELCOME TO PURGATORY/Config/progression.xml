@@ -671,26 +671,26 @@
 
             <effect_group>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="foodCornOnTheCob,foodBakedPotato,Hashbrown,Mashed Potato,Grilled Ribs,Scrambled Eggs,Grilled Rabbit Leg"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,100" value="1" tags="foodCornBread,drinkJarGoldenRodTea,Corn Grits,Fried Egg,Grilled Bacon,Grilled Chicken Wings"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,100" value="1" tags="foodGrilledMeat,drinkJarRedTea,Blueberry Jam,Yucca Jam,HotdogLink,Grilled Chicken Breast"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,100" value="1" tags="foodBoiledMeat,drinkJarYuccaJuice,Fried Meat,Sugar Extract,Sausage,Boiled Snake Eggs,Grilled Rabbit"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="foodBaconAndEggs,drinkJarCoffee,Iced Mixed Tea,Rock Candy,Grilled Steak,Chicken Tenders,Meatball"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,100" value="1" tags="foodCornBread,drinkJarGoldenRodTea,Corn Grits,Fried Egg,Grilled Bacon,Grilled Chicken Wings,foodPickledBoarsFeet"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,100" value="1" tags="foodGrilledMeat,drinkJarRedTea,Blueberry Jam,Yucca Jam,HotdogLink,Grilled Chicken Breast,foodCookedChickenBreast"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,100" value="1" tags="foodBoiledMeat,drinkJarYuccaJuice,Fried Meat,Sugar Extract,Sausage,Boiled Snake Eggs,Grilled Rabbit,foodCookedChitlins"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="foodBaconAndEggs,drinkJarCoffee,Iced Mixed Tea,Rock Candy,Grilled Steak,Chicken Tenders,Meatball,foodCookedDeerChili"/>
 
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="foodPumpkinBread,foodBlueberryPie,Iced Coffee,French Toast,Smoked Ribs,Egg And Cheese Taco,Meatloaf"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,100" value="1" tags="foodPumpkinPie,drinkJarHoneyTea,Blueberry Jam Sandwichm,Smoked Brisket,Fried Chicken Leg,Pulled Pork"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,100" value="1" tags="foodPumpkinPie,drinkJarHoneyTea,Blueberry Jam Sandwichm,Smoked Brisket,Fried Chicken Leg,Pulled Pork,foodCookedPorkSteak"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,100" value="1" tags="foodPumpkinCheesecake,Egg Salad,Yucca Jam Sandwich,foodFrenchFryes,Chicken Jerky,Plain Burger"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,100" value="1" tags="foodVegetableStew,foodMeatStew,Corn Chips,Blueberry Candy,Grilled Snake,Rabbit Jerky,Roast Rabbit Leg"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,100" value="1" tags="foodVegetableStew,foodMeatStew,Corn Chips,Blueberry Candy,Grilled Snake,Rabbit Jerky,Roast Rabbit Leg,foodCookedChickenBreastMeal"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="foodSteakAndPotato,Yucca Chips,Fried Mushrooms,Plain Fudge,Animal Cheese,Plain Hotdog,Roast Chicken Breast"/>
 
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="drinkYuccaJuiceSmoothie,drinkJarBeer,Custard Pie,Snake Jerky,Grilled Chicken Leg,Sliced Chicken Sandwich"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="foodHoboStew,Coffee Cake,Honey Glazed Meat,foodRamenNoodles,Pickled Eggs,Plain Pizza,Sliced Angus Sandwich"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="drinkYuccaJuiceSmoothie,drinkJarBeer,Custard Pie,Snake Jerky,Grilled Chicken Leg,Sliced Chicken Sandwich,foodCookedPorkSteakMeal"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="foodHoboStew,Coffee Cake,Honey Glazed Meat,foodRamenNoodles,Pickled Eggs,Plain Pizza,Sliced Angus Sandwich,foodCookedChitlinsMeal"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="43,100" value="1" tags="foodFishTacos,Mushroom Pie,Kvass Soda,WorkingStove,foodHamburger,Loaded Burger,Sliced Ham Sandwich,Egg Salad"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,100" value="1" tags="foodChiliDog,Meat and Beer Pie,Sponge Cake,foodCookedHamburger,Ham And Tomato Taco,Fried Chicken Sandwich"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,100" value="1" tags="foodChiliDog,Meat and Beer Pie,Sponge Cake,foodCookedHamburger,Ham And Tomato Taco,Fried Chicken Sandwich,foodCookedHamShank"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="59,100" value="1" tags="foodShamChowder,foodHoneyGlazedSham,Blueberry Sponge Cake,Mutton,BLT Sandwich,Omelet,Calzone,Pulled Pork Sandwich"/>
 
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,100" value="1" tags="foodTunaFishGravyToast,drinkJarGrandpasAwesomeSauce,Yucca Sponge Cake,All In One Sandwich"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="foodShepardsPie,drinkJarGrandpasMoonshine,Energy Tablet,Cheese Burger,Pulled Pork Sandwich"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,100" value="1" tags="drinkJarGrandpasLearningElixir,foodHoneyBrisket,Angus Taco,Bacon Pizza,Meatball Sub"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,100" value="1" tags="drinkJarGrandpasLearningElixir,foodHoneyBrisket,Angus Taco,Bacon Pizza,Meatball Sub,foodCookedDeerChiliwithMegaCrush"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,100" value="1" tags="foodSpaghetti,Carbonated Water,foodBurgerFrenchFryes,Bacon Burger,Pepperoni Pizza,Lasagna"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="foodGumboStew,Distilled Vodka,foodstuffedbellpepper,Fried Chicken Burrito,BBQ Ribs"/>
             </effect_group>

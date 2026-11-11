@@ -2859,7 +2859,7 @@
 
             <effect_group name="meleeWpnBatonT1JunkBaton">
                 <passive_effect name="AttacksPerMinute" operation="base_set" value="85" tags="perkElectrocutioner,perkFlurryOfIntellect"/>
-                <passive_effect name="StaminaLoss" operation="base_set" value="16.5" tags="primary"/>
+                <passive_effect name="StaminaLoss" operation="base_set" value="10.2" tags="primary"/>
                 <passive_effect name="DegradationMax" operation="base_set" value="300,700" tier="1,6" tags="perkElectrocutioner"/>
                 <passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkElectrocutioner"/>
                 <passive_effect name="MaxRange" operation="base_set" value="2.4" tags="perkElectrocutioner"/>
@@ -8807,7 +8807,7 @@
         <item name="Vinegar">
             <property name="HoldType" value="3"/>
             <property name="CustomIcon" value="FoodCookingOil"/>
-            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/masonJarWaterPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="DisplayType" value="waterDysentery"/>
             <property name="Material" value="Mglass"/>
@@ -8848,7 +8848,7 @@
             <property name="HoldType" value="3"/>
             <property name="DisplayType" value="waterDysentery"/>
             <property name="CustomIcon" value="FoodCookingOil"/>
-            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/masonJarWaterPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="Mglass"/>
             <property name="Stacknumber" value="250"/> <!-- STK drink -->
@@ -8885,8 +8885,8 @@
         <item name="Pure Animal Milk">
             <property name="HoldType" value="3"/>
             <property name="DisplayType" value="waterDysentery"/>
-            <property name="CustomIcon" value="FoodAnimalMilk"/>
-            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="CustomIcon" value="animalMilkCow"/>
+            <property name="Meshfile" value="@:Other/Items/Food/masonJarWaterPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="Mglass"/>
             <property name="Stacknumber" value="250"/> <!-- STK drink -->
@@ -9295,8 +9295,8 @@
             <property name="CraftingIngredientTime" value="10"/>
             <!-- 14 is large round hold -->
             <property name="UnlockedBy" value="craftingFood"/><!-- foodGumboStewSchematic, -->
-            <property name="SoundPickup" value="food_bowl2_grab"/>
-            <property name="SoundPlace" value="food_bowl2_place"/>
+            <property name="SoundPickup" value="meat_raw_grab"/>
+            <property name="SoundPlace" value="meat_raw_place"/>
             <property class="Action0">
                 <property name="Class" value="Eat"/>
                 <property name="Delay" value="1.0"/>
@@ -9330,8 +9330,8 @@
             <property name="CraftingIngredientTime" value="10"/>
             <!-- 14 is large round hold -->
             <property name="UnlockedBy" value="craftingFood"/><!-- foodGumboStewSchematic, -->
-            <property name="SoundPickup" value="food_bowl2_grab"/>
-            <property name="SoundPlace" value="food_bowl2_place"/>
+            <property name="SoundPickup" value="meat_raw_grab"/>
+            <property name="SoundPlace" value="meat_raw_place"/>
             <property class="Action0">
                 <property name="Class" value="Eat"/>
                 <property name="Delay" value="1.0"/>
@@ -9365,8 +9365,8 @@
             <property name="CraftingIngredientTime" value="10"/>
             <!-- 14 is large round hold -->
             <property name="UnlockedBy" value="craftingFood"/><!-- foodGumboStewSchematic, -->
-            <property name="SoundPickup" value="food_bowl2_grab"/>
-            <property name="SoundPlace" value="food_bowl2_place"/>
+            <property name="SoundPickup" value="meat_raw_grab"/>
+            <property name="SoundPlace" value="meat_raw_place"/>
             <property class="Action0">
                 <property name="Class" value="Eat"/>
                 <property name="Delay" value="1.0"/>
@@ -9400,8 +9400,8 @@
             <property name="CraftingIngredientTime" value="10"/>
             <!-- 14 is large round hold -->
             <property name="UnlockedBy" value="craftingFood"/><!-- foodGumboStewSchematic, -->
-            <property name="SoundPickup" value="food_bowl2_grab"/>
-            <property name="SoundPlace" value="food_bowl2_place"/>
+            <property name="SoundPickup" value="meat_raw_grab"/>
+            <property name="SoundPlace" value="meat_raw_place"/>
             <property class="Action0">
                 <property name="Class" value="Eat"/>
                 <property name="Delay" value="1.0"/>
@@ -12145,7 +12145,7 @@
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="HoldType" value="31"/>
 			<property name="Material" value="Morganic"/>
-			<property name="Stacknumber" value="50"/>
+			<property name="Stacknumber" value="250"/>
 			<property name="EconomicValue" value="32"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
@@ -16169,24 +16169,6 @@
             <property name="SoundPlace" value="meat_raw_place"/>
         </item>
 
-        <item name="GoldenPoop">
-            <property name="Tags" value="gems"/>
-            <property name="HoldType" value="3"/>
-            <property name="Group" value="Resources"/>
-            <property name="Meshfile" value="#@modfolder:Resources/poop.unity3d?GoldenPoop.Prefab"/>		
-		    <property name="DropMeshfile" value="#@modfolder:Resources/poop.unity3d?GoldenPoop.Prefab"/>
-            <property name="Material" value="MresourceSilverNugget"/>
-            <property name="Stacknumber" value="1"/> <!-- STK food -->
-            <!-- <property name="EconomicBundleSize" value="5"/> -->
-            <property name="EconomicValue" value="10000"/>
-            <property name="DescriptionKey" value="rareOresGroupDesc"/>
-            <property name="CraftingIngredientTime" value="3"/>
-            <property name="SoundPickup" value="nuggets_grab"/>
-	        <property name="SoundPlace" value="nuggets_place"/>
-        </item>
-
-
-
         <!--item name="Information file">
             <property name="CustomIcon" value="resourceLockPick"/>
             <property name="ItemTypeIcon" value="bundle"/>
@@ -16794,13 +16776,87 @@
 	<append xpath="/items/item/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceForgedTungsten</append>
     <append xpath="/items/item/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceForgedTantalum</append>
 
+    <append xpath="/items">
 
+        <item name="questRewardgunBowT1IronCrossbowBundle">
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="bundleBow"/>
+            <property name="CustomIconTint" value="CC9966"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="DescriptionKey" value="questRewardgunBowT1IronCrossbowBundleDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="gunBowT1IronCrossbow,ammoCrossbowBoltIron"/>
+                <property name="Create_item_count" value="1-3,30"/>
+            </property>
+        </item>
 
+        <item name="questRewardgunBowT1WoodenBowBundle">
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="bundleBow"/>
+            <property name="CustomIconTint" value="CC9966"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="DescriptionKey" value="questRewardgunBowT1WoodenBowBundleDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="gunBowT1WoodenBow,ammoArrowIron"/>
+                <property name="Create_item_count" value="1-3,30"/>
+            </property>
+        </item>
 
+        <item name="questRewardgunHandgunT1PistolBundle">
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="bundlePistol"/>
+            <property name="CustomIconTint" value="CC9966"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="DescriptionKey" value="questRewardgunHandgunT1PistolBundleDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="gunHandgunT1Pistol,ammo9mmBulletBall"/>
+                <property name="Create_item_count" value="1-3,30"/>
+            </property>
+        </item>
 
+        <item name="questRewardgunRifleT1HuntingRifleBundle">
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="bundleRifle"/>
+            <property name="CustomIconTint" value="CC9966"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="DescriptionKey" value="questRewardgunRifleT1HuntingRifleBundleDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="gunRifleT1HuntingRifle,ammo762mmBulletBall"/>
+                <property name="Create_item_count" value="1-3,30"/>
+            </property>
+        </item>
 
+        <item name="questRewardgunShotgunT1DoubleBarrelBundle">
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="bundleShotgun"/>
+            <property name="CustomIconTint" value="CC9966"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="DescriptionKey" value="questRewardgunShotgunT1DoubleBarrelBundleDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="gunShotgunT1DoubleBarrel,ammoShotgunShell"/>
+                <property name="Create_item_count" value="1-3,30"/>
+            </property>
+        </item>
 
+        <item name="questRewardgunMGT1AK47Bundle">
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="bundleMachineGun"/>
+            <property name="CustomIconTint" value="CC9966"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="DescriptionKey" value="questRewardgunMGT1AK47BundleDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="gunMGT1AK47,ammo762mmBulletBall"/>
+                <property name="Create_item_count" value="1-3,30"/>
+            </property>
+        </item>
 
+    </append>
 
 	<append xpath="/items/item[@name='gunShotgunT0PipeShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoShotgunShellFlechette</append>
 	<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoShotgunShellFlechette</append>

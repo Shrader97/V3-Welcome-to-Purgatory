@@ -401,57 +401,6 @@ gunRifleT3Rifle4Bore,"4 Bore Rifle"
 
 gunHandgunT3Magnum4Bore,"4 Bore Magnum"
 
-
-
-
-
-
-CowStable001,Cow Stable
-
-
-FishingBait,"Bait"
-FishingBaitDesc,"Could be used for Fishing."
-
-FishingLoot,"Catched Loot"
-FishingLootDesc,"Your catched Fishing-Loot. By opening you will get back your Fishing Rod without a bait and maybe you get a fish."
-
-FishingLootpro,"Catched PRO Loot"
-FishingLootv3,"Catched Triple Loot"
-
-RawFish,"Raw Cat Fish"
-RawFishDesc,"Raw Cat Fish, could be cooked at the Campfire"
-
-RawFish2,"Raw Crawfish"
-RawFish2Desc,"Raw Cod, could be cooked at the Campfire"
-
-RawFish3,"Raw Shrimp"
-RawFish3Desc,"Raw Shrimp, could be cooked at the Campfire"
-
-RawFish4,"Raw Clam"
-RawFish4Desc,"Raw Clam, could be cooked at the Campfire"
-
-fishingRodnorm,"Fishing Rod ([ff0000]No Bait[-])"
-fishingRodnormDesc,"Use unbaited fishing rod and baits to craft a baited rod."
-
-fishingRodpro,"Fishing Rod PRO ([ff0000]No Bait[-])"
-fishingRodproDesc,"Faster Fishing. Use unbaited fishing rod and baits to craft a baited pro-rod."
-
-fishingRodv3,"Triple Float Rod ([ff0000]No Bait[-])"
-fishingRodv3Desc,"Triple Fishing. Use unbaited fishing rod and baits to craft a baited triple-rod."
-
-fishingRodBaitednorm,"Fishing Rod ([00ff00]With Bait[-])"
-fishingRodBaitednormDesc,"Go over to the river and left click on the water while the rod is equipped, then wait up to 10 seconds. Tight lines!.\n\n\n[ff0000]YOU'LL BE LOCKED INTO THE ANIMATION UNTIL YOU GET A CATCH[-]"
-
-fishingRodBaitedpro,"Fishing Rod PRO ([00ff00]With Bait[-])"
-fishingRodBaitedproDesc,"Go over to the river and left click on the water while the rod is equipped, then wait up to 10 seconds. Tight lines!.\n\n\n[ff0000]YOU'LL BE LOCKED INTO THE ANIMATION UNTIL YOU GET A CATCH[-]"
-
-fishingRodBaitedv3,"Triple Float Rod ([00ff00]With Bait[-])"
-fishingRodBaitedv3Desc,"Go over to the river and left click on the water while the rod is equipped, then wait up to 10 seconds. Tight lines!.\n\n\n[ff0000]YOU'LL BE LOCKED INTO THE ANIMATION UNTIL YOU GET A CATCH[-]"
-
-fishskillmagazine,"Fishing Magazine"
-fishskillmagazinedesc,"By reading this magazine you increase your knowledge about fishing."
-
-
 buffSugerRushTooltip,"WOOHOO You have a Suger Rush!!!"
 
 PickleRickTooltip,"You Just Got Pickeled By Pickle Rick BITCH!!!"
@@ -1365,4 +1314,16 @@ meleeWpnBatonT1JunkBaton,Junk Baton
 
 
 
+questRewardgunShotgunT1DoubleBarrelBundle,Double Barrel Shotgun Bundle
+questRewardgunShotgunT1DoubleBarrelBundleDesc,A Double Barrel Shotgun.\n\nA great choice for those investing points into Strength Perks.
+questRewardgunHandgunT1PistolBundle,Pistol Bundle
+questRewardgunHandgunT1PistolBundleDesc,A 9mm Pistol.\n\nA great choice for those investing points into Agility Perks.
+questRewardgunBowT1IronCrossbowBundle,Iron Crossbow Bundle
+questRewardgunBowT1IronCrossbowBundleDesc,An Iron Crossbow.\n\nA great choice for those investing points into Agility Perks.
+questRewardgunBowT1WoodenBowBundle,Wooden Bow Bundle
+questRewardgunBowT1WoodenBowBundleDesc,A Wooden Bow.\n\nA great choice for those investing points into Agility Perks.
+questRewardgunRifleT1HuntingRifleBundle,Hunting Rifle Bundle
+questRewardgunRifleT1HuntingRifleBundleDesc,A Hunting Rifle.\n\nA great choice for those investing points into Perception Perks.
+questRewardgunMGT1AK47Bundle,AK-47 Machine Gun Bundle
+questRewardgunMGT1AK47BundleDesc,An AK-47 Machine Gun.\n\nA great choice for those investing points into Fortitude Perks.
 

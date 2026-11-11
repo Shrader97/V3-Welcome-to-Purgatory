@@ -1912,6 +1912,17 @@
 			<ingredient name="Yucca Jam" count="1"/>
 		</recipe>
 
+		<recipe name="Blueberry Jam Sandwich" count="1" craft_time="8" craft_area="campfire">
+			<ingredient name="SliceOfBread" count="1"/>
+			<ingredient name="Blueberry Jam" count="1"/>
+		</recipe>
+
+		<recipe name="Yucca Jam Sandwich" count="1" craft_time="8" craft_area="campfire">
+			<ingredient name="SliceOfBread" count="1"/>
+			<ingredient name="Yucca Jam" count="1"/>
+		</recipe>
+
+
 		<recipe name="Coffee Cake" count="1" craft_time="50" craft_area="campfire" tags="learnable,perkMasterChef" craft_tool="toolCookingPot">
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="foodCornMeal" count="2"/>
@@ -2208,27 +2219,27 @@
             <ingredient name="Deli Meat Pepperoni" count="1"/>
         </recipe>
 
-        <recipe name="Taco Shell" count="1" craft_area="WorkingStove" craft_tool="toolCookingPot">
+        <recipe name="Taco Shell" count="10" craft_area="WorkingStove" craft_tool="toolCookingPot">
             <ingredient name="dough" count="2"/>
         </recipe>
 
-        <recipe name="Hotdog Bun" count="1" craft_area="WorkingStove" craft_tool="toolCookingPot">
+        <recipe name="Hotdog Bun" count="10" craft_area="WorkingStove" craft_tool="toolCookingPot">
             <ingredient name="dough" count="2"/>
         </recipe>
 
-        <recipe name="Burger Bun" count="1" craft_area="WorkingStove" craft_tool="toolCookingPot">
+        <recipe name="Burger Bun" count="10" craft_area="WorkingStove" craft_tool="toolCookingPot">
             <ingredient name="dough" count="2"/>
         </recipe>
 
-        <recipe name="Baguette" count="1" craft_area="WorkingStove" craft_tool="toolCookingPot">
+        <recipe name="Baguette" count="10" craft_area="WorkingStove" craft_tool="toolCookingPot">
             <ingredient name="dough" count="2"/>
         </recipe>
 
-        <recipe name="Flat Bread" count="1" craft_area="WorkingStove" craft_tool="toolCookingPot">
+        <recipe name="Flat Bread" count="10" craft_area="WorkingStove" craft_tool="toolCookingPot">
             <ingredient name="dough" count="2"/>
         </recipe>
 
-        <recipe name="Taco Shell" count="1" craft_area="WorkingStove" craft_tool="toolCookingPot">
+        <recipe name="Taco Shell" count="10" craft_area="WorkingStove" craft_tool="toolCookingPot">
             <ingredient name="dough" count="2"/>
         </recipe>
 
@@ -2382,40 +2393,40 @@
 
         <recipe name="foodCookedPorkSteakMeal" craft_time="75" count="1" craft_area="WorkingStove" tags="perkMasterChef,learnable">
             <ingredient name="foodCookedPorkSteak" count="1"/>
-            <ingredient name="Cooking Oil" count="2"/>
+            <ingredient name="Cooking Oil" count="1"/>
             <ingredient name="Mashed Potato" count="1"/>
             <ingredient name="Fried Mushrooms" count="1"/>
         </recipe>
 
         <recipe name="foodCookedHamShank" craft_time="120" count="1" craft_area="campfire" tags="perkMasterChef,learnable">
             <ingredient name="foodRawPorkShank" count="1"/>
-            <ingredient name="Cooking Oil" count="2"/>
+            <ingredient name="Cooking Oil" count="1"/>
         </recipe>
 
         <recipe name="foodCookedHamShank" craft_time="60" count="1" craft_area="WorkingStove" tags="perkMasterChef,learnable">
             <ingredient name="foodRawPorkShank" count="1"/>
-            <ingredient name="Cooking Oil" count="2"/>
+            <ingredient name="Cooking Oil" count="1"/>
         </recipe>
 
         <recipe name="foodCookedChickenBreast" craft_time="120" count="1" craft_area="campfire" tags="perkMasterChef,learnable">
             <ingredient name="foodRawChickenBreast" count="1"/>
-            <ingredient name="Cooking Oil" count="2"/>
+            <ingredient name="Cooking Oil" count="1"/>
         </recipe>
 
         <recipe name="foodCookedChickenBreast" craft_time="60" count="1" craft_area="WorkingStove" tags="perkMasterChef,learnable">
             <ingredient name="foodRawChickenBreast" count="1"/>
-            <ingredient name="Cooking Oil" count="2"/>
+            <ingredient name="Cooking Oil" count="1"/>
         </recipe>
 
         <recipe name="foodCookedChickenBreastMeal" craft_time="180" count="1" craft_area="campfire" tags="perkMasterChef,learnable">
             <ingredient name="foodRawChickenBreast" count="1"/>
-            <ingredient name="Cooking Oil" count="2"/>
+            <ingredient name="Cooking Oil" count="1"/>
             <ingredient name="Mashed Potato" count="1"/>
         </recipe>
 
         <recipe name="foodCookedChickenBreastMeal" craft_time="75" count="1" craft_area="WorkingStove" tags="perkMasterChef,learnable">
             <ingredient name="foodRawChickenBreast" count="1"/>
-            <ingredient name="Cooking Oil" count="2"/>
+            <ingredient name="Cooking Oil" count="1"/>
             <ingredient name="Mashed Potato" count="1"/>
         </recipe>
 
@@ -2630,13 +2641,7 @@
             <ingredient name="resourceAcid" count="1"/>
         </recipe>
 
-        <recipe name="toolBeaker" count="1" material_based="true" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
-            <ingredient name="resourceCrushedSand" count="50"/>
-            <ingredient name="resourceRockSmall" count="20"/>
-            <ingredient name="resourceScrapLead" count="40"/>
-            <ingredient name="resourceScrapIron" count="40"/>
-            <ingredient name="resourceClayLump" count="40"/>
-        </recipe>
+
 
 
 
@@ -2842,10 +2847,9 @@
             <ingredient name="Raw Steak" count="1"/>
         </recipe>
 
-        <!--recipe name="Smoked Brisket" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
-            <ingredient name="resourceCoal" count="2"/>
-            <ingredient name="Large Raw Animal Meat" count="1"/>
-        </recipe-->
+        <recipe name="Cooking Oil" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
+            <ingredient name="resourceAnimalFat" count="5"/>
+        </recipe>
 
         <recipe name="Grilled Bacon" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
             <ingredient name="foodRawBacon" count="2"/>
@@ -2903,13 +2907,13 @@
         <recipe name="Chicken Tenders" count="2" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
             <ingredient name="foodRawChickenBreast" count="1"/>
             <ingredient name="foodCornMeal" count="3"/>
-            <ingredient name="Cooking Oil" count="3"/>	
+            <ingredient name="Cooking Oil" count="1"/>	
         </recipe>
 
         <recipe name="Fried Chicken Leg" count="2" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
             <ingredient name="foodRawChickenLegs" count="1"/>
             <ingredient name="foodCornMeal" count="3"/>
-            <ingredient name="Cooking Oil" count="3"/>	
+            <ingredient name="Cooking Oil" count="1"/>	
         </recipe>
 
         <recipe name="Chicken Jerky" count="2" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
@@ -2917,7 +2921,7 @@
         </recipe>
 
         <recipe name="Pickled Eggs" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="3" tags="perkMasterChef,learnable">
-            <ingredient name="Cooking Oil" count="2"/>
+            <ingredient name="Cooking Oil" count="1"/>
             <ingredient name="Vinegar" count="2"/>
             <ingredient name="foodEggBoiled" count="3"/>
         </recipe>
@@ -2943,6 +2947,10 @@
             <ingredient name="resourceElectricParts" count="5"/>
             <ingredient name="resourceMetalPipe" count="5"/>
             <ingredient name="resourceHeadlight" count="1"/>
+        </recipe>
+
+        <recipe name="Cooking Oil" count="1" craft_area="WorkingStove" craft_tool="toolCookingPot" tags="perkMasterChef">
+            <ingredient name="resourceAnimalFat" count="5"/>
         </recipe>
 
         <recipe name="foodCanLamb" count="50"  craft_time="210" craft_area="WorkingStove" craft_tool="toolCookingPot">
@@ -3304,6 +3312,17 @@
 			<ingredient name="Yucca Jam" count="1"/>
 		</recipe>
 
+		<recipe name="Blueberry Jam Sandwich" count="1" craft_time="8" craft_area="WorkingStove">
+			<ingredient name="SliceOfBread" count="1"/>
+			<ingredient name="Blueberry Jam" count="1"/>
+		</recipe>
+
+		<recipe name="Yucca Jam Sandwich" count="1" craft_time="8" craft_area="WorkingStove">
+			<ingredient name="SliceOfBread" count="1"/>
+			<ingredient name="Yucca Jam" count="1"/>
+		</recipe>
+
+
 		<recipe name="Coffee Cake" count="1" craft_time="50" craft_area="WorkingStove" tags="learnable,perkMasterChef" craft_tool="toolCookingPot">
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="foodCornMeal" count="2"/>
@@ -3515,13 +3534,13 @@
         <recipe name="Chicken Tenders" count="2" craft_area="WorkingStove" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
             <ingredient name="foodRawChickenBreast" count="1"/>
             <ingredient name="foodCornMeal" count="3"/>
-            <ingredient name="Cooking Oil" count="3"/>	
+            <ingredient name="Cooking Oil" count="1"/>	
         </recipe>
 
         <recipe name="Fried Chicken Leg" count="2" craft_area="WorkingStove" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
             <ingredient name="foodRawChickenLegs" count="1"/>
             <ingredient name="foodCornMeal" count="3"/>
-            <ingredient name="Cooking Oil" count="3"/>	
+            <ingredient name="Cooking Oil" count="1"/>	
         </recipe>
 
         <recipe name="Chicken Jerky" count="2" craft_area="WorkingStove" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
@@ -3529,7 +3548,7 @@
         </recipe>
 
         <recipe name="Pickled Eggs" count="1" craft_area="WorkingStove" craft_tool="toolCookingPot" craft_time="3" tags="perkMasterChef,learnable">
-            <ingredient name="Cooking Oil" count="2"/>
+            <ingredient name="Cooking Oil" count="1"/>
             <ingredient name="Vinegar" count="2"/>
             <ingredient name="foodEggBoiled" count="3"/>
         </recipe>
